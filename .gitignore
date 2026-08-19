@@ -1,0 +1,82 @@
+# ============================================================
+# MIMIC-IV-ED Critical Outcome Prediction — .gitignore
+# ============================================================
+
+# ---- Personal / Supervisor documents ----
+*.pdf
+*.docx
+*.doc
+*.pptx
+*.ppt
+*.xlsx
+*.xls
+
+# ---- Patient Data (NEVER commit) ----
+data/
+*.csv
+*.parquet
+*.feather
+*.h5
+*.hdf5
+*.pkl
+*.pickle
+mimic*/
+physionet*/
+
+# ---- Cloned / Vendored baseline repositories ----
+# These are referenced as external repos, not modified
+mimic4ed-benchmark-main/
+CAREBench/
+MDS-ED/
+Error-quantified-Conformal-Inference/
+
+# ---- Model checkpoints ----
+outputs/
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+
+# ---- Python ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.eggs/
+.env
+.venv
+env/
+venv/
+ENV/
+pip-wheel-metadata/
+
+# ---- Jupyter ----
+.ipynb_checkpoints
+*.ipynb
+
+# ---- IDEs ----
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ---- OS ----
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ---- Logs ----
+*.log
+logs/
+wandb/
+mlruns/
+
+# ---- Temporary files ----
+tmp/
+temp/
+scratch/
