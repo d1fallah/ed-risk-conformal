@@ -134,3 +134,6 @@ mimic4ed-benchmark-main/paper_assets/*.toc
 mimic4ed-benchmark-main/docx_text.txt
 mimic4ed-benchmark-main/pdf_text.txt
 mimic4ed-benchmark-main/m2_hybrid_grud_guide*_text.txt
+
+# Generated paper assets are created locally by src/generate_*.py (removed from the repository on GitHub on 2026-10-04)
+mimic4ed-benchmark-main/paper_assets/

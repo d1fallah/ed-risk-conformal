@@ -46,7 +46,7 @@ pre-specified comparisons did not support that claim, and the dossier records th
     ├── src/                        # evidence pipeline: tables, number macros, figure provenance, verification
     ├── experiments/                # single-command reproduction entry point
     ├── configs/                    # frozen run configuration
-    ├── paper_assets/               # generated tables (LaTeX), figures, and provenance records
+    ├── paper_assets/               # created locally by the scripts below (tables, figures, provenance); not tracked here
     ├── results/                    # evidence manifest (hashes of every artifact behind a reported value)
     ├── track_b/                    # deployment runtime (ONNX serving, recalibration, NEWS2 fallback), code only
     ├── M2_Findings_Dossier.md      # results, each claim traced to a stored file
