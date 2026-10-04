@@ -1,0 +1,44 @@
+{
+  "train_period": {
+    "n_stays": 288208,
+    "n_patients": 139371,
+    "age_median": 53.0,
+    "age_q1": 35.0,
+    "age_q3": 68.0,
+    "female_share": 0.5451826458668739,
+    "female_pct": 54.518264586687394,
+    "outcome_events": 15567,
+    "outcome_prevalence": 0.054013073891078664,
+    "outcome_pct": 5.401307389107866,
+    "acuity_missing_share": 0.0,
+    "acuity_levels_share": {
+      "1": 0.06060553489146727,
+      "2": 0.3233220451895853,
+      "3": 0.5445268694831511,
+      "4": 0.0688079442624771,
+      "5": 0.0027376061733192696
+    },
+    "source_file": "data/train_v2.csv"
+  },
+  "test_period": {
+    "n_stays": 84241,
+    "n_patients": 61843,
+    "age_median": 50.0,
+    "age_q1": 30.0,
+    "age_q3": 67.0,
+    "female_share": 0.5229757481511378,
+    "female_pct": 52.29757481511378,
+    "outcome_events": 6815,
+    "outcome_prevalence": 0.08089884972875441,
+    "outcome_pct": 8.089884972875442,
+    "acuity_missing_share": 0.0,
+    "acuity_levels_share": {
+      "1": 0.0580477439726499,
+      "2": 0.36373025011573934,
+      "3": 0.5067010125710758,
+      "4": 0.0689925333270023,
+      "5": 0.0025284600135326027
+    },
+    "source_file": "data/test_v2.csv"
+  }
+}

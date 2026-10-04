@@ -20,15 +20,49 @@ data/
 *.hdf5
 *.pkl
 *.pickle
-mimic*/
+# NOTE: this used to be the single wildcard `mimic*/`, which (being a directory-pattern
+# match) also matched -- and made untraceable, since git will not recurse to re-include
+# anything under an excluded directory -- the vendored `mimic4ed-benchmark-main/` code
+# repository below, where 100% of M2's own scripts and documentation live. Narrowed to the
+# actual raw PhysioNet export naming conventions so it no longer catches that repo by
+# accident.
+mimic-iv*/
+mimic-iii*/
 physionet*/
 
-# ---- Cloned / Vendored baseline repositories ----
-# These are referenced as external repos, not modified
-mimic4ed-benchmark-main/
+# ---- Cloned / Vendored baseline repositories (read-only, no M2 code inside) ----
 CAREBench/
 MDS-ED/
+# Error-quantified-Conformal-Inference/ has two files patched for NumPy 2.0 compatibility
+# (core/methods.py, core/quantile.py -- np.infty -> np.inf); it keeps its own nested .git and
+# is not tracked as ordinary files from here. The patch is recorded verbatim, with a diff, in
+# module2_provenance.md so it stays auditable despite not being outer-repo-tracked.
 Error-quantified-Conformal-Inference/
+
+# ---- mimic4ed-benchmark-main: NOT wholesale-ignored ----
+# M2's own ~30 m2_*.py scripts, train_grud_conformal.py, and its M2_*.md documentation live
+# INSIDE this vendored tree (see module2_provenance.md for why, and the fix being tracked
+# here rather than restructured mid-project). Only the tree's heavy/PHI-risk subpaths are
+# excluded below -- everything else (source code, docs, small figure PNGs) is tracked.
+mimic4ed-benchmark-main/.venv/
+mimic4ed-benchmark-main/data/
+mimic4ed-benchmark-main/Benchmark_scripts/__pycache__/
+mimic4ed-benchmark-main/Benchmark_scripts/*.onnx
+mimic4ed-benchmark-main/Benchmark_scripts/*.onnx.data
+mimic4ed-benchmark-main/Benchmark_scripts/*.egg-info/
+# Upstream (pre-existing, not M2's contribution) embedding/reference-data artifacts --
+# large, and reproducible from the vendored repo's own pipeline, not hand-authored by M2:
+mimic4ed-benchmark-main/Benchmark_scripts/embedding_*/
+mimic4ed-benchmark-main/Benchmark_scripts/medcodes/
+mimic4ed-benchmark-main/Benchmark_scripts/hospitalization_triage_mlp/
+mimic4ed-benchmark-main/Benchmark_scripts/m2_plots/*.b64
+# CAUTION -- deliberately NOT re-included here: every CSV/JSON/pickle result file (they are
+# per-patient-row outputs derived from MIMIC-IV-ED; the MIMIC-IV Data Use Agreement restricts
+# redistribution of such derivatives, not only the raw tables). The blanket `data/` and
+# `*.csv`/`*.pkl`/`*.pickle` rules above already cover this tree too. Deciding which
+# aggregate-only summary files (if any) are safe to version is a deliberate follow-up
+# decision for a human familiar with the DUA, not something to resolve here under time
+# pressure by guessing which CSVs are patient-level and which are already aggregated.
 
 # ---- Model checkpoints ----
 outputs/
@@ -80,3 +114,23 @@ mlruns/
 tmp/
 temp/
 scratch/
+
+# ---- Added 2026-10-04: keep manuscripts, vendored clones, snapshots and build artifacts out of the code repository ----
+mTAN/
+paper-m2/
+paper-m2-v2/
+paper_draft/
+M2_Handoff_2026-09-21/
+M2_Handoff_2026-09-21.zip
+_snapshots/
+mimic4ed-benchmark-main/paper_assets_pre_alignment_fix_2026-10-01/
+mimic4ed-benchmark-main/paper_assets/M2_Supervisor_Handoff.*
+mimic4ed-benchmark-main/paper_assets/*.aux
+mimic4ed-benchmark-main/paper_assets/*.out
+mimic4ed-benchmark-main/paper_assets/*.toc
+*.bak
+
+# Text extracts of the supervisor documents (roadmap, consolidated plan, execution guides): private, never publish
+mimic4ed-benchmark-main/docx_text.txt
+mimic4ed-benchmark-main/pdf_text.txt
+mimic4ed-benchmark-main/m2_hybrid_grud_guide*_text.txt

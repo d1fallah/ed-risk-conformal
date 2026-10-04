@@ -1,0 +1,143 @@
+# M2 reproducible-run configuration, per CLAUDE.md Sec 1.3
+# ("Every headline result must reproduce via a single command") and Sec 4
+# Step 6 ("one-command reproducible script... mean +/- std over >=5 seeds").
+#
+# This config records values already frozen across the gate documents and
+# governing scripts -- it does not introduce any new number. Every value
+# here traces to one of: M2_Outcome_Definition_Gate.md (v2), a script's
+# own module-level constants, or a *_tuned_config.json artifact. The
+# orchestrator (experiments/run_reproducible_m2.py) prints this config for
+# a consistency check; the stage scripts themselves read their own frozen
+# constants/artifacts, so no value here is silently duplicated into logic
+# the scripts don't also enforce.
+#
+# Two tracks, per M2_Findings_Dossier.md:
+#   v2 (primary)  -- irregular-series cohort, chronological-primary split,
+#                    Gate v2 (signed off 2026-09-19 by Akram). Sec 24.
+#   t2 (secondary, superseded) -- fixed T=2 (triage + latest-ED), random
+#                    split. Independently reproducible from
+#                    data/archive_pre_irregular/. Secs 1-22.
+# `track: v2` is the default and the one CLAUDE.md's "headline result"
+# language refers to.
+
+track: v2
+
+seeds:
+  confirmatory: [42, 123, 7, 456, 789]   # every 5-seed model/conformal run
+  tuning_grud_xgboost: [42, 123, 7]       # m2_grud_tuning.py / m2_xgboost_tuning*.py
+  mtan_tuning: [42, 123, 7]               # m2_mtan_tuning_matched_v2.py (closes Deviation 15); the earlier 1-seed m2_mtan_tuning_v2.py is superseded
+  bootstrap: 42                           # m2_v2_analyze.py / m2_hybrid_analyze.py RNG_SEED base (added per-seed)
+  bootstrap_n_resamples: 10000            # raised from the T=2 default of 1000 -- Sec 19.2 Monte-Carlo-stability finding
+
+cohort_v2:
+  # m2_build_irregular_cohort.py
+  age_min: 18
+  cut_year: 2016                          # chronological primary-split boundary (m2_chronological_eci.py::CUT_YEAR)
+  t_max_ed: 10                            # p90 of ED-vitalsign observations/stay; measured 0 stays truncated (Deviation 13)
+  dev_split_fractions: [0.7778, 0.1111, 0.0556, 0.0556]  # 70/90, 10/90, 5/90, 5/90 -- training/validation/calibration_selection/final_conformal_calibration
+  horizons_hours: [1, 6, 12]              # Gate v2 Sec 3 -- real time-to-event labels, not an LOS filter
+
+cohort_t2:
+  # data_general_processing.py (superseded, retained for the secondary track)
+  age_min: 18
+  train_fraction: 0.8
+  split_seed: 42
+  horizons_hours: [1, 6, 12]               # LOS-filtered, disclosed as confounded -- Gate v2 Sec 3 vs. v1
+
+conformal:
+  alpha: 0.1                               # 90% target coverage, MAPIE + ECI + Mondrian-LAC uniformly
+  eci_lr: 0.05                             # T=2 Track A primary (m2_ablations.py::ECI_LR)
+  eci_lr_hybrid_grid: [0.01, 0.05, 0.1]    # two-stage lr sweep, Hybrid-family pipeline (both cohorts)
+  eci_t_burnin: 5
+
+models:
+  grud:
+    hidden: 32
+    dropout: 0.2
+    weight_decay: 0.0001
+    lr: 0.01
+    batch_size: 128
+    max_epochs: 100
+    patience: 10
+  frozen_temporal_control:
+    fusion_dropout: 0.1
+    lr: 0.0005                             # re-selected by the 2026-09-21 end-to-end run (0.001 at the first pass: a near-tie); source of truth is data/m2_v2_frozen_control_tuned_config.json
+    batch_size: 128
+    max_epochs: 100
+    patience: 10
+    # Tuned, Phase 2b (2026-09-19, m2_frozen_control_tuning_v2.py) --
+    # Deviation 14 RESOLVED. See data/m2_v2_frozen_control_tuned_config.json.
+    # (Prior disclosed-reuse value: lr=0.0005, from the T=2 pipeline's own
+    # validation-selected winner.)
+  hybrid_grud:
+    static_hidden: 64
+    static_dropout: 0.3
+    fusion_dropout: 0.1
+    lr: 0.001
+    batch_size: 128
+    max_epochs: 100
+    patience: 10
+    # Tuned, Phase 2b (2026-09-19, m2_hybrid_head_tuning_v2.py) -- Deviation
+    # 14 RESOLVED. See data/m2_v2_hybrid_head_tuned_config.json. (Prior
+    # disclosed-reuse value: static_dropout=0.1, from the T=2 pipeline's own
+    # validation-selected winner.)
+  static_only_mlp:
+    hidden: 32
+    dropout: 0.2
+    lr: 0.001
+    max_epochs: 3000                       # m2_static_only_mlp.py's own diagnosed epoch budget for a 4-input MLP
+    patience: 10
+  xgboost_matched:
+    # Tuned, Phase 2a (2026-09-19, m2_xgboost_tuning_v2.py) -- Deviation 16
+    # RESOLVED. See data/m2_v2_xgboost_tuned_config.json. (Prior untuned
+    # pilot config: n_estimators=100, learning_rate=0.3.)
+    n_estimators: 1000
+    max_depth: 6
+    learning_rate: 0.03
+    subsample: 1.0
+    colsample_bytree: 1.0
+  mtan:
+    # m2_mtan_v2.py DEFAULTS, shown as the UNTUNED_BASE origin of the matched-rigor search only.
+    # The values m2_mtan_final_v2.py actually uses are read from
+    # data/m2_v2_mtan_tuned_config_matched.json (m2_mtan_tuning_matched_v2.py: 3 seeds, 4 stages,
+    # noise + ECE guards; closes Deviation 15) and are NOT duplicated here -- that file is the source
+    # of truth and includes lr and weight_decay, which the earlier lighter protocol did not tune.
+    untuned_base:
+      nhidden: 32
+      embed_time: 32
+      num_heads: 1
+      num_ref_points: 16
+      weight_decay: 0.0001
+      lr: 0.001
+    batch_size: 128
+    max_epochs: 100
+    patience: 10
+    time_scale_hours: 24.0
+
+# Stages added 2026-09-20 (each has its own pre-registration or deviation record)
+mondrian_eci:
+  preregistration: M2_MondrianECI_PreRegistration.md   # Parts 1-4
+  lr_grid: [0.01, 0.05, 0.1]
+  saturation_guard: 0.25
+  recalibration: {R_arrivals: 2000, windows_arrivals: [10000, 40000]}   # arrivals, NOT calendar time
+  valid_min_coverage: 0.89
+eci_vs_recalibration:
+  preregistration: M2_ECI_vs_Recalibration_PreRegistration.md
+label_lag:
+  preregistration: M2_LabelLag_PreRegistration.md
+  lags_arrivals: [0, 60, 240, 1000, 4000, 16000, inf]   # unit = arrivals; ~5 arrivals/hour is a coarse, uncertain conversion
+  realistic_band: [60, 240, 1000]
+  recalibration: {R_arrivals: 2000, windows_arrivals: [10000, 40000]}
+logit_vs_clipping:
+  script: m2_v2_logit_vs_clipping.py            # small required ablation; coverage of the logit-bounded interval is 0 by construction
+latency:
+  script: m2_v2_latency.py                      # batch=1, 2000 timed calls, budget 2000 ms; hardware recorded in data/m2_v2_latency.json
+horizon_ablation:
+  horizons_hours: [1, 6, 12]
+  models: [temporal_only_grud, hybrid_grud, xgboost_matched]   # 3 of 6; hyperparameters = composite-tuned, NOT re-tuned (Deviation 20)
+  env_switch: M2_V2_HORIZON
+  bootstrap_n_resamples: 10000
+
+gates:
+  outcome_definition_gate_v2_status: "SIGNED OFF (2026-09-19, approved by Akram; M2_Outcome_Definition_Gate.md)"
+  outcome_definition_gate_v1_status: "NEVER SIGNED OFF (superseded by v2; T=2 results retained as secondary/historical)"

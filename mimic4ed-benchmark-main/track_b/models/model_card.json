@@ -1,0 +1,66 @@
+{
+  "name": "m2_hybrid_grud_hz6h_seed42",
+  "module": "M2",
+  "track": "B",
+  "data_label": "Proxy/Simulated (MIMIC-IV-ED)",
+  "artifact": "m2_hybrid_grud_hz6h_seed42.onnx",
+  "artifact_sha256": "c4621775b50f06fe48ed8b6059ab9630cbbd98a18922aeafaad5fe69af354cb9",
+  "source_checkpoints": {
+    "m2_temporal_only_grud": {
+      "path": "data\\checkpoints\\m2_temporal_only_grud_v2_hz6h_seed42.pt",
+      "sha256": "7e5ef44f6b70c0b5ab9ffa821afe837724883914322f7469b4dd54e47f8b60c8"
+    },
+    "m2_hybrid_grud_head": {
+      "path": "data\\checkpoints\\m2_hybrid_grud_head_v2_hz6h_seed42.pt",
+      "sha256": "baa79ff853163b3bdbc2b9eb0a81c3d132f7646a0ca07b6dfa4ca55fd3cc4b84"
+    }
+  },
+  "seed": 42,
+  "seed_policy": "fixed in advance (first locked seed), not chosen by test score",
+  "horizon_h": 6,
+  "input_shapes": {
+    "X": "(B,11,7)",
+    "M": "(B,11,7)",
+    "D": "(B,11,7)",
+    "pad": "(B,11)",
+    "S": "(B,4)"
+  },
+  "vitals_order": [
+    "temperature",
+    "heartrate",
+    "resprate",
+    "o2sat",
+    "sbp",
+    "dbp",
+    "pain"
+  ],
+  "static_order": [
+    "age",
+    "sex",
+    "triage_acuity",
+    "comorbidity_elixhauser_count"
+  ],
+  "track_a_reference": {
+    "auroc": 0.9699077768837799,
+    "auprc": 0.6984970293301527,
+    "source": "data/m2_v2_seed_results_hz6h/hybrid_grud/seed_42.json"
+  },
+  "alert_threshold": {
+    "value": 0.01950964331626892,
+    "rule": "largest validation threshold with recall >= 0.95",
+    "chosen_on": "validation split (6h, horizon-eligible)"
+  },
+  "interval": {
+    "method": "periodic recalibration, absolute residual",
+    "alpha": 0.1,
+    "window": 10000,
+    "refresh_every": 2000,
+    "state_file": "m2_recalibration_state.json",
+    "calibration_fold": "final_conformal_calibration (6h, chronological)"
+  },
+  "exported_at": "2026-10-01T13:21:09",
+  "export_checks": {
+    "onnx_vs_torch_max_abs_diff": 3.5762786865234375e-07,
+    "test_auroc": 0.9699077720257998
+  }
+}

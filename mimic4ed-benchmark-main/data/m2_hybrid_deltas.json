@@ -1,0 +1,197 @@
+{
+  "Delta_representation": {
+    "model_a": "Hybrid GRU-D",
+    "model_b": "XGBoost-Matched",
+    "question": "PRIMARY: does temporal representation add value over matched tabular aggregation?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.0006251025215180395,
+        "ci_lo": -0.0010846139175928887,
+        "ci_hi": 0.0022130464332357318
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.0006396171146656471,
+        "ci_lo": -0.0011349496160481033,
+        "ci_hi": 0.002448547347728422
+      },
+      {
+        "seed": 7,
+        "point_estimate": 1.730165538349482e-05,
+        "ci_lo": -0.0017882271512510732,
+        "ci_hi": 0.0019476203145638302
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.0012223552487937717,
+        "ci_lo": -0.0006422006821824504,
+        "ci_hi": 0.003021750384041913
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.00012093715221506152,
+        "ci_lo": -0.0015500838728222165,
+        "ci_hi": 0.0019041565067002297
+      }
+    ],
+    "mean": 0.000525062738515203,
+    "sd": 0.00048230859291914404
+  },
+  "Delta_static_contribution": {
+    "model_a": "Hybrid GRU-D",
+    "model_b": "Frozen-Temporal Head Control",
+    "question": "Cleanest ablation: incremental contribution of the static MLP branch alone.",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.03878085540524556,
+        "ci_lo": 0.03540082822373489,
+        "ci_hi": 0.04184329316671273
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.03757595541918857,
+        "ci_lo": 0.03452139881392494,
+        "ci_hi": 0.040947044091404955
+      },
+      {
+        "seed": 7,
+        "point_estimate": 0.03838561327065493,
+        "ci_lo": 0.03495560837130418,
+        "ci_hi": 0.0417878310255255
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.037162598030943794,
+        "ci_lo": 0.033910032749119516,
+        "ci_hi": 0.04034495643941372
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.03754415999877314,
+        "ci_lo": 0.03451193888249271,
+        "ci_hi": 0.04060852788485827
+      }
+    ],
+    "mean": 0.0378898364249612,
+    "sd": 0.000668318536158659
+  },
+  "Delta_temporal_alone": {
+    "model_a": "Temporal-Only GRU-D",
+    "model_b": "XGBoost-Matched",
+    "question": "How strong is temporal representation alone vs. matched tabular aggregation?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": -0.0381565886118711,
+        "ci_lo": -0.04204269959542839,
+        "ci_hi": -0.03427210562182041
+      },
+      {
+        "seed": 123,
+        "point_estimate": -0.03859266296558872,
+        "ci_lo": -0.042634799009834426,
+        "ci_hi": -0.03464456291197303
+      },
+      {
+        "seed": 7,
+        "point_estimate": -0.0389612776559789,
+        "ci_lo": -0.0428841440913709,
+        "ci_hi": -0.03500651193692677
+      },
+      {
+        "seed": 456,
+        "point_estimate": -0.036221622815086896,
+        "ci_lo": -0.04014179289729994,
+        "ci_hi": -0.032207367597290835
+      },
+      {
+        "seed": 789,
+        "point_estimate": -0.03594301292154167,
+        "ci_lo": -0.03999285788890773,
+        "ci_hi": -0.032160121010740866
+      }
+    ],
+    "mean": -0.037575032994013456,
+    "sd": 0.0013955877424861696
+  },
+  "Delta_static_only": {
+    "model_a": "Static-Only MLP",
+    "model_b": "Temporal-Only GRU-D",
+    "question": "Relative contribution of static characteristics vs. temporal representation.",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": -0.019944110615310873,
+        "ci_lo": -0.025689369334621102,
+        "ci_hi": -0.014077715499000304
+      },
+      {
+        "seed": 123,
+        "point_estimate": -0.01962864667274289,
+        "ci_lo": -0.025775151495987067,
+        "ci_hi": -0.013372518289540197
+      },
+      {
+        "seed": 7,
+        "point_estimate": -0.018327492153365377,
+        "ci_lo": -0.02450752744775628,
+        "ci_hi": -0.011864039902990668
+      },
+      {
+        "seed": 456,
+        "point_estimate": -0.021366694351137694,
+        "ci_lo": -0.028035012211199063,
+        "ci_hi": -0.014865368607845854
+      },
+      {
+        "seed": 789,
+        "point_estimate": -0.021764467101789586,
+        "ci_lo": -0.0273281764319536,
+        "ci_hi": -0.015882027186890513
+      }
+    ],
+    "mean": -0.020206282178869283,
+    "sd": 0.0013880512715831474
+  },
+  "Delta_rich": {
+    "model_a": "XGBoost-Rich",
+    "model_b": "Hybrid GRU-D",
+    "question": "How much performance is attributable to richer features vs. representation choice?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.011153377866708558,
+        "ci_lo": 0.008801233086221355,
+        "ci_hi": 0.01344417973591171
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.01113886327356095,
+        "ci_lo": 0.008780539547460307,
+        "ci_hi": 0.013452599149393575
+      },
+      {
+        "seed": 7,
+        "point_estimate": 0.011761178732843103,
+        "ci_lo": 0.009249811370315211,
+        "ci_hi": 0.014217598083700924
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.010556125139432826,
+        "ci_lo": 0.008343527429779184,
+        "ci_hi": 0.013033987035595907
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.011657543236011536,
+        "ci_lo": 0.009240295387336287,
+        "ci_hi": 0.013998008449538963
+      }
+    ],
+    "mean": 0.011253417649711394,
+    "sd": 0.00048230859291914404
+  }
+}

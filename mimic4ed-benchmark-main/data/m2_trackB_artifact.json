@@ -1,0 +1,13 @@
+{
+  "auroc": 0.9216,
+  "auprc": 0.5555,
+  "coverage_mapie": 0.899,
+  "width_mapie": 0.2294,
+  "coverage_eci": 0.9003,
+  "width_eci": 0.2539,
+  "onnx_kb": 73.7,
+  "onnx_vs_torch_max_abs_diff": 1.9073486328125e-06,
+  "delta_t_sensitivity": 2.187784,
+  "latency_ms_per_patient": 0.0757,
+  "n_latency_samples": 5000
+}

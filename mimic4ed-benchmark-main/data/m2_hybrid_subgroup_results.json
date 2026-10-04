@@ -1,0 +1,123 @@
+{
+  "density_bucketing": "natural breaks: Sparse<=7, Moderate=8-13, Dense=14 (see Deviation 5)",
+  "frac_fully_observed_dev_population": 0.7783401505260045,
+  "density_group_sizes": {
+    "Dense": 64829,
+    "Moderate": 14291,
+    "Sparse": 4212
+  },
+  "primary_interaction_test": [
+    {
+      "seed": 42,
+      "did": 0.006980130614816948,
+      "ci_lo": 0.002503613283267353,
+      "ci_hi": 0.01153140037294114
+    },
+    {
+      "seed": 123,
+      "did": 0.0050164277013946545,
+      "ci_lo": 0.0006303153822601548,
+      "ci_hi": 0.010053687427747668
+    },
+    {
+      "seed": 7,
+      "did": 0.006271667479372245,
+      "ci_lo": 0.001511411008444305,
+      "ci_hi": 0.011033116365430187
+    },
+    {
+      "seed": 456,
+      "did": 0.004999214358763826,
+      "ci_lo": 0.0007435238444204602,
+      "ci_hi": 0.010078516644401174
+    },
+    {
+      "seed": 789,
+      "did": 0.005294549981501029,
+      "ci_lo": 0.0006225161349142999,
+      "ci_hi": 0.010230267420387854
+    }
+  ],
+  "exploratory_subgroups": {
+    "age_group": [
+      {
+        "group": "<65",
+        "n": 58547,
+        "auroc_hybrid": 0.9126938747518758,
+        "auroc_xgboost_matched": 0.9144734273497871
+      },
+      {
+        "group": "65-80",
+        "n": 15880,
+        "auroc_hybrid": 0.886251062016566,
+        "auroc_xgboost_matched": 0.8837888215789811
+      },
+      {
+        "group": ">80",
+        "n": 8905,
+        "auroc_hybrid": 0.8513980005080921,
+        "auroc_xgboost_matched": 0.8448425965188218
+      }
+    ],
+    "acuity_group": [
+      {
+        "group": "High(1-2)",
+        "n": 32467,
+        "auroc_hybrid": 0.8485629521974258,
+        "auroc_xgboost_matched": 0.8424363680674732
+      },
+      {
+        "group": "Intermediate(3)",
+        "n": 44896,
+        "auroc_hybrid": 0.8270944748284272,
+        "auroc_xgboost_matched": 0.837050123471753
+      },
+      {
+        "group": "Low(4-5)",
+        "n": 5969,
+        "auroc_hybrid": 0.9199765376235964,
+        "auroc_xgboost_matched": 0.9476286240992123
+      }
+    ],
+    "density_group": [
+      {
+        "group": "Sparse",
+        "n": 4212,
+        "auroc_hybrid": 0.9491319698975221,
+        "auroc_xgboost_matched": 0.9426359112037214
+      },
+      {
+        "group": "Moderate",
+        "n": 14291,
+        "auroc_hybrid": 0.9106762922628596,
+        "auroc_xgboost_matched": 0.9052039023088084
+      },
+      {
+        "group": "Dense",
+        "n": 64829,
+        "auroc_hybrid": 0.8848414955978828,
+        "auroc_xgboost_matched": 0.885325567518899
+      }
+    ],
+    "news2_risk_group": [
+      {
+        "group": "Low(<3)",
+        "n": 80596,
+        "auroc_hybrid": 0.9003658526488164,
+        "auroc_xgboost_matched": 0.8999033436332038
+      },
+      {
+        "group": "Intermediate",
+        "n": 2684,
+        "auroc_hybrid": 0.850348259514772,
+        "auroc_xgboost_matched": 0.8427778714232235
+      },
+      {
+        "group": "High(>=7)",
+        "n": 52,
+        "auroc_hybrid": 0.7765765765765766,
+        "auroc_xgboost_matched": 0.8126126126126126
+      }
+    ]
+  }
+}

@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Pre-specified comparators for the online label-conditional construction (B), Hybrid GRU-D (primary model). A method is \emph{valid} if coverage of both classes is $\geq 0.89$. A: static Mondrian-LAC; B: Mondrian-ECI; C1 and C2: static Mondrian with periodic recalibration over the two window lengths shown; D and E: conditioning on bins of the model's own risk score instead of the true label, static (D) and online (E). Labels are assumed immediate for all methods; recalibration windows are in arrivals, not calendar time. The valid method with the smallest mean set size is in bold. Proxy cohort (MIMIC-IV-ED-derived).}
+\label{tab:m2-mondrian-comparators}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lccccc}
+\toprule
+Method & Class-0 cov. & Class-1 cov. & Mean $|C|$ & Informative $P(C{=}\{1\}\mid y{=}1)$ & Valid \\
+\midrule
+A: static Mondrian-LAC & 0.914 $\pm$ 0.001 & 0.895 $\pm$ 0.005 & 1.091 $\pm$ 0.008 & 0.794 $\pm$ 0.005 & yes \\
+B: Mondrian-ECI (online, label-cond.) & 0.900 $\pm$ 0.001 & 0.898 $\pm$ 0.001 & 1.133 $\pm$ 0.039 & 0.808 $\pm$ 0.004 & yes \\
+C1: static Mondrian + recal.\ ($W{=}10$k) & 0.901 $\pm$ 0.000 & 0.901 $\pm$ 0.001 & 1.087 $\pm$ 0.003 & 0.816 $\pm$ 0.003 & yes \\
+C2: static Mondrian + recal.\ ($W{=}40$k) & \textbf{0.903 $\pm$ 0.000} & \textbf{0.899 $\pm$ 0.001} & \textbf{1.085 $\pm$ 0.004} & \textbf{0.813 $\pm$ 0.004} & yes \\
+D: static score-bin Mondrian & 0.927 $\pm$ 0.003 & 0.636 $\pm$ 0.009 & 0.996 $\pm$ 0.005 & 0.266 $\pm$ 0.020 & no \\
+E: online score-bin ECI & 0.956 $\pm$ 0.006 & 0.648 $\pm$ 0.008 & 1.030 $\pm$ 0.006 & 0.266 $\pm$ 0.011 & no \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

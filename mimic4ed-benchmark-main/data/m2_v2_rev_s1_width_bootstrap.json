@@ -1,0 +1,484 @@
+{
+  "n_boot": 10000,
+  "rng_seed_base": 42,
+  "family_size": 9,
+  "contrasts": {
+    "Temporal-Only GRU-D v2 | ECI - static": {
+      "model": "Temporal-Only GRU-D v2",
+      "contrast": "ECI - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.03587125470878851,
+          "ci_lo": 0.03499618363730862,
+          "ci_hi": 0.03671906192285509,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.01721834194773628,
+          "ci_lo": 0.016927581838536654,
+          "ci_hi": 0.017517942803394772,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.01585558263730699,
+          "ci_lo": 0.01554342707723979,
+          "ci_hi": 0.01616024716660669,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.028393469574405812,
+          "ci_lo": 0.027526870033780914,
+          "ci_hi": 0.02926547886609281,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.02830590714011175,
+          "ci_lo": 0.027395214630597534,
+          "ci_hi": 0.029238055554771415,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.02512891120166987,
+      "sd": 0.008436828746198399,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Temporal-Only GRU-D v2 | recal(10k) - static": {
+      "model": "Temporal-Only GRU-D v2",
+      "contrast": "recal(10k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.010628669385449221,
+          "ci_lo": 0.010512346386490255,
+          "ci_hi": 0.01074664819972977,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.009960129738195043,
+          "ci_lo": 0.009835100529064014,
+          "ci_hi": 0.010085789022811837,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.010586993245025884,
+          "ci_lo": 0.010463201085839806,
+          "ci_hi": 0.010709383124010636,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.009705353482403157,
+          "ci_lo": 0.009580935478894909,
+          "ci_hi": 0.009830118655810882,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.006113012558267029,
+          "ci_lo": 0.005949637375757428,
+          "ci_hi": 0.006275218997808696,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.009398831681868069,
+      "sd": 0.0018794844447731806,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Temporal-Only GRU-D v2 | recal(40k) - static": {
+      "model": "Temporal-Only GRU-D v2",
+      "contrast": "recal(40k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.011183469814361625,
+          "ci_lo": 0.011146604624701155,
+          "ci_hi": 0.011220413887113024,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.010854625780513003,
+          "ci_lo": 0.01081937902200125,
+          "ci_hi": 0.010890237355286485,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.011176376768590644,
+          "ci_lo": 0.01114276028597469,
+          "ci_hi": 0.011210193262565152,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.01098598347941935,
+          "ci_lo": 0.010948420142052417,
+          "ci_hi": 0.011024849578728898,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.009488418745539755,
+          "ci_lo": 0.00944758187916862,
+          "ci_hi": 0.009528974132797182,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.010737774917684875,
+      "sd": 0.000711893247559061,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Frozen-Temporal Head Control v2 | ECI - static": {
+      "model": "Frozen-Temporal Head Control v2",
+      "contrast": "ECI - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.04158674325815663,
+          "ci_lo": 0.040609242296386835,
+          "ci_hi": 0.04255629462894289,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.033784908799885674,
+          "ci_lo": 0.032859146873797464,
+          "ci_hi": 0.03470339922779575,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.044252023853112415,
+          "ci_lo": 0.043291592776926055,
+          "ci_hi": 0.04519625651018031,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.03659360516005784,
+          "ci_lo": 0.035631898726623076,
+          "ci_hi": 0.0375547937962739,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.040361116962713134,
+          "ci_lo": 0.03940461528284866,
+          "ci_hi": 0.04134371755831711,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.03931567960678514,
+      "sd": 0.004141777363161134,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Frozen-Temporal Head Control v2 | recal(10k) - static": {
+      "model": "Frozen-Temporal Head Control v2",
+      "contrast": "recal(10k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.002983066027445866,
+          "ci_lo": 0.0028632825658124533,
+          "ci_hi": 0.003101284766803118,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 9.364982627639022e-05,
+          "ci_lo": -3.0056300537735342e-05,
+          "ci_hi": 0.0002189251721449469,
+          "excludes_zero": false,
+          "p_proxy": 0.141
+        },
+        {
+          "seed": 7,
+          "point": 0.002316000333412923,
+          "ci_lo": 0.002194895983475126,
+          "ci_hi": 0.0024361003708755218,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.0018202642460236518,
+          "ci_lo": 0.0017066592552962751,
+          "ci_hi": 0.0019305645291309446,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.0023261001917432894,
+          "ci_lo": 0.0021866015234976626,
+          "ci_hi": 0.0024645341896644708,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.001907816124980424,
+      "sd": 0.0010950574131222122,
+      "excludes_zero_n_of_5": 4,
+      "p_proxy_conservative": 0.141,
+      "holm_p": 0.141,
+      "holm_significant": false,
+      "significant_by_paper_rule": false
+    },
+    "Frozen-Temporal Head Control v2 | recal(40k) - static": {
+      "model": "Frozen-Temporal Head Control v2",
+      "contrast": "recal(40k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.004605074157463353,
+          "ci_lo": 0.004567601361348846,
+          "ci_hi": 0.00464264606606501,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.0019562021905238343,
+          "ci_lo": 0.0019102582393273916,
+          "ci_hi": 0.0020016115218357017,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.004386461075190201,
+          "ci_lo": 0.004344017868562753,
+          "ci_hi": 0.004429482199733876,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.0038499395064856144,
+          "ci_lo": 0.0038007436974618137,
+          "ci_hi": 0.0038979682435487514,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.004360973314412196,
+          "ci_lo": 0.00431564658152964,
+          "ci_hi": 0.004407654040096718,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.0038317300488150395,
+      "sd": 0.0010844148638504648,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Hybrid GRU-D v2 | ECI - static": {
+      "model": "Hybrid GRU-D v2",
+      "contrast": "ECI - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.011105382816959134,
+          "ci_lo": 0.010792463210380781,
+          "ci_hi": 0.01141408314075057,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.03403730280939633,
+          "ci_lo": 0.03312888970286639,
+          "ci_hi": 0.03493318860761149,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.034462937575599456,
+          "ci_lo": 0.03357339456387453,
+          "ci_hi": 0.03534827773961455,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.023126177068100908,
+          "ci_lo": 0.02222845887140718,
+          "ci_hi": 0.024014731927574966,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": 0.013645759394131202,
+          "ci_lo": 0.0129841269543782,
+          "ci_hi": 0.014325850524722683,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.02327551193283741,
+      "sd": 0.010975439774091164,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Hybrid GRU-D v2 | recal(10k) - static": {
+      "model": "Hybrid GRU-D v2",
+      "contrast": "recal(10k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.004657658418223859,
+          "ci_lo": 0.004538176416324946,
+          "ci_hi": 0.004777026869996394,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.0044880973993957135,
+          "ci_lo": 0.004375791150988398,
+          "ci_hi": 0.004601426532261797,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.000557580744387682,
+          "ci_lo": 0.0004424184559104537,
+          "ci_hi": 0.0006692528350379151,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": -0.000900382349280581,
+          "ci_lo": -0.0009958838161159504,
+          "ci_hi": -0.000801165616413431,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": -0.003857786608395236,
+          "ci_lo": -0.003984242773028706,
+          "ci_hi": -0.003730524695290613,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.0009890335208662872,
+      "sd": 0.0036383363594385374,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    },
+    "Hybrid GRU-D v2 | recal(40k) - static": {
+      "model": "Hybrid GRU-D v2",
+      "contrast": "recal(40k) - static",
+      "per_seed": [
+        {
+          "seed": 42,
+          "point": 0.006586651433161032,
+          "ci_lo": 0.006550260771672399,
+          "ci_hi": 0.00662407009361927,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 123,
+          "point": 0.006570607113522063,
+          "ci_lo": 0.006529114831237075,
+          "ci_hi": 0.006612348821504148,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 7,
+          "point": 0.002916234336826412,
+          "ci_lo": 0.002879136277832071,
+          "ci_hi": 0.0029538284471948137,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 456,
+          "point": 0.0015226438280874996,
+          "ci_lo": 0.0014768599502501117,
+          "ci_hi": 0.00156839133540913,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        },
+        {
+          "seed": 789,
+          "point": -0.00025732318053205524,
+          "ci_lo": -0.0003087586658065212,
+          "ci_hi": -0.0002048298870907205,
+          "excludes_zero": true,
+          "p_proxy": 0.0
+        }
+      ],
+      "mean": 0.00346776270621299,
+      "sd": 0.003054465835582315,
+      "excludes_zero_n_of_5": 5,
+      "p_proxy_conservative": 0.0,
+      "holm_p": 0.0,
+      "holm_significant": true,
+      "significant_by_paper_rule": true
+    }
+  }
+}

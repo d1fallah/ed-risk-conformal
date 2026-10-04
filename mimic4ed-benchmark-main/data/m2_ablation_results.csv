@@ -1,0 +1,9 @@
+ablation,variant,auroc,auprc,coverage,width,latency_ms,coverage_eci
+MAPIE_vs_ECI,GRU-D + MAPIE,0.9216,0.5555,0.899,0.2294,0.0009,
+MAPIE_vs_ECI,GRU-D + ECI,0.9216,0.5555,0.9003,0.2539,0.0103,
+Horizon,Horizon 1h,0.9754,0.7257,0.915,,,0.9014
+Horizon,Horizon 6h,0.9446,0.6414,0.8836,,,0.9001
+Horizon,Horizon 12h,0.9256,0.5733,0.8914,,,0.8997
+Horizon,Horizon All,0.9216,0.5555,0.899,,,0.9003
+Logit_vs_Clip,ECI + Clipping,0.9216,0.5555,0.9003,0.2539,,
+Logit_vs_Clip,ECI + Logit-transform,0.9216,0.5555,0.0,0.0163,,

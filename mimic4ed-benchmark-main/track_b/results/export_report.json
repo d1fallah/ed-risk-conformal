@@ -1,0 +1,67 @@
+{
+  "module": "M2",
+  "track": "B",
+  "data_label": "Proxy/Simulated (MIMIC-IV-ED)",
+  "tests": {
+    "loads_from_models_dir": {
+      "pass": true,
+      "artifact_sha256": "c4621775b50f06fe48ed8b6059ab9630cbbd98a18922aeafaad5fe69af354cb9"
+    },
+    "matches_trackA_pytorch": {
+      "pass": true,
+      "max_abs_diff": 2.980232238769531e-07,
+      "n": 84229
+    },
+    "reproduces_trackA_auroc": {
+      "pass": true,
+      "auroc": 0.9699077720257998,
+      "track_a_seed42_hz6h_auroc": 0.9699077768837799
+    },
+    "recalibration_matches_trackA": {
+      "pass": true,
+      "stream_match": true,
+      "static_reproduction": true
+    },
+    "interval_coverage_track_b_metric": {
+      "marginal_coverage": 0.9014591174061191,
+      "coverage_positive_class": 0.08305128872689403,
+      "coverage_negative_class": 0.940563268149475,
+      "mean_width": 0.07929219948892902,
+      "n_positive": 3841,
+      "n": 84229,
+      "labels_assumed_immediate": true,
+      "pass": true
+    },
+    "alert_threshold_track_b_metric": {
+      "threshold": 0.01950964331626892,
+      "validation_recall": 0.951073985680191,
+      "test_recall": 0.9565217391304348,
+      "test_precision": 0.24128193340776252,
+      "test_alert_rate": 0.18078096617554523,
+      "test_positive_rate": 0.04560187108952973,
+      "n_test": 84229,
+      "pass": true
+    },
+    "news2_fallback_matches_trackA": {
+      "pass": true,
+      "n": 20000,
+      "n_mismatch": 0
+    },
+    "latency": {
+      "n": 1000,
+      "p50_ms": 0.23529999998572748,
+      "p95_ms": 0.31524000087301823,
+      "p99_ms": 0.38488699967274437,
+      "max_ms": 0.7493000011891127,
+      "scope": "in-process: preprocessing + ONNX (CPU, 1 thread) + interval; excludes HTTP/JSON overhead",
+      "targets": {
+        "risk_score_endpoint_ms": 100,
+        "update_s": 2.0
+      },
+      "pass": true
+    }
+  },
+  "cleared": true,
+  "failed": [],
+  "run_at": "2026-10-01T13:21:24"
+}

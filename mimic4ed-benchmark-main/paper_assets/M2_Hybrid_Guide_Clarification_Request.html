@@ -1,0 +1,190 @@
+<title>M2 Hybrid Guide Clarification Request</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;0,8..60,600;0,8..60,700;1,8..60,400;1,8..60,600&family=Public+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap">
+<style>
+  @page{ size:A4; margin:20mm 16mm 22mm; }
+
+  :root{
+    --ink:#1B2430; --ink-soft:#4E5964; --ink-faint:#7C8791;
+    --paper:#F3F4F1; --surface:#FFFFFF; --surface-2:#EDEFEC; --border:#D6DAD5;
+    --accent:#1C6E68; --accent-strong:#123F3B; --accent-soft:#E1EEEC;
+    --amber:#93591F; --amber-soft:#F3E7D9;
+    --brick:#8E3333; --brick-soft:#F5E2E1;
+    --font-display:'Source Serif 4', Georgia, 'Times New Roman', serif;
+    --font-body:'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --font-mono:'JetBrains Mono','SF Mono', Consolas, 'Liberation Mono', monospace;
+  }
+
+  *{box-sizing:border-box; -webkit-print-color-adjust:exact; print-color-adjust:exact;}
+  html,body{margin:0; padding:0;}
+  body{
+    background:var(--paper); color:var(--ink);
+    font-family:var(--font-body); font-size:10.6pt; line-height:1.55;
+  }
+
+  .page{max-width:100%; margin:0 auto;}
+
+  .masthead{display:flex; flex-direction:column; gap:10px; padding-bottom:16px; border-bottom:1.5px solid var(--ink); margin-bottom:22px;}
+  .eyebrow{font-family:var(--font-mono); font-size:8.5pt; letter-spacing:0.09em; text-transform:uppercase; color:var(--ink-soft);}
+  h1{font-family:var(--font-display); font-weight:600; font-size:21pt; line-height:1.18; margin:0; color:var(--ink);}
+  .subtitle{font-family:var(--font-display); font-style:italic; font-size:12pt; color:var(--ink-soft); margin:0;}
+  .memoline{font-size:9pt; color:var(--ink-soft); margin:2px 0 0;}
+  .memoline b{color:var(--ink); font-weight:600;}
+  .chiprow{display:flex; flex-wrap:wrap; gap:7px; margin-top:4px;}
+
+  .tag{display:inline-flex; align-items:center; gap:5px; font-family:var(--font-mono); font-size:7.6pt; font-weight:600; letter-spacing:0.03em; text-transform:uppercase; padding:2.5px 8px; border-radius:999px; border:1px solid transparent; white-space:nowrap;}
+  .tag-real{color:var(--accent-strong); background:var(--accent-soft); border-color:var(--accent);}
+  .tag-sim{color:var(--amber); background:var(--amber-soft); border-color:var(--amber);}
+  .tag-blocked{color:var(--brick); background:var(--brick-soft); border-color:var(--brick);}
+  .tag-neutral{color:var(--ink-soft); background:var(--surface-2); border-color:var(--border);}
+
+  .headline{background:var(--surface); border:1px solid var(--border); border-left:4px solid var(--accent); border-radius:2px; padding:16px 18px; margin-bottom:22px; break-inside:avoid;}
+  .headline-label{font-family:var(--font-mono); font-size:7.6pt; letter-spacing:0.07em; text-transform:uppercase; color:var(--accent-strong); margin-bottom:9px; display:block;}
+  .headline p{font-family:var(--font-display); font-size:11.5pt; line-height:1.55; margin:0 0 12px; color:var(--ink);}
+
+  section{margin-bottom:22px; break-inside:avoid;}
+  h2{font-family:var(--font-display); font-weight:600; font-size:13.5pt; display:flex; align-items:baseline; gap:8px; margin:0 0 8px; break-after:avoid;}
+  .secnum{font-family:var(--font-mono); font-size:9pt; color:var(--ink-faint); font-weight:500;}
+  p{max-width:none; margin:0 0 10px;}
+  code, .mono{font-family:var(--font-mono); font-size:0.92em; background:var(--surface-2); padding:0.03em 0.3em; border-radius:3px;}
+  em.quote{font-style:italic; color:var(--accent-strong);}
+
+  table{border-collapse:collapse; width:100%; font-size:8.8pt;}
+  .tablewrap{margin:10px 0 14px; break-inside:avoid;}
+  thead th{text-align:left; font-weight:600; font-size:7.6pt; letter-spacing:0.02em; text-transform:uppercase; color:var(--ink-soft); border-bottom:1.3px solid var(--ink); padding:6px 10px 6px 0;}
+  tbody td{padding:7px 10px 7px 0; border-bottom:0.75px solid var(--border); vertical-align:top;}
+  tbody tr:last-child td{border-bottom:1.3px solid var(--ink);}
+  td.status{white-space:nowrap; width:1%;}
+
+  .callout{border:1px solid var(--border); border-left:3.5px solid var(--ink-faint); background:var(--surface); border-radius:2px; padding:12px 14px; margin:10px 0; break-inside:avoid;}
+  .callout.watch{border-left-color:var(--amber); background:var(--amber-soft);}
+  .callout.ask{border-left-color:var(--brick); background:var(--brick-soft);}
+  .callout .taglabel{font-family:var(--font-mono); font-size:7.4pt; letter-spacing:0.06em; text-transform:uppercase; color:var(--ink-faint); display:block; margin-bottom:6px;}
+  .callout.ask .taglabel{color:var(--brick);}
+  .callout.watch .taglabel{color:var(--amber);}
+  .callout p{margin:0 0 6px; max-width:none;}
+  .callout p:last-child{margin-bottom:0;}
+  .callout ol, .callout ul{margin:0; padding-left:1.15em;}
+  .callout li{margin-bottom:5px;}
+  .callout li:last-child{margin-bottom:0;}
+
+  ul.assets{padding-left:1.2em; margin:6px 0;}
+  ul.assets li{margin-bottom:5px; font-size:9.4pt;}
+
+  footer{border-top:1px solid var(--border); margin-top:26px; padding-top:12px; font-size:8pt; color:var(--ink-faint); font-style:italic;}
+  footer .mono{font-style:normal;}
+</style>
+
+<div class="page">
+
+  <div class="masthead">
+    <span class="eyebrow">SihhaDZ · Module 2 · Hybrid GRU-D Execution Guide — Clarification Request</span>
+    <h1>M2 Clarification Request — Hybrid GRU-D Guide v3.2</h1>
+    <p class="subtitle">28 August 2026</p>
+    <p class="memoline"><b>To:</b> Supervisor &nbsp;·&nbsp; <b>From:</b> Student 2 — M2 &nbsp;·&nbsp; <b>Re:</b> <span class="mono">M2_Hybrid_GRU_D_Student_Execution_Guide_v3_2.docx</span> — four points requiring your decision before Hybrid GRU-D construction begins</p>
+    <div class="chiprow">
+      <span class="tag tag-real">6 of 8 baseline numbers verified exact</span>
+      <span class="tag tag-blocked">4 items pending your decision</span>
+      <span class="tag tag-neutral">Data pipeline + 2 of 4 models already proceeding</span>
+    </div>
+  </div>
+
+  <div class="headline">
+    <span class="headline-label">Summary</span>
+    <p>Before starting on the Hybrid GRU-D model itself, every "frozen"/"already validated" number and architectural claim in the guide was cross-checked directly against the actual M2 codebase and saved result files — not just re-read from the prior reports. Six of eight baseline numbers checked matched exactly. Four points did not resolve cleanly, and rather than pick an interpretation unilaterally, all four are brought to you below before any Hybrid GRU-D model code is written. Work that doesn't depend on these four points — the data/leakage pipeline, the Static-Only MLP, and XGBoost-Matched — is already complete; see the closing section.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th style="width:6%">#</th><th>Item</th><th>What's blocked</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>Static-feature confound in the "Frozen"/"Tuned" GRU-D baseline, plus overlapping terminology</td><td>Δ_static's validity; which checkpoint is compared against Hybrid GRU-D</td></tr>
+          <tr><td>2</td><td>Fusion width: 96-d (diagram) vs. 64-d (arithmetic from the frozen hidden dim)</td><td>Hybrid GRU-D's fusion-layer/prediction-head shape</td></tr>
+          <tr><td>3</td><td>GRU-D learning rate: 5e-4 (guide) vs. 0.01 (actual frozen checkpoint)</td><td>Which lr the "frozen" temporal branch trains at</td></tr>
+          <tr><td>4</td><td>Stale "Historical" baseline number, not reproducible from any current file</td><td>What the Historical row in the final table reports</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="secnum">01</span> Static-feature confound + overlapping "Frozen" terminology</h2>
+    <p>The guide's §1 table lists <strong>"GRU-D Tuned (Primary Comparator)"</strong> — AUROC 0.9009 ± 0.0042 — as <strong>"Temporal vitals only (2-timestep, irregular)."</strong> §4.1's four-way model-definition table separately lists <strong>"Frozen GRU-D"</strong> (no "(Historical)" suffix) with the same "✓ temporal / ✗ static" characterization, described in §2.1 as reusing the existing GRU-D implementation with "HYPERPARAMETERS FROZEN: hidden dim = 32, dropout = 0.2, weight decay = 1e-4" — the identical configuration as "GRU-D Tuned."</p>
+    <p>The actual code (<span class="mono">m2_ablations.py:120-145</span>, <span class="mono">GRUD.forward</span>) shows this exact model is not temporal-only:</p>
+    <p class="mono" style="display:block; white-space:pre; background:var(--surface-2); padding:10px 12px; border-radius:3px; font-size:8.6pt; line-height:1.5; overflow-x:auto;">self.clf = nn.Sequential(
+    nn.Linear(hid+stat, clf_hidden), nn.ReLU(),
+    nn.Dropout(dropout), nn.Linear(clf_hidden, out)
+)
+...
+return self.clf(torch.cat([h, S], 1))   # h = temporal hidden state, S = 24 static features</p>
+    <p><span class="mono">stat=24</span> (<span class="mono">static_cols</span>, <span class="mono">m2_ablations.py:58-68</span>): age, gender, triage acuity, 9 utilization counts (ED/hosp/ICU visits at 30/90/365 days), 10 chief-complaint flags, med/med-reconciliation counts. This is baked into every saved AUROC for this model, including the 0.9009 figure.</p>
+    <p>This means Δ_static = AUROC_Hybrid − AUROC_Frozen would not cleanly answer "did adding static information help," since the comparator already has (a different, broader) static information fused in.</p>
+    <div class="callout ask">
+      <span class="taglabel">Three questions</span>
+      <ol>
+        <li>Should a genuinely temporal-only control (<span class="mono">static_size=0</span>, same architecture otherwise) be added as an additional ablation arm, so Δ_static has a clean denominator? <em>(Recommendation, if useful: yes — it's a cheap addition given the architecture refactor is already needed for the two-branch design, and it makes the causal claim defensible under review.)</em></li>
+        <li>In the guide's own usage, does "Frozen GRU-D" (§4.1) refer to the same checkpoint as "GRU-D Tuned" (§1), or something else?</li>
+        <li>§10's final comparison table shows blank ("—") Coverage/Width cells for "GRU-D Tuned," even though this model's MAPIE/ECI coverage and width are already computed and saved (<span class="mono">data/m2_multiseed_overall.csv</span>: coverage_mapie 90.13%±0.16pp, width_mapie 0.2824±0.0586). Is that omission intentional, or should those cells be filled from the existing data?</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="secnum">02</span> Fusion width: 96-d vs. 64-d</h2>
+    <p>§2's architecture diagram states the fusion layer is 64-d (temporal) + 32-d (static) = 96-d → <span class="mono">Linear(96, 1)</span>. §6.1's hyperparameter table freezes the GRU-D hidden dim at 32 (matching the actual code's <span class="mono">hid=32</span>), which would make the real temporal embedding 32-d, not 64-d — so fusion would be 32+32=64-d → <span class="mono">Linear(64, 1)</span>, not 96.</p>
+    <div class="callout ask">
+      <span class="taglabel">Question</span>
+      <p>Which is authoritative: retrain the temporal branch at <span class="mono">hidden_dim=64</span> to match the diagram (a deviation from "frozen"/"already validated" hidden=32), or treat the diagram's 64-d/96-d labels as a documentation slip and build 32+32=64-d?</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="secnum">03</span> GRU-D learning rate: 5e-4 vs. 0.01</h2>
+    <p>§6.1's table states: "Learning rate | 5e-4 | Already validated as best config in M2." Checked against every artifact that documents the tuning search: <span class="mono">M2_Findings_Dossier.md</span> §2's tuning stages vary <span class="mono">pos_weight, hid, dropout, weight_decay, batch_size, early_stopping</span> — no learning-rate sweep appears anywhere; <span class="mono">data/m2_grud_tuning_trace.csv</span>'s header has no learning-rate column; and the actual tuned/frozen model's code (<span class="mono">m2_ablations.py:158-165</span>, <span class="mono">SKLearnGRUD.__init__</span>) hardcodes <span class="mono">lr=0.01</span> as the default, with its own inline comment naming only <span class="mono">hid=32, dropout=0.2, weight_decay=1e-4</span> as "the winning config" — lr is not part of that list.</p>
+    <div class="callout ask">
+      <span class="taglabel">Question</span>
+      <p>Should the frozen temporal branch train at lr=0.01 (what's actually in every saved artifact), or at 5e-4 (the guide's stated value, which would need its own validation since it was never tested in any saved trace)?</p>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="secnum">04</span> Stale "Historical" baseline number</h2>
+    <p>§1/§10 state: <em class="quote">"GRU-D Frozen (Historical) | ... | 0.8937 ± 0.0128 | 0.4196 ± 0.0424 | ... pre-tuning baseline"</em>, with §1's instruction "Do not rerun, recompute, or modify."</p>
+    <p>This number predates a fit/calibration-split leakage fix documented in <span class="mono">M2_Findings_Dossier.md</span> §1.2 (10,156 overlapping patients found at seed 42 under the old row-level split). The pre-tuning baseline was re-run after that fix, and the currently-archived, reproducible result (<span class="mono">data/m2_seed_results_pretuning/seed_{42,123,7,456,789}.json</span>, aggregated in <span class="mono">data/m2_multiseed_overall_pretuning.csv</span>) is <strong>0.8925 ± 0.0136</strong> (AUPRC <strong>0.4176 ± 0.0469</strong>) — not 0.8937/0.0128 or 0.4196/0.0424. No file in the repo currently reproduces the guide's exact stated figures.</p>
+    <div class="callout ask">
+      <span class="taglabel">Question</span>
+      <p>Should the Historical row report the reproducible 0.8925 ± 0.0136 (with a note that the guide's figure predates the leakage fix), or the guide's stated 0.8937 ± 0.0128 (footnoted as supervisor-provided, not independently reproducible from current repo artifacts)? This doesn't affect anything else — §0.1's Fix #1 already relegates this specific number to a historical footnote regardless of which value is used.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>For your awareness — not blocking</h2>
+    <div class="callout watch">
+      <span class="taglabel">Transparency notes</span>
+      <ul>
+        <li><strong>Outcome-Definition Gate status:</strong> <span class="mono">M2_Outcome_Definition_Gate.md</span>'s last line still literally reads "Pending Supervisor Approval," even though every M2 script complies with it and both prior reports treat it as binding. Worth a formal status update at your convenience.</li>
+        <li><strong>Elixhauser category count:</strong> §3.1 states "29 AHRQ categories." The vendored mapper (<span class="mono">medcodes/diagnoses/comorbidities.py:109-111</span>, citing Quan H, Sundararajan V, Halfon P, et al., "Coding algorithms for defining Comorbidities in ICD-9-CM and ICD-10 administrative data," <em>Med Care</em>, 2005 Nov;43(11):1130-9) implements <strong>31</strong> categories. The comorbidity-burden feature is documented as a sum over the real 31, not 29, per the project's citation-verification standard.</li>
+        <li><strong>Roadmap scope:</strong> <span class="mono">SihhaDZ_Student_Roadmap_v8-1.pdf</span>'s M2 section lists exactly three closed-menu optional enhancements (frequency-decoupled vitals, test-time adaptation, sensitivity-aware DeepSHAP caching) and doesn't include a hybrid static+temporal architecture among them. This guide's own "Approved for execution after peer review" is being treated as your direct authorization superseding that closed menu — flagged for the record, not as an objection.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>What's proceeding vs. paused</h2>
+    <p><span class="tag tag-blocked" style="margin-right:6px;">Paused</span> pending your answers above: all Hybrid GRU-D model code, its multi-seed training, and everything downstream of it (uncertainty analysis, Δ_temporal/Δ_static, subgroup analysis, final synthesis table).</p>
+    <p><span class="tag tag-real" style="margin-right:6px;">Complete</span> since none of it depends on the four items above: environment setup, the four-static-feature data pipeline and Feature Availability Table, the Pre-Experiment Leakage Checklist, the Static-Only MLP model (5-seed AUROC 0.8489 ± 0.0004), and XGBoost-Matched (5-seed AUROC 0.9075, deterministic).</p>
+  </section>
+
+  <section>
+    <h2>Asset index</h2>
+    <ul class="assets">
+      <li><span class="mono">M2_Findings_Dossier.md</span> §11–13 — Feature Availability Table, leakage checklist, Static-Only MLP and XGBoost-Matched full results</li>
+      <li><span class="mono">Benchmark_scripts/m2_hybrid_common.py</span> — shared 4-feature construction, fixed-test-set loader, prediction/metrics persistence</li>
+      <li><span class="mono">Benchmark_scripts/m2_static_only_mlp.py</span>, <span class="mono">m2_xgboost_matched.py</span> — the two completed new models</li>
+      <li><span class="mono">data/results_hybrid.csv</span>, <span class="mono">data/m2_hybrid_predictions.csv</span> — per-seed metrics and per-patient predictions for both completed models</li>
+    </ul>
+  </section>
+
+  <footer>
+    This document responds to <span class="mono">M2_Hybrid_GRU_D_Student_Execution_Guide_v3_2.docx</span> (27 August 2026). Companion: <span class="mono">M2_Findings_Dossier.md</span> (the full raw-material record, §1–13).
+  </footer>
+
+</div>

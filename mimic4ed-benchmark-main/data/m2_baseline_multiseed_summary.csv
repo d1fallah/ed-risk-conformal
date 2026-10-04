@@ -1,0 +1,5 @@
+model,auroc_mean,auroc_std,grud_vs_model_t_stat,p_value,significant_at_0.05
+Logistic Regression,0.8969,0.0,48.962,0.0,Yes
+Random Forest,0.9045,0.0006,30.176,0.0,Yes
+XGBoost,0.9184,0.0,6.889,0.0023,Yes
+XGBoost (tuned),0.9239,0.0002,-3.761,0.0172,Yes

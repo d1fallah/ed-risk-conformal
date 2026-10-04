@@ -1,0 +1,30 @@
+{
+  "row_count": 416660,
+  "sha256": "de8500318b4658609221d13ccef0ed0f36154ad671ff109d03b15f03a0d4ce6b",
+  "checks": [
+    {
+      "name": "One row per encounter (per seed)",
+      "passed": true
+    },
+    {
+      "name": "Unique (subject_id, stay_id, seed) triples",
+      "passed": true
+    },
+    {
+      "name": "Identical ground truth across all models",
+      "passed": true
+    },
+    {
+      "name": "Identical test cohort across all models/seeds",
+      "passed": true
+    },
+    {
+      "name": "No missing prediction values",
+      "passed": true
+    },
+    {
+      "name": "All predictions in range [0, 1]",
+      "passed": true
+    }
+  ]
+}

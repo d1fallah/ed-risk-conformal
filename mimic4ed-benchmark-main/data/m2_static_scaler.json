@@ -1,0 +1,22 @@
+{
+  "cols": [
+    "age",
+    "sex",
+    "triage_acuity",
+    "comorbidity_elixhauser_count"
+  ],
+  "mean": [
+    52.803413845166794,
+    0.4550794681378293,
+    2.6260214450638317,
+    2.3389334327085245
+  ],
+  "sd": [
+    20.648342915945232,
+    0.4979780575660133,
+    0.7062557935915424,
+    3.548708740198988
+  ],
+  "n_train_rows": 260293,
+  "fit_on": "fixed dev-pool `training` subject subset only"
+}

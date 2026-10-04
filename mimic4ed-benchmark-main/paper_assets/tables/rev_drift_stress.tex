@@ -1,0 +1,30 @@
+\begin{table*}[t]
+\centering
+\caption{Stress test with synthetic drift imposed on the real predictions of the primary model (Hybrid GRU-D) at the midpoint of the test stream; model, calibration and labels are unchanged. Logit shift: $\mathrm{logit}\,\hat{p}$ raised by the stated amount after the change point. Case-mix change: the stream re-ordered so that the more severe half of stays by triage acuity follows the change point (chronological order kept within each half). Coverage before and after the change, class-1 coverage after it, and mean size (interval width or set size) before and after, mean $\pm$ SD over seeds. The pre-specified time-to-recovery measure (return of the trailing 2{,}000-arrival coverage to within 0.01 of target) is not reported: the sampling SD of that coverage is about 0.007, so every method crossed the band by chance. Coverage after the change at or above 0.89 is in bold. Synthetic drift; not a finding about the hospital. Proxy cohort (MIMIC-IV-ED-derived).}
+\label{tab:m2-rev-drift}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{llccccc}
+\toprule
+Drift & Method & Cov.\ before & Cov.\ after & Class-1 cov.\ after & Size before & Size after \\
+\midrule
+logit shift $+0.5$ & static split-conformal (width) & 0.899 $\pm$ 0.001 & 0.888 $\pm$ 0.003 & 0.278 $\pm$ 0.019 & 0.235 $\pm$ 0.010 & 0.244 $\pm$ 0.010 \\
+ & recal.\ ($W{=}10$k) (width) & 0.900 $\pm$ 0.000 & \textbf{0.899 $\pm$ 0.000} & 0.315 $\pm$ 0.011 & 0.238 $\pm$ 0.010 & 0.279 $\pm$ 0.012 \\
+ & ECI (interval) (width) & 0.898 $\pm$ 0.001 & \textbf{0.899 $\pm$ 0.001} & 0.326 $\pm$ 0.010 & 0.257 $\pm$ 0.012 & 0.295 $\pm$ 0.008 \\
+ & ACI (set) (set size) & 0.900 $\pm$ 0.000 & \textbf{0.900 $\pm$ 0.000} & 0.419 $\pm$ 0.018 & 1.007 $\pm$ 0.032 & 1.007 $\pm$ 0.032 \\
+ & ECI (set) (set size) & 0.898 $\pm$ 0.001 & \textbf{0.899 $\pm$ 0.001} & 0.326 $\pm$ 0.010 & 0.929 $\pm$ 0.001 & 0.929 $\pm$ 0.001 \\
+\midrule
+logit shift $+1.0$ & static split-conformal (width) & 0.899 $\pm$ 0.001 & 0.867 $\pm$ 0.004 & 0.370 $\pm$ 0.016 & 0.235 $\pm$ 0.010 & 0.255 $\pm$ 0.010 \\
+ & recal.\ ($W{=}10$k) (width) & 0.900 $\pm$ 0.000 & \textbf{0.897 $\pm$ 0.000} & 0.445 $\pm$ 0.011 & 0.238 $\pm$ 0.010 & 0.336 $\pm$ 0.011 \\
+ & ECI (interval) (width) & 0.898 $\pm$ 0.001 & \textbf{0.899 $\pm$ 0.001} & 0.455 $\pm$ 0.012 & 0.257 $\pm$ 0.012 & 0.358 $\pm$ 0.011 \\
+ & ACI (set) (set size) & 0.900 $\pm$ 0.000 & \textbf{0.900 $\pm$ 0.000} & 0.526 $\pm$ 0.011 & 1.007 $\pm$ 0.032 & 1.024 $\pm$ 0.033 \\
+ & ECI (set) (set size) & 0.898 $\pm$ 0.001 & \textbf{0.899 $\pm$ 0.001} & 0.455 $\pm$ 0.012 & 0.929 $\pm$ 0.001 & 0.932 $\pm$ 0.001 \\
+\midrule
+case-mix change & static split-conformal (width) & 0.986 $\pm$ 0.000 & 0.815 $\pm$ 0.002 & 0.219 $\pm$ 0.010 & 0.208 $\pm$ 0.009 & 0.262 $\pm$ 0.011 \\
+ & recal.\ ($W{=}10$k) (width) & 0.918 $\pm$ 0.000 & 0.856 $\pm$ 0.001 & 0.419 $\pm$ 0.007 & 0.041 $\pm$ 0.001 & 0.511 $\pm$ 0.002 \\
+ & ECI (interval) (width) & 0.926 $\pm$ 0.013 & \textbf{0.898 $\pm$ 0.001} & 0.486 $\pm$ 0.008 & 0.043 $\pm$ 0.012 & 0.544 $\pm$ 0.006 \\
+ & ACI (set) (set size) & 0.900 $\pm$ 0.000 & \textbf{0.900 $\pm$ 0.000} & 0.583 $\pm$ 0.015 & 0.908 $\pm$ 0.002 & 1.219 $\pm$ 0.051 \\
+ & ECI (set) (set size) & 0.925 $\pm$ 0.012 & \textbf{0.898 $\pm$ 0.001} & 0.486 $\pm$ 0.008 & 0.930 $\pm$ 0.013 & 1.003 $\pm$ 0.001 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

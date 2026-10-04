@@ -1,0 +1,65 @@
+{
+  "hardware": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "processor": "Intel64 Family 6 Model 151 Stepping 5, GenuineIntel",
+    "cpu_count": 8,
+    "torch": "2.13.0+cu130",
+    "python": "3.13.12",
+    "torch_threads": 4,
+    "gpu": "NVIDIA GeForce RTX 3050"
+  },
+  "methodology": {
+    "batch_size": 1,
+    "model": "Hybrid GRU-D v2 (seed 42)",
+    "n_timed": 2000,
+    "n_warmup": 200,
+    "budget_ms": 2000.0
+  },
+  "paths": {
+    "forward_gpu": {
+      "median_ms": 6.836349999503,
+      "p95_ms": 8.77860500031602,
+      "p99_ms": 9.218115999246947,
+      "max_ms": 10.828300000866875,
+      "n": 2000
+    },
+    "forward_cpu": {
+      "median_ms": 1.5798000003997004,
+      "p95_ms": 1.9258149993220286,
+      "p99_ms": 2.1667619993240805,
+      "max_ms": 3.153200001179357,
+      "n": 2000
+    },
+    "split_conformal_set": {
+      "amortized_ms_per_arrival": 0.00027056065336616676
+    },
+    "eci_step_plus_set": {
+      "amortized_ms_per_arrival": 0.0008592843377225228
+    },
+    "mondrian_eci_step_plus_set": {
+      "amortized_ms_per_arrival": 0.0010529183811628772
+    },
+    "recalibration_refresh_W10000": {
+      "refresh_ms_median": 0.08884999988367781,
+      "amortized_ms_per_arrival": 4.4424999941838905e-05,
+      "window_used": 10000
+    },
+    "recalibration_refresh_W40000": {
+      "refresh_ms_median": 0.03369999922142597,
+      "amortized_ms_per_arrival": 1.6849999610712985e-05,
+      "window_used": 11754
+    },
+    "end_to_end_gpu_forward_plus_eci": {
+      "median_ms": 6.923100000676641,
+      "p95_ms": 8.8672350001616,
+      "p99_ms": 9.488041999247798,
+      "max_ms": 13.290999999298947,
+      "n": 2000
+    }
+  },
+  "budget_check": {
+    "budget_ms": 2000.0,
+    "worst_p99_ms_any_timed_path": 9.488041999247798,
+    "within_budget": true
+  }
+}

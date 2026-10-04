@@ -1,0 +1,18 @@
+{
+  "nhidden": 16,
+  "embed_time": 16,
+  "num_ref_points": 16,
+  "num_heads": 1,
+  "lr": 0.001,
+  "weight_decay": 0.0,
+  "val_auroc": 0.8708905227329505,
+  "val_auroc_sd": 0.003592001920593013,
+  "val_ece": 0.006204712320169723,
+  "tune_seeds": [
+    42,
+    123,
+    7
+  ],
+  "protocol": "3-seed, 4-stage, noise-guarded (1 SD) + ECE-guarded (5x), UNTUNED_BASE origin; stage 5 (class imbalance) not applicable to the shared BCE loop",
+  "smoke": false
+}

@@ -1,0 +1,33 @@
+{
+  "source": "test_v2.csv",
+  "scored_params": [
+    "triage_resprate",
+    "triage_temperature",
+    "triage_sbp",
+    "triage_heartrate",
+    "triage_o2sat"
+  ],
+  "outcome": "outcome_critical",
+  "n_total": 84241,
+  "n_pos_total": 6815,
+  "groups": {
+    "all_scored_params_recorded": {
+      "n": 77939,
+      "n_pos": 4394,
+      "pos_rate": 0.05637742336955824,
+      "share_of_all_positives": 0.6447542186353632
+    },
+    "any_scored_param_missing": {
+      "n": 6302,
+      "n_pos": 2421,
+      "pos_rate": 0.38416375753728976,
+      "share_of_all_positives": 0.3552457813646368
+    },
+    "all_scored_params_missing": {
+      "n": 3594,
+      "n_pos": 2003,
+      "pos_rate": 0.5573177518085698,
+      "share_of_all_positives": 0.29391049156272925
+    }
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "asset_id": "parameter_summary",
+  "records": [
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "0.10",
+      "fmt": null,
+      "formatted": "0.10",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "declared target miscoverage (90% target coverage), the module's mandatory-core conformal target throughout T3/T5/T6/T8/T9 -- not the unrelated alpha=0.05 Holm-correction significance threshold used for the discrimination deltas in T2/T7"
+    },
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "0.89",
+      "fmt": null,
+      "formatted": "0.89",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "declared validity threshold (both-class coverage >= this value), not a measured value -- matches the module's alpha=0.1 conformal target (1 - 0.1 = 0.90, with a small pre-specified slack to 0.89)"
+    },
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "1h, 6h, 12h",
+      "fmt": null,
+      "formatted": "1h, 6h, 12h",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "the three pre-specified time-anchored label definitions (CLAUDE.md M2 required ablation), same set T7 uses -- these vary the outcome definition, not the prediction lead time"
+    },
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "60, 240, 1{,}000",
+      "fmt": null,
+      "formatted": "60, 240, 1{,}000",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "pre-specified realistic label-lag band (arrivals), M2_LabelLag_PreRegistration.md -- same values T9's (label_lag) table rows use"
+    },
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "10{,}000, 40{,}000",
+      "fmt": null,
+      "formatted": "10{,}000, 40{,}000",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "the two periodic-recalibration windows W (arrivals) tested throughout T6/T9, M3/M4 in their own column labels"
+    },
+    {
+      "kind": "literal",
+      "artifact": null,
+      "pointer": null,
+      "reduce_how": null,
+      "raw": "2{,}000",
+      "fmt": null,
+      "formatted": "2{,}000",
+      "note": "",
+      "citation": null,
+      "locus": null,
+      "reason": "recalibration refresh cadence R (arrivals) -- the threshold is recomputed every R arrivals from the trailing W-arrival window, same constant used to generate T6/T9's recal. columns"
+    }
+  ]
+}

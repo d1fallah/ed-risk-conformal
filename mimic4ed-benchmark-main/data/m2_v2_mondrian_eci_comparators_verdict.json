@@ -1,0 +1,149 @@
+{
+  "Temporal-Only GRU-D v2": {
+    "verdict": "NOT NEEDED (valid with |C| <= B+0.02: ['A', 'C1', 'C2'])",
+    "valid": {
+      "A": true,
+      "B": true,
+      "C1": true,
+      "C2": true,
+      "D": false,
+      "E": false
+    },
+    "table": {
+      "A": {
+        "coverage_class0": 0.9112,
+        "coverage_class1": 0.8939,
+        "mean_set_size": 1.1276,
+        "informative_class1": 0.7748
+      },
+      "B": {
+        "coverage_class0": 0.8987,
+        "coverage_class1": 0.8978,
+        "mean_set_size": 1.2151,
+        "informative_class1": 0.7864
+      },
+      "C1": {
+        "coverage_class0": 0.9007,
+        "coverage_class1": 0.9024,
+        "mean_set_size": 1.1337,
+        "informative_class1": 0.7915
+      },
+      "C2": {
+        "coverage_class0": 0.9023,
+        "coverage_class1": 0.8991,
+        "mean_set_size": 1.1292,
+        "informative_class1": 0.7888
+      },
+      "D": {
+        "coverage_class0": 0.9244,
+        "coverage_class1": 0.629,
+        "mean_set_size": 0.9979,
+        "informative_class1": 0.2384
+      },
+      "E": {
+        "coverage_class0": 0.9501,
+        "coverage_class1": 0.6222,
+        "mean_set_size": 1.0231,
+        "informative_class1": 0.2519
+      }
+    }
+  },
+  "Frozen-Temporal Head Control v2": {
+    "verdict": "NOT NEEDED (valid with |C| <= B+0.02: ['C1', 'C2'])",
+    "valid": {
+      "A": false,
+      "B": true,
+      "C1": true,
+      "C2": true,
+      "D": false,
+      "E": false
+    },
+    "table": {
+      "A": {
+        "coverage_class0": 0.9124,
+        "coverage_class1": 0.8885,
+        "mean_set_size": 1.1255,
+        "informative_class1": 0.7714
+      },
+      "B": {
+        "coverage_class0": 0.8994,
+        "coverage_class1": 0.8991,
+        "mean_set_size": 1.2203,
+        "informative_class1": 0.7854
+      },
+      "C1": {
+        "coverage_class0": 0.9007,
+        "coverage_class1": 0.9018,
+        "mean_set_size": 1.1403,
+        "informative_class1": 0.7904
+      },
+      "C2": {
+        "coverage_class0": 0.9024,
+        "coverage_class1": 0.8987,
+        "mean_set_size": 1.1359,
+        "informative_class1": 0.7878
+      },
+      "D": {
+        "coverage_class0": 0.921,
+        "coverage_class1": 0.6243,
+        "mean_set_size": 0.9935,
+        "informative_class1": 0.2309
+      },
+      "E": {
+        "coverage_class0": 0.9555,
+        "coverage_class1": 0.6154,
+        "mean_set_size": 1.0262,
+        "informative_class1": 0.2395
+      }
+    }
+  },
+  "Hybrid GRU-D v2": {
+    "verdict": "NOT NEEDED (valid with |C| <= B+0.02: ['A', 'C1', 'C2'])",
+    "valid": {
+      "A": true,
+      "B": true,
+      "C1": true,
+      "C2": true,
+      "D": false,
+      "E": false
+    },
+    "table": {
+      "A": {
+        "coverage_class0": 0.914,
+        "coverage_class1": 0.8951,
+        "mean_set_size": 1.0906,
+        "informative_class1": 0.7943
+      },
+      "B": {
+        "coverage_class0": 0.8997,
+        "coverage_class1": 0.8982,
+        "mean_set_size": 1.1335,
+        "informative_class1": 0.8077
+      },
+      "C1": {
+        "coverage_class0": 0.9009,
+        "coverage_class1": 0.9011,
+        "mean_set_size": 1.0875,
+        "informative_class1": 0.8161
+      },
+      "C2": {
+        "coverage_class0": 0.9031,
+        "coverage_class1": 0.8991,
+        "mean_set_size": 1.0852,
+        "informative_class1": 0.8128
+      },
+      "D": {
+        "coverage_class0": 0.9275,
+        "coverage_class1": 0.6364,
+        "mean_set_size": 0.9959,
+        "informative_class1": 0.2655
+      },
+      "E": {
+        "coverage_class0": 0.9563,
+        "coverage_class1": 0.6477,
+        "mean_set_size": 1.0301,
+        "informative_class1": 0.2659
+      }
+    }
+  }
+}

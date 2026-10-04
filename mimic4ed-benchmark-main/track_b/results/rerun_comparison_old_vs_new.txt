@@ -1,0 +1,65 @@
+=== 1. MAPIE (static) and ECI, mean over 5 seeds per model (m2_v2_conformal_summary.csv)
+OLD (misaligned)
+                                  mapie_coverage  mapie_coverage_class1  eci_coverage  eci_coverage_class1  eci_width
+model                                                                                                               
+Frozen-Temporal Head Control v2          0.8773                 0.0363        0.9014               0.0747     0.7259
+Hybrid GRU-D v2                          0.8852                 0.0261        0.9016               0.0498     0.5515
+Temporal-Only GRU-D v2                   0.8768                 0.0417        0.9015               0.0762     0.7221 
+NEW (aligned)
+                                  mapie_coverage  mapie_coverage_class1  eci_coverage  eci_coverage_class1  eci_width
+model                                                                                                               
+Frozen-Temporal Head Control v2          0.9003                 0.1860        0.8996               0.2104     0.2685
+Hybrid GRU-D v2                          0.9004                 0.2043        0.8998               0.2227     0.2580
+Temporal-Only GRU-D v2                   0.8984                 0.1903        0.9003               0.2153     0.3159
+  OLD Mondrian-LAC class-1 / class-0 coverage (mean): {'Frozen-Temporal Head Control v2': {'mondrian_lac_coverage_class1': 0.9019, 'mondrian_lac_coverage_class0': 0.8713}, 'Hybrid GRU-D v2': {'mondrian_lac_coverage_class1': 0.8805, 'mondrian_lac_coverage_class0': 0.8894}, 'Temporal-Only GRU-D v2': {'mondrian_lac_coverage_class1': 0.9057, 'mondrian_lac_coverage_class0': 0.8706}}
+  NEW Mondrian-LAC class-1 / class-0 coverage (mean): {'Frozen-Temporal Head Control v2': {'mondrian_lac_coverage_class1': 0.8885, 'mondrian_lac_coverage_class0': 0.9124}, 'Hybrid GRU-D v2': {'mondrian_lac_coverage_class1': 0.8951, 'mondrian_lac_coverage_class0': 0.914}, 'Temporal-Only GRU-D v2': {'mondrian_lac_coverage_class1': 0.8939, 'mondrian_lac_coverage_class0': 0.9112}}
+
+=== 2. ECI vs periodic recalibration (m2_v2_eci_vs_recalibration.csv)
+OLD 
+                                         coverage  coverage_class1   width
+model                           method                                   
+Frozen-Temporal Head Control v2 M1        0.8775           0.0364  0.4944
+                                M2        0.9014           0.0747  0.7259
+                                M3        0.8997           0.0601  0.7095
+                                M4        0.8978           0.0564  0.6886
+Hybrid GRU-D v2                 M1        0.8853           0.0262  0.3422
+                                M2        0.9016           0.0498  0.5515
+                                M3        0.8996           0.0434  0.5189
+                                M4        0.8984           0.0414  0.4990
+Temporal-Only GRU-D v2          M1        0.8769           0.0418  0.5265
+                                M2        0.9015           0.0762  0.7221
+                                M3        0.8995           0.0638  0.6974
+                                M4        0.8976           0.0610  0.6809
+NEW 
+                                         coverage  coverage_class1   width
+model                           method                                   
+Frozen-Temporal Head Control v2 M1        0.9004           0.1861  0.2291
+                                M2        0.8996           0.2104  0.2685
+                                M3        0.9006           0.1871  0.2310
+                                M4        0.9012           0.1892  0.2330
+Hybrid GRU-D v2                 M1        0.9004           0.2047  0.2348
+                                M2        0.8998           0.2227  0.2580
+                                M3        0.9005           0.2053  0.2357
+                                M4        0.9012           0.2074  0.2382
+Temporal-Only GRU-D v2          M1        0.8984           0.1906  0.2908
+                                M2        0.9003           0.2153  0.3159
+                                M3        0.9005           0.1982  0.3002
+                                M4        0.9010           0.1990  0.3015
+OLD verdicts: {'Temporal-Only GRU-D v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)", 'Frozen-Temporal Head Control v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)", 'Hybrid GRU-D v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)"}
+NEW verdicts: {'Temporal-Only GRU-D v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)", 'Frozen-Temporal Head Control v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)", 'Hybrid GRU-D v2': "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)"}
+
+=== 3. Mondrian-ECI verdicts
+m2_v2_mondrian_eci_pilot_verdict.json  OLD: verdict=NO-GO cov1=0.924 informative1=0.182 set_size=1.657 sat=0.430
+m2_v2_mondrian_eci_pilot_verdict.json  NEW: verdict=MIDDLE cov1=0.898 informative1=0.808 set_size=1.133 sat=0.045
+m2_v2_mondrian_eci_confirmatory_verdic OLD: verdict=MIDDLE cov1=0.907 informative1=0.174 set_size=1.487 sat=0.012
+m2_v2_mondrian_eci_confirmatory_verdic NEW: verdict=MIDDLE cov1=0.898 informative1=0.808 set_size=1.133 sat=0.045
+comparators OLD: {'Temporal-Only GRU-D v2': "NOT NEEDED (valid with |C| <= B+0.02: ['C1', 'C2'])", 'Frozen-Temporal Head Control v2': "NOT NEEDED (valid with |C| <= B+0.02: ['C1', 'C2'])", 'Hybrid GRU-D v2': "NOT NEEDED (valid with |C| <= B+0.02: ['C1', 'C2'])"}
+comparators NEW: {'Temporal-Only GRU-D v2': "NOT NEEDED (valid with |C| <= B+0.02: ['A', 'C1', 'C2'])", 'Frozen-Temporal Head Control v2': "NOT NEEDED (valid with |C| <= B+0.02: ['C1', 'C2'])", 'Hybrid GRU-D v2': "NOT NEEDED (valid with |C| <= B+0.02: ['A', 'C1', 'C2'])"}
+
+=== 4. Label lag verdicts (marginal, per lag)
+OLD Temporal-Only GRU-D v2     {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'BOTH INVALID'}
+OLD Frozen-Temporal Head Contr {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'BOTH INVALID'}
+OLD Hybrid GRU-D v2            {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'BOTH INVALID'}
+NEW Temporal-Only GRU-D v2     {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'ECI NOT NEEDED'}
+NEW Frozen-Temporal Head Contr {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'ECI NOT NEEDED'}
+NEW Hybrid GRU-D v2            {'0': 'ECI NOT NEEDED', '60': 'ECI NOT NEEDED', '240': 'ECI NOT NEEDED', '1000': 'ECI NOT NEEDED', '4000': 'ECI NOT NEEDED', '16000': 'ECI NOT NEEDED', 'inf': 'ECI NOT NEEDED'}

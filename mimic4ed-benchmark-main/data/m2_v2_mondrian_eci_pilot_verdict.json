@@ -1,0 +1,21 @@
+{
+  "model": "Hybrid GRU-D v2",
+  "n_seeds": 5,
+  "verdict": "MIDDLE",
+  "coverage_class1": 0.8982245047688922,
+  "informative_class1": 0.8076889214966985,
+  "mean_set_size": 1.133464702460797,
+  "q1_saturated_frac": 0.04541256632756021,
+  "lac_informative_class1": 0.7942773294203962,
+  "lac_mean_set_size": 1.0905663513016226,
+  "thresholds": {
+    "nogo_mean_set_size": 1.9,
+    "nogo_saturation": 0.25,
+    "nogo_informative": 0.1,
+    "go_cov_band": [
+      0.85,
+      0.95
+    ],
+    "go_informative_margin": 0.05
+  }
+}

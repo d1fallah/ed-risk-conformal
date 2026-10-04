@@ -1,0 +1,8 @@
+{
+  "fusion_dropout": 0.1,
+  "lr": 0.0005,
+  "batch_size": 128,
+  "max_epochs": 100,
+  "patience": 10,
+  "static_hidden": null
+}

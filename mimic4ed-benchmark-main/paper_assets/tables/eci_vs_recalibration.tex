@@ -1,0 +1,18 @@
+\begin{table*}[t]
+\centering
+\caption{Static split-conformal, ECI and periodic recalibration of split-conformal: marginal coverage and mean clipped interval width (mean $\pm$ SD over seeds) on the chronological test period. Valid means marginal coverage $\geq 0.89$. ECI is run as implemented in the authors' reference code. Labels are assumed immediate for all methods. The static column is an independently recomputed interval $[\hat{p}-q,\hat{p}+q]\cap[0,1]$ built from the same LAC quantile as the MAPIE classification-set run of Table~\ref{tab:m2-v2-conformal}, so that its width is comparable with the other three columns. The pipeline requires the two to agree in marginal coverage to within 0.003 on every model and seed (largest gap between the unrounded means: 0.0001). For each model, the valid method with the narrowest interval is in bold. Proxy cohort (MIMIC-IV-ED-derived).}
+\label{tab:m2-eci-vs-recal}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lcccccccc}
+\toprule
+Model & \multicolumn{2}{c}{static split-conformal} & \multicolumn{2}{c}{ECI} & \multicolumn{2}{c}{recal.\ ($W{=}10$k)} & \multicolumn{2}{c}{recal.\ ($W{=}40$k)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+ & Cov. & Width & Cov. & Width & Cov. & Width & Cov. & Width \\
+\midrule
+Hybrid GRU-D (primary) & \textbf{0.9004 $\pm$ 0.0009} & \textbf{0.235 $\pm$ 0.010} & 0.8998 $\pm$ 0.0011 & 0.258 $\pm$ 0.010 & 0.9005 $\pm$ 0.0002 & 0.236 $\pm$ 0.010 & 0.9012 $\pm$ 0.0002 & 0.238 $\pm$ 0.010 \\
+Temporal-Only GRU-D & \textbf{0.8984 $\pm$ 0.0006} & \textbf{0.291 $\pm$ 0.019} & 0.9003 $\pm$ 0.0011 & 0.316 $\pm$ 0.013 & 0.9005 $\pm$ 0.0002 & 0.300 $\pm$ 0.020 & 0.9010 $\pm$ 0.0003 & 0.302 $\pm$ 0.019 \\
+Frozen-Temporal Head Control & \textbf{0.9004 $\pm$ 0.0003} & \textbf{0.229 $\pm$ 0.014} & 0.8996 $\pm$ 0.0005 & 0.268 $\pm$ 0.010 & 0.9006 $\pm$ 0.0002 & 0.231 $\pm$ 0.013 & 0.9012 $\pm$ 0.0002 & 0.233 $\pm$ 0.013 \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

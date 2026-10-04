@@ -1,0 +1,43 @@
+{
+  "n_with_ed_obs": 84224,
+  "n_no_ed_obs": 17,
+  "no_ed_obs_fraction": 0.00020180197291105282,
+  "by_model": {
+    "Frozen-Temporal Head Control v2": {
+      "auroc_full_mean": 0.9201416665208969,
+      "auroc_with_ed_obs_mean": 0.9202009991324939,
+      "auroc_no_ed_obs_mean": 0.5083333333333333,
+      "n_seeds_no_ed_obs_computable": 5
+    },
+    "Hybrid GRU-D v2": {
+      "auroc_full_mean": 0.9371927489650073,
+      "auroc_with_ed_obs_mean": 0.9372435375874634,
+      "auroc_no_ed_obs_mean": 0.6799999999999999,
+      "n_seeds_no_ed_obs_computable": 5
+    },
+    "Static-Only MLP v2": {
+      "auroc_full_mean": 0.8556010530226015,
+      "auroc_with_ed_obs_mean": 0.8556364419280555,
+      "auroc_no_ed_obs_mean": 0.6900000000000001,
+      "n_seeds_no_ed_obs_computable": 5
+    },
+    "Temporal-Only GRU-D v2": {
+      "auroc_full_mean": 0.9208812892679635,
+      "auroc_with_ed_obs_mean": 0.9209533102471305,
+      "auroc_no_ed_obs_mean": 0.5149999999999999,
+      "n_seeds_no_ed_obs_computable": 5
+    },
+    "XGBoost-Matched v2": {
+      "auroc_full_mean": 0.9271368866652103,
+      "auroc_with_ed_obs_mean": 0.9272217918897979,
+      "auroc_no_ed_obs_mean": 0.7,
+      "n_seeds_no_ed_obs_computable": 5
+    },
+    "mTAN v2": {
+      "auroc_full_mean": 0.862181043565343,
+      "auroc_with_ed_obs_mean": 0.8622356762752448,
+      "auroc_no_ed_obs_mean": 0.495,
+      "n_seeds_no_ed_obs_computable": 5
+    }
+  }
+}

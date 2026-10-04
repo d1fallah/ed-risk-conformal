@@ -1,0 +1,238 @@
+{
+  "aci_lac_lag0": {
+    "improves_on_static_all_models": false,
+    "per_model": {
+      "Temporal-Only GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9591,
+          "coverage_class1": 0.228,
+          "mean_set_size": 0.9364,
+          "informative_class1": 0.2113
+        },
+        "static_lac": {
+          "coverage_marginal": 0.8984,
+          "coverage_class0": 0.9608,
+          "coverage_class1": 0.1906,
+          "mean_set_size": 0.9284,
+          "informative_class1": 0.1906
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Frozen-Temporal Head Control v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9591,
+          "coverage_class1": 0.2285,
+          "mean_set_size": 0.9499,
+          "informative_class1": 0.1934
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9632,
+          "coverage_class1": 0.1861,
+          "mean_set_size": 0.9307,
+          "informative_class1": 0.1861
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Hybrid GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9505,
+          "coverage_class1": 0.3262,
+          "mean_set_size": 1.0035,
+          "informative_class1": 0.1863
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9617,
+          "coverage_class1": 0.2047,
+          "mean_set_size": 0.9289,
+          "informative_class1": 0.2047
+        },
+        "valid": true,
+        "smaller_than_static": false
+      }
+    }
+  },
+  "eci_lac_lag0": {
+    "improves_on_static_all_models": false,
+    "per_model": {
+      "Temporal-Only GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9003,
+          "coverage_class0": 0.9606,
+          "coverage_class1": 0.2153,
+          "mean_set_size": 0.9325,
+          "informative_class1": 0.2144
+        },
+        "static_lac": {
+          "coverage_marginal": 0.8984,
+          "coverage_class0": 0.9608,
+          "coverage_class1": 0.1906,
+          "mean_set_size": 0.9284,
+          "informative_class1": 0.1906
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Frozen-Temporal Head Control v2": {
+        "method": {
+          "coverage_marginal": 0.8996,
+          "coverage_class0": 0.9602,
+          "coverage_class1": 0.2104,
+          "mean_set_size": 0.9326,
+          "informative_class1": 0.2086
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9632,
+          "coverage_class1": 0.1861,
+          "mean_set_size": 0.9307,
+          "informative_class1": 0.1861
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Hybrid GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.8998,
+          "coverage_class0": 0.9594,
+          "coverage_class1": 0.2227,
+          "mean_set_size": 0.9302,
+          "informative_class1": 0.2219
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9617,
+          "coverage_class1": 0.2047,
+          "mean_set_size": 0.9289,
+          "informative_class1": 0.2047
+        },
+        "valid": true,
+        "smaller_than_static": false
+      }
+    }
+  },
+  "aci_lac_lag240": {
+    "improves_on_static_all_models": false,
+    "per_model": {
+      "Temporal-Only GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9018,
+          "coverage_class1": 0.8803,
+          "mean_set_size": 1.7791,
+          "informative_class1": 0.0013
+        },
+        "static_lac": {
+          "coverage_marginal": 0.8984,
+          "coverage_class0": 0.9608,
+          "coverage_class1": 0.1906,
+          "mean_set_size": 0.9284,
+          "informative_class1": 0.1906
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Frozen-Temporal Head Control v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9018,
+          "coverage_class1": 0.8797,
+          "mean_set_size": 1.7792,
+          "informative_class1": 0.0013
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9632,
+          "coverage_class1": 0.1861,
+          "mean_set_size": 0.9307,
+          "informative_class1": 0.1861
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Hybrid GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9,
+          "coverage_class0": 0.9023,
+          "coverage_class1": 0.8735,
+          "mean_set_size": 1.7722,
+          "informative_class1": 0.0021
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9617,
+          "coverage_class1": 0.2047,
+          "mean_set_size": 0.9289,
+          "informative_class1": 0.2047
+        },
+        "valid": true,
+        "smaller_than_static": false
+      }
+    }
+  },
+  "eci_lac_lag240": {
+    "improves_on_static_all_models": false,
+    "per_model": {
+      "Temporal-Only GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.8987,
+          "coverage_class0": 0.93,
+          "coverage_class1": 0.5435,
+          "mean_set_size": 1.3315,
+          "informative_class1": 0.1057
+        },
+        "static_lac": {
+          "coverage_marginal": 0.8984,
+          "coverage_class0": 0.9608,
+          "coverage_class1": 0.1906,
+          "mean_set_size": 0.9284,
+          "informative_class1": 0.1906
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Frozen-Temporal Head Control v2": {
+        "method": {
+          "coverage_marginal": 0.8999,
+          "coverage_class0": 0.9124,
+          "coverage_class1": 0.7576,
+          "mean_set_size": 1.5848,
+          "informative_class1": 0.0564
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9632,
+          "coverage_class1": 0.1861,
+          "mean_set_size": 0.9307,
+          "informative_class1": 0.1861
+        },
+        "valid": true,
+        "smaller_than_static": false
+      },
+      "Hybrid GRU-D v2": {
+        "method": {
+          "coverage_marginal": 0.9002,
+          "coverage_class0": 0.9487,
+          "coverage_class1": 0.3491,
+          "mean_set_size": 1.0808,
+          "informative_class1": 0.1806
+        },
+        "static_lac": {
+          "coverage_marginal": 0.9004,
+          "coverage_class0": 0.9617,
+          "coverage_class1": 0.2047,
+          "mean_set_size": 0.9289,
+          "informative_class1": 0.2047
+        },
+        "valid": true,
+        "smaller_than_static": false
+      }
+    }
+  }
+}

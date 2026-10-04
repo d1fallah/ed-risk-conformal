@@ -1,0 +1,107 @@
+{
+  "Temporal-Only GRU-D v2": {
+    "verdict": "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)",
+    "valid": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true
+    },
+    "table": {
+      "M1": {
+        "coverage": 0.8984,
+        "coverage_class0": 0.9608,
+        "coverage_class1": 0.1906,
+        "width": 0.2908
+      },
+      "M2": {
+        "coverage": 0.9003,
+        "coverage_class0": 0.9606,
+        "coverage_class1": 0.2153,
+        "width": 0.3159
+      },
+      "M3": {
+        "coverage": 0.9005,
+        "coverage_class0": 0.9623,
+        "coverage_class1": 0.1982,
+        "width": 0.3002
+      },
+      "M4": {
+        "coverage": 0.901,
+        "coverage_class0": 0.9627,
+        "coverage_class1": 0.199,
+        "width": 0.3015
+      }
+    }
+  },
+  "Frozen-Temporal Head Control v2": {
+    "verdict": "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)",
+    "valid": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true
+    },
+    "table": {
+      "M1": {
+        "coverage": 0.9004,
+        "coverage_class0": 0.9632,
+        "coverage_class1": 0.1861,
+        "width": 0.2291
+      },
+      "M2": {
+        "coverage": 0.8996,
+        "coverage_class0": 0.9602,
+        "coverage_class1": 0.2104,
+        "width": 0.2685
+      },
+      "M3": {
+        "coverage": 0.9006,
+        "coverage_class0": 0.9634,
+        "coverage_class1": 0.1871,
+        "width": 0.231
+      },
+      "M4": {
+        "coverage": 0.9012,
+        "coverage_class0": 0.9639,
+        "coverage_class1": 0.1892,
+        "width": 0.233
+      }
+    }
+  },
+  "Hybrid GRU-D v2": {
+    "verdict": "ECI NOT NEEDED (['M3', 'M4'] valid with width <= ECI + 0.02)",
+    "valid": {
+      "M1": true,
+      "M2": true,
+      "M3": true,
+      "M4": true
+    },
+    "table": {
+      "M1": {
+        "coverage": 0.9004,
+        "coverage_class0": 0.9617,
+        "coverage_class1": 0.2047,
+        "width": 0.2348
+      },
+      "M2": {
+        "coverage": 0.8998,
+        "coverage_class0": 0.9594,
+        "coverage_class1": 0.2227,
+        "width": 0.258
+      },
+      "M3": {
+        "coverage": 0.9005,
+        "coverage_class0": 0.9617,
+        "coverage_class1": 0.2053,
+        "width": 0.2357
+      },
+      "M4": {
+        "coverage": 0.9012,
+        "coverage_class0": 0.9623,
+        "coverage_class1": 0.2074,
+        "width": 0.2382
+      }
+    }
+  }
+}

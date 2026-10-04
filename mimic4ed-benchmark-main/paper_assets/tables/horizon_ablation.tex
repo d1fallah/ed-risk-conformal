@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Sensitivity to the outcome definition: the same models and the same full per-stay input sequence, evaluated against three time-anchored label definitions $y_h$, $h\in\{1\mathrm{h}, 6\mathrm{h}, 12\mathrm{h}\}$, on the chronological split. The input is not truncated at $h$, so the rows compare outcome definitions, not predictions made $h$ hours ahead. Encoders were trained per definition with the hyperparameters tuned for the composite outcome; 3 of 6 models. ``Sig.'' requires Holm significance and all 5 per-seed confidence intervals excluding zero. $^{\dagger}$Underpowered (few test and validation positives); not interpreted. Highest AUROC per definition and significant differences in bold. Proxy cohort (MIMIC-IV-ED-derived).}
+\label{tab:m2-horizon}
+\resizebox{\textwidth}{!}{%
+\begin{tabular}{lrccccc}
+\toprule
+Label definition & Test pos. & Hybrid & Temporal-Only & XGBoost & Hybrid $-$ XGB (95\% CI; sig.) & Temporal $-$ XGB (95\% CI; sig.) \\
+\midrule
+1h$^{\dagger}$ & 66 & \textbf{0.9311 $\pm$ 0.0051} & 0.8761 $\pm$ 0.0585 & 0.9205 $\pm$ 0.0000 & +0.0106 [-0.0088, +0.0304]; no & -0.0445 [-0.0885, -0.0034]; no \\
+6h & 3,841 & \textbf{0.9704 $\pm$ 0.0010} & 0.9624 $\pm$ 0.0016 & 0.9463 $\pm$ 0.0000 & \textbf{+0.0241 [+0.0221, +0.0262]; yes} & \textbf{+0.0161 [+0.0135, +0.0187]; yes} \\
+12h & 5,875 & \textbf{0.9506 $\pm$ 0.0004} & 0.9370 $\pm$ 0.0019 & 0.9356 $\pm$ 0.0000 & \textbf{+0.0151 [+0.0134, +0.0168]; yes} & +0.0014 [-0.0012, +0.0040]; no \\
+\bottomrule
+\end{tabular}%
+}
+\end{table*}

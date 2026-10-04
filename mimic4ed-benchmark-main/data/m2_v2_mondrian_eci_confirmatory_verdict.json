@@ -1,0 +1,18 @@
+{
+  "model": "Hybrid GRU-D v2",
+  "verdict": "MIDDLE",
+  "lr_chosen_per_seed": [
+    0.01,
+    0.05,
+    0.01,
+    0.05,
+    0.05
+  ],
+  "coverage_class1": 0.8982245047688922,
+  "informative_class1": 0.8076889214966985,
+  "mean_set_size": 1.133464702460797,
+  "q1_saturated_frac": 0.04541256632756021,
+  "lac_informative_class1": 0.7942773294203962,
+  "lac_mean_set_size": 1.0905663513016226,
+  "sat_guard": 0.25
+}

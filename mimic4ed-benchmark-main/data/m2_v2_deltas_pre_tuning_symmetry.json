@@ -1,0 +1,267 @@
+{
+  "Delta_representation": {
+    "model_a": "Hybrid GRU-D v2",
+    "model_b": "XGBoost-Matched v2",
+    "question": "PRIMARY: does temporal representation add value over matched tabular aggregation, on the irregular-series cohort?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.015652922965148974,
+        "ci_lo": 0.013858527736093574,
+        "ci_hi": 0.01742580088962998,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.015745217562149305,
+        "ci_lo": 0.013903073984205108,
+        "ci_hi": 0.017621067202019104,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 7,
+        "point_estimate": 0.014374439066320632,
+        "ci_lo": 0.012481462232335764,
+        "ci_hi": 0.01626958309370818,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.015355496519441902,
+        "ci_lo": 0.013555104878465785,
+        "ci_hi": 0.017149606957186703,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.015798286955424623,
+        "ci_lo": 0.013941536455088064,
+        "ci_hi": 0.01761681369662186,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      }
+    ],
+    "mean": 0.015385272613697088,
+    "sd": 0.0005904339504364522,
+    "p_proxy_conservative": 0.0,
+    "excludes_zero_at_n_of_5_seeds": 5,
+    "holm_corrected_p": 0.0,
+    "holm_significant_at_0.05": true
+  },
+  "Delta_static_contribution": {
+    "model_a": "Hybrid GRU-D v2",
+    "model_b": "Frozen-Temporal Head Control v2",
+    "question": "Cleanest ablation: incremental contribution of the static MLP branch alone.",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.01641892832176084,
+        "ci_lo": 0.014511296592431088,
+        "ci_hi": 0.018350158821211892,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.016636328529269995,
+        "ci_lo": 0.014934323812139796,
+        "ci_hi": 0.01839125294417808,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 7,
+        "point_estimate": 0.0184496738314629,
+        "ci_lo": 0.016492533332480838,
+        "ci_hi": 0.02040428330563252,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.017057368142054385,
+        "ci_lo": 0.015229781090166688,
+        "ci_hi": 0.01896003985923158,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.01667807335654181,
+        "ci_lo": 0.014730061815923142,
+        "ci_hi": 0.018663313943096782,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      }
+    ],
+    "mean": 0.017048074436217985,
+    "sd": 0.000816521212508524,
+    "p_proxy_conservative": 0.0,
+    "excludes_zero_at_n_of_5_seeds": 5,
+    "holm_corrected_p": 0.0,
+    "holm_significant_at_0.05": true
+  },
+  "Delta_temporal_alone": {
+    "model_a": "Temporal-Only GRU-D v2",
+    "model_b": "XGBoost-Matched v2",
+    "question": "How strong is temporal representation alone vs. matched tabular aggregation?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.0017250466632574568,
+        "ci_lo": -0.0008839679404196943,
+        "ci_hi": 0.004315699178078422,
+        "excludes_zero": false,
+        "p_proxy": 0.2
+      },
+      {
+        "seed": 123,
+        "point_estimate": -0.0009975690891864675,
+        "ci_lo": -0.0037583260493765478,
+        "ci_hi": 0.001779978932966078,
+        "excludes_zero": false,
+        "p_proxy": 0.4728
+      },
+      {
+        "seed": 7,
+        "point_estimate": -0.004232712658169935,
+        "ci_lo": -0.007095906780680963,
+        "ci_hi": -0.00141611043397938,
+        "excludes_zero": true,
+        "p_proxy": 0.0042
+      },
+      {
+        "seed": 456,
+        "point_estimate": -0.00041487179418175923,
+        "ci_lo": -0.0030890740009325984,
+        "ci_hi": 0.0022249541170802248,
+        "excludes_zero": false,
+        "p_proxy": 0.748
+      },
+      {
+        "seed": 789,
+        "point_estimate": -0.00021948773314783843,
+        "ci_lo": -0.0030287391127153257,
+        "ci_hi": 0.0025167520099026062,
+        "excludes_zero": false,
+        "p_proxy": 0.8598
+      }
+    ],
+    "mean": -0.0008279189222857086,
+    "sd": 0.002161008519532276,
+    "p_proxy_conservative": 0.8598,
+    "excludes_zero_at_n_of_5_seeds": 1,
+    "holm_corrected_p": 0.8598,
+    "holm_significant_at_0.05": false
+  },
+  "Delta_static_only": {
+    "model_a": "Static-Only MLP v2",
+    "model_b": "Temporal-Only GRU-D v2",
+    "question": "Relative contribution of static characteristics vs. temporal representation.",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": -0.0679359615360089,
+        "ci_lo": -0.07260370042344576,
+        "ci_hi": -0.06345360583118997,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 123,
+        "point_estimate": -0.06484505812370689,
+        "ci_lo": -0.06954973081921675,
+        "ci_hi": -0.060167938104715504,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 7,
+        "point_estimate": -0.061366425488439735,
+        "ci_lo": -0.06612547487206234,
+        "ci_hi": -0.056652121427836565,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 456,
+        "point_estimate": -0.06523816488094325,
+        "ci_lo": -0.0699645941527716,
+        "ci_hi": -0.06056568480447904,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 789,
+        "point_estimate": -0.06701557119771051,
+        "ci_lo": -0.07163180483035575,
+        "ci_hi": -0.06233516574577342,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      }
+    ],
+    "mean": -0.06528023624536186,
+    "sd": 0.002528503947717686,
+    "p_proxy_conservative": 0.0,
+    "excludes_zero_at_n_of_5_seeds": 5,
+    "holm_corrected_p": 0.0,
+    "holm_significant_at_0.05": true
+  },
+  "Delta_modern_comparator": {
+    "model_a": "Hybrid GRU-D v2",
+    "model_b": "mTAN v2",
+    "question": "Does GRU-D's decay-based recurrence beat a tuned attention-based comparator on this irregular series?",
+    "per_seed": [
+      {
+        "seed": 42,
+        "point_estimate": 0.0880820830242397,
+        "ci_lo": 0.0838289603295507,
+        "ci_hi": 0.09238263614175111,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 123,
+        "point_estimate": 0.08601682464172478,
+        "ci_lo": 0.0818594928236637,
+        "ci_hi": 0.0902367164254944,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 7,
+        "point_estimate": 0.09449270938066945,
+        "ci_lo": 0.09017677615524947,
+        "ci_hi": 0.09898183751226917,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 456,
+        "point_estimate": 0.09576463505664556,
+        "ci_lo": 0.09126766177511425,
+        "ci_hi": 0.10030652374272349,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      },
+      {
+        "seed": 789,
+        "point_estimate": 0.097910627521957,
+        "ci_lo": 0.09344732847730078,
+        "ci_hi": 0.10248652854140393,
+        "excludes_zero": true,
+        "p_proxy": 0.0
+      }
+    ],
+    "mean": 0.0924533759250473,
+    "sd": 0.005134255228834995,
+    "p_proxy_conservative": 0.0,
+    "excludes_zero_at_n_of_5_seeds": 5,
+    "holm_corrected_p": 0.0,
+    "holm_significant_at_0.05": true
+  }
+}

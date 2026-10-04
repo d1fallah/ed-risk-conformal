@@ -1,0 +1,21 @@
+seed,model,auroc,auprc
+42,Logistic Regression,0.8969,0.4343
+42,Random Forest,0.9053,0.5068
+42,XGBoost,0.9184,0.5312
+42,XGBoost (tuned),0.924,0.5624
+123,Logistic Regression,0.8969,0.4343
+123,Random Forest,0.9047,0.5062
+123,XGBoost,0.9184,0.5312
+123,XGBoost (tuned),0.9239,0.5641
+7,Logistic Regression,0.8969,0.4343
+7,Random Forest,0.9038,0.5068
+7,XGBoost,0.9184,0.5312
+7,XGBoost (tuned),0.9235,0.5608
+456,Logistic Regression,0.8969,0.4343
+456,Random Forest,0.9041,0.505
+456,XGBoost,0.9184,0.5312
+456,XGBoost (tuned),0.9239,0.5632
+789,Logistic Regression,0.8969,0.4343
+789,Random Forest,0.9048,0.5064
+789,XGBoost,0.9184,0.5312
+789,XGBoost (tuned),0.9241,0.5646

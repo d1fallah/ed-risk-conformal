@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "mean": {
+    "temperature": 36.73733597661135,
+    "heartrate": 81.67935558411264,
+    "resprate": 17.403244160395918,
+    "o2sat": 98.26598541558332,
+    "sbp": 131.23874475584816,
+    "dbp": 75.5274994933258,
+    "pain": 3.160852307672798
+  },
+  "sd": {
+    "temperature": 0.4715222454676776,
+    "heartrate": 16.583267469673288,
+    "resprate": 2.5048407685435614,
+    "o2sat": 2.69748296153645,
+    "sbp": 21.528406857744717,
+    "dbp": 14.521584863489974,
+    "pain": 3.528549331763778
+  },
+  "delta_ref_hours": 5.5,
+  "n_train_rows": 260293,
+  "n_train_patients": 125199,
+  "fit_on": "fixed dev-pool `training` subject subset only"
+}

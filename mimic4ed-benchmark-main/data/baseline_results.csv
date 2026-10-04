@@ -1,0 +1,11 @@
+task,target,model,auroc,auprc,n_train,n_test,pos_rate_test,category
+Task 1 — Hospitalization,outcome_hospitalization,Logistic Regression,0.806,0.7704,334693,83332,0.4729,
+Task 1 — Hospitalization,outcome_hospitalization,Random Forest,0.8099,0.7746,334693,83332,0.4729,
+Task 1 — Hospitalization,outcome_hospitalization,XGBoost,0.819,0.7929,334693,83332,0.4729,
+Task 2 — Critical Outcome,outcome_critical,Logistic Regression,0.8969,0.4343,334693,83332,0.0588,
+Task 2 — Critical Outcome,outcome_critical,Random Forest,0.9052,0.5056,334693,83332,0.0588,
+Task 2 — Critical Outcome,outcome_critical,XGBoost,0.9184,0.5312,334693,83332,0.0588,
+Task 3 — 72h ED Revisit,outcome_ed_revisit_3d,Logistic Regression,0.6972,0.171,334693,83332,0.0376,
+Task 3 — 72h ED Revisit,outcome_ed_revisit_3d,Random Forest,0.672,0.161,334693,83332,0.0376,
+Task 3 — 72h ED Revisit,outcome_ed_revisit_3d,XGBoost,0.6974,0.1641,334693,83332,0.0376,
+Task 2 - Critical Outcome,outcome_critical,NEWS2 (Clinical Baseline),0.6359,0.1566,0,83332,0.0588,Clinical Baselines

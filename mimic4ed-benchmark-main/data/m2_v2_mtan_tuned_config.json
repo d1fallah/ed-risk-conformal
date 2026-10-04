@@ -1,0 +1,9 @@
+{
+  "nhidden": 32,
+  "embed_time": 32,
+  "num_ref_points": 8,
+  "num_heads": 1,
+  "val_auroc": 0.85646719872676,
+  "tune_seed": 42,
+  "protocol": "1-seed, 2-stage, 8-candidate (disclosed scope reduction -- see module docstring)"
+}

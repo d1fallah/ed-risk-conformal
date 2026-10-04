@@ -1,0 +1,22 @@
+{
+  "model": "Hybrid GRU-D v2",
+  "verdict_vs_defective_anchor": "MIDDLE",
+  "verdict_vs_corrected_anchor": "MIDDLE",
+  "test_prevalence": 0.08089884972875441,
+  "eci": {
+    "coverage_class1": 0.8982245047688922,
+    "informative_class1": 0.8076889214966985,
+    "mean_set_size": 1.133464702460797,
+    "q1_saturated_frac": 0.0454125663275602
+  },
+  "anchor_defective": {
+    "mean_set_size": 1.0905663513016226,
+    "informative_class1": 0.7942773294203962
+  },
+  "anchor_corrected": {
+    "mean_set_size": 1.0905663513016226,
+    "informative_class1": 0.7942773294203962,
+    "coverage_class0": 0.914013380518172,
+    "coverage_class1": 0.8951137197358767
+  }
+}

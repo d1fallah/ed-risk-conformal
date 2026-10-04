@@ -1,0 +1,1738 @@
+{
+  "lags": [
+    "0",
+    "60",
+    "240",
+    "1000",
+    "4000",
+    "16000",
+    "inf"
+  ],
+  "realistic_band": [
+    60,
+    240,
+    1000
+  ],
+  "models": {
+    "Temporal-Only GRU-D v2": {
+      "marginal": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9003,
+              "coverage_class0": 0.9606,
+              "coverage_class1": 0.2153,
+              "size": 0.3159,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9003,
+              "coverage_class0": 0.9606,
+              "coverage_class1": 0.2153,
+              "size": 0.3159,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9003,
+              "coverage_class0": 0.9606,
+              "coverage_class1": 0.2153,
+              "size": 0.3159,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.1982,
+              "size": 0.3002,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.199,
+              "size": 0.3015,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9024,
+              "coverage_class0": 0.9618,
+              "coverage_class1": 0.2273,
+              "size": 0.3311,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9029,
+              "coverage_class0": 0.961,
+              "coverage_class1": 0.2427,
+              "size": 0.346,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.96,
+              "coverage_class1": 0.2286,
+              "size": 0.3303,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9006,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.1985,
+              "size": 0.3003,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.199,
+              "size": 0.3016,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9024,
+              "coverage_class0": 0.9637,
+              "coverage_class1": 0.2058,
+              "size": 0.3119,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9352,
+              "coverage_class0": 0.9697,
+              "coverage_class1": 0.5434,
+              "size": 0.6117,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8999,
+              "coverage_class0": 0.9616,
+              "coverage_class1": 0.1992,
+              "size": 0.3018,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.1983,
+              "size": 0.3005,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.1991,
+              "size": 0.3016,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9029,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.2098,
+              "size": 0.316,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9556,
+              "coverage_class0": 0.9834,
+              "coverage_class1": 0.639,
+              "size": 0.7019,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8983,
+              "coverage_class0": 0.9601,
+              "coverage_class1": 0.1958,
+              "size": 0.2991,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9624,
+              "coverage_class1": 0.1981,
+              "size": 0.3002,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.1989,
+              "size": 0.3015,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.99,
+              "coverage_class0": 0.9962,
+              "coverage_class1": 0.9202,
+              "size": 0.9428,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.975,
+              "coverage_class0": 0.9858,
+              "coverage_class1": 0.852,
+              "size": 0.883,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9984,
+              "coverage_class0": 0.9992,
+              "coverage_class1": 0.9897,
+              "size": 0.992,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9625,
+              "coverage_class1": 0.1981,
+              "size": 0.3007,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.1992,
+              "size": 0.3013,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9574,
+              "coverage_class0": 0.9831,
+              "coverage_class1": 0.6651,
+              "size": 0.7304,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9717,
+              "coverage_class0": 0.9893,
+              "coverage_class1": 0.772,
+              "size": 0.8177,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9491,
+              "coverage_class0": 0.95,
+              "coverage_class1": 0.9385,
+              "size": 0.9472,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.1972,
+              "size": 0.2997,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9624,
+              "coverage_class1": 0.198,
+              "size": 0.2996,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9055,
+              "coverage_class0": 0.9651,
+              "coverage_class1": 0.2276,
+              "size": 0.3348,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9055,
+              "coverage_class0": 0.9651,
+              "coverage_class1": 0.2276,
+              "size": 0.3348,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9608,
+              "coverage_class1": 0.1906,
+              "size": 0.2908,
+              "informative_class1": NaN
+            }
+          }
+        }
+      },
+      "class": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.8986,
+              "coverage_class0": 0.8987,
+              "coverage_class1": 0.8978,
+              "size": 1.2151,
+              "informative_class1": 0.7864
+            },
+            "C1": {
+              "coverage": 0.9008,
+              "coverage_class0": 0.9007,
+              "coverage_class1": 0.9024,
+              "size": 1.1337,
+              "informative_class1": 0.7915
+            },
+            "C2": {
+              "coverage": 0.902,
+              "coverage_class0": 0.9023,
+              "coverage_class1": 0.8991,
+              "size": 1.1292,
+              "informative_class1": 0.7888
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9008,
+              "coverage_class1": 0.8995,
+              "size": 1.2424,
+              "informative_class1": 0.7793
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9007,
+              "coverage_class1": 0.9028,
+              "size": 1.1342,
+              "informative_class1": 0.7916
+            },
+            "C2": {
+              "coverage": 0.902,
+              "coverage_class0": 0.9023,
+              "coverage_class1": 0.8991,
+              "size": 1.1292,
+              "informative_class1": 0.7888
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.9002,
+              "coverage_class0": 0.9002,
+              "coverage_class1": 0.8995,
+              "size": 1.2384,
+              "informative_class1": 0.6758
+            },
+            "C1": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9008,
+              "coverage_class1": 0.9029,
+              "size": 1.1345,
+              "informative_class1": 0.7915
+            },
+            "C2": {
+              "coverage": 0.9021,
+              "coverage_class0": 0.9023,
+              "coverage_class1": 0.8992,
+              "size": 1.1295,
+              "informative_class1": 0.7888
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.9002,
+              "coverage_class0": 0.9002,
+              "coverage_class1": 0.9007,
+              "size": 1.2917,
+              "informative_class1": 0.6607
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9007,
+              "coverage_class1": 0.9024,
+              "size": 1.1344,
+              "informative_class1": 0.7915
+            },
+            "C2": {
+              "coverage": 0.9021,
+              "coverage_class0": 0.9024,
+              "coverage_class1": 0.8993,
+              "size": 1.1294,
+              "informative_class1": 0.7886
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.8956,
+              "coverage_class0": 0.8959,
+              "coverage_class1": 0.8924,
+              "size": 1.6901,
+              "informative_class1": 0.1384
+            },
+            "C1": {
+              "coverage": 0.9011,
+              "coverage_class0": 0.901,
+              "coverage_class1": 0.9022,
+              "size": 1.1347,
+              "informative_class1": 0.7906
+            },
+            "C2": {
+              "coverage": 0.9024,
+              "coverage_class0": 0.9027,
+              "coverage_class1": 0.899,
+              "size": 1.1289,
+              "informative_class1": 0.7881
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI INVALID (recalibration valid)",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.8044,
+              "coverage_class0": 0.802,
+              "coverage_class1": 0.8319,
+              "size": 1.4895,
+              "informative_class1": 0.2382
+            },
+            "C1": {
+              "coverage": 0.9023,
+              "coverage_class0": 0.9024,
+              "coverage_class1": 0.9012,
+              "size": 1.1345,
+              "informative_class1": 0.7881
+            },
+            "C2": {
+              "coverage": 0.9039,
+              "coverage_class0": 0.9045,
+              "coverage_class1": 0.8972,
+              "size": 1.1274,
+              "informative_class1": 0.7855
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "B": {
+              "coverage": 0.9257,
+              "coverage_class0": 0.9202,
+              "coverage_class1": 0.9881,
+              "size": 1.7282,
+              "informative_class1": 0.7576
+            },
+            "C1": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            },
+            "C2": {
+              "coverage": 0.9098,
+              "coverage_class0": 0.9112,
+              "coverage_class1": 0.8939,
+              "size": 1.1276,
+              "informative_class1": 0.7748
+            }
+          }
+        }
+      }
+    },
+    "Frozen-Temporal Head Control v2": {
+      "marginal": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.8996,
+              "coverage_class0": 0.9602,
+              "coverage_class1": 0.2104,
+              "size": 0.2685,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.8996,
+              "coverage_class0": 0.9602,
+              "coverage_class1": 0.2104,
+              "size": 0.2685,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8996,
+              "coverage_class0": 0.9602,
+              "coverage_class1": 0.2104,
+              "size": 0.2685,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9006,
+              "coverage_class0": 0.9634,
+              "coverage_class1": 0.1871,
+              "size": 0.231,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.1892,
+              "size": 0.233,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9024,
+              "coverage_class0": 0.9647,
+              "coverage_class1": 0.1944,
+              "size": 0.2423,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9083,
+              "coverage_class0": 0.9619,
+              "coverage_class1": 0.2994,
+              "size": 0.3752,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9001,
+              "coverage_class0": 0.9629,
+              "coverage_class1": 0.1866,
+              "size": 0.2324,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9635,
+              "coverage_class1": 0.1876,
+              "size": 0.2311,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.1892,
+              "size": 0.233,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9024,
+              "coverage_class0": 0.9647,
+              "coverage_class1": 0.1941,
+              "size": 0.2434,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9602,
+              "coverage_class0": 0.9773,
+              "coverage_class1": 0.7659,
+              "size": 0.7923,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8996,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.1873,
+              "size": 0.2325,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9635,
+              "coverage_class1": 0.1875,
+              "size": 0.2314,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.1892,
+              "size": 0.2331,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9026,
+              "coverage_class0": 0.9647,
+              "coverage_class1": 0.1973,
+              "size": 0.2487,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9911,
+              "coverage_class0": 0.9964,
+              "coverage_class1": 0.931,
+              "size": 0.9464,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8987,
+              "coverage_class0": 0.9613,
+              "coverage_class1": 0.1875,
+              "size": 0.2359,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9635,
+              "coverage_class1": 0.1876,
+              "size": 0.2312,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.1891,
+              "size": 0.2329,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9913,
+              "coverage_class0": 0.9971,
+              "coverage_class1": 0.9255,
+              "size": 0.9452,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9913,
+              "coverage_class0": 0.9971,
+              "coverage_class1": 0.9255,
+              "size": 0.9452,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9986,
+              "coverage_class0": 0.9994,
+              "coverage_class1": 0.9891,
+              "size": 0.9915,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9637,
+              "coverage_class1": 0.1882,
+              "size": 0.2319,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9013,
+              "coverage_class0": 0.964,
+              "coverage_class1": 0.1892,
+              "size": 0.2331,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9541,
+              "coverage_class0": 0.9835,
+              "coverage_class1": 0.6208,
+              "size": 0.6886,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9811,
+              "coverage_class0": 0.9943,
+              "coverage_class1": 0.831,
+              "size": 0.8578,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9491,
+              "coverage_class0": 0.95,
+              "coverage_class1": 0.9385,
+              "size": 0.947,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9638,
+              "coverage_class1": 0.1877,
+              "size": 0.2324,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9639,
+              "coverage_class1": 0.1888,
+              "size": 0.2331,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9212,
+              "coverage_class0": 0.9786,
+              "coverage_class1": 0.2686,
+              "size": 0.3529,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9212,
+              "coverage_class0": 0.9786,
+              "coverage_class1": 0.2686,
+              "size": 0.3529,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9632,
+              "coverage_class1": 0.1861,
+              "size": 0.2291,
+              "informative_class1": NaN
+            }
+          }
+        }
+      },
+      "class": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.8994,
+              "coverage_class0": 0.8994,
+              "coverage_class1": 0.8991,
+              "size": 1.2203,
+              "informative_class1": 0.7854
+            },
+            "C1": {
+              "coverage": 0.9008,
+              "coverage_class0": 0.9007,
+              "coverage_class1": 0.9018,
+              "size": 1.1403,
+              "informative_class1": 0.7904
+            },
+            "C2": {
+              "coverage": 0.9021,
+              "coverage_class0": 0.9024,
+              "coverage_class1": 0.8987,
+              "size": 1.1359,
+              "informative_class1": 0.7878
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.9006,
+              "coverage_class0": 0.9007,
+              "coverage_class1": 0.8998,
+              "size": 1.2577,
+              "informative_class1": 0.7764
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9008,
+              "coverage_class1": 0.902,
+              "size": 1.14,
+              "informative_class1": 0.7904
+            },
+            "C2": {
+              "coverage": 0.9021,
+              "coverage_class0": 0.9024,
+              "coverage_class1": 0.8988,
+              "size": 1.1359,
+              "informative_class1": 0.7878
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.9008,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.8996,
+              "size": 1.1766,
+              "informative_class1": 0.7874
+            },
+            "C1": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.9021,
+              "size": 1.141,
+              "informative_class1": 0.7903
+            },
+            "C2": {
+              "coverage": 0.9022,
+              "coverage_class0": 0.9025,
+              "coverage_class1": 0.8989,
+              "size": 1.1363,
+              "informative_class1": 0.7876
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.9008,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.9001,
+              "size": 1.3394,
+              "informative_class1": 0.7731
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9008,
+              "coverage_class1": 0.9022,
+              "size": 1.1407,
+              "informative_class1": 0.7901
+            },
+            "C2": {
+              "coverage": 0.9022,
+              "coverage_class0": 0.9025,
+              "coverage_class1": 0.8989,
+              "size": 1.1361,
+              "informative_class1": 0.7876
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI INVALID (recalibration valid)",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.8891,
+              "coverage_class0": 0.8888,
+              "coverage_class1": 0.892,
+              "size": 1.6014,
+              "informative_class1": 0.2115
+            },
+            "C1": {
+              "coverage": 0.9011,
+              "coverage_class0": 0.901,
+              "coverage_class1": 0.9017,
+              "size": 1.1411,
+              "informative_class1": 0.7899
+            },
+            "C2": {
+              "coverage": 0.9026,
+              "coverage_class0": 0.903,
+              "coverage_class1": 0.8984,
+              "size": 1.1354,
+              "informative_class1": 0.7868
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI INVALID (recalibration valid)",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.8015,
+              "coverage_class0": 0.7959,
+              "coverage_class1": 0.8657,
+              "size": 1.4619,
+              "informative_class1": 0.2782
+            },
+            "C1": {
+              "coverage": 0.9023,
+              "coverage_class0": 0.9025,
+              "coverage_class1": 0.9002,
+              "size": 1.1398,
+              "informative_class1": 0.7873
+            },
+            "C2": {
+              "coverage": 0.9043,
+              "coverage_class0": 0.905,
+              "coverage_class1": 0.8962,
+              "size": 1.1331,
+              "informative_class1": 0.7833
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI SUPPORTED - sole valid method",
+          "direction": "for",
+          "table": {
+            "A": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "B": {
+              "coverage": 0.9225,
+              "coverage_class0": 0.9179,
+              "coverage_class1": 0.9746,
+              "size": 1.6222,
+              "informative_class1": 0.7617
+            },
+            "C1": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            },
+            "C2": {
+              "coverage": 0.9105,
+              "coverage_class0": 0.9124,
+              "coverage_class1": 0.8885,
+              "size": 1.1255,
+              "informative_class1": 0.7714
+            }
+          }
+        }
+      }
+    },
+    "Hybrid GRU-D v2": {
+      "marginal": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.8998,
+              "coverage_class0": 0.9594,
+              "coverage_class1": 0.2227,
+              "size": 0.258,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.8998,
+              "coverage_class0": 0.9594,
+              "coverage_class1": 0.2227,
+              "size": 0.258,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8998,
+              "coverage_class0": 0.9594,
+              "coverage_class1": 0.2227,
+              "size": 0.258,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2053,
+              "size": 0.2357,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.2074,
+              "size": 0.2382,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.902,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.212,
+              "size": 0.2446,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.905,
+              "coverage_class0": 0.9609,
+              "coverage_class1": 0.2705,
+              "size": 0.3143,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9,
+              "coverage_class0": 0.9612,
+              "coverage_class1": 0.2043,
+              "size": 0.2346,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2058,
+              "size": 0.2358,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.2075,
+              "size": 0.2382,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.902,
+              "coverage_class0": 0.9627,
+              "coverage_class1": 0.2117,
+              "size": 0.245,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9389,
+              "coverage_class0": 0.971,
+              "coverage_class1": 0.5745,
+              "size": 0.6011,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9,
+              "coverage_class0": 0.9609,
+              "coverage_class1": 0.2078,
+              "size": 0.2384,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9005,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2057,
+              "size": 0.2359,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.2075,
+              "size": 0.2383,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9021,
+              "coverage_class0": 0.9625,
+              "coverage_class1": 0.2165,
+              "size": 0.2504,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9722,
+              "coverage_class0": 0.989,
+              "coverage_class1": 0.7804,
+              "size": 0.7987,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.8984,
+              "coverage_class0": 0.9594,
+              "coverage_class1": 0.2049,
+              "size": 0.2374,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9616,
+              "coverage_class1": 0.2052,
+              "size": 0.2356,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9623,
+              "coverage_class1": 0.2074,
+              "size": 0.2382,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9923,
+              "coverage_class0": 0.9972,
+              "coverage_class1": 0.9363,
+              "size": 0.9493,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9849,
+              "coverage_class0": 0.9932,
+              "coverage_class1": 0.89,
+              "size": 0.9073,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9985,
+              "coverage_class0": 0.9993,
+              "coverage_class1": 0.9891,
+              "size": 0.9917,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9007,
+              "coverage_class0": 0.9619,
+              "coverage_class1": 0.2058,
+              "size": 0.2363,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9013,
+              "coverage_class0": 0.9624,
+              "coverage_class1": 0.2078,
+              "size": 0.2384,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9547,
+              "coverage_class0": 0.9825,
+              "coverage_class1": 0.6381,
+              "size": 0.6851,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9757,
+              "coverage_class0": 0.9915,
+              "coverage_class1": 0.7964,
+              "size": 0.8206,
+              "informative_class1": NaN
+            },
+            "M2vend": {
+              "coverage": 0.9491,
+              "coverage_class0": 0.95,
+              "coverage_class1": 0.9387,
+              "size": 0.9471,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.962,
+              "coverage_class1": 0.206,
+              "size": 0.2369,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9013,
+              "coverage_class0": 0.9624,
+              "coverage_class1": 0.2075,
+              "size": 0.2384,
+              "informative_class1": NaN
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "M1": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M2": {
+              "coverage": 0.9157,
+              "coverage_class0": 0.972,
+              "coverage_class1": 0.2766,
+              "size": 0.321,
+              "informative_class1": NaN
+            },
+            "M2fix": {
+              "coverage": 0.9157,
+              "coverage_class0": 0.972,
+              "coverage_class1": 0.2766,
+              "size": 0.321,
+              "informative_class1": NaN
+            },
+            "M3": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            },
+            "M4": {
+              "coverage": 0.9004,
+              "coverage_class0": 0.9617,
+              "coverage_class1": 0.2047,
+              "size": 0.2348,
+              "informative_class1": NaN
+            }
+          }
+        }
+      },
+      "class": {
+        "0": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.8996,
+              "coverage_class0": 0.8997,
+              "coverage_class1": 0.8982,
+              "size": 1.1335,
+              "informative_class1": 0.8077
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.9011,
+              "size": 1.0875,
+              "informative_class1": 0.8161
+            },
+            "C2": {
+              "coverage": 0.9028,
+              "coverage_class0": 0.9031,
+              "coverage_class1": 0.8991,
+              "size": 1.0852,
+              "informative_class1": 0.8128
+            }
+          }
+        },
+        "60": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.9011,
+              "coverage_class0": 0.9013,
+              "coverage_class1": 0.8991,
+              "size": 1.0946,
+              "informative_class1": 0.8129
+            },
+            "C1": {
+              "coverage": 0.9009,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.9011,
+              "size": 1.0874,
+              "informative_class1": 0.8162
+            },
+            "C2": {
+              "coverage": 0.9027,
+              "coverage_class0": 0.9031,
+              "coverage_class1": 0.899,
+              "size": 1.0852,
+              "informative_class1": 0.8127
+            }
+          }
+        },
+        "240": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.9012,
+              "coverage_class0": 0.9013,
+              "coverage_class1": 0.8997,
+              "size": 1.0978,
+              "informative_class1": 0.8125
+            },
+            "C1": {
+              "coverage": 0.9011,
+              "coverage_class0": 0.901,
+              "coverage_class1": 0.9018,
+              "size": 1.0881,
+              "informative_class1": 0.8162
+            },
+            "C2": {
+              "coverage": 0.9028,
+              "coverage_class0": 0.9031,
+              "coverage_class1": 0.8996,
+              "size": 1.0856,
+              "informative_class1": 0.8127
+            }
+          }
+        },
+        "1000": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9012,
+              "coverage_class1": 0.8996,
+              "size": 1.1987,
+              "informative_class1": 0.7933
+            },
+            "C1": {
+              "coverage": 0.901,
+              "coverage_class0": 0.9009,
+              "coverage_class1": 0.9016,
+              "size": 1.0875,
+              "informative_class1": 0.8158
+            },
+            "C2": {
+              "coverage": 0.9029,
+              "coverage_class0": 0.9032,
+              "coverage_class1": 0.8993,
+              "size": 1.0855,
+              "informative_class1": 0.8126
+            }
+          }
+        },
+        "4000": {
+          "verdict": "ECI INVALID (recalibration valid)",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.881,
+              "coverage_class0": 0.8799,
+              "coverage_class1": 0.8934,
+              "size": 1.4509,
+              "informative_class1": 0.3008
+            },
+            "C1": {
+              "coverage": 0.9013,
+              "coverage_class0": 0.9013,
+              "coverage_class1": 0.9016,
+              "size": 1.0882,
+              "informative_class1": 0.8154
+            },
+            "C2": {
+              "coverage": 0.9034,
+              "coverage_class0": 0.9038,
+              "coverage_class1": 0.899,
+              "size": 1.0859,
+              "informative_class1": 0.8117
+            }
+          }
+        },
+        "16000": {
+          "verdict": "ECI INVALID (recalibration valid)",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.8061,
+              "coverage_class0": 0.7972,
+              "coverage_class1": 0.9065,
+              "size": 1.3879,
+              "informative_class1": 0.3528
+            },
+            "C1": {
+              "coverage": 0.9032,
+              "coverage_class0": 0.9034,
+              "coverage_class1": 0.9004,
+              "size": 1.0894,
+              "informative_class1": 0.8119
+            },
+            "C2": {
+              "coverage": 0.9053,
+              "coverage_class0": 0.906,
+              "coverage_class1": 0.898,
+              "size": 1.0865,
+              "informative_class1": 0.808
+            }
+          }
+        },
+        "inf": {
+          "verdict": "ECI NOT NEEDED",
+          "direction": "against",
+          "table": {
+            "A": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "B": {
+              "coverage": 0.916,
+              "coverage_class0": 0.9126,
+              "coverage_class1": 0.9554,
+              "size": 1.3345,
+              "informative_class1": 0.7965
+            },
+            "C1": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            },
+            "C2": {
+              "coverage": 0.9125,
+              "coverage_class0": 0.914,
+              "coverage_class1": 0.8951,
+              "size": 1.0906,
+              "informative_class1": 0.7943
+            }
+          }
+        }
+      }
+    }
+  },
+  "overall": "THE NEGATIVE RESULT IS ROBUST TO REALISTIC LAG"
+}
