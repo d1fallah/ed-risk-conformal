@@ -1,3 +1,5 @@
+# Derived from the MIMIC-IV-ED benchmark (https://github.com/nliulab/mimic4ed-benchmark), GNU General Public License v3.0.
+# Modified in 2026 by Akram Mdifallah for the M2 conformal-calibration study; see the git history for the changes.
 import pandas as pd
 import numpy as np
 import re

@@ -39,7 +39,7 @@ pre-specified comparisons did not support that claim, and the dossier records th
 ```
 .
 ├── README.md
-├── LICENSE                         # applies to this study's own code (MIT)
+├── LICENSE                         # GNU General Public License v3.0
 ├── module2_provenance.md           # vendored-baseline provenance, with pinned commits
 └── mimic4ed-benchmark-main/        # the baseline workspace; all study work lives here
     ├── Benchmark_scripts/          # cohort building, models, conformal analyses (m2_*.py), run scripts (*.sh)
@@ -113,8 +113,11 @@ python src/cohort_demographics.py       # cohort description (needs the local sp
 
 ## Licenses and third-party code
 
-- This study's own code is released under the MIT license (`LICENSE`).
+- This repository is released under the GNU General Public License v3.0 (`LICENSE`). Copyright (c) 2026 Akram Mdifallah.
 - `mimic4ed-benchmark-main/` is derived from the MIMIC-IV-ED benchmark of Xie et al. (Scientific Data 9, 658, 2022),
-  which is distributed under the GNU General Public License v3.0; its license is in `mimic4ed-benchmark-main/LICENSE`.
-  Files that come from or modify that baseline stay under that license.
-- Use of MIMIC-IV-ED is governed by the PhysioNet credentialed data use agreement.
+  also distributed under the GNU General Public License v3.0; its original license and notices are kept in
+  `mimic4ed-benchmark-main/LICENSE`. Files that come from or modify that baseline are marked as modified in the commit
+  history, for example `Benchmark_scripts/helpers.py`.
+- The ECI and mTAN implementations that this study uses are released under the MIT license by their authors. They are
+  not copied into this repository.
+- Use of MIMIC-IV-ED is governed by the PhysioNet credentialed data use agreement, which is separate from this license.
