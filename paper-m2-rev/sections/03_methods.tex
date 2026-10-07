@@ -36,7 +36,7 @@ cohort has \RVHtwoEligibleTotal{} eligible stays; \RVHtwoPrimaryPositivesTotal{}
 secondary-outcome positives, so the primary outcome retains \RVRetainedPrimary{} and the secondary outcome \RVRetainedSecondary{} of the \RVOriginalPositivesTotal{} positives of the original endpoint (Table~\ref{tab:cohort}). The primary outcome also counts \RVOverlapPrimaryOnly{} events that the original endpoint excludes, all of them ICU admissions later than 12 hours after ED departure but within 24 hours of the landmark. Fig.~\ref{fig:landmark} shows the design.
 
 \input{fig_landmark}
-\input{tab_cohort}
+\input{tab_cohort_merged}
 
 \subsection{Inputs and Their Timing}
 \label{sec:methods-inputs}
@@ -50,7 +50,7 @@ sequence tensors, outlier rules, and elapsed-time construction follow the reposi
 eligible training-period stays have no ED vital sign after triage, against \RVZeroRowsTestPct{} in the test period, a difference in recording practice
 between the periods that we report and do not correct.
 
-\input{tab_timing}
+\input{tab_timing_slim}
 
 \subsection{Models and Tuning}
 \label{sec:methods-models}

@@ -163,6 +163,8 @@ def main():
     print("tables A written")
     if partB:
         B.table_discrimination(); B.table_contrasts(); B.table_conformal_main(); B.table_intervals(); B.table_alpha(); B.table_lag_drift(); B.table_tuning(); B.table_calibration(); B.table_elixhauser(); B.table_duration(); B.table_stream(); B.table_other_models(); B.table_sweep(); B.table_years(); B.table_search(); B.table_acuity_shortcut(); B.table_fixed_cohort(); B.table_characteristics(); Cc.table_recording(); Cc.table_arrival(); Cc.table_static_cov(); Cc.table_intercept(); Cc.table_dedup()
+        import gen_assets_v2_d as Dd
+        Dd.table_cohort_merged(); Dd.table_shortcuts_arrival(); Dd.table_discrimination_cal(); Dd.table_timing_slim()
         print("tables B written")
     label_proxy()
 

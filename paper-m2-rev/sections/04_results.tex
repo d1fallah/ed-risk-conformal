@@ -5,7 +5,7 @@
 \label{sec:results-cohort}
 
 At the two-hour landmark, \RVHtwoTestEligible{} of the \RVHtwoTestStays{} test-period stays were eligible and \RVHtwoTestPositives{} had the primary outcome (Table~\ref{tab:cohort}).
-Table~\ref{tab:characteristics} (added analysis) compares the eligible stays of the two periods. Age, sex, and triage acuity differed little (standardized differences
+Table~\ref{tab:cohort} (added analysis) compares the eligible stays of the two periods. Age, sex, and triage acuity differed little (standardized differences
 \RVCharSmdAge{}, \RVCharSmdFemale{}, and \RVCharSmdAcuity{} for acuity 1 or 2). The primary-outcome rate rose from \RVCharTrainPrimary{} in the training period to
 \RVCharTestPrimary{} in the test period, the share of stays with no ED vital sign after triage fell from \RVZeroRowsTrainPct{} to \RVZeroRowsTestPct{} (standardized
 difference \RVCharSmdRowsZero{}), and the share with at least one comorbidity fell from \RVCharTrainElixPct{} to \RVCharTestElixPct{} (\RVCharSmdElix{}).
@@ -13,8 +13,6 @@ difference \RVCharSmdRowsZero{}), and the share with at least one comorbidity fe
 The change in recording (added analysis; Supplementary Table~\ref{S-tab:recording}) was a transition between 2013 and 2016 that ended before the test period. The share of eligible stays with no ED vital sign by two hours fell from \RVRecZeroC{} in 2011 to \RVRecZeroF{} in 2014, \RVRecZeroG{} in 2015, and \RVRecZeroH{} in 2016, and the median delay from arrival to the first charted ED vital sign fell from \RVRecDelayC{} hours in 2011 to \RVRecDelayH{} hours in 2016. Over the same years the share of stays whose first ED vital-sign row repeats the triage measurement rose from \RVRecEqTriC{} to \RVRecEqTriF{}, \RVRecEqTriG{}, and \RVRecEqTriH{}, and was \RVRecEqTriTest{} in the test period.
 
 Removing the copied row left discrimination unchanged (added analysis; Supplementary Table~\ref{S-tab:dedup}). The row was removed for \RVDdFlaggedFit{} of stays in the fitting subset and \RVDdFlaggedTest{} in the test period. After refitting, the AUROC of the trees was \RVDdTrees{} (\RVDdTreesLo{}--\RVDdTreesHi{}), a change of \RVDdTreesChange{} (\RVDdTreesChangeLo{} to \RVDdTreesChangeHi{}) from the primary analysis, and that of logistic regression changed by \RVDdLrChange{} (\RVDdLrChangeLo{} to \RVDdLrChangeHi{}). Removing the timing features changed the AUROC of the trees by \RVNtTreesChange{} (\RVNtTreesChangeLo{} to \RVNtTreesChangeHi{}) and that of logistic regression by \RVNtLrChange{} (\RVNtLrChangeLo{} to \RVNtLrChangeHi{}), and reducing the inputs to vital-sign values and the static profile changed them by \RVVoTreesChange{} and \RVVoLrChange{}. The advantage of the trees over logistic regression was \RVOrigTreesOverLr{} (\RVOrigTreesOverLrLo{} to \RVOrigTreesOverLrHi{}) in the primary analysis and between \RVNtTreesOverLr{} and \RVVoTreesOverLr{} in the three variants. Scoring the stored Hybrid GRU-D models on test stays without the copied row, with no refit, changed the AUROC of the seed mean from \RVGrudHybridStored{} to \RVGrudHybridDd{}, a change of \RVGrudHybridChange{} (\RVGrudHybridChangeLo{} to \RVGrudHybridChangeHi{}), with seed-level changes from \RVGrudHybridSeedLow{} to \RVGrudHybridSeedHigh{}; this is below the threshold of \RVGrudRule{} set beforehand, so the refit was not run. The stored Temporal-Only models, which receive vital signs and their timing only, changed by \RVGrudTempChange{} (\RVGrudTempChangeLo{} to \RVGrudTempChangeHi{}).
-
-\input{tab_characteristics}
 
 \subsection{Timing of the Inputs and the Shortcut Diagnostic}
 \label{sec:results-audit}
@@ -42,7 +40,7 @@ In an added analysis by triage acuity (Supplementary Table~\ref{S-tab:acuity-sho
 GRU-D. Over all stays, acuity alone reached \RVAcuOverallAcu{} and acuity with the workflow quantities \RVAcuOverallWorkAcu{}. Acuity 4 or 5 (\RVAcuLowN{} stays) had
 \RVAcuLowPos{} stay with the outcome and was not evaluated.
 
-\input{tab_shortcuts}
+\input{tab_shortcuts_arrival}
 
 \subsection{Discrimination, Calibration, and Usefulness at the Landmark}
 \label{sec:results-discrimination}
@@ -63,7 +61,7 @@ calendar year of the test period, the AUROC ranged from \RVYearAurocHybridMin{} 
 \RVYearAurocTreesMax{} for the tree ensemble, and from \RVYearAurocLrMin{} to \RVYearAurocLrMax{} for logistic regression, and the tree ensemble was at or above the
 primary model in every year (Supplementary Table~\ref{S-tab:years}).
 
-\input{tab_discrimination}
+\input{tab_discrimination_cal}
 
 \begin{figure}[t]
 \centering

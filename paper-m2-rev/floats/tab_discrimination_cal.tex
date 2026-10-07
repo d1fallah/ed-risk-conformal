@@ -1,0 +1,23 @@
+\begin{table*}[t]
+\centering
+\caption{Discrimination and calibration on the test period for the primary outcome $Y_L$ (ICU admission or in-hospital death within 24\,h of the landmark; MIMIC-IV-ED, retrospective single-center proxy). AUROC is the mean over five seeds with the standard deviation across seeds; the interval is the patient-cluster bootstrap 95\% interval of the seed-averaged AUROC. Sec.: AUROC for the secondary outcome (benchmark composite after $L$). Slope and Int.: slope and intercept of a logistic regression of the outcome on the logit of the score (mean over seeds; observed event rate 7.8\%). The primary model is Hybrid GRU-D trained end to end.}
+\label{tab:discrimination}
+\begin{tabular}{lcccccc}
+\toprule
+Model & AUROC & 95\% CI & AUPRC & Sec. & Slope & Int. \\
+\midrule
+\multicolumn{7}{l}{\emph{2-hour landmark}} \\
+Logistic regression & 0.896 & [0.891, 0.900] & 0.531 & 0.895 & 1.06 & 0.58 \\
+Timing-aware trees & 0.905\,$\pm$\,0.0002 & [0.901, 0.909] & 0.563 & 0.904 & 0.99 & 0.34 \\
+Temporal-Only GRU-D & 0.879\,$\pm$\,0.0008 & [0.874, 0.884] & 0.532 & 0.875 & 1.06 & 0.36 \\
+Hybrid GRU-D, frozen encoder & 0.903\,$\pm$\,0.0002 & [0.898, 0.907] & 0.555 & 0.901 & 1.01 & 0.36 \\
+Hybrid GRU-D, end to end & 0.902\,$\pm$\,0.0005 & [0.897, 0.906] & 0.552 & 0.900 & 1.04 & 0.42 \\
+NEWS2 (five parameters) & 0.669 & [0.661, 0.677] & -- & -- & -- & -- \\
+\midrule
+\multicolumn{7}{l}{\emph{Arrival (triage) landmark}} \\
+Logistic regression & 0.878 & [0.874, 0.882] & 0.432 & 0.879 & -- & -- \\
+Gradient-boosted trees & 0.887\,$\pm$\,0.0003 & [0.883, 0.891] & 0.454 & 0.887 & -- & -- \\
+NEWS2 (five parameters) & 0.546 & [0.538, 0.554] & -- & -- & -- & -- \\
+\bottomrule
+\end{tabular}
+\end{table*}

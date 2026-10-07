@@ -1,0 +1,25 @@
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Shortcut diagnostic and information at arrival on the end-of-stay task of the original analysis (test period; outcome: death or ICU transfer within 12 h of ED departure). Workflow quantities describe how a stay was monitored: ED duration, number of retained measurements, and per-vital measurement counts. Arrival information: the triage vital signs and their missingness, age, sex, triage acuity, and comorbidity count. Upper block: patient-cluster bootstrap 95\% interval (paired for differences). Lower block: standard deviation over five seeds. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:shortcuts}
+\begin{tabular}{lccc}
+\toprule
+Inputs & AUROC & Interval & AUPRC \\
+\midrule
+\multicolumn{4}{l}{\emph{Logistic regression, end-of-stay task}} \\
+ED duration alone & 0.584 & [0.577, 0.591] & 0.097 \\
+Workflow quantities & 0.843 & [0.837, 0.848] & 0.448 \\
+Arrival information & 0.880 & [0.876, 0.884] & -- \\
+Arrival information and ED duration & 0.882 & [0.878, 0.886] & -- \\
+Arrival information and workflow quantities & 0.911 & [0.906, 0.914] & -- \\
+ED duration added to arrival information (difference) & +0.003 & [+0.001, +0.005] & -- \\
+Workflow quantities added to arrival information (difference) & +0.031 & [+0.028, +0.034] & -- \\
+\midrule
+\multicolumn{4}{l}{\emph{Models that read the last ten vital-sign rows of the whole stay}} \\
+Static features, neural network & 0.856 & seed SD 0.001 & 0.360 \\
+Trees, whole stay & 0.927 & seed SD 0.000 & 0.634 \\
+Hybrid GRU-D, whole stay & 0.937 & seed SD 0.001 & 0.687 \\
+\bottomrule
+\end{tabular}
+\end{table}
