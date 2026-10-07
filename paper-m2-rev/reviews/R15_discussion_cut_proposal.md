@@ -186,9 +186,9 @@ Further levers, each with its estimated saving (words of the section files over 
 | Results to 1,300 words | 0.2 | 9.4 |
 | Table II (timing audit, full width) to the supplement, three sentences stay in Methods | 0.3 | 9.1 |
 | References cut to about 33 with the shorter text | 0.15 | 8.9 |
-| Discussion body (without Limitations) from 880 to 580 words | 0.3 | 8.6 |
-| Fig. 6 (full width) to one column | 0.15 | 8.5 |
-A forecast is uncertain by about 0.3 page, so 8.5 needs all of these and 9.0 needs roughly the first five. At 9.0 pages the cost is one charged page; at 10.5, two.
+| Discussion body (without Limitations) from 1,314 to about 900 words | 0.4 | 8.5 |
+| Fig. 6 (full width) to one column | 0.15 | 8.35 |
+A forecast is uncertain by about 0.3 page, so 8.5 needs the first seven levers and 9.0 needs roughly the first five. At 9.0 pages the cost is one charged page; at 10.5, two.
 
 ## Decisions needed
 1. Approve the proposed Discussion text (or mark the paragraphs to change).
