@@ -1,0 +1,76 @@
+% TRIPOD+AI checklist (Collins et al., BMJ 2024;385:e078378), items abbreviated. Locations refer to the main manuscript (labels prefixed M-, read through xr).
+% Written by hand: it contains no result, only where each item is reported or why it is not.
+{\footnotesize
+\begin{longtable}{@{}p{0.9cm}p{5.4cm}p{10.2cm}@{}}
+\caption{TRIPOD+AI checklist (Collins et al., BMJ, vol.~385, e078378, 2024) with the location of each item in the main manuscript (Sec.: section; Tab.: table). Items are abbreviated; see the statement for their full wording.}
+\label{tab:tripod}\\
+\toprule
+Item & Topic & Where reported, or why not \\
+\midrule
+\endfirsthead
+\toprule
+Item & Topic & Where reported, or why not \\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\multicolumn{3}{@{}l}{\emph{Title and abstract}}\\
+1 & Development or evaluation, population, outcome & Title \\
+2 & Abstract & Abstract \\
+\multicolumn{3}{@{}l}{\emph{Introduction}}\\
+3a & Health-care context, rationale, existing models & Sec.~\ref{M-sec:introduction}; Sec.~\ref{M-sec:related-work} \\
+3b & Target population, intended purpose and users & Sec.~\ref{M-sec:introduction} and~\ref{M-sec:methods-task}: adult ED stays; a score for ED clinicians two hours after arrival, between triage and disposition. No deployment is proposed \\
+3c & Known health inequalities & Not reviewed \\
+4 & Objectives & Sec.~\ref{M-sec:introduction} (aim and contributions); the study develops and evaluates models on a temporal split \\
+\multicolumn{3}{@{}l}{\emph{Methods}}\\
+5a & Data sources, rationale, representativeness & Sec.~\ref{M-sec:methods-cohort}; single-center representativeness in Sec.~\ref{M-sec:limitations} \\
+5b & Dates of the data & Sec.~\ref{M-sec:methods-cohort} (approximate calendar years; dates are shifted for de-identification); Tab.~\ref{tab:years} \\
+6a & Setting, number and location of centers & Sec.~\ref{M-sec:methods-cohort}: the ED of one US academic medical center \\
+6b & Eligibility criteria & Sec.~\ref{M-sec:methods-cohort} and~\ref{M-sec:methods-task}; Tab.~\ref{M-tab:cohort} \\
+6c & Treatments & Not modelled: treatments in the ED are neither inputs nor adjusted for \\
+7 & Data preparation and quality checks & Sec.~\ref{M-sec:methods-inputs}; input audit in Tab.~\ref{M-tab:timing}. The same rules apply to every stay \\
+8a & Outcome, horizon, assessment & Sec.~\ref{M-sec:methods-task}; the outcome is derived from recorded timestamps in the same way for every stay \\
+8b & Subjective outcome assessment & Not applicable (recorded timestamps) \\
+8c & Blinding of outcome assessment & Not applicable (recorded timestamps) \\
+9a & Choice of predictors & Sec.~\ref{M-sec:methods-inputs} (inputs of the benchmark pipeline) \\
+9b & Definition and timing of predictors & Sec.~\ref{M-sec:methods-inputs}; Tab.~\ref{M-tab:timing} \\
+9c & Subjective predictors & Triage acuity is assigned by triage staff, whose characteristics are not recorded in the database \\
+10 & Study size & No sample-size calculation; all eligible stays were used. Event counts in Sec.~\ref{M-sec:methods-cohort} and Tab.~\ref{M-tab:cohort} \\
+11 & Missing data & Sec.~\ref{M-sec:methods-inputs} and~\ref{M-sec:methods-models} (masks and decay in GRU-D; median imputation with indicators for logistic regression); Sec.~\ref{M-sec:methods-diagnostics} (NEWS2) \\
+12a & Use and partitioning of the data & Sec.~\ref{M-sec:methods-cohort} \\
+12b & Handling of predictors & Sec.~\ref{M-sec:methods-inputs} and~\ref{M-sec:methods-models} \\
+12c & Model type, building, tuning, internal validation & Sec.~\ref{M-sec:methods-models}; Tab.~\ref{tab:tuning} \\
+12d & Heterogeneity across clusters & Single center; discrimination by calendar year (Sec.~\ref{M-sec:methods-stats}) \\
+12e & Performance measures and plots & Sec.~\ref{M-sec:methods-conformal} and~\ref{M-sec:methods-stats} \\
+12f & Model updating & The models were not updated; the conformal calibration was updated online and periodically (Sec.~\ref{M-sec:methods-conformal}) \\
+12g & How predictions were calculated & Code (Data and Code Availability) \\
+13 & Class imbalance & No class weighting or resampling (Sec.~\ref{M-sec:methods-models}); class-conditional conformal calibration (Sec.~\ref{M-sec:methods-conformal}) \\
+14 & Fairness & No fairness intervention; discrimination by sex, age, and acuity (Sec.~\ref{M-sec:methods-stats}) \\
+15 & Model output & Predicted probability and conformal prediction sets (Sec.~\ref{M-sec:methods-conformal}); no classification threshold was chosen \\
+16 & Development versus evaluation data & Sec.~\ref{M-sec:methods-cohort} and~\ref{M-sec:methods-inputs}; Sec.~\ref{M-sec:results-cohort} and Tab.~\ref{M-tab:characteristics} \\
+17 & Ethical approval and consent & Sec.~\ref{M-sec:methods-cohort} \\
+\multicolumn{3}{@{}l}{\emph{Open science}}\\
+18a & Funding & \datagap{funding statement, to be added by the author} \\
+18b & Conflicts of interest & Conflict of Interest section \\
+18c & Protocol & An analysis plan was written before the landmark models were trained (Sec.~\ref{M-sec:methods-stats}); it is not publicly posted \\
+18d & Registration & Not registered \\
+18e & Data sharing & Data and Code Availability (PhysioNet credentialed access) \\
+18f & Code sharing & Data and Code Availability \\
+19 & Patient and public involvement & None \\
+\multicolumn{3}{@{}l}{\emph{Results}}\\
+20a & Flow of participants, events & Sec.~\ref{M-sec:results-cohort}; Tab.~\ref{M-tab:cohort}; Fig.~\ref{M-fig:landmark} \\
+20b & Characteristics, missing data & Tab.~\ref{M-tab:characteristics} \\
+20c & Development versus evaluation predictors & Tab.~\ref{M-tab:characteristics} (standardized differences) \\
+21 & Participants and events per analysis & Tab.~\ref{M-tab:cohort}; Sec.~\ref{M-sec:results-audit} to~\ref{M-sec:results-coverage} \\
+22 & Full model specification & Configurations in Tab.~\ref{tab:tuning}; code (Data and Code Availability) \\
+23a & Performance with intervals, subgroups & Sec.~\ref{M-sec:results-discrimination}; Tab.~\ref{M-tab:discrimination}; Tab.~\ref{tab:calibration} and~\ref{tab:subgroups} \\
+23b & Heterogeneity across clusters & Tab.~\ref{tab:years} \\
+24 & Results of model updating & Sec.~\ref{M-sec:results-coverage} \\
+\multicolumn{3}{@{}l}{\emph{Discussion}}\\
+25 & Interpretation & Sec.~\ref{M-sec:discussion} \\
+26 & Limitations & Sec.~\ref{M-sec:limitations} \\
+27a & Poor-quality or missing inputs in use & Not addressed beyond the handling of missing vital signs (Sec.~\ref{M-sec:methods-inputs}) \\
+27b & User interaction and expertise & Not addressed; no user-facing tool was built \\
+27c & Next steps & Sec.~\ref{M-sec:limitations}; Sec.~\ref{M-sec:conclusion} \\
+\end{longtable}
+}

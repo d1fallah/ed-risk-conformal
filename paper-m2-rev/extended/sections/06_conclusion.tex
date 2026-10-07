@@ -1,0 +1,19 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+We audited the inputs of an ED deterioration model on MIMIC-IV-ED and re-evaluated the task at a two-hour landmark with conformal calibration. On the end-of-stay task (AUROC \RVEosHybridAuroc{} for the full model), arrival information alone reached \RVIncArr{} and quantities that describe how a stay was monitored added \RVIncWorkOverArr{}, so that task does not support a claim of early warning. At the landmark, with inputs restricted to what had been recorded by then, the best AUROC was \RVAurocXgbT{}; timing-aware trees were slightly better than a recurrent hybrid model under a four-configuration tuning budget, and logistic regression came close. Discrimination fell at later landmarks as the eligible patients changed, whereas on one fixed set of patients it rose with every landmark. Conformal sets that met their marginal coverage covered few of the patients who deteriorated, and class-conditional sets that covered them issued the singleton set $\{1\}$ with a positive predictive value of \RVSetPpvMondEci{} and \RVSetFaMondEci{} false alarms per 100 patients, which a plain threshold on the score also gives at that sensitivity. Online updating moved marginal coverage toward the target and, under imposed drift, held it where static calibration did not.
+
+Studies of ED deterioration models should therefore state the prediction time, report a workflow-only baseline next to any end-of-stay result, and give the class-specific coverage and false-alarm burden of conformal sets. The next steps are a validation of the frozen protocol at another site and prospectively, and an elicitation of the false-alarm burden that ED clinicians would accept, which would make the coverage level of the sets a clinical choice.
+
+\section*{Acknowledgment}
+\datagap{acknowledgment text (funding, supervision, compute), to be written by the author}
+
+Portions of the text were drafted with the assistance of an AI language model (Claude, Anthropic) and revised by the author, who is responsible for the content. \datagap{author to confirm the wording of the AI-use disclosure}
+
+\section*{Conflict of Interest}
+\datagap{conflict-of-interest statement, to be confirmed by the author}
+
+\section*{Data and Code Availability}
+The MIMIC-IV-ED and MIMIC-IV data are available from PhysioNet to credentialed users who complete the
+required training and sign the data use agreement; they cannot be redistributed. The code that produces
+every reported result, table, and figure will be released at \datagap{repository URL}.

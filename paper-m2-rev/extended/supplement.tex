@@ -1,0 +1,83 @@
+% Supplementary material for the revised M2 manuscript. Tables are generated from frozen evidence (see ../mimic4ed-benchmark-main/src/revision_v2/paper_v2/),
+% except the TRIPOD+AI checklist (sections/supp_tripod.tex), which holds no result. Tables appear in the order of their first citation in main.tex;
+% main-text locations are read from main.aux (M- prefix).
+\input{preamble}
+\input{rv_numbers}
+\usepackage{longtable}
+\usepackage{array}
+\usepackage{xr}
+\externaldocument[M-]{main}
+% Keep each generated table under its heading (the generated files ask for [t], which IEEEtran refuses on the title page).
+\let\origtable\table
+\let\endorigtable\endtable
+\renewenvironment{table}[1][]{\origtable[H]}{\endorigtable}
+\begin{document}
+\onecolumn
+\raggedbottom
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\title{Supplementary Material for ``Predicting Deterioration Two Hours After Emergency Department Arrival: Avoiding Leakage and Evaluating Conformal Prediction Sets''}
+\author{Akram~Mdifallah}
+\markboth{IEEE Journal of Biomedical and Health Informatics}{}
+\maketitle
+
+\section*{Literature search}
+\input{tab_search}
+
+\section*{Comparison with the closest studies}
+\input{supp_related}
+
+\section*{Tuning budget}
+\input{tab_tuning}
+
+\clearpage
+\clearpage
+\section*{Reporting checklist}
+\input{supp_tripod}
+
+\clearpage
+\section*{Recording of vital signs by year}
+\input{tab_recording}
+\input{tab_dedup}
+
+\section*{End-of-stay diagnostics}
+\input{tab_elixhauser}
+\input{tab_arrival}
+\input{tab_duration}
+\input{tab_acuity_shortcut}
+
+\section*{Pre-specified contrasts}
+\input{tab_contrasts}
+
+\section*{Discrimination by calendar year of the test period}
+\input{tab_years}
+
+\section*{Landmark time}
+\input{tab_sweep}
+\input{tab_fixed_cohort}
+
+\section*{Calibration and subgroups}
+\input{tab_calibration}
+
+\section*{Coverage of the static conformal sets}
+\input{tab_static_cov}
+
+\section*{Robustness of the conformal results}
+\input{tab_other_models}
+\input{tab_stream}
+
+\section*{Precision of the singleton set}
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.5\linewidth]{fig_pr}
+\caption{Precision--recall curve of the primary model on the test period (seed 42) with the positive predictive value and sensitivity of the singleton set $\{1\}$ of the static and online class-conditional sets at $\alpha = 0.10$. The singleton of a static set is issued exactly for the stays whose score exceeds one threshold, so its operating point lies on the curve; the three Mondrian points nearly coincide. Dotted line: event rate. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{fig:pr}
+\end{figure}
+
+\section*{Nominal coverage level}
+\input{tab_alpha}
+
+\section*{Recalibration of the score}
+\input{tab_intercept}
+
+\end{document}

@@ -84,3 +84,15 @@ the built PDFs. Each step ends with a commit.
 2. 8.5 pages (one charged page) or cut to 8.0 (400 words more).
 3. Whether the label-delay and drift analyses should appear as a main-text sentence plus supplement table (A) or as a sentence alone.
 4. The wording of the pointer to the extended version (a preprint reference to be filled once it is posted).
+
+## 9. Decisions received (2026-10-07)
+1. Supplement: include A (label delay and imposed drift) and B (literature-search table). No tables for C, D, E: the static-coverage bootstrap intervals go inline in the Results text, the
+   intercept recalibration gets one sentence with its numbers, and the calibration slope and intercept become two columns of the main discrimination table (Table V); the separate calibration table is dropped.
+   Supplement size with A and B: 2.7 + 0.4 + 0.5 = 3.6 pages, which still holds if the checklist counts.
+2. Target 8.5 pages for the main text including references. Later cuts, if needed, come from the Implications subsection, never from the Limitations paragraph.
+3. Pointer to the extended version: "An extended version with all analyses is available [ref]", the reference left as a placeholder (`[DATA_GAP: extended-version reference; depends on whether
+   JBHI review is anonymous]`); no arXiv identifier or repository URL. Before posting on arXiv: check the current IEEE preprint policy and update the preprint after acceptance as it requires.
+Note on the bibliography: BibTeX prints only cited entries, so the submitted version needs no separate trimmed `.bib`; the reference count follows from the cut text.
+
+## 10. Progress
+- Step 1 (extended copy): done. `extended/` builds to text identical to the current paper (16 pages) and supplement (11 pages); the verifier passes on both versions.

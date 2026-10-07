@@ -89,14 +89,16 @@ def main():
     # macros used vs defined
     defined = set(re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read()))
     used = set()
-    for f in glob.glob(os.path.join(PAPER, "sections", "*.tex")) + glob.glob(os.path.join(PAPER, "floats", "*.tex")) + [os.path.join(PAPER, "main.tex")]:
+    # both versions: the submitted paper and the extended version (paper-m2-rev/extended), which share floats/ and rv_numbers.tex
+    section_files = glob.glob(os.path.join(PAPER, "sections", "*.tex")) + glob.glob(os.path.join(PAPER, "extended", "sections", "*.tex"))
+    for f in section_files + glob.glob(os.path.join(PAPER, "floats", "*.tex")) + [os.path.join(PAPER, "main.tex"), os.path.join(PAPER, "extended", "main.tex")]:
         used |= set(re.findall(r"\\(RV[A-Za-z]+)", open(f, encoding="utf-8").read()))
     for m in sorted(used - defined):
         check(False, f"macro used but not defined: \\{m}")
     # hand-typed numbers in prose
     # 20 = minimum events per evaluated stratum (p2_16); 0.40 = upper end of the decision-curve grid (p2_13); both fixed in code before running.
     allow = re.compile(r"^(0\.(05|10|20|01|89|90|40)|0\.9|0\.80|0\.95|0\.99|2[0-9]{3}|10|20|24|12|18|42|50|65|90|95|100|128|3050|2\.13|3\.4|1\.9|1\.5|60|240|1,?000|2,?000|10,?000|40,?000)$")
-    for f in glob.glob(os.path.join(PAPER, "sections", "*.tex")):
+    for f in section_files:
         if os.path.basename(f) == "supp_tripod.tex":
             continue  # reporting checklist: its digits are TRIPOD+AI item numbers, and it holds no result
         for i, line in enumerate(open(f, encoding="utf-8").read().split("\n"), 1):
@@ -110,7 +112,7 @@ def main():
             for tok in re.findall(r"(?<![A-Za-z\\{])\d[\d,\.]*\d|\b\d\b", s):
                 if not allow.match(tok) and not re.match(r"^\d$", tok):
                     check(False, f"{os.path.basename(f)}:{i}: possible hand-typed number {tok!r}")
-    print(f"records replayed: {n_rec}; macros defined {len(defined)}, used {len(used)}")
+    print(f"records replayed: {n_rec}; macros defined {len(defined)}, used {len(used)}; section files scanned {len(section_files)}")
     for m in fails[:80]:
         print("FAIL:", m)
     print("RESULT:", "FAIL" if fails else "PASS", f"({len(fails)} problems)")

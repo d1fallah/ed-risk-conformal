@@ -10,3 +10,8 @@ This version follows `../paper-m2/REVISION_PLAN.md` (Phases 0 to 2) and the revi
   Regenerate: `freeze_evidence_v2.py`, `gen_assets_v2.py`, `gen_figures_v2.py`, then `./build_local.sh` (main.pdf) and, for the supplement, pdflatex on `supplement.tex`.
 - Reviews: `reviews/R0_full_review_pre_revision.md`, `R1_post_revision_review.md`, `R2_final_review.md`, `R3_after_user_challenge.md` (latest scores).
 - Open items for the author: dataset version, acknowledgment, conflict of interest, repository URL, affiliation and ORCID (red markers); confirmation of the AI-use disclosure wording.
+
+## Extended version (added 2026-10-07)
+`extended/` holds the paper and supplement with every analysis (snapshot of the manuscript as of commit 0f43a53), built by `extended/build_extended.sh` into `main_extended.pdf` and
+`supplement_extended.pdf`. It shares `floats/`, `rv_numbers.tex` and `refs/` with the submitted version, so there is one set of generated numbers; `verify_assets_v2.py` scans the sections of both.
+The submitted version (this directory) is being shortened to 8.5 pages with references; see `reviews/R14_length_cut_proposal.md`.

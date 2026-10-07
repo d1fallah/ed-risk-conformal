@@ -1,0 +1,30 @@
+% Comparison with the closest prior studies. Written by hand from the full texts (Europe PMC, PMC, arXiv; abstract only for Abdulai et al.), read on 2026-10-07.
+% Reference numbers come from main.aux (labels cite:<key> exported by main.tex).
+\newcommand{\mc}[1]{[\ref{M-cite:#1}]}
+\begin{table}[H]
+\centering
+\caption{The closest prior studies compared with this one. Entries summarize what each study reports, taken from its full text (from the abstract only for
+Abdulai et al.). ``None'': the study does not quantify the uncertainty of individual predictions; ``--'': not reported.}
+\label{tab:related}
+\footnotesize
+\setlength{\tabcolsep}{3pt}
+\newcolumntype{L}[1]{>{\raggedright\arraybackslash}p{#1}}
+\begin{tabular}{@{}L{2.1cm}L{2.5cm}L{2.0cm}L{2.6cm}L{2.6cm}L{1.4cm}L{2.3cm}L{2.1cm}@{}}
+\toprule
+Study & Data and setting & Prediction time & Inputs and prediction time & Uncertainty of individual predictions & Class-1 coverage & Operating characteristics & Evaluation under shift \\
+\midrule
+Xie et al. \mc{xie2022mimic4ed} & MIMIC-IV-ED, ED visits & Triage; disposition for return visits & Not assessed; the pipeline also provides vital signs charted during the stay & None & -- & -- & Random split of visits \\
+Lopez Alcaraz et al. \mc{alcaraz2025mdsed} & MIMIC-IV-ED with ECG and laboratory values & Triage and a 1.5\,h collection window & Restricted to the window by design & None & -- & -- & Stratified random split \\
+Solaiman et al. \mc{solaiman2026earlydeterioration} & MIMIC-IV-ED, first encounter per patient & First hour after arrival & Restricted by design (leakage-aware); not quantified & None & -- & -- & Repeated random patient-level splits \\
+Keoliya et al. \mc{keoliya2025carebench} (CAREBench) & MC-MED (ED), MIMIC-IV, EHRShot & Reference time with a task-specific horizon & Length of observed history matched between classes & None & -- & Recall at high precision; alert flips & Five-fold cross-validation \\
+Ramadan et al. \mc{ramadan2025icdleakage} & MIMIC-IV, ICU and ED admissions & During the admission & Leakage from discharge diagnosis codes quantified & None & -- & -- & Train, validation, and test split \\
+Yang et al. \mc{yang2024sepsisconformal} & MIMIC-IV sepsis in the ICU; eICU & First day after admission & Not assessed & Mondrian conformal, static & Yes & -- & External (eICU) \\
+Dalal et al. \mc{dalal2025sepsisconformal} & MIMIC-IV sepsis outside the ICU; eICU & 6, 12, and 24\,h before onset & Not assessed & Conformal with abstention, static & -- & Reduction in false alarms & External (eICU) \\
+Kwon et al. \mc{kwon2026conformaltriage} & PhysioNet 2019 sepsis in the ICU & 6\,h ahead & Not assessed & Split, gender-Mondrian, and weighted conformal with deferral, static & -- (coverage by gender) & Error on retained cases; expected cost & Later-admitted patients \\
+Abdulai et al. \mc{abdulai2025idontknow} & ED visits, three hospitals & Triage (disposition) & -- & Conformal with abstention, static & -- & Sensitivity, specificity, abstention rate & Random test sample \\
+Millar et al. \mc{millar2026classconditionalms} (preprint) & MRI, multiple sclerosis diagnosis & -- & -- & Class-conditional conformal, static & Yes & -- & Scanner field strength; image degradation \\
+\midrule
+This study & MIMIC-IV-ED & 2\,h after arrival; arrival & Every input audited; increment of workflow quantities over arrival information quantified & Static, class-conditional, ECI, periodic recalibration; label delay & Yes & PPV and sensitivity of $\{1\}$; false alarms per 100 patients & Chronological; imposed drift \\
+\bottomrule
+\end{tabular}
+\end{table}

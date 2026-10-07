@@ -1,0 +1,42 @@
+% EXTENDED VERSION (all analyses; snapshot of the paper and supplement as of commit 0f43a53; shares floats/, rv_numbers.tex and refs/ with the submitted version).
+% M2 manuscript, revision v2 (IEEE JBHI). Numbers come from rv_numbers.tex and floats/tab_*.tex, both generated from frozen evidence
+% (mimic4ed-benchmark-main/src/revision_v2/paper_v2/gen_assets_v2.py); nothing numeric is typed in the sections.
+\input{preamble}
+\input{rv_numbers}
+\input{numfmt}
+% Supplementary tables are referenced by label (S- prefix) from supplement.aux, so their numbers follow the order of first citation here.
+\usepackage{xr}
+\externaldocument[S-]{supplement}
+% Export the reference numbers that the supplement cites (it has no bibliography of its own) as labels cite:<key>, read there through xr.
+\makeatletter
+\AtEndDocument{\@for\supp@k:=xie2022mimic4ed,alcaraz2025mdsed,solaiman2026earlydeterioration,keoliya2025carebench,ramadan2025icdleakage,%
+yang2024sepsisconformal,dalal2025sepsisconformal,kwon2026conformaltriage,abdulai2025idontknow,millar2026classconditionalms\do{%
+\@ifundefined{b@\supp@k}{}{\immediate\write\@auxout{\string\newlabel{cite:\supp@k}{{\csname b@\supp@k\endcsname}{}}}}}}
+\makeatother
+
+\begin{document}
+
+\title{Predicting Deterioration Two Hours After Emergency Department Arrival: Avoiding Leakage and Evaluating Conformal Prediction Sets}
+\author{Akram~Mdifallah%
+\thanks{Affiliation and ORCID to be added before submission.}}
+
+\markboth{IEEE Journal of Biomedical and Health Informatics}{}
+\maketitle
+
+\input{sections/00_abstract}
+
+\begin{IEEEkeywords}
+conformal prediction, clinical risk prediction, emergency department, landmark analysis, data leakage
+\end{IEEEkeywords}
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_methods}
+\input{sections/04_results}
+\input{sections/05_discussion}
+\input{sections/06_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{../refs/m2}
+
+\end{document}
