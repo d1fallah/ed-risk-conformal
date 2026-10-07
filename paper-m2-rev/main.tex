@@ -6,12 +6,7 @@
 % Supplementary tables are referenced by label (S- prefix) from supplement.aux, so their numbers follow the order of first citation here.
 \usepackage{xr}
 \externaldocument[S-]{supplement}
-% Export the reference numbers that the supplement cites (it has no bibliography of its own) as labels cite:<key>, read there through xr.
-\makeatletter
-\AtEndDocument{\@for\supp@k:=xie2022mimic4ed,alcaraz2025mdsed,solaiman2026earlydeterioration,keoliya2025carebench,ramadan2025icdleakage,%
-yang2024sepsisconformal,dalal2025sepsisconformal,kwon2026conformaltriage,abdulai2025idontknow,millar2026classconditionalms\do{%
-\@ifundefined{b@\supp@k}{}{\immediate\write\@auxout{\string\newlabel{cite:\supp@k}{{\csname b@\supp@k\endcsname}{}}}}}}
-\makeatother
+
 
 \begin{document}
 
