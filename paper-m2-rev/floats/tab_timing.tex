@@ -1,0 +1,19 @@
+\begin{table*}[t]
+\centering
+\caption{Timing audit of the model inputs against the landmark $L$. Classes: (a) available at or before arrival; (b) charted between arrival and $L$; (c) available only after $L$;
+(d) ambiguous. ``Documentation time'' means that the column records when a value was entered, which can be later than when it was measured. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:timing}
+\begin{tabular}{p{3.9cm}p{6.6cm}p{1.2cm}p{4.2cm}}
+\toprule
+Input & Source table and timestamp column & Class & Used by \\
+\midrule
+Triage vital signs & \texttt{ed.triage}; no timestamp, arrival (\texttt{edstays.intime}) used as the operational anchor & (a) & all models; NEWS2 \\
+Age, sex, triage acuity & \texttt{patients}, \texttt{ed.triage}, \texttt{edstays.intime} & (a) & all models \\
+Elixhauser comorbidity count & \texttt{hosp.diagnoses\_icd} of earlier admissions, dated by \texttt{admissions.dischtime} (documentation time of coded diagnoses) & (a); (d) for the most recent admissions & all models except Temporal-Only GRU-D \\
+ED vital signs with \texttt{charttime} $\le L$ & \texttt{ed.vitalsign.charttime} (documentation time) & (b) & 2\,h models; NEWS2 at 2\,h \\
+Number of ED rows, measurement counts, and intervals up to $L$ & derived from \texttt{ed.vitalsign.charttime} $\le L$ & (b) & tree ensemble (timing features), mask and elapsed-time inputs of GRU-D \\
+ED vital signs after $L$; ED length of stay; number of measurements in the whole stay & \texttt{ed.vitalsign.charttime} $> L$; \texttt{edstays.outtime} & (c) & excluded from the 2\,h models; \emph{used by} the end-of-stay models of the original analysis \\
+Disposition, admission time, ICU transfer time, death time & \texttt{edstays}, \texttt{admissions}, \texttt{icustays} & (c) & outcome definition only \\
+\bottomrule
+\end{tabular}
+\end{table*}

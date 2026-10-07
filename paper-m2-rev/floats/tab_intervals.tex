@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Score intervals for the primary model at $\alpha = 0.10$ on the test period: marginal and class-1 coverage and mean width (mean over five seeds, $\pm$ SD across seeds). Validity threshold 0.89. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:intervals}
+\begin{tabular}{lccc}
+\toprule
+Method & Coverage & Class-1 coverage & Width \\
+\midrule
+Static split-conformal & 0.892\,$\pm$\,0.002 & 0.065 & 0.273\,$\pm$\,0.022 \\
+ECI & 0.901\,$\pm$\,0.001 & 0.098 & 0.323\,$\pm$\,0.016 \\
+Recalibration, $W = 10$k & 0.901\,$\pm$\,0.000 & 0.085 & 0.308\,$\pm$\,0.016 \\
+Recalibration, $W = 40$k & 0.900\,$\pm$\,0.000 & 0.083 & 0.306\,$\pm$\,0.016 \\
+\bottomrule
+\end{tabular}
+\end{table}

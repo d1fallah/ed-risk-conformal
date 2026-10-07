@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\caption{Behavior across the nominal coverage level $1 - \alpha$ for the primary model (test period, mean over five seeds). The class-1 quantile is feasible at every level (774 final-calibration positives). MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:alpha}
+\begin{tabular}{llccccc}
+\toprule
+$1-\alpha$ & Method & Cov. & Class-1 cov. & Set size & PPV & False alarms / 100 \\
+\midrule
+0.80 & Static LAC & 0.807 & 0.008 & 0.83 & 0.98 & 0.0 \\
+0.80 & Static Mondrian-LAC & 0.824 & 0.817 & 1.00 & 0.28 & 16.1 \\
+0.80 & Mondrian-ECI & 0.795 & 0.800 & 1.01 & 0.31 & 13.4 \\
+\addlinespace
+0.90 & Static LAC & 0.892 & 0.065 & 0.93 & 0.90 & 0.1 \\
+0.90 & Static Mondrian-LAC & 0.906 & 0.893 & 1.19 & 0.39 & 8.6 \\
+0.90 & Mondrian-ECI & 0.900 & 0.899 & 1.28 & 0.37 & 9.2 \\
+\addlinespace
+0.95 & Static LAC & 0.947 & 0.352 & 1.02 & 0.84 & 0.3 \\
+0.95 & Static Mondrian-LAC & 0.949 & 0.948 & 1.37 & 0.49 & 4.7 \\
+0.95 & Mondrian-ECI & 0.951 & 0.950 & 1.48 & 0.49 & 4.5 \\
+\addlinespace
+0.99 & Static LAC & 0.989 & 0.862 & 1.28 & 1.00 & 0.0 \\
+0.99 & Static Mondrian-LAC & 0.990 & 0.989 & 1.68 & 0.72 & 0.9 \\
+0.99 & Mondrian-ECI & 0.989 & 0.991 & 1.76 & 0.71 & 1.0 \\
+\bottomrule
+\end{tabular}
+\end{table}

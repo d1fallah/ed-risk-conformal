@@ -1,0 +1,41 @@
+{
+  "bootstrap": "patient-cluster, 1,000 resamples, 95% percentile CI",
+  "landmarks": {
+    "triage": {
+      "n_test": 84241,
+      "positives": 6566,
+      "auroc": 0.5461479531789369,
+      "auroc_ci95": [
+        0.5380778333351479,
+        0.5542767047641887
+      ],
+      "stays_with_all_five_parameters": 77939,
+      "share_complete": 0.9251908215714438,
+      "stays_with_all_five_missing": 3594,
+      "complete_case_auroc": 0.6705346281184346,
+      "complete_case_auroc_ci95": [
+        0.6613948541875148,
+        0.6798134652706354
+      ],
+      "complete_case_positives": 4167
+    },
+    "h2": {
+      "n_test": 78492,
+      "positives": 6088,
+      "auroc": 0.66850718357521,
+      "auroc_ci95": [
+        0.6609936395161967,
+        0.6768323844363048
+      ],
+      "stays_with_all_five_parameters": 75503,
+      "share_complete": 0.9619196860826581,
+      "stays_with_all_five_missing": 746,
+      "complete_case_auroc": 0.6958796688947896,
+      "complete_case_auroc_ci95": [
+        0.6871497791079273,
+        0.7041256859763759
+      ],
+      "complete_case_positives": 5172
+    }
+  }
+}

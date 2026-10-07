@@ -1,0 +1,29 @@
+{
+  "links_own_admission_accepted": 42,
+  "stays": 42,
+  "own_admittime_ge_intime": 41,
+  "own_dischtime_lt_admittime": 41,
+  "own_edregtime_missing": 0,
+  "own_intime_minus_dischtime_days_quantiles": {
+    "min": 0.0006944444444444445,
+    "50%": 0.45138888888888884,
+    "max": 0.8895833333333333
+  },
+  "own_admittime_minus_intime_days_quantiles": {
+    "min": -0.5694444444444444,
+    "50%": 0.08298611111111112,
+    "max": 0.5347222222222222
+  },
+  "stays_whose_count_changes_if_own_admission_removed": 34,
+  "max_count_change": 7,
+  "mean_count_change_over_these_stays": 2.1666666666666665,
+  "train_v2_n_stays": 288208,
+  "train_v2_stays_with_own_admission_accepted": 24,
+  "train_v2_stays_count_changes": 17,
+  "test_v2_n_stays": 84241,
+  "test_v2_stays_with_own_admission_accepted": 5,
+  "test_v2_stays_count_changes": 5,
+  "stays_linked_to_admission": 203016,
+  "linked_dischtime_before_intime": 42,
+  "linked_admittime_before_intime_minus_1d": 1
+}

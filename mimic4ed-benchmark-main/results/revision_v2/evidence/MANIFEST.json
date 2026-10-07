@@ -1,0 +1,181 @@
+{
+  "files": {
+    "audit_inputs.json": {
+      "source": "results/revision_v2/phase0/p04_truncation_timing.json",
+      "sha256": "b55846072d314936bb01de0f6123650155f05af6679937070d1c95a6278e7158"
+    },
+    "audit_cohort.json": {
+      "source": "results/revision_v2/phase0/p05_cohort_counts.json",
+      "sha256": "efcbf41a9acc462fe09c101e16daf009d0494a330c3dc20d3b98fefdf24bafa7"
+    },
+    "audit_elixhauser.json": {
+      "source": "results/revision_v2/phase0/p02_elixhauser_audit.json",
+      "sha256": "7716f1bad4ed9ba64d54d6da90ec6814188e7726c4e4ded69b8b3c43be628fb7"
+    },
+    "audit_elixhauser_anomaly.json": {
+      "source": "results/revision_v2/phase0/p02b_index_admission_anomaly.json",
+      "sha256": "2d12cc5bd292c4e11ee6fc2e2facacbdb65989087c99cc7339bfd3ff09f0e973"
+    },
+    "audit_ed_admit_gap.json": {
+      "source": "results/revision_v2/phase0/p06_ed_admit_gap.json",
+      "sha256": "6b24bb6aef45182e3ce59af8b94e595a56b3a3e259d1808a47f268c7c210fc5c"
+    },
+    "audit_eci_streams.json": {
+      "source": "results/revision_v2/phase0/p07_eci_stream_vs_lag.json",
+      "sha256": "146bd304b972b5231aae53ad023dabefc8defa6caf57e1c2b91661143b930380"
+    },
+    "ph1_shortcuts.json": {
+      "source": "results/revision_v2/phase1/p1_2_shortcuts.json",
+      "sha256": "9a71c4e9cc05bd4e05d95a824490cf1b31eba741f7b5f12680b005d00f55bb5a"
+    },
+    "ph1_elixhauser.json": {
+      "source": "results/revision_v2/phase1/p1_3_elixhauser_ablation.json",
+      "sha256": "85176ccb0b0871734e86e8d8ae058f13874685d0b0beb201232ccd4c4a931fed"
+    },
+    "ph1_duration.json": {
+      "source": "results/revision_v2/phase1/p1_4_duration_strata.json",
+      "sha256": "c7600459b28422b6826e04775b446c2d15417e8d474a84a01196f65723b12f7d"
+    },
+    "ph1_scores.json": {
+      "source": "results/revision_v2/phase1/p1_5_score_distributions.json",
+      "sha256": "e06de612f56e923f82178c7a796b94600262e99a38660df469160090e07c0f43"
+    },
+    "ph1_sets_alpha.json": {
+      "source": "results/revision_v2/phase1/p1_6_7_operating_and_alpha.json",
+      "sha256": "d9c4b5f9bb3003356d3ed2d7cd0f6ccf87ed1e2bda99039c7f378a738084a26f"
+    },
+    "ph1_stream_order.json": {
+      "source": "results/revision_v2/phase1/p1_8_stream_order.json",
+      "sha256": "971cd220cc1197c190d3323f46b0df35ce5d6a0be0d373ff452c267258a7f1e8"
+    },
+    "ph2_cohorts.json": {
+      "source": "results/revision_v2/phase2/p2_1_cohorts.json",
+      "sha256": "ffc298b1af3d3a3085267140cf628b1d21ed1a0c33250898b9cfba829634be99"
+    },
+    "ph2_classical.json": {
+      "source": "results/revision_v2/phase2/p2_2_classical.json",
+      "sha256": "870e2089d0ccd4ac326f833ef20796b8d451abdfae1d7f8326cd914eec819083"
+    },
+    "ph2_contrasts.json": {
+      "source": "results/revision_v2/phase2/p2_4_contrasts.json",
+      "sha256": "f3190c36671544afcc9bac07f687fd23ef201c8cbd5d8ee4cc2326dafb04c03f"
+    },
+    "ph2_conformal.json": {
+      "source": "results/revision_v2/phase2/p2_5_conformal.json",
+      "sha256": "616c758c4814115201ddff976ca0de78879a2ce041fa853e5f8b48ef9f0838af"
+    },
+    "ph2_news2.json": {
+      "source": "results/revision_v2/phase2/p2_6_news2.json",
+      "sha256": "de1bba8cdadaebbd0b2cbbe5f9298784e17ed1776a2f5c91309c5782ef11f0ed"
+    },
+    "ph2_stream_order.json": {
+      "source": "results/revision_v2/phase2/p2_8_stream_order.json",
+      "sha256": "db5ff7b0f039308523b70be98a421c3957c2b74f456dfc6a31a61652afdaf1f4"
+    },
+    "ph2_sweep.json": {
+      "source": "results/revision_v2/phase2/p2_10_landmark_sweep.json",
+      "sha256": "580a32e4338515b2d1312ecbc551c4fddb0d30b4bd57aa6ca35f4f0fd9cac64f"
+    },
+    "ph2_hist.json": {
+      "source": "results/revision_v2/phase2/p2_11_score_histogram.json",
+      "sha256": "e6c15bc1ee53142bb8e7c2844bb87230b1fe3eb3f4bb266319a68d53ccc4d4e4"
+    },
+    "ph2_scores.json": {
+      "source": "results/revision_v2/phase2/p2_9_score_distribution.json",
+      "sha256": "1073d6527c820207948f174659819ecd13549c5c5014b56b828cacdbfa919688"
+    },
+    "ph2_calibration.json": {
+      "source": "results/revision_v2/phase2/p2_7_calibration_subgroups.json",
+      "sha256": "eb0a0cf099386cc8e5909a631f02f7792ddcf81028ad1a04cc3b00a76054c52b"
+    },
+    "ph2_reliability.json": {
+      "source": "results/revision_v2/phase2/p2_12_reliability.json",
+      "sha256": "dbcbb7322203d7b1735515ad66e19440b3e1e3cfc169983d92d1b1dd61057a6c"
+    },
+    "ph2_years_decision.json": {
+      "source": "results/revision_v2/phase2/p2_13_year_blocks_decision.json",
+      "sha256": "1abc06554664fd50bec0dda2e7e3fc1d8d51d95f3782e3208c2c8e81bd7e7fcb"
+    },
+    "ph2_search.json": {
+      "source": "results/revision_v2/phase2/p2_15_screening.json",
+      "sha256": "93126e5fc5ff2b8b2e7823ed49f58ce40de44ebb90c07e77940a6912bb575b26"
+    },
+    "ph2_acuity_shortcut.json": {
+      "source": "results/revision_v2/phase2/p2_16_shortcut_by_acuity.json",
+      "sha256": "ecb3fa253fbab3bf852516eab37c9609f380da0f932c5d05ff3e25345c966fc4"
+    },
+    "ph2_fixed_cohort.json": {
+      "source": "results/revision_v2/phase2/p2_17_fixed_cohort_landmarks.json",
+      "sha256": "ff3c68b606d418698595dff6766b46370da90afcc21d889e8d35a7a76e082916"
+    },
+    "ph2_characteristics.json": {
+      "source": "results/revision_v2/phase2/p2_18_cohort_characteristics.json",
+      "sha256": "c824316439b4dd5ab833aa051030ac49c94abfeafeaf92a5a50b1d8ce9675274"
+    },
+    "ph2_recording.json": {
+      "source": "results/revision_v2/phase2/p2_19_recording_by_year.json",
+      "sha256": "6ce0b02470faf006217b550888ae886a4231e4017cc67577316482efd6374152"
+    },
+    "ph2_arrival_increment.json": {
+      "source": "results/revision_v2/phase2/p2_20_arrival_increment.json",
+      "sha256": "e1b5e8c5ac36c216af121566fc083f74022911deaccbe260451a54461cc4ff25"
+    },
+    "ph2_arrival_h2.json": {
+      "source": "results/revision_v2/phase2/p2_21_arrival_on_h2_population.json",
+      "sha256": "fda89ea9c61c4f7b56cddf379c02857ea0e8541ed0b0c622b7ad8aaad634ed54"
+    },
+    "ph2_static_cov_boot.json": {
+      "source": "results/revision_v2/phase2/p2_22_static_coverage_bootstrap.json",
+      "sha256": "c9974f920e29a0eb4627e37813f883c9befcb89db0d060a3747cc0633167248d"
+    },
+    "ph2_pr_points.json": {
+      "source": "results/revision_v2/phase2/p2_23_pr_operating_points.json",
+      "sha256": "cd53661726479a70766d0989d36ce59dc274b5a5dfed86be24eed3d3f53655f7"
+    },
+    "ph2_intercept_recal.json": {
+      "source": "results/revision_v2/phase2/p2_24_intercept_recalibration.json",
+      "sha256": "4f0603856c36d78b62bf5434e71d55c17d31e14ac83032fa5cd2bd0d1a161fc8"
+    },
+    "ph2_overlap.json": {
+      "source": "results/revision_v2/phase2/p2_25_outcome_overlap.json",
+      "sha256": "a68af55d3e8ebaa130e3008a043bff4c1fe2b1f3a30669fee7b5dc04331955d8"
+    },
+    "ph2_dedup.json": {
+      "source": "results/revision_v2/phase2/p2_26_dedup_and_ablation_classical.json",
+      "sha256": "1e1b0537b78477bc66b8ed8fc55d0e04e2fe2be0ea29ef53695852a285de94d2"
+    },
+    "ph2_grud_dedup.json": {
+      "source": "results/revision_v2/phase2/p2_27_grud_dedup_inference.json",
+      "sha256": "7853ae5f7f05bd599d7fb42e8b839450491154b6839230b6b48791e2fa1f5380"
+    },
+    "ph2_conformal_xgb.json": {
+      "source": "results/revision_v2/phase2/p2_5_conformal_h2_xgboost_timing.json",
+      "sha256": "2923dbde2218575a27684b76195fb452c30b3bc1ef52336d0b11e80a92fde5db"
+    },
+    "ph2_conformal_lr.json": {
+      "source": "results/revision_v2/phase2/p2_5_conformal_h2_logreg.json",
+      "sha256": "536c48695022ba46a6dd72ed3020c496a581426c7a7f928fd23a4a6a9d575bd5"
+    },
+    "orig_chronological_shift.json": {
+      "source": "data/m2_chronological_shift.json",
+      "sha256": "369d3ae348f5ed94a2049538d12a243c07a464e80165df631b87128b05c939af"
+    },
+    "ph2_sel_temporal.json": {
+      "source": "data/revision_v2/runs/temporal_selected.json",
+      "sha256": "165478df48e1e768fe4c2975d9fb40c26dc8ea1c96f7d60da86b4e811d79b1cf"
+    },
+    "ph2_sel_e2e.json": {
+      "source": "data/revision_v2/runs/e2e_selected.json",
+      "sha256": "d7330f28b9c92db46f78114669b758c367a84700a9d2c5c34ecd217d0820ceca"
+    },
+    "ph2_sel_hybrid_frozen.json": {
+      "source": "data/revision_v2/runs/hybrid_frozen_selected.json",
+      "sha256": "0b0fab655c32122d3f020d05eb4bad91ecad270872334a49d48f46bc38acab5d"
+    },
+    "derived.json": {
+      "source": "computed by freeze_evidence_v2.py from the frozen files",
+      "sha256": "30d8668e64eef4bbe5bba48469b1db6905a522b852c012daa3c91e71150a93b9"
+    }
+  },
+  "missing_at_freeze": []
+}

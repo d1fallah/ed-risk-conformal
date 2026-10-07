@@ -1,0 +1,156 @@
+{
+  "n_test": 78492,
+  "positives": 6088,
+  "rule_threshold": 0.002,
+  "delta_rebuild_max_abs_diff_unmodified": 3.5762786865234375e-07,
+  "delta_rebuild_share_within_1e-3": 1.0,
+  "flagged_share_test": 0.9505936910767976,
+  "models": {
+    "e2e": {
+      "per_seed": [
+        {
+          "seed": 42,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.9019418462734398,
+          "auroc_dedup": 0.9018650396907817,
+          "change": -7.680658265807327e-05,
+          "change_ci95": [
+            -0.0004742011079923281,
+            0.0002911447303159092
+          ]
+        },
+        {
+          "seed": 123,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.9010488529158298,
+          "auroc_dedup": 0.9002600597929808,
+          "change": -0.0007887931228489631,
+          "change_ci95": [
+            -0.0012863085106949196,
+            -0.0003111613730070628
+          ]
+        },
+        {
+          "seed": 7,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.9014203380618505,
+          "auroc_dedup": 0.901837864961033,
+          "change": 0.0004175268991825076,
+          "change_ci95": [
+            -9.767472662835507e-05,
+            0.00088010041392918
+          ]
+        },
+        {
+          "seed": 456,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.9021578579812892,
+          "auroc_dedup": 0.9017564916353784,
+          "change": -0.0004013663459108141,
+          "change_ci95": [
+            -0.0008032741351025246,
+            -3.394831426766778e-05
+          ]
+        },
+        {
+          "seed": 789,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.9012214930426521,
+          "auroc_dedup": 0.9009620779930193,
+          "change": -0.00025941504963278295,
+          "change_ci95": [
+            -0.000802236798240763,
+            0.00026881027972813494
+          ]
+        }
+      ],
+      "auroc_stored_seed_mean": 0.9015580776550124,
+      "auroc_dedup_seed_mean": 0.9013363068146386,
+      "change_seed_mean": -0.00022177084037362517,
+      "change_seed_mean_ci95": [
+        -0.000659507004165631,
+        0.0001875309188117112
+      ],
+      "change_seed_sd": 0.0004429735140897392,
+      "auroc_dedup_seed_mean_ci95": [
+        0.8969251649948605,
+        0.9055296343484253
+      ],
+      "max_abs_change_over_seeds": 0.0007887931228489631
+    },
+    "temporal": {
+      "per_seed": [
+        {
+          "seed": 42,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.8779924020195194,
+          "auroc_dedup": 0.8773072635270149,
+          "change": -0.0006851384925045112,
+          "change_ci95": [
+            -0.0013390866801733735,
+            -3.8913670798326775e-05
+          ]
+        },
+        {
+          "seed": 123,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.8783150856295392,
+          "auroc_dedup": 0.8762954282260997,
+          "change": -0.0020196574034394565,
+          "change_ci95": [
+            -0.0029024565267383616,
+            -0.0011658862483209527
+          ]
+        },
+        {
+          "seed": 7,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.8778197312662538,
+          "auroc_dedup": 0.8751759693346451,
+          "change": -0.002643761931608646,
+          "change_ci95": [
+            -0.0033339168466551355,
+            -0.0019784741892555496
+          ]
+        },
+        {
+          "seed": 456,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.8796625209593767,
+          "auroc_dedup": 0.8771616370575355,
+          "change": -0.002500883901841222,
+          "change_ci95": [
+            -0.0032806696935545583,
+            -0.0017518577333565683
+          ]
+        },
+        {
+          "seed": 789,
+          "reproduction_max_abs_diff": 0.0,
+          "auroc_stored": 0.8792586863489947,
+          "auroc_dedup": 0.8775385192634612,
+          "change": -0.0017201670855335749,
+          "change_ci95": [
+            -0.002397818391604001,
+            -0.0010573060488354076
+          ]
+        }
+      ],
+      "auroc_stored_seed_mean": 0.8786096852447368,
+      "auroc_dedup_seed_mean": 0.8766957634817512,
+      "change_seed_mean": -0.0019139217629854822,
+      "change_seed_mean_ci95": [
+        -0.0026046999164866533,
+        -0.0012411192454739434
+      ],
+      "change_seed_sd": 0.000780355760326117,
+      "auroc_dedup_seed_mean_ci95": [
+        0.8713482333983867,
+        0.8817940609382842
+      ],
+      "max_abs_change_over_seeds": 0.002643761931608646
+    }
+  },
+  "rule_applied_to": "hybrid_e2e seed mean",
+  "refit_required": false
+}

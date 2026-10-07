@@ -1,0 +1,110 @@
+{
+  "alpha": 0.1,
+  "runs": [
+    {
+      "seed": 42,
+      "q_hat": 0.23662574589252472,
+      "risk_needed_for_label_1": 0.7633742541074753,
+      "final_calibration": {
+        "median_risk_events": 0.23071788996458054,
+        "q75_risk_events": 0.49261967092752457,
+        "q90_risk_events": 0.7123627841472626,
+        "median_risk_non_events": 0.01743689738214016,
+        "share_events_above_threshold": 0.07364341085271318,
+        "share_non_events_above_threshold": 0.0009685230024213075
+      },
+      "test": {
+        "median_risk_events": 0.2559269219636917,
+        "q75_risk_events": 0.47979680448770523,
+        "q90_risk_events": 0.6967645585536958,
+        "median_risk_non_events": 0.01205240748822689,
+        "share_events_above_threshold": 0.05863994743758213,
+        "share_non_events_above_threshold": 0.0005386442737970278
+      }
+    },
+    {
+      "seed": 123,
+      "q_hat": 0.2537725269794464,
+      "risk_needed_for_label_1": 0.7462274730205536,
+      "final_calibration": {
+        "median_risk_events": 0.25287356972694397,
+        "q75_risk_events": 0.5136110186576843,
+        "q90_risk_events": 0.7346875846385956,
+        "median_risk_non_events": 0.018275070935487747,
+        "share_events_above_threshold": 0.0917312661498708,
+        "share_non_events_above_threshold": 0.0014527845036319612
+      },
+      "test": {
+        "median_risk_events": 0.2775803804397583,
+        "q75_risk_events": 0.5174144059419632,
+        "q90_risk_events": 0.7329695522785187,
+        "median_risk_non_events": 0.012578788213431835,
+        "share_events_above_threshold": 0.09083442838370565,
+        "share_non_events_above_threshold": 0.001049665764322413
+      }
+    },
+    {
+      "seed": 7,
+      "q_hat": 0.20978206396102905,
+      "risk_needed_for_label_1": 0.790217936038971,
+      "final_calibration": {
+        "median_risk_events": 0.20479488372802734,
+        "q75_risk_events": 0.46774952858686447,
+        "q90_risk_events": 0.7154755592346191,
+        "median_risk_non_events": 0.014989803545176983,
+        "share_events_above_threshold": 0.06459948320413436,
+        "share_non_events_above_threshold": 0.0008716707021791767
+      },
+      "test": {
+        "median_risk_events": 0.23451454937458038,
+        "q75_risk_events": 0.47627709060907364,
+        "q90_risk_events": 0.7046327769756318,
+        "median_risk_non_events": 0.01011060131713748,
+        "share_events_above_threshold": 0.05371222076215506,
+        "share_non_events_above_threshold": 0.0005248328821612065
+      }
+    },
+    {
+      "seed": 456,
+      "q_hat": 0.20950427651405334,
+      "risk_needed_for_label_1": 0.7904957234859467,
+      "final_calibration": {
+        "median_risk_events": 0.19601740688085556,
+        "q75_risk_events": 0.4555751830339432,
+        "q90_risk_events": 0.6869533121585848,
+        "median_risk_non_events": 0.018196672201156616,
+        "share_events_above_threshold": 0.050387596899224806,
+        "share_non_events_above_threshold": 0.0005811138014527845
+      },
+      "test": {
+        "median_risk_events": 0.23666826635599136,
+        "q75_risk_events": 0.47680655121803284,
+        "q90_risk_events": 0.7053611874580383,
+        "median_risk_non_events": 0.011975281871855259,
+        "share_events_above_threshold": 0.04862023653088042,
+        "share_non_events_above_threshold": 0.00030385061598806696
+      }
+    },
+    {
+      "seed": 789,
+      "q_hat": 0.22837406396865845,
+      "risk_needed_for_label_1": 0.7716259360313416,
+      "final_calibration": {
+        "median_risk_events": 0.221146821975708,
+        "q75_risk_events": 0.5016694813966751,
+        "q90_risk_events": 0.718256211280823,
+        "median_risk_non_events": 0.01508230809122324,
+        "share_events_above_threshold": 0.07751937984496124,
+        "share_non_events_above_threshold": 0.0009685230024213075
+      },
+      "test": {
+        "median_risk_events": 0.2577235549688339,
+        "q75_risk_events": 0.5152475535869598,
+        "q90_risk_events": 0.7343010842800141,
+        "median_risk_non_events": 0.010866228025406599,
+        "share_events_above_threshold": 0.07506570302233903,
+        "share_non_events_above_threshold": 0.0008424948897850947
+      }
+    }
+  ]
+}

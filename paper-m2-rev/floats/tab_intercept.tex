@@ -1,0 +1,19 @@
+\begin{table}[t]
+\centering
+\caption{Periodic recalibration of the intercept of the primary model's score (test period, mean $\pm$ SD over five seeds). The logit of the score is shifted by an intercept estimated on the most recent labelled arrivals and re-estimated every 2{,}000 arrivals. Original: static LAC sets on the original score. Matched: for each block of 2{,}000 arrivals the same intercept shift is applied to the final-calibration scores and to the block, and the static quantile is recomputed on the shifted calibration scores. Rolling quantile: the recalibrated score with a quantile recomputed every 2{,}000 arrivals from the most recent 10{,}000. Observed event rate 7.8\%. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:intercept}
+\begin{tabular}{lccc}
+\toprule
+& Original & Intercept, matched & Intercept, rolling quantile \\
+\midrule
+Mean predicted risk & 6.2\%\,$\pm$\,0.3\% & 7.8\%\,$\pm$\,0.0\% & as matched \\
+Brier score & 0.0494\,$\pm$\,0.0003 & 0.0485\,$\pm$\,0.0002 & as matched \\
+Expected calibration error & 0.015\,$\pm$\,0.003 & 0.003\,$\pm$\,0.001 & as matched \\
+\midrule
+Marginal coverage, LAC sets & 0.892\,$\pm$\,0.002 & 0.893\,$\pm$\,0.001 & 0.900\,$\pm$\,0.000 \\
+Class-1 coverage, LAC sets & 0.065\,$\pm$\,0.017 & 0.139\,$\pm$\,0.009 & 0.160\,$\pm$\,0.010 \\
+Mean set size, LAC sets & 0.93\,$\pm$\,0.00 & 0.93\,$\pm$\,0.00 & -- \\
+Class-1 coverage, static Mondrian & 0.893\,$\pm$\,0.006 & 0.893\,$\pm$\,0.006 & -- \\
+\bottomrule
+\end{tabular}
+\end{table}

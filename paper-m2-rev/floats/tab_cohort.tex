@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{Cohort at the 2-hour landmark (MIMIC-IV-ED, retrospective single-center proxy). Eligible stays are in the ED at $L$ and event-free at $L$. Primary outcome: ICU admission or in-hospital death in $(L, L+24\,\mathrm{h}]$; secondary outcome: the benchmark composite restricted to events after $L$.}
+\label{tab:cohort}
+\begin{tabular}{lrrrrrr}
+\toprule
+Subset & Stays & Eligible & Primary events & Rate & Secondary events & Rate \\
+\midrule
+Training & 240,353 & 220,384 & 11,132 & 5.1\% & 11,498 & 5.2\% \\
+Validation & 24,026 & 22,070 & 1,266 & 5.7\% & 1,315 & 6.0\% \\
+Calibration selection & 12,075 & 11,108 & 568 & 5.1\% & 590 & 5.3\% \\
+Final calibration & 11,754 & 11,099 & 774 & 7.0\% & 818 & 7.4\% \\
+Test period & 84,241 & 78,492 & 6,088 & 7.8\% & 6,278 & 8.0\% \\
+\midrule
+All & 372,449 & 343,153 & 19,828 &  & 20,499 &  \\
+\bottomrule
+\end{tabular}
+\end{table}

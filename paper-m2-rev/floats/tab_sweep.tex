@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Discrimination at landmarks from 0 to 6 hours after arrival (test period; primary outcome in the following 24 hours; AUROC with the patient-cluster bootstrap 95\% interval of the seed mean). The eligible population differs between landmarks: stays that have ended, and stays with an earlier event, drop out as the landmark moves later. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:sweep}
+\begin{tabular}{lccll}
+\toprule
+Landmark (h) & Eligible test stays & Event rate & Logistic regression & Timing-aware trees \\
+\midrule
+0 (arrival) & 84,241 & 7.8\% & 0.878 [0.874, 0.882] & 0.887 [0.883, 0.891] \\
+1 & 82,849 & 7.8\% & 0.895 [0.891, 0.899] & 0.903 [0.899, 0.907] \\
+2 & 78,492 & 7.8\% & 0.896 [0.891, 0.900] & 0.905 [0.901, 0.909] \\
+3 & 70,563 & 7.4\% & 0.886 [0.881, 0.891] & 0.897 [0.893, 0.902] \\
+4 & 60,691 & 6.8\% & 0.876 [0.870, 0.881] & 0.886 [0.880, 0.891] \\
+6 & 41,173 & 5.9\% & 0.846 [0.837, 0.855] & 0.859 [0.851, 0.867] \\
+\bottomrule
+\end{tabular}
+\end{table}

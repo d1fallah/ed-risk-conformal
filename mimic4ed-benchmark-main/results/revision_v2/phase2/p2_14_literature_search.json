@@ -1,0 +1,1617 @@
+{
+ "date": "2026-10-07",
+ "source": "OpenAlex works search",
+ "filter": "publication year >= 2015, English",
+ "queries": {
+  "Q1_workflow_shortcut_ed": {
+   "query": "(\"emergency department\" OR \"emergency departments\") AND (leakage OR shortcut OR \"measurement frequency\" OR \"measurement counts\" OR \"measurement patterns\" OR \"informative missingness\" OR \"informative presence\") AND (prediction OR \"risk model\")",
+   "total_hits": 23,
+   "records": [
+    {
+     "title": "Heparin-Binding Protein Measurement Improves the Prediction of Severe Infection With Organ Dysfunction in the Emergency Department",
+     "first_author": "Adam Linder",
+     "year": 2015,
+     "venue": "Critical Care Medicine",
+     "doi": "https://doi.org/10.1097/ccm.0000000000001265"
+    },
+    {
+     "title": "Machine learning-based model for triage-stage prediction of emergency department disposition",
+     "first_author": "Kentaro Yoshimura",
+     "year": 2026,
+     "venue": "BMC Emergency Medicine",
+     "doi": "https://doi.org/10.1186/s12873-026-01523-w"
+    },
+    {
+     "title": "An interpretable machine learning model for early prediction of ESBL-producing bacteraemia in the emergency department",
+     "first_author": "Ye-Chan Kim",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-62046-9"
+    },
+    {
+     "title": "Explainable Machine Learning Model for Early Hospital Admission Prediction in the Emergency Department: A Retrospective Analysis",
+     "first_author": "Hind Haboubi",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.20720950"
+    },
+    {
+     "title": "Achieving the Holy Grail of Emergency Department Evaluation for Chest Pain",
+     "first_author": "Keith Eric Kocher",
+     "year": 2017,
+     "venue": "Circulation Cardiovascular Quality and Outcomes",
+     "doi": "https://doi.org/10.1161/circoutcomes.117.004026"
+    },
+    {
+     "title": "OP 8 STUDY ON USAGE OF BEDSIDE ULTRASONOGRAPHY IN DETECTING PLASMA LEAKAGE AMONG DENGUE PATIENTS IN EMERGENCY DEPARTMENT",
+     "first_author": "Lailajan Mohamed Kassim",
+     "year": 2016,
+     "venue": "Malaysian Journal of Emergency Medicine",
+     "doi": null
+    },
+    {
+     "title": "DeepTriage-CN: integrating clinical text with vital signs for emergency department admission prediction in an aging population",
+     "first_author": "Wenjia Lin",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-61270-7"
+    },
+    {
+     "title": "Diagnostic Codes in AI Prediction Models and Label Leakage of Same-Admission Clinical Outcomes",
+     "first_author": "Bashar Ramadan",
+     "year": 2025,
+     "venue": "JAMA Network Open",
+     "doi": "https://doi.org/10.1001/jamanetworkopen.2025.50454"
+    },
+    {
+     "title": "The coverage gap in PREVENT: Why cardiovascular risk prediction needs a lab-free complement",
+     "first_author": "Rebecca Arden Harris",
+     "year": 2026,
+     "venue": "American Journal of Preventive Cardiology",
+     "doi": "https://doi.org/10.1016/j.ajpc.2026.101782"
+    },
+    {
+     "title": "Prediction of Respiratory Decompensation in Patients Receiving Home Mechanical Ventilation: Machine Learning Model Development and Validation Study",
+     "first_author": "Nerea Berbel Casado",
+     "year": 2025,
+     "venue": "JMIR Formative Research",
+     "doi": "https://doi.org/10.2196/78941"
+    },
+    {
+     "title": "Prediction of Respiratory Decompensation Using Machine Learning on Home Mechanical Ventilation Data in Catalonia: Model Development and Validation (Preprint)",
+     "first_author": "Nerea Berbel Casado",
+     "year": 2025,
+     "venue": null,
+     "doi": "https://doi.org/10.2196/preprints.78941"
+    },
+    {
+     "title": "Towards Digital Twins in Prostate Cancer: A Mixture-of-Experts Framework for Multitask Prognostics in Hospital Admissions",
+     "first_author": "Annette John",
+     "year": 2025,
+     "venue": "Applied Sciences",
+     "doi": "https://doi.org/10.3390/app152412959"
+    },
+    {
+     "title": "Determining Distinct Suicide Attempts From Recurrent Electronic Health Record Codes: Classification Study",
+     "first_author": "Kate H. Bentley",
+     "year": 2023,
+     "venue": "JMIR Formative Research",
+     "doi": "https://doi.org/10.2196/46364"
+    },
+    {
+     "title": "Determining Distinct Suicide Attempts From Recurrent Electronic Health Record Codes: Classification Study (Preprint)",
+     "first_author": "Kate H. Bentley",
+     "year": 2023,
+     "venue": null,
+     "doi": "https://doi.org/10.2196/preprints.46364"
+    },
+    {
+     "title": "An interpretable machine learning framework with clinical nomogram for predicting in-hospital mortality in acute ischemic stroke using high-granularity bedside data",
+     "first_author": "Guoying Li",
+     "year": 2026,
+     "venue": "Journal of Stroke and Cerebrovascular Diseases",
+     "doi": "https://doi.org/10.1016/j.jstrokecerebrovasdis.2026.108727"
+    },
+    {
+     "title": "Discharge readiness and nutritional-inflammatory status as discharge-day markers of 30-day unplanned healthcare utilization after direct minimally invasive esophagectomy for esophageal squamous cell carcinoma",
+     "first_author": "Gaoyue Dong",
+     "year": 2026,
+     "venue": "BMC Surgery",
+     "doi": "https://doi.org/10.1186/s12893-026-04185-4"
+    },
+    {
+     "title": "Diagnostic performance of ChatGPT for acute appendicitis compared with the Alvarado score: a retrospective diagnostic accuracy study",
+     "first_author": "Amr A. Elgharib",
+     "year": 2026,
+     "venue": "Discover Artificial Intelligence",
+     "doi": "https://doi.org/10.1007/s44163-026-02332-7"
+    },
+    {
+     "title": "More than the Sum of Its Parts",
+     "first_author": "Gina Shaw",
+     "year": 2024,
+     "venue": "Emergency Medicine News",
+     "doi": "https://doi.org/10.1097/01.eem.0001095472.36117.95"
+    },
+    {
+     "title": "Clinician Gestalt in Managing Pediatric Pneumonia: Can We Predict the Future?",
+     "first_author": "Yasaman Fatemi",
+     "year": 2021,
+     "venue": "PEDIATRICS",
+     "doi": "https://doi.org/10.1542/peds.2020-048637"
+    },
+    {
+     "title": "Gut microbiota and acute coronary syndromes: ready for use in the emergency room?",
+     "first_author": "Marius Tr\u00f8seid",
+     "year": 2017,
+     "venue": "European Heart Journal",
+     "doi": "https://doi.org/10.1093/eurheartj/ehx005"
+    },
+    {
+     "title": "What's New in Shock, December 2021?",
+     "first_author": "David J. Dries",
+     "year": 2021,
+     "venue": "Shock",
+     "doi": "https://doi.org/10.1097/shk.0000000000001879"
+    },
+    {
+     "title": "What's New in Shock, February 2020?",
+     "first_author": "Hiroyuki Hirasawa",
+     "year": 2020,
+     "venue": "Shock",
+     "doi": "https://doi.org/10.1097/shk.0000000000001483"
+    },
+    {
+     "title": "Subject Index",
+     "first_author": null,
+     "year": 2016,
+     "venue": "Shock",
+     "doi": "https://doi.org/10.1097/01.shk.0000508461.69292.f3"
+    }
+   ]
+  },
+  "Q2_conformal_ed_or_deterioration": {
+   "query": "(\"conformal prediction\" OR \"conformal inference\") AND (\"emergency department\" OR \"clinical deterioration\" OR \"patient deterioration\" OR \"intensive care\" OR \"triage\")",
+   "total_hits": 45,
+   "records": [
+    {
+     "title": "\u201cI don\u2019t know\u201d: An uncertainty-aware machine learning model for predicting patient disposition at emergency department triage",
+     "first_author": "Abubakar Sadiq Bouda Abdulai",
+     "year": 2025,
+     "venue": "International Journal of Medical Informatics",
+     "doi": "https://doi.org/10.1016/j.ijmedinf.2025.105957"
+    },
+    {
+     "title": "Probabilistic prediction of arrivals and hospitalizations in emergency departments in \u00cele-de-France",
+     "first_author": "Herbert Susmann",
+     "year": 2024,
+     "venue": "International Journal of Medical Informatics",
+     "doi": "https://doi.org/10.1016/j.ijmedinf.2024.105728"
+    },
+    {
+     "title": "Utility-Directed Conformal Prediction: A Decision-Aware Framework for Actionable Uncertainty Quantification",
+     "first_author": "Santiago Cortes-Gomez",
+     "year": 2024,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2410.01767"
+    },
+    {
+     "title": "Patient Length-of-Stay Prediction and Inpatient Bed Forecasting in UNC Hospitals\u2019 Emergency Department",
+     "first_author": "Prithika Roy",
+     "year": 2026,
+     "venue": "Carolina Digital Repository (University of North Carolina at Chapel Hill)",
+     "doi": "https://doi.org/10.17615/zrwz-qw64"
+    },
+    {
+     "title": "Predicting Emergency Department Patient Arrivals at Hospitals Using Machine Learning Techniques",
+     "first_author": "Abdulmajeed M. Alenezi",
+     "year": 2026,
+     "venue": "Healthcare",
+     "doi": "https://doi.org/10.3390/healthcare14091191"
+    },
+    {
+     "title": "Class-Conditional Conformal Prediction with Uncertainty-Triggered Selective Explainability for HighStakes Imbalanced Tabular Decisions",
+     "first_author": "Pham Manh Trung Nguyen",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.22633992"
+    },
+    {
+     "title": "Training-Aware Risk Control for Intensity Modulated Radiation Therapies Quality Assurance with Conformal Prediction",
+     "first_author": "He, Kevin",
+     "year": 2025,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2501.08963"
+    },
+    {
+     "title": "Understanding uncertainty in large language model predictions of early death in critically ill patients: a conformal prediction approach",
+     "first_author": "Fatemeh Shah-Mohammadi",
+     "year": 2026,
+     "venue": "JAMIA Open",
+     "doi": "https://doi.org/10.1093/jamiaopen/ooag108"
+    },
+    {
+     "title": "Understanding Uncertainty in Large Language Model Predictions of Early Death in Critically Ill Patients: A Conformal Prediction Approach",
+     "first_author": "Fatemeh Shah-Mohammadi",
+     "year": 2025,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.64898/2025.12.14.25342221"
+    },
+    {
+     "title": "Conformal Triage for Medical Imaging AI Deployment",
+     "first_author": "Anastasios N. Angelopoulos",
+     "year": 2024,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2024.02.09.24302543"
+    },
+    {
+     "title": "Evidence-Grounded Decision Support for Aircraft Line Maintenance Using Conformal Prediction and Retrieval-Augmented NLP from Technical Log Records",
+     "first_author": "Arthur Dela Pe\u00f1a",
+     "year": 2026,
+     "venue": "Transactions of the Institute of Aviation",
+     "doi": "https://doi.org/10.2478/tar-2026-0009"
+    },
+    {
+     "title": "Beyond Accuracy: A Clinically-Oriented Breast Cancer Diagnostic Framework Integrating Conformal Prediction, Counterfactual Explanations, and Multi-Task Learning on FNA Cytological Features",
+     "first_author": "Esra Gungor Ulutas",
+     "year": 2026,
+     "venue": "Firat University Journal of Experimental and Computational Engineering",
+     "doi": "https://doi.org/10.62520/fujece.1940340"
+    },
+    {
+     "title": "Conformal, Explainable Machine Learning for Forensic Malware Triage and IoT Attribution",
+     "first_author": "Arafat Al-Dhaqm",
+     "year": 2026,
+     "venue": "International Journal of Advanced Computer Science and Applications",
+     "doi": "https://doi.org/10.14569/ijacsa.2026.0170888"
+    },
+    {
+     "title": "Conformal selective prediction with cost aware deferral for safe clinical triage under distribution shift",
+     "first_author": "Hyun Kwon",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-40637-w"
+    },
+    {
+     "title": "A Trustworthy AI Framework for Nuclear Power Plant Accident Triage With Conformalized Causal Transformers",
+     "first_author": "Ahmad O. Aseeri",
+     "year": 2026,
+     "venue": "IEEE Access",
+     "doi": "https://doi.org/10.1109/access.2026.3723691"
+    },
+    {
+     "title": "Conformal Coronary Calcification Volume Estimation with Conditional Coverage via Histogram Clustering",
+     "first_author": "Olivier Jaubert",
+     "year": 2025,
+     "venue": "IEEE International Symposium on Biomedical Imaging (ISBI)",
+     "doi": "https://doi.org/10.1109/isbi60581.2025.10980751"
+    },
+    {
+     "title": "Making the Improbable Possible: Generalizing Models Designed for a Syndrome-Based, Heterogeneous Patient Landscape",
+     "first_author": "Joshua Pei Le",
+     "year": 2023,
+     "venue": "Critical Care Clinics",
+     "doi": "https://doi.org/10.1016/j.ccc.2023.02.003"
+    },
+    {
+     "title": "A clinical decision support framework for automated M-protein isotype classification from capillary zone electrophoresis immunotyping signals",
+     "first_author": "Deniz \u0130lhan Top\u00e7u",
+     "year": 2026,
+     "venue": "Clinica Chimica Acta",
+     "doi": "https://doi.org/10.1016/j.cca.2026.121355"
+    },
+    {
+     "title": "On the early detection of Sepsis in MIMIC-III",
+     "first_author": "Manuel Medina",
+     "year": 2021,
+     "venue": "IEEE International Conference on Healthcare Informatics (ICHI)",
+     "doi": "https://doi.org/10.1109/ichi52183.2021.00035"
+    },
+    {
+     "title": "Distribution-Free Uncertainty Quantification in Mechanical Ventilation Treatment: A Conformal Deep Q-Learning Framework",
+     "first_author": "Niloufar Eghbali",
+     "year": 2025,
+     "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+     "doi": "https://doi.org/10.1609/aaai.v39i27.35013"
+    },
+    {
+     "title": "Distribution-Free Uncertainty Quantification in Mechanical Ventilation Treatment: A Conformal Deep Q-Learning Framework",
+     "first_author": "Niloufar Eghbali",
+     "year": 2024,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2412.12597"
+    },
+    {
+     "title": "A machine-learning algorithm for diagnosis of multisystem inflammatory syndrome in children and Kawasaki disease in the USA: a retrospective model development and validation study",
+     "first_author": "Jonathan Y. Lam",
+     "year": 2022,
+     "venue": "The Lancet Digital Health",
+     "doi": "https://doi.org/10.1016/s2589-7500(22)00149-2"
+    },
+    {
+     "title": "AI-based classification of OSA severity in awake subjects using breathing sound analysis",
+     "first_author": "Ali Mohammad Alqudah",
+     "year": 2026,
+     "venue": "Mspace (University of Manitoba)",
+     "doi": null
+    },
+    {
+     "title": "GEMATI-CARE: Uncertainty-Aware Conformal Routing for Mental-Health Crisis Escalation (code, model, and results)",
+     "first_author": "Junta Zeniarja",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.23131628"
+    },
+    {
+     "title": "GEMATI-CARE: Uncertainty-Aware Conformal Routing for Mental-Health Crisis Escalation (code, model, and results)",
+     "first_author": "Junta Zeniarja",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.23131627"
+    },
+    {
+     "title": "Awake Insights for Obstructive Sleep Apnea: Severity Detection Using Tracheal Breathing Sounds and Meta-Model Analysis",
+     "first_author": "Ali Mohammad Alqudah",
+     "year": 2026,
+     "venue": "Diagnostics",
+     "doi": "https://doi.org/10.3390/diagnostics16030448"
+    },
+    {
+     "title": "Evidence integrity and review utility in crop-image decision support: an audit-to-review framework for precision agriculture",
+     "first_author": "Xin Li",
+     "year": 2026,
+     "venue": "Bulletin of the National Research Centre/Bulletin of the National Research Center",
+     "doi": "https://doi.org/10.1186/s42269-026-01492-x"
+    },
+    {
+     "title": "Trust Beyond Accuracy: Conformal Uncertainty Quantification Reveals the Generalization Gap in Polymer Glass Transition Temperature Prediction",
+     "first_author": "Murat Akdo\u011fan",
+     "year": 2026,
+     "venue": "ACS Omega",
+     "doi": "https://doi.org/10.1021/acsomega.6c02607"
+    },
+    {
+     "title": "Early detection of inflammatory arthritis to improve referrals using multimodal machine learning from blood testing, semi-structured and unstructured patient records",
+     "first_author": "Bing Wang",
+     "year": 2023,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2310.19967"
+    },
+    {
+     "title": "Knowing When to Defer: Trustworthy Multimodal AI for BI-RADS-Derived Management Using Paired Mammography and Ultrasound",
+     "first_author": "Muhammad Nouman",
+     "year": 2026,
+     "venue": "BioMedInformatics",
+     "doi": "https://doi.org/10.3390/biomedinformatics6050074"
+    },
+    {
+     "title": "Non-invasive arterial blood pressure waveform generation in critically ill patients: A sensor-based deep learning approach",
+     "first_author": "Carl Harris",
+     "year": 2026,
+     "venue": "Computers in Biology and Medicine",
+     "doi": "https://doi.org/10.1016/j.compbiomed.2026.111861"
+    },
+    {
+     "title": "In-sample calibration yields conformal calibration guarantees",
+     "first_author": "Sam Allen",
+     "year": 2025,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2503.03841"
+    },
+    {
+     "title": "Conformal reliability assessment of PPG-based ICU arrhythmia classification under class imbalance and patient heterogeneity",
+     "first_author": "\u0130smail Hakk\u0131 Kinalio\u011flu",
+     "year": 2026,
+     "venue": "Physiological Measurement",
+     "doi": "https://doi.org/10.1088/1361-6579/ae92e8"
+    },
+    {
+     "title": "SENTINEL: A cascade-aware temporal framework with formally verified alert logic for early ICU mortality prediction",
+     "first_author": "V. Sindhuja",
+     "year": 2026,
+     "venue": "Array",
+     "doi": "https://doi.org/10.1016/j.array.2026.101173"
+    },
+    {
+     "title": "A tri-light warning system for hospitalized COVID-19 patients: Credibility-based risk stratification for future pandemic preparedness",
+     "first_author": "Chuanjun Xu",
+     "year": 2024,
+     "venue": "European Journal of Radiology Open",
+     "doi": "https://doi.org/10.1016/j.ejro.2024.100603"
+    },
+    {
+     "title": "AI-Based Toxicity Prediction Models",
+     "first_author": "Laura Silva",
+     "year": 2023,
+     "venue": "Biomedical and Pharmacological Literature Archives",
+     "doi": "https://doi.org/10.5281/zenodo.19511665"
+    },
+    {
+     "title": "DAVis-Net: A Dual-Attention Deep Supervision Framework for Reliable Retinal OCT Image Classification with Integrated Explainability and Uncertainty Quantification",
+     "first_author": "Varun Kaza",
+     "year": 2026,
+     "venue": "Mathematical and Computational Applications",
+     "doi": "https://doi.org/10.3390/mca31050190"
+    },
+    {
+     "title": "Calibrated well-level screening of annular-pressure integrity records using physics-informed and ensemble machine learning",
+     "first_author": "Tuan Nguyen\u2010Sy",
+     "year": 2026,
+     "venue": "International journal of greenhouse gas control",
+     "doi": "https://doi.org/10.1016/j.ijggc.2026.104741"
+    },
+    {
+     "title": "Integrating Model Explainability and Uncertainty Quantification for Trustworthy Fraud Detection",
+     "first_author": "Tebogo Mapaila",
+     "year": 2026,
+     "venue": "Technologies",
+     "doi": "https://doi.org/10.3390/technologies14040212"
+    },
+    {
+     "title": "Quantum artificial intelligence for human health: A statistical framework",
+     "first_author": "Hossein Hassani",
+     "year": 2026,
+     "venue": "Elsevier eBooks",
+     "doi": "https://doi.org/10.1016/b978-0-443-43934-6.00039-0"
+    },
+    {
+     "title": "Development and validation of SXI++ large numerical model (LNM) algorithm for sepsis prediction",
+     "first_author": "Dharambir Mahto",
+     "year": 2025,
+     "venue": "Journal of Medical Artificial Intelligence",
+     "doi": "https://doi.org/10.21037/jmai-24-393"
+    },
+    {
+     "title": "Multicenter Validation of a Machine Learning Algorithm for Diagnosing Pediatric Patients with Multisystem Inflammatory Syndrome and Kawasaki Disease",
+     "first_author": "Jonathan Y. Lam",
+     "year": 2022,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2022.02.07.21268280"
+    },
+    {
+     "title": "Survival Analysis AAA: Applications, Assessment, and Algorithms",
+     "first_author": "Shi-ang Qi",
+     "year": 2026,
+     "venue": "ERA: Education and Research Archive (University of Alberta)",
+     "doi": "https://doi.org/10.7939/83975"
+    },
+    {
+     "title": "Editorial: AI in digital oncology: imaging and wearable technology for cancer detection and management",
+     "first_author": "Souptik Barua",
+     "year": 2025,
+     "venue": "Frontiers in Artificial Intelligence",
+     "doi": "https://doi.org/10.3389/frai.2025.1662971"
+    },
+    {
+     "title": "Cognitive alignment in cardiovascular AI: designing predictive models that think with, not just for, clinicians",
+     "first_author": "Jeena Joseph",
+     "year": 2025,
+     "venue": "Frontiers in Cardiovascular Medicine",
+     "doi": "https://doi.org/10.3389/fcvm.2025.1651324"
+    }
+   ]
+  },
+  "Q3_conformal_class_conditional_clinical": {
+   "query": "(\"conformal prediction\" OR \"conformal inference\") AND (\"class-conditional\" OR \"class conditional\" OR \"Mondrian\" OR \"minority class\" OR \"imbalanced\") AND (clinical OR patients OR mortality OR \"electronic health\")",
+   "total_hits": 35,
+   "records": [
+    {
+     "title": "Class-Conditional Conformal Prediction with Uncertainty-Triggered Selective Explainability for HighStakes Imbalanced Tabular Decisions",
+     "first_author": "Pham Manh Trung Nguyen",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.22633992"
+    },
+    {
+     "title": "Reliable Uncertainty Under Class Imbalance and Distribution Shift: Class-Conditional Conformal Prediction of Multiple Sclerosis",
+     "first_author": "Alexander S. Millar",
+     "year": 2026,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.64898/2026.05.12.26353057"
+    },
+    {
+     "title": "Quantization-aware Mondrian conformal prediction for embedded ECG classification",
+     "first_author": "Oussama El Allam",
+     "year": 2026,
+     "venue": "Biomedical Signal Processing and Control",
+     "doi": "https://doi.org/10.1016/j.bspc.2026.111217"
+    },
+    {
+     "title": "Reliable classification of imbalanced lung cancer data with enhanced split conformal prediction",
+     "first_author": "Hao Ding",
+     "year": 2026,
+     "venue": "PeerJ Computer Science",
+     "doi": "https://doi.org/10.7717/peerj-cs.3841"
+    },
+    {
+     "title": "Toward Clinically Trustworthy Deep Learning: Applying Conformal Prediction to Intracranial Hemorrhage Detection",
+     "first_author": "Cooper U. Gamble",
+     "year": 2024,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2401.08058"
+    },
+    {
+     "title": "Improving the reliability of polygenic risk score-based prediction for cardiovascular and renal complications across ancestries in type 2 diabetes using Mondrian Cross-Conformal Prediction",
+     "first_author": "Edoh Kodji",
+     "year": 2026,
+     "venue": "PLoS Computational Biology",
+     "doi": "https://doi.org/10.1371/journal.pcbi.1014670"
+    },
+    {
+     "title": "Improving Mortality Prediction in Adults with Kidney Failure: Conformal Prediction Methodology with Data from the United State Renal Data System (USRDS)",
+     "first_author": "Mei Liu",
+     "year": 2025,
+     "venue": "Journal of the American Society of Nephrology",
+     "doi": "https://doi.org/10.1681/asn.2025g724abn7"
+    },
+    {
+     "title": "Conformal Prediction Using Random Survival Forests",
+     "first_author": "Henrik Bostr\u00f6m",
+     "year": 2017,
+     "venue": "IEEE International Conference on Machine Learning and Applications (ICMLA)",
+     "doi": "https://doi.org/10.1109/icmla.2017.00-57"
+    },
+    {
+     "title": "Quantifying central canal stenosis prediction uncertainty in SpineNet with conformal prediction",
+     "first_author": "Andrea Cina",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-35343-6"
+    },
+    {
+     "title": "Quantifying central canal stenosis prediction uncertainty in SpineNet with conformal prediction",
+     "first_author": "Andrea Cina",
+     "year": 2026,
+     "venue": "Repository for Publications and Research Data (ETH Zurich)",
+     "doi": "https://doi.org/10.3929/ethz-c-000795896"
+    },
+    {
+     "title": "Conformal Prediction for Deep Learning Classification Model in Histopathological Images",
+     "first_author": "Santiago Gelvez",
+     "year": 2025,
+     "venue": null,
+     "doi": "https://doi.org/10.1109/stsiva66383.2025.11156416"
+    },
+    {
+     "title": "Understanding uncertainty in large language model predictions of early death in critically ill patients: a conformal prediction approach",
+     "first_author": "Fatemeh Shah-Mohammadi",
+     "year": 2026,
+     "venue": "JAMIA Open",
+     "doi": "https://doi.org/10.1093/jamiaopen/ooag108"
+    },
+    {
+     "title": "Understanding Uncertainty in Large Language Model Predictions of Early Death in Critically Ill Patients: A Conformal Prediction Approach",
+     "first_author": "Fatemeh Shah-Mohammadi",
+     "year": 2025,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.64898/2025.12.14.25342221"
+    },
+    {
+     "title": "Conformal reliability assessment of PPG-based ICU arrhythmia classification under class imbalance and patient heterogeneity",
+     "first_author": "\u0130smail Hakk\u0131 Kinalio\u011flu",
+     "year": 2026,
+     "venue": "Physiological Measurement",
+     "doi": "https://doi.org/10.1088/1361-6579/ae92e8"
+    },
+    {
+     "title": "Development and Validation of an Interpretable Conformal Predictor to Predict Sepsis Mortality Risk: Retrospective Cohort Study",
+     "first_author": "Meicheng Yang",
+     "year": 2024,
+     "venue": "Journal of Medical Internet Research",
+     "doi": "https://doi.org/10.2196/50369"
+    },
+    {
+     "title": "Development and Validation of an Interpretable Conformal Predictor to Predict Sepsis Mortality Risk: Retrospective Cohort Study (Preprint)",
+     "first_author": "Meicheng Yang",
+     "year": 2023,
+     "venue": null,
+     "doi": "https://doi.org/10.2196/preprints.50369"
+    },
+    {
+     "title": "Translating polygenic risk scores for clinical use by estimating the confidence bounds of risk prediction",
+     "first_author": "Jiangming Sun",
+     "year": 2021,
+     "venue": "Nature Communications",
+     "doi": "https://doi.org/10.1038/s41467-021-25014-7"
+    },
+    {
+     "title": "Conformal selective prediction with cost aware deferral for safe clinical triage under distribution shift",
+     "first_author": "Hyun Kwon",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-40637-w"
+    },
+    {
+     "title": "Leakage-aware and imbalance-robust gradient boosting for intrusion detection in cyber-physical healthcare systems under adversarial AI threats",
+     "first_author": "Md Azizul Rahaman",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-70077-5"
+    },
+    {
+     "title": "Early risk prediction of pregnancy complications:Integrating clinical and physiological data",
+     "first_author": "Yanqi Wu",
+     "year": 2026,
+     "venue": "TU/e Research Portal",
+     "doi": null
+    },
+    {
+     "title": "Outlier detection to identify presence of clinical confounders to AI performance: application to coronary angiography and LVEF prediction",
+     "first_author": "Kuan Zhang",
+     "year": 2025,
+     "venue": "SPIE Medical Imaging: Computer-Aided Diagnosis",
+     "doi": "https://doi.org/10.1117/12.3048988"
+    },
+    {
+     "title": "Uncertainty\u2011aware sepsis survival prediction using conformal XGBoost on minimal clinical features under Sepsis\u20113 criteria",
+     "first_author": "Samuel John Parre\u00f1o",
+     "year": 2026,
+     "venue": "Computer Methods and Programs in Biomedicine",
+     "doi": "https://doi.org/10.1016/j.cmpb.2026.109429"
+    },
+    {
+     "title": "Unbiased confidence measures for stroke risk estimation based on ultrasound carotid image analysis",
+     "first_author": "Harris Papadopoulos",
+     "year": 2016,
+     "venue": "Neural Computing and Applications",
+     "doi": "https://doi.org/10.1007/s00521-016-2590-3"
+    },
+    {
+     "title": "Uncertainty-Aware Machine Learning for Predicting Axillary Lymph Node Metastasis Using Breast MRI",
+     "first_author": "Sevgi \u00dcnal",
+     "year": 2026,
+     "venue": "Breast Cancer Targets and Therapy",
+     "doi": "https://doi.org/10.2147/bctt.s599211"
+    },
+    {
+     "title": "Uncertainty-Aware Machine Learning for Predicting Axillary Lymph Node Metastasis Using Breast MRI",
+     "first_author": "Sevgi \u00c3\u009cnal",
+     "year": 2026,
+     "venue": "Dove Medical Press (Taylor and Francis Group)",
+     "doi": null
+    },
+    {
+     "title": "Prediction of Cardiovascular and Renal Complications of Diabetes by a multi-Polygenic Risk Score in Different Ethnic Groups",
+     "first_author": "Edoh Kodji",
+     "year": 2025,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2025.06.17.25329804"
+    },
+    {
+     "title": "Predicting Adverse Drug Events with Confidence",
+     "first_author": "Tuve L\u00f6fstr\u00f6m",
+     "year": 2015,
+     "venue": "Frontiers in artificial intelligence and applications",
+     "doi": "https://doi.org/10.3233/978-1-61499-589-0-88"
+    },
+    {
+     "title": "Continuous risk estimation for febrile infants when procalcitonin is unavailable: a derivation study and documented negative result",
+     "first_author": "Hayden Farquhar",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.20798310"
+    },
+    {
+     "title": "Continuous risk estimation for febrile infants when procalcitonin is unavailable: a derivation study and documented negative result",
+     "first_author": "Hayden Farquhar",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.19673237"
+    },
+    {
+     "title": "OvCaNet: An uncertainty-calibrated deep learning framework for benign\u2013malignant ovarian cancer classification from ultrasound imaging",
+     "first_author": "Tamim Mahmud",
+     "year": 2026,
+     "venue": "Intelligence-Based Medicine",
+     "doi": "https://doi.org/10.1016/j.ibmed.2026.100458"
+    },
+    {
+     "title": "CRuSE-Heart: explainable AI for risk-controlled selective ensembles in heart-attack screening",
+     "first_author": "Muhammad Asad",
+     "year": 2026,
+     "venue": "Discover Artificial Intelligence",
+     "doi": "https://doi.org/10.1007/s44163-026-01378-x"
+    },
+    {
+     "title": "Device-Specific Conformal Reliability under Scanner-Level Acquisition Shift in Breast Ultrasound CAD",
+     "first_author": "\u0130smail Hakk\u0131 Kinalio\u011flu",
+     "year": 2026,
+     "venue": "Medical Engineering & Physics",
+     "doi": "https://doi.org/10.1088/1873-4030/aeb029"
+    },
+    {
+     "title": "KACQ-DCNN: Uncertainty-Aware Interpretable Kolmogorov-Arnold Classical-Quantum Dual-Channel Neural Network for Heart Disease Detection",
+     "first_author": "Md Abrar Jahin",
+     "year": 2024,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2410.07446"
+    },
+    {
+     "title": "KACQ-DCNN: Uncertainty-Aware Interpretable Kolmogorov\u2013Arnold Classical\u2013Quantum Dual-Channel Neural Network for Heart Disease Detection",
+     "first_author": "Md Abrar Jahin",
+     "year": 2025,
+     "venue": "Computers in Biology and Medicine",
+     "doi": "https://doi.org/10.1016/j.compbiomed.2025.110976"
+    },
+    {
+     "title": "ACCURACIES, UNCERTAINTIES, AND PITFALLS IN USING DEEP LEARNING FRAMEWORKS IN ORTHOPAEDICS AND MITIGATION STRATEGIES",
+     "first_author": "Bhushan S. Borotikar",
+     "year": 2025,
+     "venue": "Orthopaedic Proceedings",
+     "doi": "https://doi.org/10.1302/1358-992x.2025.9.044"
+    }
+   ]
+  },
+  "Q4_online_conformal_clinical": {
+   "query": "(\"adaptive conformal\" OR \"online conformal\" OR \"conformal prediction\") AND (\"distribution shift\" OR \"temporal shift\" OR \"non-stationary\" OR \"nonstationary\" OR \"covariate shift\") AND (clinical OR patients OR hospital OR \"electronic health\" OR \"MIMIC\")",
+   "total_hits": 25,
+   "records": [
+    {
+     "title": "Estimating Test Performance for AI Medical Devices under Distribution Shift with Conformal Prediction",
+     "first_author": "Charles S. Lu",
+     "year": 2022,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2207.05796"
+    },
+    {
+     "title": "Conformal Prediction in Clinical Artificial Intelligence",
+     "first_author": "Xiaofeng Wang",
+     "year": 2026,
+     "venue": "CHEST Journal",
+     "doi": "https://doi.org/10.1016/j.chest.2025.07.4116"
+    },
+    {
+     "title": "Reliable Uncertainty Under Class Imbalance and Distribution Shift: Class-Conditional Conformal Prediction of Multiple Sclerosis",
+     "first_author": "Alexander S. Millar",
+     "year": 2026,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.64898/2026.05.12.26353057"
+    },
+    {
+     "title": "Uncertainty-Aware Brain-Tumor Type Classification From MRI: Segmentation-Guided ROI, Conformal Prediction, and Selective Abstention Under Distribution Shift",
+     "first_author": "Ngan Nguyen",
+     "year": 2026,
+     "venue": "IEEE Access",
+     "doi": "https://doi.org/10.1109/access.2026.3729887"
+    },
+    {
+     "title": "Pitfalls of Conformal Predictions for Medical Image Classification",
+     "first_author": "Hendrik Alexander Mehrtens",
+     "year": 2023,
+     "venue": "Lecture notes in computer science",
+     "doi": "https://doi.org/10.1007/978-3-031-44336-7_20"
+    },
+    {
+     "title": "Conformal selective prediction with cost aware deferral for safe clinical triage under distribution shift",
+     "first_author": "Hyun Kwon",
+     "year": 2026,
+     "venue": "Scientific Reports",
+     "doi": "https://doi.org/10.1038/s41598-026-40637-w"
+    },
+    {
+     "title": "Three Applications of Conformal Prediction for Rating Breast Density in Mammography",
+     "first_author": "Charles S. Lu",
+     "year": 2022,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2206.12008"
+    },
+    {
+     "title": "Reliable machine learning models in genomic medicine using conformal prediction",
+     "first_author": "Christina Papangelou",
+     "year": 2025,
+     "venue": "Frontiers in Bioinformatics",
+     "doi": "https://doi.org/10.3389/fbinf.2025.1507448"
+    },
+    {
+     "title": "Reliable machine learning models in genomic medicine using conformal prediction",
+     "first_author": "Christina Papangelou",
+     "year": 2024,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2024.09.09.24312995"
+    },
+    {
+     "title": "Multicenter Validation of a Machine Learning Algorithm for Diagnosing Pediatric Patients with Multisystem Inflammatory Syndrome and Kawasaki Disease",
+     "first_author": "Jonathan Y. Lam",
+     "year": 2022,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2022.02.07.21268280"
+    },
+    {
+     "title": "A Tri-light Warning System for Hospitalized COVID-19 Patients: Credibility-based Risk Stratification under Data Shift",
+     "first_author": "Chuanjun Xu",
+     "year": 2022,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2022.12.11.22283309"
+    },
+    {
+     "title": "A tri-light warning system for hospitalized COVID-19 patients: Credibility-based risk stratification for future pandemic preparedness",
+     "first_author": "Chuanjun Xu",
+     "year": 2024,
+     "venue": "European Journal of Radiology Open",
+     "doi": "https://doi.org/10.1016/j.ejro.2024.100603"
+    },
+    {
+     "title": "A machine-learning algorithm for diagnosis of multisystem inflammatory syndrome in children and Kawasaki disease in the USA: a retrospective model development and validation study",
+     "first_author": "Jonathan Y. Lam",
+     "year": 2022,
+     "venue": "The Lancet Digital Health",
+     "doi": "https://doi.org/10.1016/s2589-7500(22)00149-2"
+    },
+    {
+     "title": "Making Conformal Predictors Robust in Healthcare Settings: a Case Study on EEG Classification",
+     "first_author": "Arjun Chatterjee",
+     "year": 2026,
+     "venue": "Lecture notes in computer science",
+     "doi": "https://doi.org/10.1007/978-3-032-30710-1_6"
+    },
+    {
+     "title": "Physiological Nonconformity Score for Uncertainty Quantification in Cuffless Blood Pressure Estimation",
+     "first_author": "Jo\u00e3o Loureiro",
+     "year": 2026,
+     "venue": "World Congress on Medical Physics and Biomedical Engineering, September 7 - 12, 2009, Munich, Germany",
+     "doi": "https://doi.org/10.1007/978-3-032-39674-7_40"
+    },
+    {
+     "title": "ReFIT: Federated Transfer Learning for Sequential Prediction and Uncertainty Quantification Using Streaming EHR Data",
+     "first_author": "Yuying Lu",
+     "year": 2026,
+     "venue": "Statistics in Biosciences",
+     "doi": "https://doi.org/10.1007/s12561-026-09525-9"
+    },
+    {
+     "title": "Conformal Triage for Medical Imaging AI Deployment",
+     "first_author": "Anastasios N. Angelopoulos",
+     "year": 2024,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2024.02.09.24302543"
+    },
+    {
+     "title": "Distribution-Free Uncertainty Quantification in Mechanical Ventilation Treatment: A Conformal Deep Q-Learning Framework",
+     "first_author": "Niloufar Eghbali",
+     "year": 2025,
+     "venue": "Proceedings of the AAAI Conference on Artificial Intelligence",
+     "doi": "https://doi.org/10.1609/aaai.v39i27.35013"
+    },
+    {
+     "title": "Distribution-Free Uncertainty Quantification in Mechanical Ventilation Treatment: A Conformal Deep Q-Learning Framework",
+     "first_author": "Niloufar Eghbali",
+     "year": 2024,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2412.12597"
+    },
+    {
+     "title": "Distribution-Free Prediction Sets for Regression under Target Shift",
+     "first_author": "Menghan Yi",
+     "year": 2025,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2510.10985"
+    },
+    {
+     "title": "Safe and reliable transport of prediction models to new healthcare settings without the need to collect new labeled data",
+     "first_author": "Rudraksh Tuwani",
+     "year": 2023,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2023.12.13.23299899"
+    },
+    {
+     "title": "Conformal predictive intervals in survival analysis: a resampling approach",
+     "first_author": "Jing Qin",
+     "year": 2025,
+     "venue": "Biometrics",
+     "doi": "https://doi.org/10.1093/biomtc/ujaf063"
+    },
+    {
+     "title": "Bringing the Promise of Artificial Intelligence to Critical Care: What the Experience With Sepsis Analytics Can Teach Us",
+     "first_author": "Gabriel Wardi",
+     "year": 2023,
+     "venue": "Critical Care Medicine",
+     "doi": "https://doi.org/10.1097/ccm.0000000000005894"
+    },
+    {
+     "title": "PAGE: Domain-Incremental Adaptation with Past-Agnostic Generative Replay for Smart Healthcare",
+     "first_author": "Chia\u2010Hao Li",
+     "year": 2025,
+     "venue": "ACM Transactions on Computing for Healthcare",
+     "doi": "https://doi.org/10.1145/3731681"
+    },
+    {
+     "title": "Development and external validation of an ultrasound image-based deep learning model to estimate gestational age in the second and third trimesters of pregnancy using data from Garbh-Ini cohort: a prospective cohort study in North Indian population",
+     "first_author": "Divyanshu Mishra",
+     "year": 2024,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2024.05.13.24305466"
+    }
+   ]
+  },
+  "Q6_monitoring_pattern_leakage_clinical_prediction": {
+   "query": "(\"informative missingness\" OR \"informative presence\" OR \"measurement frequency\" OR \"measurement patterns\" OR \"monitoring frequency\" OR \"monitoring intensity\" OR \"label leakage\" OR \"temporal leakage\" OR \"data leakage\") AND (\"clinical prediction\" OR \"risk prediction\" OR \"early warning\" OR \"deterioration\" OR \"mortality prediction\")",
+   "total_hits": 313,
+   "records": [
+    {
+     "title": "Informative presence and observation in routine health data: A review of methodology for clinical risk prediction",
+     "first_author": "Rose Sisk",
+     "year": 2020,
+     "venue": "Journal of the American Medical Informatics Association",
+     "doi": "https://doi.org/10.1093/jamia/ocaa242"
+    },
+    {
+     "title": "Early warning score challenges and opportunities in the care of deteriorating patients .",
+     "first_author": "John Asger Petersen",
+     "year": 2018,
+     "venue": "PubMed",
+     "doi": null
+    },
+    {
+     "title": "Informative missingness in electronic health record systems: the curse of knowing",
+     "first_author": "Rolf H. H. Groenwold",
+     "year": 2020,
+     "venue": "Diagnostic and Prognostic Research",
+     "doi": "https://doi.org/10.1186/s41512-020-00077-0"
+    },
+    {
+     "title": "Preserving Informative Presence: How Missing Data and Imputation Strategies Affect the Performance of an AI-Based Early Warning Score",
+     "first_author": "T.Y. Sim",
+     "year": 2025,
+     "venue": "Journal of Clinical Medicine",
+     "doi": "https://doi.org/10.3390/jcm14072213"
+    },
+    {
+     "title": "Frequency of early warning score assessment and clinical deterioration in hospitalized patients: A randomized trial",
+     "first_author": "John Asger Petersen",
+     "year": 2016,
+     "venue": "Resuscitation",
+     "doi": "https://doi.org/10.1016/j.resuscitation.2016.02.003"
+    },
+    {
+     "title": "A Time-Constrained Analysis of Dynamic Early Warning Systems for Academic Risk Prediction",
+     "first_author": "Shintaro Tajiri",
+     "year": 2026,
+     "venue": "IIAI Letters on Institutional Research",
+     "doi": "https://doi.org/10.52731/lir.v006.489"
+    },
+    {
+     "title": "Early warning of financial statement data leakage risk based on grey fuzzy comprehensive evaluation",
+     "first_author": "Shanshan Li",
+     "year": 2023,
+     "venue": "International Journal of Applied Systemic Studies",
+     "doi": "https://doi.org/10.1504/ijass.2023.134366"
+    },
+    {
+     "title": "Early warning of financial statement data leakage risk based on grey fuzzy comprehensive evaluation",
+     "first_author": "Shanshan Li",
+     "year": 2022,
+     "venue": "International Journal of Applied Systemic Studies",
+     "doi": "https://doi.org/10.1504/ijass.2023.10050058"
+    },
+    {
+     "title": "MADE: leveraging informative missingness and temporal evaluation for electronic health record-based deterioration prediction in general wards",
+     "first_author": "Yechan Mun",
+     "year": 2026,
+     "venue": "Journal of the American Medical Informatics Association",
+     "doi": "https://doi.org/10.1093/jamia/ocag124"
+    },
+    {
+     "title": "An enterprise financial data leakage risk prediction based on ARIMA-SVM combination model",
+     "first_author": "Qian Cao",
+     "year": 2023,
+     "venue": "International Journal of Applied Systemic Studies",
+     "doi": "https://doi.org/10.1504/ijass.2023.134358"
+    },
+    {
+     "title": "Risk Prediction Model of Financial Lending Big Data Leakage Based on Association Rules",
+     "first_author": "Qi Fan",
+     "year": 2022,
+     "venue": "Smart innovation, systems and technologies",
+     "doi": "https://doi.org/10.1007/978-981-19-2768-3_60"
+    },
+    {
+     "title": "An enterprise financial data leakage risk prediction based on ARIMA-SVM combination model.",
+     "first_author": "Qian Cao",
+     "year": 2022,
+     "venue": "International Journal of Applied Systemic Studies",
+     "doi": "https://doi.org/10.1504/ijass.2023.10048600"
+    },
+    {
+     "title": "A framework for understanding label leakage in machine learning for health care",
+     "first_author": "Sharon E. Davis",
+     "year": 2023,
+     "venue": "Journal of the American Medical Informatics Association",
+     "doi": "https://doi.org/10.1093/jamia/ocad178"
+    },
+    {
+     "title": "Audit on the Appropriateness of Monitoring Frequencies and Clinical Escalation From National Early Warning Scores 2 (NEWS2) in Old Age Psychiatry Patients",
+     "first_author": "Vanessa Tolulope Jacobs",
+     "year": 2025,
+     "venue": "BJPsych Open",
+     "doi": "https://doi.org/10.1192/bjo.2025.10610"
+    },
+    {
+     "title": "What are the patterns of compliance with Early Warning Track and Trigger Tools: A narrative review",
+     "first_author": "Nicki Credland",
+     "year": 2018,
+     "venue": "Applied Nursing Research",
+     "doi": "https://doi.org/10.1016/j.apnr.2018.09.002"
+    },
+    {
+     "title": "Do medical students recognise the deteriorating patient by analysing their vital signs? A monocentric observational study based on the National Early Warning Score 2",
+     "first_author": "David Alexander Christian Messerer",
+     "year": 2021,
+     "venue": "BMJ Open",
+     "doi": "https://doi.org/10.1136/bmjopen-2020-044354"
+    },
+    {
+     "title": "The illusion of improvement in ATTR-CM: re-evaluating informative missingness and discordant endpoints in ATTRibute-CM",
+     "first_author": "Zhang Liu",
+     "year": 2026,
+     "venue": "European Journal of Heart Failure",
+     "doi": "https://doi.org/10.1093/ejhf/xuag089"
+    },
+    {
+     "title": "Barriers and facilitating factors related to use of early warning score among acute care nurses: a qualitative study",
+     "first_author": "John Asger Petersen",
+     "year": 2017,
+     "venue": "BMC Emergency Medicine",
+     "doi": "https://doi.org/10.1186/s12873-017-0147-0"
+    },
+    {
+     "title": "Diagnostic Codes in AI Prediction Models and Label Leakage of Same-Admission Clinical Outcomes",
+     "first_author": "Bashar Ramadan",
+     "year": 2025,
+     "venue": "JAMA Network Open",
+     "doi": "https://doi.org/10.1001/jamanetworkopen.2025.50454"
+    },
+    {
+     "title": "Reply to \u2018the illusion of improvement in ATTR-CM: re-evaluating informative missingness and discordant endpoints in ATTRibute-CM\u2019",
+     "first_author": "Francesco Cappelli",
+     "year": 2026,
+     "venue": "European Journal of Heart Failure",
+     "doi": "https://doi.org/10.1093/ejhf/xuag122"
+    },
+    {
+     "title": "A generalized early warning criterion for the landslide risk assessment: deformation probability index (DPI)",
+     "first_author": "Junrong Zhang",
+     "year": 2024,
+     "venue": "Acta Geotechnica",
+     "doi": "https://doi.org/10.1007/s11440-023-02199-3"
+    },
+    {
+     "title": "Early warning systems to improve maternal health in Nigeria: design, validation, and evaluation of a modified obstetric early warning chart for use in low-resource settings",
+     "first_author": "Aminu Umar",
+     "year": 2020,
+     "venue": "University of Liverpool",
+     "doi": "https://doi.org/10.17638/03072890"
+    },
+    {
+     "title": "Research on the Early Warning for Abnormal Inflow in Wastewater Treatment Plants",
+     "first_author": "Yaorong Shu",
+     "year": 2024,
+     "venue": "Theory and Practice of Science and Technology",
+     "doi": "https://doi.org/10.47297/taposatwsp2633-456904.20240504"
+    },
+    {
+     "title": "An Abstract Interpretation-Based Data Leakage Static Analysis",
+     "first_author": "Filip Drobnjakovi\u0107",
+     "year": 2024,
+     "venue": "Lecture notes in computer science",
+     "doi": "https://doi.org/10.1007/978-3-031-64626-3_7"
+    },
+    {
+     "title": "Variation in nurses\u2019 compliance with an Early Warning Score protocol: A retrospective cohort study",
+     "first_author": "Jobbe P L Leenen",
+     "year": 2024,
+     "venue": "Heliyon",
+     "doi": "https://doi.org/10.1016/j.heliyon.2024.e36147"
+    },
+    {
+     "title": "Diagnostic Codes in AI prediction models and Label Leakage of Same-admission Clinical Outcomes",
+     "first_author": "Bashar Ramadan",
+     "year": 2025,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2025.08.09.25333360"
+    },
+    {
+     "title": "Leakage-Safe Benchmarks for Financial Stress Early Warning and Risk Forecasting",
+     "first_author": "Antoine Leroux",
+     "year": 2026,
+     "venue": "SOCIAL AND MANAGEMENT SCIENCES RESEARCH JOURNAL",
+     "doi": null
+    },
+    {
+     "title": "Foundations of Machine Learning-Based Clinical Prediction Modeling: Part II\u2014Generalization and Overfitting",
+     "first_author": "Julius M. Kernbach",
+     "year": 2021,
+     "venue": "Acta neurochirurgica. Supplementum",
+     "doi": "https://doi.org/10.1007/978-3-030-85292-4_3"
+    },
+    {
+     "title": "An Integrated Approach Toward Reliable and Adaptive Landslide Early Warning Systems",
+     "first_author": "Libin Tang",
+     "year": 2026,
+     "venue": null,
+     "doi": "https://doi.org/10.71548/244"
+    },
+    {
+     "title": "A Leakage-Safe Evaluation Framework for Volatility Forecasting and Market Stress Early Warning",
+     "first_author": "Noah Almeida",
+     "year": 2026,
+     "venue": "International Journal of Quantitative and Qualitative Research",
+     "doi": null
+    },
+    {
+     "title": "[Early Warning Scores at the nursing ward: what do you really want to know?]",
+     "first_author": "Sebastian J.H. Bredie",
+     "year": 2020,
+     "venue": "PubMed",
+     "doi": null
+    },
+    {
+     "title": "SegCrop: Segmentation-based Dynamic Cropping of Endoscopic Videos to Address Label Leakage in Surgical Tool Detection",
+     "first_author": "Adnan Qayyum",
+     "year": 2023,
+     "venue": "IEEE International Symposium on Biomedical Imaging (ISBI)",
+     "doi": "https://doi.org/10.1109/isbi53787.2023.10230822"
+    },
+    {
+     "title": "Static analysis by abstract interpretation against data leakage in machine learning",
+     "first_author": "Caterina Urban",
+     "year": 2025,
+     "venue": "Science of Computer Programming",
+     "doi": "https://doi.org/10.1016/j.scico.2025.103338"
+    },
+    {
+     "title": "FEDERATED DEEP LEARNING FRAMEWORK FOR REAL-TIME FLOOD PREDICTION AND EARLY WARNING SYSTEMS",
+     "first_author": "Mr. V.THARMALINGAM",
+     "year": 2025,
+     "venue": "International Journal of Engineering Research and Science & Technology",
+     "doi": "https://doi.org/10.62643/ijerst.2025.v21.n4.pp675-681"
+    },
+    {
+     "title": "Performance verification of Shandong earthquake early warning station network based on spatial analysis",
+     "first_author": "Le Yang",
+     "year": 2024,
+     "venue": "International Conference on Geoscience and Remote Sensing Mapping (GRSM)",
+     "doi": "https://doi.org/10.1117/12.3020885"
+    },
+    {
+     "title": "Gambaran pendokumentasian implementasi early warning score di ruang rawat inap siloam hospitals lippo cikarang = documentation implementation of early warning score at ward siloam hospitals lippo cikarang.",
+     "first_author": "Desi Hotma Pardede",
+     "year": 2018,
+     "venue": null,
+     "doi": null
+    },
+    {
+     "title": "Machine Learning Approach towards the Early Warning of Cyanobacterial Blooms in Drinking Water Reservoirs",
+     "first_author": "Claudia Fournier",
+     "year": 2022,
+     "venue": null,
+     "doi": "https://doi.org/10.3390/blsf2022014038"
+    },
+    {
+     "title": "Seasonal Early Warning of Impacts of Harmful Algal Blooms on Farmed Shellfish in Coastal Waters of Scotland",
+     "first_author": "Oliver Stoner",
+     "year": 2024,
+     "venue": "Water Resources Research",
+     "doi": "https://doi.org/10.1029/2023wr034889"
+    },
+    {
+     "title": "Behavioural leakage and the illusion of actionability: A deployment-honest evaluation framework for educational early warning systems",
+     "first_author": "Nguyen Le",
+     "year": 2026,
+     "venue": "Expert Systems with Applications",
+     "doi": "https://doi.org/10.1016/j.eswa.2026.134262"
+    },
+    {
+     "title": "Research on Early Warning Models for Swine Feeding Dynamic Signatures Based on Electronic Automated Feeding Data",
+     "first_author": "Yue Wang",
+     "year": 2026,
+     "venue": "Animals",
+     "doi": "https://doi.org/10.3390/ani16121880"
+    },
+    {
+     "title": "Enhancing pandemic early warning systems with secure data transfer via blockchain and stealth monitoring",
+     "first_author": "Nabrisi Rohid",
+     "year": 2025,
+     "venue": "Perinatal Journal",
+     "doi": "https://doi.org/10.57239/prn.25.03310065"
+    },
+    {
+     "title": "Maternal health risk prediction in Bangladesh using machine learning",
+     "first_author": "Shubham Shirodkar",
+     "year": 2026,
+     "venue": "Solent University Research Portal (Solent University)",
+     "doi": null
+    },
+    {
+     "title": "Multi-party Diabetes Mellitus risk prediction based on secure federated learning",
+     "first_author": "Yifei Su",
+     "year": 2023,
+     "venue": "Biomedical Signal Processing and Control",
+     "doi": "https://doi.org/10.1016/j.bspc.2023.104881"
+    },
+    {
+     "title": "Machine learning mortality prediction model for cyclosporine therapy in pediatric aplastic anemia",
+     "first_author": "Xianhao Wen",
+     "year": 2026,
+     "venue": "Annals of Hematology",
+     "doi": "https://doi.org/10.1007/s00277-026-06842-3"
+    },
+    {
+     "title": "Machine Learning-Based Early Warning System for Transport-Layer Bottlenecks in Open-Source 5G Testbeds",
+     "first_author": "Yedil S. Nurakhov",
+     "year": 2026,
+     "venue": "Algorithms",
+     "doi": "https://doi.org/10.3390/a19090728"
+    },
+    {
+     "title": "Imputation and missing indicators for handling missing data in the development and deployment of clinical prediction models: A simulation study",
+     "first_author": "Rose Sisk",
+     "year": 2023,
+     "venue": "Statistical Methods in Medical Research",
+     "doi": "https://doi.org/10.1177/09622802231165001"
+    },
+    {
+     "title": "The use of robotized inclinometric system in Early Warning System. The case study of a large landslide monitoring.",
+     "first_author": "Danilo Godone",
+     "year": 2022,
+     "venue": null,
+     "doi": "https://doi.org/10.5194/egusphere-egu22-7388"
+    },
+    {
+     "title": "An Interpretable Longitudinal Preeclampsia Risk Prediction Using Machine Learning",
+     "first_author": "Braden W. Eberhard",
+     "year": 2023,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2023.08.16.23293946"
+    },
+    {
+     "title": "Forecasting and Multilevel Early Warning of Wind Speed Using an Adaptive Kernel Estimator and Optimized Gated Recurrent Units",
+     "first_author": "Pengjiao Wang",
+     "year": 2024,
+     "venue": "Mathematics",
+     "doi": "https://doi.org/10.3390/math12162581"
+    },
+    {
+     "title": "Incorporating informatively collected laboratory data from EHR in clinical prediction models",
+     "first_author": "Minghui Sun",
+     "year": 2024,
+     "venue": "BMC Medical Informatics and Decision Making",
+     "doi": "https://doi.org/10.1186/s12911-024-02612-1"
+    },
+    {
+     "title": "MentalRoBERTa-EW Early-Warning Timeline Detection of Depressive Episodes from Longitudinal Social Media Text",
+     "first_author": "Devashish Soan",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.18995664"
+    },
+    {
+     "title": "Explainable AI-Based Early Warning System for Electricity Price Spikes: Evidence from the Romanian Market",
+     "first_author": "Alexandru-Victor Andrei",
+     "year": 2026,
+     "venue": "Proceedings of the ... International Conference on Business Excellence",
+     "doi": "https://doi.org/10.2478/picbe-2026-0352"
+    },
+    {
+     "title": "Proactive Early Warning of Vortex Ring State in Coaxial UAVs: A Physics-Informed Multimodal ViT-LSTM Approach",
+     "first_author": "Xiang Zhou",
+     "year": 2026,
+     "venue": "Sensors",
+     "doi": "https://doi.org/10.3390/s26123888"
+    },
+    {
+     "title": "Incorporation of feature engineering and attention mechanisms into deep learning models to develop an early warning system for harmful algal blooms",
+     "first_author": "TaeHo Kim",
+     "year": 2023,
+     "venue": "Journal of Cleaner Production",
+     "doi": "https://doi.org/10.1016/j.jclepro.2023.137564"
+    },
+    {
+     "title": "When Can We Trust Early Warnings? Leakage-Excluded Early Outcome Prediction from LMS Interaction Logs",
+     "first_author": "Ngoc Luyen Le",
+     "year": 2026,
+     "venue": "arXiv (Cornell University)",
+     "doi": "https://doi.org/10.48550/arxiv.2605.25794"
+    },
+    {
+     "title": "Online Monitoring of Heavy Metals in Groundwater: A Case Study of Dynamic Behavior, Monitoring Optimization and Early Warning Performance",
+     "first_author": "Shuping Yi",
+     "year": 2026,
+     "venue": "Hydrology",
+     "doi": "https://doi.org/10.3390/hydrology13020057"
+    },
+    {
+     "title": "Ten key considerations for developing interpretable risk prediction models",
+     "first_author": "Xi Zhang",
+     "year": 2026,
+     "venue": "Frontiers in Bioinformatics",
+     "doi": "https://doi.org/10.3389/fbinf.2026.1878681"
+    },
+    {
+     "title": "Leakage-Aware, Activity-Controlled Evaluation Protocol for Academic-Risk Prediction",
+     "first_author": "Li, Qiong",
+     "year": 2026,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.21203622"
+    },
+    {
+     "title": "Beyond the AUROC: data leakage, random splitting, and neglected calibration in critical care machine learning",
+     "first_author": "\u00d6mer Faruk \u00c7ak\u0131ro\u011flu",
+     "year": 2026,
+     "venue": "Eurasian Journal of Critical Care",
+     "doi": "https://doi.org/10.55994/ejcc.1993408"
+    },
+    {
+     "title": "Development and validation of an explainable machine learning model for mortality prediction in ICU patients with lung cancer",
+     "first_author": "Jinhong Xia",
+     "year": 2026,
+     "venue": "Frontiers in Cell and Developmental Biology",
+     "doi": "https://doi.org/10.3389/fcell.2026.1862263"
+    }
+   ]
+  },
+  "Q7_ed_prediction_time_landmark": {
+   "query": "(\"emergency department\" OR \"emergency departments\") AND (\"prediction time\" OR \"time of prediction\" OR \"landmark\" OR \"first hour\" OR \"early prediction\" OR \"available at triage\") AND (deterioration OR \"critical care\" OR \"ICU admission\" OR \"in-hospital mortality\" OR \"critical illness\") AND (\"machine learning\" OR \"deep learning\" OR \"prediction model\")",
+   "total_hits": 33,
+   "records": [
+    {
+     "title": "Early prediction of in-hospital deterioration after emergency department admission using machine learning models",
+     "first_author": "Chi-Yung Cheng",
+     "year": 2026,
+     "venue": "BMC Emergency Medicine",
+     "doi": "https://doi.org/10.1186/s12873-025-01464-w"
+    },
+    {
+     "title": "Early Prediction of Patient Disposition for Emergency Department Visits Using Machine Learning",
+     "first_author": "Ha Eun Hwang",
+     "year": 2021,
+     "venue": "Journal of Korean Institute of Industrial Engineers",
+     "doi": "https://doi.org/10.7232/jkiie.2021.47.3.263"
+    },
+    {
+     "title": "Early Prediction of Critical Care Interventions From Pediatric Emergency Department Triage",
+     "first_author": "Trang Ha",
+     "year": 2026,
+     "venue": "Hospital Pediatrics",
+     "doi": "https://doi.org/10.1542/hpeds.2025-009127"
+    },
+    {
+     "title": "Early prediction of intensive care unit admission in emergency department patients using machine learning",
+     "first_author": "Dinesh Pandey",
+     "year": 2024,
+     "venue": "Australian Critical Care",
+     "doi": "https://doi.org/10.1016/j.aucc.2024.101143"
+    },
+    {
+     "title": "Deep learning-based Emergency Department In-hospital Cardiac Arrest Score (Deep EDICAS) for early prediction of cardiac arrest and cardiopulmonary resuscitation in the emergency department",
+     "first_author": "Yuan-Xiang Deng",
+     "year": 2024,
+     "venue": "BioData Mining",
+     "doi": "https://doi.org/10.1186/s13040-024-00407-8"
+    },
+    {
+     "title": "Early prediction of clinical deterioration in older adults with suspected infection admitted from the emergency department to general wards: a multicenter machine learning study",
+     "first_author": "Yu-Lun Hung",
+     "year": 2026,
+     "venue": "BMC Geriatrics",
+     "doi": "https://doi.org/10.1186/s12877-026-08161-8"
+    },
+    {
+     "title": "Deep\u2010learning approaches to identify critically Ill patients at emergency department triage using limited information",
+     "first_author": "Joshua W. Joseph",
+     "year": 2020,
+     "venue": "Journal of the American College of Emergency Physicians Open",
+     "doi": "https://doi.org/10.1002/emp2.12218"
+    },
+    {
+     "title": "In-Hospital Mortality Prediction Model for Critically Ill Older Adult Patients Transferred from the Emergency Department to the Intensive Care Unit",
+     "first_author": "Yan Lu",
+     "year": 2023,
+     "venue": "Risk Management and Healthcare Policy",
+     "doi": "https://doi.org/10.2147/rmhp.s442138"
+    },
+    {
+     "title": "Deep-Learning Approaches to Identify Critically Ill Patients at Emergency Department Triage Using Limited Information",
+     "first_author": "Joshua W. Joseph",
+     "year": 2020,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2020.05.02.20089052"
+    },
+    {
+     "title": "Emergency department early mortality model for patients admitted after presenting to a tertiary medical center emergency department",
+     "first_author": "Justin K. Brooten",
+     "year": 2025,
+     "venue": "Academic Emergency Medicine",
+     "doi": "https://doi.org/10.1111/acem.15096"
+    },
+    {
+     "title": "Deep Learning\u2013Based Electrocardiogram Model (EIANet) to Predict Emergency Department Cardiac Arrest: Development and External Validation Study",
+     "first_author": "Shao-Chi Lu",
+     "year": 2025,
+     "venue": "Journal of Medical Internet Research",
+     "doi": "https://doi.org/10.2196/67576"
+    },
+    {
+     "title": "Impact of a deep learning sepsis prediction model on quality of care and survival",
+     "first_author": "Aaron E. Boussina",
+     "year": 2024,
+     "venue": "npj Digital Medicine",
+     "doi": "https://doi.org/10.1038/s41746-023-00986-6"
+    },
+    {
+     "title": "Abstract 13455: Predicting Emergency Department Disposition at Triage for Suspected Patients With Acute Coronary Syndrome Using Machine Learning Algorithms",
+     "first_author": "Stephanie O. Frisch",
+     "year": 2020,
+     "venue": "Circulation",
+     "doi": "https://doi.org/10.1161/circ.142.suppl_3.13455"
+    },
+    {
+     "title": "Early Prediction of Cardiogenic Shock Using Machine Learning",
+     "first_author": "Yale Chang",
+     "year": 2022,
+     "venue": "Frontiers in Cardiovascular Medicine",
+     "doi": "https://doi.org/10.3389/fcvm.2022.862424"
+    },
+    {
+     "title": "Deep Learning\u2013Based Electrocardiogram Model (EIANet) to Predict Emergency Department Cardiac Arrest: Development and External Validation Study (Preprint)",
+     "first_author": "Shao-Chi Lu",
+     "year": 2024,
+     "venue": null,
+     "doi": "https://doi.org/10.2196/preprints.67576"
+    },
+    {
+     "title": "Artificial intelligence prediction of adverse outcomes in emergency department patients with hyperglycemic crises in real-time",
+     "first_author": "Chin-Chuan Hsu",
+     "year": 2020,
+     "venue": "Research Square",
+     "doi": "https://doi.org/10.21203/rs.3.rs-73620/v1"
+    },
+    {
+     "title": "Real\u2010time artificial intelligence predicts adverse outcomes in acute pancreatitis in the emergency department: Comparison with clinical decision rule",
+     "first_author": "C H Chang",
+     "year": 2023,
+     "venue": "Academic Emergency Medicine",
+     "doi": "https://doi.org/10.1111/acem.14824"
+    },
+    {
+     "title": "Early prediction of mortality of septic patients visiting emergency room using machine learning",
+     "first_author": "Jeongwon Heo",
+     "year": 2022,
+     "venue": null,
+     "doi": "https://doi.org/10.1183/13993003.congress-2022.3433"
+    },
+    {
+     "title": "Early prediction of in-hospital death of COVID-19 patients: a machine-learning model based on age, blood analyses, and chest x-ray score",
+     "first_author": "Emirena Garrafa",
+     "year": 2021,
+     "venue": "eLife",
+     "doi": "https://doi.org/10.7554/elife.70640"
+    },
+    {
+     "title": "Early prediction of antibiotic need and bacteremia risk in non-immunocompromised pediatric emergency patients using machine learning",
+     "first_author": "Tom Velez",
+     "year": 2025,
+     "venue": "Pediatric Research",
+     "doi": "https://doi.org/10.1038/s41390-025-04656-z"
+    },
+    {
+     "title": "Development of an Explainable Machine Learning Model for Predicting Neurological Deterioration in Spontaneous Intracerebral Hemorrhage",
+     "first_author": "Ming Jie Jonathan Yeo",
+     "year": 2024,
+     "venue": "SSRN Electronic Journal",
+     "doi": "https://doi.org/10.2139/ssrn.5044195"
+    },
+    {
+     "title": "Early Prediction of In-Hospital Death of COVID-19 Patients: A Machine-Learning Model Based on Age, Blood Analyses, and Chest X-Ray Score",
+     "first_author": "Emirena Garrafa",
+     "year": 2021,
+     "venue": "medRxiv",
+     "doi": "https://doi.org/10.1101/2021.06.10.21258721"
+    },
+    {
+     "title": "A nomogram based on trauma-induced coagulopathy for predicting hospital mortality in multi-trauma patients: a retrospective study",
+     "first_author": "Shaochuan Chen",
+     "year": 2025,
+     "venue": "Internal and Emergency Medicine",
+     "doi": "https://doi.org/10.1007/s11739-025-03867-w"
+    },
+    {
+     "title": "AI-Assisted Triage Systems",
+     "first_author": "Laura Dubois",
+     "year": 2024,
+     "venue": "Excerpta Medica Archives Journal: Transaction A",
+     "doi": "https://doi.org/10.5281/zenodo.19613909"
+    },
+    {
+     "title": "From Measuring Mistriage to Predicting Risk: Two Approaches to Pediatric Triage",
+     "first_author": "C S Smith",
+     "year": 2026,
+     "venue": "Hospital Pediatrics",
+     "doi": "https://doi.org/10.1542/hpeds.2026-009272"
+    },
+    {
+     "title": "Editorial: Delirium in older persons",
+     "first_author": "Paolo Mazzola",
+     "year": 2025,
+     "venue": "Frontiers in Medicine",
+     "doi": "https://doi.org/10.3389/fmed.2025.1587624"
+    },
+    {
+     "title": "Patient safety and quality of care: a key focus for clinical informatics",
+     "first_author": "Suzanne R. Bakken",
+     "year": 2021,
+     "venue": "Journal of the American Medical Informatics Association",
+     "doi": "https://doi.org/10.1093/jamia/ocab141"
+    },
+    {
+     "title": "What's New in Shock, October 2021?",
+     "first_author": "Hugo C. Castro-Faria-Neto",
+     "year": 2021,
+     "venue": "Shock",
+     "doi": "https://doi.org/10.1097/shk.0000000000001857"
+    },
+    {
+     "title": "Global Perspectives in Acute Kidney Injury: Spain",
+     "first_author": "Mar\u00eda Jos\u00e9 Soler",
+     "year": 2023,
+     "venue": "Kidney360",
+     "doi": "https://doi.org/10.34067/kid.0000000000000080"
+    },
+    {
+     "title": "PSTM 2020 Abstract Supplement",
+     "first_author": null,
+     "year": 2020,
+     "venue": "Plastic & Reconstructive Surgery Global Open",
+     "doi": "https://doi.org/10.1097/01.gox.0000720288.22187.fa"
+    },
+    {
+     "title": "Challenges in Studying the Pediatric Hospital Medicine Workforce",
+     "first_author": "Neha Shirish Joshi",
+     "year": 2025,
+     "venue": "Hospital Pediatrics",
+     "doi": "https://doi.org/10.1542/hpeds.2025-008419"
+    },
+    {
+     "title": "The Liver Meeting: 2025 Subject Categories",
+     "first_author": null,
+     "year": 2025,
+     "venue": "Hepatology",
+     "doi": "https://doi.org/10.1097/hep.0000000000001494"
+    },
+    {
+     "title": "H22 How to teach ultrasound-guided peripheral nerve blocks to residents?",
+     "first_author": "Mireia Rodr\u00edguez Prieto",
+     "year": 2024,
+     "venue": null,
+     "doi": "https://doi.org/10.1136/rapm-2024-esra.584"
+    }
+   ]
+  },
+  "Q5_conformal_delayed_feedback": {
+   "query": "(\"conformal prediction\" OR \"conformal inference\") AND (\"delayed feedback\" OR \"delayed labels\" OR \"label delay\" OR \"delayed label\" OR \"feedback delay\")",
+   "total_hits": 3,
+   "records": [
+    {
+     "title": "Low-Latency Fraud Detection - RCP209 project (CNAM)",
+     "first_author": "EL KOBI, Yassir",
+     "year": 2025,
+     "venue": "Zenodo (CERN European Organization for Nuclear Research)",
+     "doi": "https://doi.org/10.5281/zenodo.17664103"
+    },
+    {
+     "title": "Conformal-risk-aware decentralized task reallocation for agile Earth observation satellite scheduling under meteorological uncertainty",
+     "first_author": "Guangtong Zhu",
+     "year": 2026,
+     "venue": "Aerospace Science and Technology",
+     "doi": "https://doi.org/10.1016/j.ast.2026.113895"
+    },
+    {
+     "title": "Toward an Empirical Science of Reliable Machine Learning: Causality, Synthetic Evaluation, and Model-Agnostic Optimization",
+     "first_author": "Alessandro Leite",
+     "year": 2026,
+     "venue": "INRIA a CCSD electronic archive server",
+     "doi": null
+    }
+   ]
+  }
+ }
+}

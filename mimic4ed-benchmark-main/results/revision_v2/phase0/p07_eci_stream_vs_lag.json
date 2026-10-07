@@ -1,0 +1,180 @@
+{
+  "stream_lengths": {
+    "cs": {
+      "n": 12075,
+      "positives": 643
+    },
+    "fc": {
+      "n": 11754,
+      "positives": 888
+    },
+    "te": {
+      "n": 84241,
+      "positives": 6815
+    }
+  },
+  "per_lag": {
+    "0": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 12074,
+        "class0": 11431,
+        "class1": 643,
+        "after_start_resolved": 12074
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 6037,
+        "class0": 5727,
+        "class1": 310,
+        "after_start_resolved": 6037
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 84240,
+        "class0": 77426,
+        "class1": 6814,
+        "after_start_resolved": 84240
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": 0.0
+    },
+    "60": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 12014,
+        "class0": 11372,
+        "class1": 642,
+        "after_start_resolved": 12014
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 5977,
+        "class0": 5668,
+        "class1": 309,
+        "after_start_resolved": 5977
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 84180,
+        "class0": 77375,
+        "class1": 6805,
+        "after_start_resolved": 84180
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": 0.0007122422573331275
+    },
+    "240": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 11834,
+        "class0": 11203,
+        "class1": 631,
+        "after_start_resolved": 11834
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 5797,
+        "class0": 5499,
+        "class1": 298,
+        "after_start_resolved": 5797
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 84000,
+        "class0": 77210,
+        "class1": 6790,
+        "after_start_resolved": 84000
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": 0.00284896902933251
+    },
+    "1000": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 11074,
+        "class0": 10482,
+        "class1": 592,
+        "after_start_resolved": 11074
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 5037,
+        "class0": 4778,
+        "class1": 259,
+        "after_start_resolved": 5037
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 83240,
+        "class0": 76503,
+        "class1": 6737,
+        "after_start_resolved": 83240
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": 0.01187070428888546
+    },
+    "4000": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 8074,
+        "class0": 7625,
+        "class1": 449,
+        "after_start_resolved": 8074
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 2037,
+        "class0": 1921,
+        "class1": 116,
+        "after_start_resolved": 2037
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 80240,
+        "class0": 73688,
+        "class1": 6552,
+        "after_start_resolved": 80240
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": 0.04748281715554184
+    },
+    "16000": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 0,
+        "class0": 0,
+        "class1": 0,
+        "after_start_resolved": 0
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 0,
+        "class0": 0,
+        "class1": 0,
+        "after_start_resolved": 0
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 68240,
+        "class0": 62604,
+        "class1": 5636,
+        "after_start_resolved": 68240
+      },
+      "L_exceeds_calibration_selection_stream": true,
+      "L_exceeds_evaluated_half_of_selection_stream": true,
+      "L_as_share_of_test_stream": 0.18993126862216736
+    },
+    "inf": {
+      "marginal_selection_stream_labels_resolved_by_end": {
+        "all": 0,
+        "class0": 0,
+        "class1": 0,
+        "after_start_resolved": 0
+      },
+      "mondrian_selection_evaluated_half_labels_resolved_by_end": {
+        "all": 0,
+        "class0": 0,
+        "class1": 0,
+        "after_start_resolved": 0
+      },
+      "test_stream_labels_resolved_by_end": {
+        "all": 0,
+        "class0": 0,
+        "class1": 0,
+        "after_start_resolved": 0
+      },
+      "L_exceeds_calibration_selection_stream": false,
+      "L_exceeds_evaluated_half_of_selection_stream": false,
+      "L_as_share_of_test_stream": null
+    }
+  },
+  "calibration_selection_half_used_by_mondrian_selection": 6038
+}

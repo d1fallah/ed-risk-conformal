@@ -1,0 +1,18 @@
+\begin{table}[t]
+\centering
+\caption{End-of-stay task: AUROC within quartiles of ED duration (cut points from the training period; test period; seed mean). Q1 is the shortest quartile. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:duration}
+\begin{tabular}{lccccc}
+\toprule
+Model & Overall & Q1 & Q2 & Q3 & Q4 \\
+\midrule
+Static features only & 0.856 & 0.946 & 0.890 & 0.836 & 0.731 \\
+mTAN & 0.862 & 0.910 & 0.888 & 0.851 & 0.787 \\
+Temporal-Only GRU-D & 0.921 & 0.966 & 0.943 & 0.912 & 0.851 \\
+Gradient-boosted trees & 0.927 & 0.975 & 0.946 & 0.917 & 0.849 \\
+Hybrid GRU-D & 0.937 & 0.977 & 0.955 & 0.927 & 0.861 \\
+\midrule
+Stays, event rate &  & 17,315, 10.7\% & 18,549, 9.8\% & 20,850, 7.8\% & 27,527, 5.5\% \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,202 @@
+{
+  "alpha": 0.1,
+  "W": 10000,
+  "R": 2000,
+  "runs": [
+    {
+      "seed": 42,
+      "delta_fc": 0.08544838640084756,
+      "delta_test_mean": 0.3176043340815244,
+      "delta_test_min": 0.047120205476952295,
+      "delta_test_max": 0.456167730450433,
+      "calibration_original": {
+        "brier": 0.04946488213034522,
+        "ece": 0.014780374475210578,
+        "mean_pred": 0.06281157393318236,
+        "observed": 0.07756204453957091
+      },
+      "calibration_recalibrated": {
+        "brier": 0.04865038920819119,
+        "ece": 0.0036200202695065406,
+        "mean_pred": 0.07792510420229003,
+        "observed": 0.07756204453957091
+      },
+      "static_original": {
+        "coverage": 0.8928043622279977,
+        "class1": 0.05863994743758213,
+        "size": 0.9303623299189726
+      },
+      "variant_I_static_quantile": {
+        "coverage": 0.8847398460989655,
+        "class1": 0.10906701708278581,
+        "size": 0.918615909901646
+      },
+      "variant_III_marginal_coverage": 0.8940274168068083,
+      "variant_III_class1_coverage": 0.13321287779237845,
+      "variant_III_mondrian_class1": 0.8878120893561103,
+      "variant_III_set_size": 0.9311522193344545,
+      "variant_II_marginal_coverage": 0.9004229730418386,
+      "variant_II_class1_coverage": 0.14963863337713534,
+      "mondrian_static_on_recalibrated": {
+        "coverage": 0.8906130561076288,
+        "class1": 0.9139290407358739
+      }
+    },
+    {
+      "seed": 123,
+      "delta_fc": 0.00786435154773338,
+      "delta_test_mean": 0.21310714942452078,
+      "delta_test_min": -0.021626311009856018,
+      "delta_test_max": 0.3421231300041962,
+      "calibration_original": {
+        "brier": 0.049111858883113445,
+        "ece": 0.010082684077390264,
+        "mean_pred": 0.06754520269704767,
+        "observed": 0.07756204453957091
+      },
+      "calibration_recalibrated": {
+        "brier": 0.04876687320011437,
+        "ece": 0.0021083138054889617,
+        "mean_pred": 0.07790627728228548,
+        "observed": 0.07756204453957091
+      },
+      "static_original": {
+        "coverage": 0.8944733221219997,
+        "class1": 0.09083442838370565,
+        "size": 0.9318401875350354
+      },
+      "variant_I_static_quantile": {
+        "coverage": 0.8864725067522805,
+        "class1": 0.12122207621550592,
+        "size": 0.9209346175406411
+      },
+      "variant_III_marginal_coverage": 0.8930336849615247,
+      "variant_III_class1_coverage": 0.13633377135348226,
+      "variant_III_mondrian_class1": 0.8953679369250985,
+      "variant_III_set_size": 0.9293558579218264,
+      "variant_II_marginal_coverage": 0.9006013351679152,
+      "variant_II_class1_coverage": 0.15801576872536136,
+      "mondrian_static_on_recalibrated": {
+        "coverage": 0.8901544106405749,
+        "class1": 0.9147503285151117
+      }
+    },
+    {
+      "seed": 7,
+      "delta_fc": 0.2325106985305892,
+      "delta_test_mean": 0.4238961532232398,
+      "delta_test_min": 0.21995795112252628,
+      "delta_test_max": 0.5451925156692828,
+      "calibration_original": {
+        "brier": 0.04983917731163725,
+        "ece": 0.01882577023792269,
+        "mean_pred": 0.05873627430164822,
+        "observed": 0.07756204453957091
+      },
+      "calibration_recalibrated": {
+        "brier": 0.048692619412057644,
+        "ece": 0.0019291995138567173,
+        "mean_pred": 0.07780870868044688,
+        "observed": 0.07756204453957091
+      },
+      "static_original": {
+        "coverage": 0.8903327727666513,
+        "class1": 0.05371222076215506,
+        "size": 0.9273046934719462
+      },
+      "variant_I_static_quantile": {
+        "coverage": 0.8829817051419253,
+        "class1": 0.11892247043363995,
+        "size": 0.916819548489018
+      },
+      "variant_III_marginal_coverage": 0.8907786780818427,
+      "variant_III_class1_coverage": 0.13518396846254926,
+      "variant_III_mondrian_class1": 0.8907687253613666,
+      "variant_III_set_size": 0.9270753707384192,
+      "variant_II_marginal_coverage": 0.9003210518269378,
+      "variant_II_class1_coverage": 0.1609724047306176,
+      "mondrian_static_on_recalibrated": {
+        "coverage": 0.8869311522193345,
+        "class1": 0.9126149802890933
+      }
+    },
+    {
+      "seed": 456,
+      "delta_fc": 0.1891541876463947,
+      "delta_test_mean": 0.38537676613158406,
+      "delta_test_min": 0.18246327696609888,
+      "delta_test_max": 0.5078827632706934,
+      "calibration_original": {
+        "brier": 0.04932454814985391,
+        "ece": 0.017614844228520023,
+        "mean_pred": 0.05997579648899008,
+        "observed": 0.07756204453957091
+      },
+      "calibration_recalibrated": {
+        "brier": 0.0481714270473131,
+        "ece": 0.0034624723934521145,
+        "mean_pred": 0.07782008917281447,
+        "observed": 0.07756204453957091
+      },
+      "static_original": {
+        "coverage": 0.8903455129185139,
+        "class1": 0.04862023653088042,
+        "size": 0.9267186464862661
+      },
+      "variant_I_static_quantile": {
+        "coverage": 0.8842557203281863,
+        "class1": 0.11317345597897503,
+        "size": 0.9180808235234164
+      },
+      "variant_III_marginal_coverage": 0.8935050705804414,
+      "variant_III_class1_coverage": 0.133377135348226,
+      "variant_III_mondrian_class1": 0.8886333771353482,
+      "variant_III_set_size": 0.9298527238444683,
+      "variant_II_marginal_coverage": 0.900410232889976,
+      "variant_II_class1_coverage": 0.15440210249671485,
+      "mondrian_static_on_recalibrated": {
+        "coverage": 0.8877720022422667,
+        "class1": 0.9117936925098554
+      }
+    },
+    {
+      "seed": 789,
+      "delta_fc": 0.17843909840273162,
+      "delta_test_mean": 0.3463604309615418,
+      "delta_test_min": 0.16821020623401609,
+      "delta_test_max": 0.46563602966691414,
+      "calibration_original": {
+        "brier": 0.049151221330710565,
+        "ece": 0.01546359979561056,
+        "mean_pred": 0.062109478135650216,
+        "observed": 0.07756204453957091
+      },
+      "calibration_recalibrated": {
+        "brier": 0.04846371841389143,
+        "ece": 0.0015338535454308862,
+        "mean_pred": 0.07780863865096463,
+        "observed": 0.07756204453957091
+      },
+      "static_original": {
+        "coverage": 0.8927151811649595,
+        "class1": 0.07506570302233903,
+        "size": 0.9297380624777047
+      },
+      "variant_I_static_quantile": {
+        "coverage": 0.8873770575345258,
+        "class1": 0.14191852825229961,
+        "size": 0.9217627274117107
+      },
+      "variant_III_marginal_coverage": 0.8928553228354482,
+      "variant_III_class1_coverage": 0.15489487516425757,
+      "variant_III_mondrian_class1": 0.9029237844940867,
+      "variant_III_set_size": 0.9291265351882995,
+      "variant_II_marginal_coverage": 0.9006905162309534,
+      "variant_II_class1_coverage": 0.1764126149802891,
+      "mondrian_static_on_recalibrated": {
+        "coverage": 0.8917724099271264,
+        "class1": 0.9211563731931669
+      }
+    }
+  ]
+}

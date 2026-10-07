@@ -1,0 +1,59 @@
+\section{Related Work}
+\label{sec:related-work}
+
+\subsection{Prediction Time and Leakage in ED Risk Models}
+
+Leakage, meaning information in the model input that would not be available when the model is used, has been documented across machine-learning-based
+science~\cite{kapoor2023leakage}. In MIMIC-IV, diagnostic codes that are finalized only after discharge inflate the performance of same-admission
+models~\cite{ramadan2025icdleakage}. Avoiding label leakage takes more nuance than a rule against using the future: Davis et al.\ propose to consider the cadence, the perspective, and the applicability of a prediction~\cite{davis2023labelleakage}. The presence and timing of measurements can themselves carry information about a patient, which methods for clinical prediction models treat as informative presence~\cite{sisk2021informativepresence}, and the value of such a predictor depends on the transportability of the mechanism that generates the missing data~\cite{groenwold2020informativemissingness}. Shortcut learning describes models that rely on features that perform well on a benchmark and do not transfer to the intended
+use~\cite{geirhos2020shortcut}. In survival analysis, landmarking restricts both the inputs and the at-risk population to what holds at a chosen
+time~\cite{vanhouwelingen2007landmarking}. For ED outcomes, models built on triage data fix the prediction time by construction~\cite{raita2019triage,hong2018admission}. The
+MIMIC-IV-ED benchmark~\cite{xie2022mimic4ed} predicts hospitalization and a critical outcome at triage and return to the ED at disposition, and in its comparison deep
+sequence models did not outperform simpler ones; its pipeline also provides the vital signs charted during the stay, which makes predictions from the whole ED record
+easy to build. A multimodal benchmark on the same database adds electrocardiogram waveforms and laboratory values to predict discharge diagnoses and deterioration
+targets~\cite{alcaraz2025mdsed}, and a leakage-aware benchmark restricts the inputs to the first hour of presentation and compares vital-sign-only with richer
+inputs~\cite{solaiman2026earlydeterioration}. CAREBench matches the length of the observed history between patients with and without the event, so that a
+model cannot use it to separate them~\cite{keoliya2025carebench}. These designs prevent a timing shortcut; they do not measure how large it is. In a recorded search (Supplementary Table~\ref{S-tab:search}), none of \RVLitHitsOne{} records on ED prediction models with workflow
+shortcuts or leakage, of the first 60 of \RVLitHitsSix{} records on informative presence, monitoring frequency, or label leakage in clinical prediction, or of \RVLitHitsSeven{} records on ED models with a stated prediction time quantified how much of the discrimination of an end-of-stay model comes from quantities that describe how a stay was monitored; the closest work concerns diagnostic codes~\cite{ramadan2025icdleakage} and informative presence in general~\cite{sisk2021informativepresence}.
+
+\subsection{Temporal Models for Vital Signs}
+
+Deep early warning systems learn from vital-sign streams to detect clinical deterioration~\cite{shamout2020dews}. GRU-D handles irregular sampling by decaying each
+variable toward its last observed value as a function of elapsed time~\cite{che2018grud}, and set functions~\cite{horn2020seft} and multi-time attention
+networks~\cite{shukla2021mtand} address the same setting; gradient-boosted trees nevertheless remain strong on tabular data~\cite{grinsztajn2022treebased}. Clinical
+models lose discrimination under temporal dataset shift~\cite{nestor2019featurerobustness,guo2022domaingeneralization}, so deployed models need continuing
+evaluation~\cite{kim2025monitoring}. CAREBench also evaluates the temporal stability of the risk score across electronic health records, waveforms, and clinical
+text, and reports poor recall at high-precision operating points~\cite{keoliya2025carebench}. These studies measure how discrimination or the stability of the score changes, not whether the uncertainty attached to a risk score stays valid on a later period.
+
+\subsection{Conformal Prediction for Clinical Risk}
+
+Split conformal prediction gives finite-sample marginal coverage under exchangeability~\cite{lei2018distributionfree,vovk2022algorithmic}; for classification we use the
+least-ambiguous set-valued score~\cite{sadinle2019lac} as implemented in MAPIE~\cite{cordier2023mapie}. Clinical applications have calibrated sepsis mortality
+risk~\cite{yang2024sepsisconformal}, sepsis diagnosis with external validation~\cite{dalal2025sepsisconformal}, and early sepsis prediction with cost-aware deferral to
+clinicians~\cite{kwon2026conformaltriage}, and uncertainty-aware models have been applied to disposition at ED triage~\cite{abdulai2025idontknow}. These studies use static
+calibration, evaluated on a random split, an external cohort, or later-admitted patients. A scoping review found clinical conformal studies conducted in isolation~\cite{vazquez2022clinicalcp}, an overview surveyed conformal prediction in clinical artificial intelligence~\cite{wang2026conformalclinicalai}, and a critical perspective questioned the value of the finite-sample guarantees in medicine~\cite{kladny2025criticalperspective}. Marginal coverage does not imply coverage within a minority class; Mondrian conformal prediction calibrates within
+categories such as the observed class~\cite{vovk2003mondrian,ding2023classconditional}, and a recent preprint on multiple sclerosis imaging found that marginal sets
+under-covered the minority class under distribution shift while class-conditional calibration reduced the gap~\cite{millar2026classconditionalms}. For shift over time,
+adaptive conformal inference updates the miscoverage level after each observation~\cite{gibbs2021aci}, with later work on step sizes and
+stability~\cite{zaffran2022adaptivecp,angelopoulos2023pid}; weighted conformal prediction handles covariate shift~\cite{tibshirani2019covariateshift}; Barber et al.\ bound
+the coverage gap without exchangeability~\cite{barber2023beyondexchangeability}; and ECI adds an error-quantification term to the adaptive update~\cite{wu2025eci}.
+Delayed and intermittent feedback have been studied~\cite{elhalabi2026delayed,wang2025mirrorocp}. Among the screened records (\RVLitHitsTwo{} on conformal prediction
+with ED, triage, deterioration or intensive care; \RVLitHitsThree{} on class-conditional conformal prediction in clinical data; \RVLitHitsFour{} on adaptive or online
+conformal prediction under shift in clinical data; \RVLitHitsFive{} on delayed feedback), none reported the coverage of an ED deterioration model separately for the
+patients who deteriorate together with the false-alarm burden of the sets, and none compared online methods with static and periodically recalibrated calibration on a
+clinical stream; the delayed-feedback studies we identified were not clinical.
+
+\subsection{Early Warning Scores}
+
+NEWS2 is the UK standard early warning score~\cite{rcp2017news2} and has been examined in hospital and emergency settings~\cite{gerry2020ews}; in one ED cohort it reached
+AUROCs of \RVRefNewsLo{} to \RVRefNewsHi{} across outcomes~\cite{mhdyunin2025news2}. Learned alternatives use the same vital-sign
+streams~\cite{shamout2020dews,ibrahim2022kdensemble}. These studies evaluate discrimination and interpretability, not the coverage of prediction sets under temporal shift.
+
+\subsection{Position of This Study}
+
+Supplementary Table~\ref{S-tab:related} compares the closest studies with this one on the data, the prediction time, the handling of input timing, the
+uncertainty method, and the evaluation under shift. Relative to the ED benchmarks~\cite{xie2022mimic4ed,alcaraz2025mdsed,solaiman2026earlydeterioration}, this study audits each input of an end-of-stay model against its
+source timestamp and measures what quantities that describe how the stay was monitored add to arrival information. Relative to clinical conformal
+studies~\cite{yang2024sepsisconformal,dalal2025sepsisconformal,kwon2026conformaltriage}, it evaluates the sets on a chronological split for the class that matters
+clinically and reports their false-alarm burden across coverage levels. Relative to methods for conformal prediction under shift~\cite{gibbs2021aci,wu2025eci}, it compares
+an adaptive method with static and periodic recalibration on a clinical stream with label delay. It does not propose a new prediction or conformal method.

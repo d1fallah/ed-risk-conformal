@@ -1,0 +1,15 @@
+{
+  "own_admission_cohort_stays": 29,
+  "own_admission_cohort_changed": 22,
+  "h2_zero_rows_share_train_period": 0.41790063515213804,
+  "h2_zero_rows_share_test": 0.0008281098710696632,
+  "h2_train_period_eligible": 264661,
+  "h2_train_period_primary_positives": 13740,
+  "trees_minus_hybrid_delta": 0.0033193633496555906,
+  "trees_minus_hybrid_lo": 0.0024455057850359257,
+  "trees_minus_hybrid_hi": 0.00422693013234864,
+  "frozen_minus_e2e_delta": 0.001049602015947748,
+  "static_vs_mapie_max_abs_coverage_diff": 0.00022554338148883524,
+  "h2_test_ineligible_share": 0.06824467895680253,
+  "h2_train_period_primary_prevalence": 0.05191546922289268
+}

@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Score intervals at $\alpha = 0.10$ for three models of the landmark task (test period; mean and SD over five seeds; logistic regression is deterministic). MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:other-models}
+\begin{tabular}{llccc}
+\toprule
+Model & Method & Coverage & SD & Width \\
+\midrule
+Hybrid GRU-D, end to end & Static & 0.892 & 0.002 & 0.273 \\
+Hybrid GRU-D, end to end & ECI & 0.901 & 0.001 & 0.323 \\
+Hybrid GRU-D, end to end & Recalibration $W = 10$k & 0.901 & 0.000 & 0.308 \\
+Timing-aware trees & Static & 0.888 & 0.001 & 0.234 \\
+Timing-aware trees & ECI & 0.901 & 0.001 & 0.304 \\
+Timing-aware trees & Recalibration $W = 10$k & 0.901 & 0.000 & 0.285 \\
+Logistic regression & Static & 0.895 & 0.000 & 0.244 \\
+Logistic regression & ECI & 0.902 & 0.000 & 0.303 \\
+Logistic regression & Recalibration $W = 10$k & 0.901 & 0.000 & 0.274 \\
+\bottomrule
+\end{tabular}
+\end{table}

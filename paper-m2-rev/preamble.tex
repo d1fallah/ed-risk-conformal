@@ -1,0 +1,37 @@
+% Shared preamble for main.tex. Mirrors module 1/paper/preamble.tex exactly (same venue, same
+% vendored IEEEtran.cls/.bst -- see module2/paper/vendor/ and module 1/paper/m1_vendor_provenance.md
+% for provenance; copied rather than re-sourced since it is the identical CTAN package for the same
+% venue). TEXINPUTS/BSTINPUTS are set by build_paper.ps1.
+\documentclass[journal]{IEEEtran}
+
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{booktabs}
+\usepackage{graphicx}
+\usepackage{cite}
+\usepackage{xcolor}
+\usepackage{url}
+\urlstyle{same}  % URLs and DOIs in the reference list in the body font, as in IEEE style
+% Several generated tables (src/generate_latex_tables.py) use [H] placement -- unlike M1, which
+% never did -- so, unlike M1's preamble, this one needs the float package for that specifier.
+\usepackage{float}
+
+% paper_assets/tables/*.tex and paper_assets/figures/*.{pdf,png} are generated (never hand-edited);
+% resolved via input/graphics search paths so section files never write "../paper_assets/...".
+\makeatletter
+\def\input@path{{floats/}{sections/}}
+\makeatother
+\graphicspath{{../mimic4ed-benchmark-main/paper_assets_v2/figures/}}
+
+% Added for the condensed manuscript: UML-style pipeline figure, shrink-to-fit generated tables, data-gap marker.
+\usepackage{adjustbox}
+\usepackage{etoolbox}
+\usepackage{tikz}
+\usetikzlibrary{shapes.multipart,arrows.meta,positioning}
+\BeforeBeginEnvironment{tabular}{\begin{adjustbox}{max width=\linewidth}}
+\AfterEndEnvironment{tabular}{\end{adjustbox}}
+\newcommand{\datagap}[1]{\textcolor{red}{[DATA\_GAP: #1]}}
+\usepackage{siunitx}
+\sisetup{group-minimum-digits=4,group-separator={,},group-digits=integer}

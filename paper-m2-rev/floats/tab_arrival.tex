@@ -1,0 +1,27 @@
+\begin{table}[t]
+\centering
+\caption{Information at arrival and what is added later. Upper block: end-of-stay task of the original analysis; arrival information is the triage vital signs and their missingness, age, sex, triage acuity, and comorbidity count. Lower block: arrival-landmark models and two-hour models scored on the same test stays against the same outcome (events in the 24 hours after the two-hour landmark). AUROC with the patient-cluster bootstrap 95\% interval; differences use paired resamples. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:arrival}
+\begin{tabular}{lcc}
+\toprule
+Inputs or model & AUROC & 95\% CI \\
+\midrule
+\multicolumn{3}{l}{\emph{End-of-stay task (logistic regression; test period)}} \\
+Arrival information & 0.880 & [0.876, 0.884] \\
+Workflow quantities & 0.843 & [0.837, 0.848] \\
+Arrival information and ED duration & 0.882 & [0.878, 0.886] \\
+Arrival information and workflow quantities & 0.911 & [0.906, 0.914] \\
+ED duration added to arrival information (difference) & +0.003 & [+0.001, +0.005] \\
+Workflow quantities added to arrival information (difference) & +0.031 & [+0.028, +0.034] \\
+\midrule
+\multicolumn{3}{l}{\emph{Same 78,492 stays and the two-hour outcome}} \\
+Arrival landmark, logistic regression & 0.868 & [0.863, 0.873] \\
+Arrival landmark, trees & 0.879 & [0.874, 0.883] \\
+Two-hour landmark, logistic regression & 0.896 & [0.891, 0.900] \\
+Two-hour landmark, timing-aware trees & 0.905 & [0.901, 0.909] \\
+Two-hour landmark, Hybrid GRU-D & 0.902 & [0.898, 0.906] \\
+Two hours over arrival, logistic regression (difference) & +0.027 & [+0.025, +0.030] \\
+Two hours over arrival, trees (difference) & +0.027 & [+0.024, +0.029] \\
+\bottomrule
+\end{tabular}
+\end{table}

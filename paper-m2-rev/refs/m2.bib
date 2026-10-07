@@ -1,0 +1,876 @@
+% M2 references -- method-source and related-work citations verified against a primary record
+% (CLAUDE.md rule 10), recorded in m2_bib_verification.json. ASCII-only (bibtex+pdflatex UTF-8
+% accent handling is unreliable -- see module 1/paper/README.md precedent). Compiled from
+% module2/mimic4ed-benchmark-main/M2_Related_Work_Notes.md, restricted to citations that note
+% file treats as real and load-bearing for a specific M2 claim (see the notes' "Consolidated
+% map" and per-section "verdict" subsections). Grey-literature / Tier-D sources the notes file
+% explicitly says not to cite as authority are deliberately excluded -- see
+% m2_bib_verification.json's top-level "excluded" list and the handback report.
+
+% ---------------------------------------------------------------------------------------------
+% Section 1 -- GRU-D and irregular clinical time series
+% ---------------------------------------------------------------------------------------------
+
+@article{che2018grud,
+  author  = {Che, Zhengping and Purushotham, Sanjay and Cho, Kyunghyun and Sontag, David and Liu, Yan},
+  title   = {Recurrent neural networks for multivariate time series with missing values},
+  journal = {Sci. Rep.},
+  volume  = {8},
+  number  = {1},
+  pages   = {6085},
+  year    = {2018},
+  doi     = {10.1038/s41598-018-24271-9},
+  note    = {doi: \url{10.1038/s41598-018-24271-9}}
+}
+
+@inproceedings{horn2020seft,
+  author        = {Horn, Max and Moor, Michael and Bock, Christian and Rieck, Bastian and Borgwardt, Karsten},
+  title         = {Set functions for time series},
+  booktitle     = {Proc. 37th Int. Conf. Mach. Learn. (ICML)},
+  series        = {PMLR},
+  volume        = {119},
+  pages         = {4353--4363},
+  year          = {2020},
+  url           = {https://proceedings.mlr.press/v119/horn20a.html},
+  eprint        = {1909.12064},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{shukla2021mtand,
+  author        = {Shukla, Satya Narayan and Marlin, Benjamin M.},
+  title         = {Multi-time attention networks for irregularly sampled time series},
+  booktitle     = {Proc. Int. Conf. Learn. Represent. (ICLR)},
+  year          = {2021},
+  url           = {https://openreview.net/forum?id=4c0J6lwQ4_},
+  eprint        = {2101.10318},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{kidger2020neuralcde,
+  author    = {Kidger, Patrick and Morrill, James and Foster, James and Lyons, Terry},
+  title     = {Neural Controlled Differential Equations for Irregular Time Series},
+  booktitle = {Advances in Neural Information Processing Systems 33 (NeurIPS 2020)},
+  note      = {Spotlight},
+  year      = {2020}
+}
+
+@inproceedings{zhang2023irregularehr,
+  author    = {Zhang, Xinlu and Li, Shiyang and Chen, Zhiyu and Yan, Xifeng and Petzold,
+               Linda R.},
+  title     = {Improving Medical Predictions by Irregular Multimodal Electronic Health Records
+               Modeling},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML
+               2023)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  year      = {2023},
+  eprint    = {2210.12156},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{grinsztajn2022treebased,
+  author    = {Grinsztajn, L\'{e}o and Oyallon, Edouard and Varoquaux, Ga\"{e}l},
+  title     = {Why do tree-based models still outperform deep learning on typical tabular data?},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS), Datasets Benchmarks Track},
+  volume    = {35},
+  pages     = {507--520},
+  year      = {2022},
+  doi       = {10.52202/068431-0037},
+  note      = {doi: \url{10.52202/068431-0037}}
+}
+
+@misc{liao2022deeplearning,
+  author        = {Liao, Ke and Wang, Wei and Elibol, Armagan and Meng, Lingzhong and Zhao, Xu
+                   and Chong, Nak Young},
+  title         = {Does Deep Learning REALLY Outperform Non-deep Machine Learning for Clinical
+                   Prediction on Physiological Time Series?},
+  year          = {2022},
+  eprint        = {2211.06034},
+  archiveprefix = {arXiv},
+  note          = {Preprint}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 2 -- Conformal prediction foundations and clinical/tabular applications
+% ---------------------------------------------------------------------------------------------
+
+@article{sadinle2019lac,
+  author  = {Sadinle, Mauricio and Lei, Jing and Wasserman, Larry},
+  title   = {Least ambiguous set-valued classifiers with bounded error levels},
+  journal = {J. Amer. Statist. Assoc.},
+  volume  = {114},
+  number  = {525},
+  pages   = {223--234},
+  year    = {2019},
+  doi     = {10.1080/01621459.2017.1395341},
+  note    = {doi: \url{10.1080/01621459.2017.1395341}}
+}
+
+@book{vovk2022algorithmic,
+  author    = {Vovk, Vladimir and Gammerman, Alexander and Shafer, Glenn},
+  title     = {Algorithmic learning in a random world},
+  publisher = {Springer International Publishing},
+  year      = {2022},
+  doi       = {10.1007/978-3-031-06649-8},
+  note      = {doi: \url{10.1007/978-3-031-06649-8}},
+  edition   = {2nd}
+}
+
+@article{lei2018distributionfree,
+  author  = {Lei, Jing and G'Sell, Max and Rinaldo, Alessandro and Tibshirani, Ryan J. and Wasserman, Larry},
+  title   = {Distribution-free predictive inference for regression},
+  journal = {J. Amer. Statist. Assoc.},
+  volume  = {113},
+  number  = {523},
+  pages   = {1094--1111},
+  year    = {2018},
+  doi     = {10.1080/01621459.2017.1307116},
+  note    = {doi: \url{10.1080/01621459.2017.1307116}}
+}
+
+@inproceedings{tibshirani2019covariateshift,
+  author    = {Tibshirani, Ryan J. and Foygel Barber, Rina and Cand\`{e}s, Emmanuel J. and Ramdas, Aaditya},
+  title     = {Conformal prediction under covariate shift},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume    = {32},
+  pages     = {2526--2536},
+  year      = {2019},
+  url       = {https://proceedings.neurips.cc/paper_files/paper/2019/hash/8fb21ee7a2207526da55a679f0332de2-Abstract.html}
+}
+
+@article{yang2024sepsisconformal,
+  author  = {Yang, Mingming and Chen, Hongyi and Hu, Wenli and Mischi, Massimo and Shan, Caifeng and Li, Jiazhi and Long, Xi and Liu, Chengyu},
+  title   = {Development and validation of an interpretable conformal predictor to predict sepsis mortality risk: Retrospective cohort study},
+  journal = {J. Med. Internet Res.},
+  volume  = {26},
+  pages   = {e50369},
+  year    = {2024},
+  doi     = {10.2196/50369},
+  note    = {doi: \url{10.2196/50369}}
+}
+
+@article{vazquez2022clinicalcp,
+  author  = {Vazquez, Janette and Facelli, Julio C.},
+  title   = {Conformal prediction in clinical medical sciences},
+  journal = {J. Healthc. Inform. Res.},
+  volume  = {6},
+  number  = {3},
+  pages   = {241--252},
+  year    = {2022},
+  doi     = {10.1007/s41666-021-00113-8},
+  note    = {doi: \url{10.1007/s41666-021-00113-8}}
+}
+
+@article{dalal2025sepsisconformal,
+  author  = {Dalal, Sarosh and Khaleghi Ardabili, Aida and Bonavia, Anthony S.},
+  title   = {Time-series deep learning and conformal prediction for improved sepsis diagnosis in primarily {non-ICU} hospitalized patients},
+  journal = {Comput. Biol. Med.},
+  volume  = {193},
+  pages   = {110497},
+  year    = {2025},
+  doi     = {10.1016/j.compbiomed.2025.110497},
+  note    = {doi: \url{10.1016/j.compbiomed.2025.110497}}
+}
+
+@article{wang2026chestconformal,
+  author  = {Wang, Xiaofeng and Albahra, Samer and Liang, Faming and Duggal, Abhijit and Dweik,
+             Raed A.},
+  title   = {Conformal Prediction in Clinical Artificial Intelligence: Enhancing Model
+             Reliability and Interpretability},
+  journal = {Chest},
+  volume  = {169},
+  number  = {2},
+  pages   = {332--335},
+  year    = {2026},
+  doi     = {10.1016/j.chest.2025.07.4116}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 3 -- Online / adaptive conformal prediction under distribution shift
+% (M2's primary claimed contribution area)
+% --------------------------------------------------------------------------------------------,
+  note    = {doi: \url{10.1016/j.chest.2025.07.4116}}
+}
+
+@inproceedings{wu2025eci,
+  author        = {Wu, Junxi and Hu, Dongjian and Bao, Yajie and Xia, Shu-Tao and Zou, Changliang},
+  title         = {Error-quantified conformal inference for time series},
+  booktitle     = {Proc. Int. Conf. Learn. Represent. (ICLR)},
+  year          = {2025},
+  url           = {https://openreview.net/forum?id=RD9q5vEe1Q},
+  eprint        = {2502.00818},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{gibbs2021aci,
+  author        = {Gibbs, Isaac and Cand\`{e}s, Emmanuel J.},
+  title         = {Adaptive conformal inference under distribution shift},
+  booktitle     = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume        = {34},
+  pages         = {1660--1672},
+  year          = {2021},
+  url           = {https://proceedings.neurips.cc/paper_files/paper/2021/hash/0d441de75945e5acbc865406fc9a2559-Abstract.html},
+  eprint        = {2106.00170},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{zaffran2022adaptivecp,
+  author        = {Zaffran, Margaux and F\'{e}ron, Olivier and Goude, Yannig and Josse, Julie and Dieuleveut, Aymeric},
+  title         = {Adaptive conformal predictions for time series},
+  booktitle     = {Proc. 39th Int. Conf. Mach. Learn. (ICML)},
+  series        = {PMLR},
+  volume        = {162},
+  pages         = {25834--25866},
+  year          = {2022},
+  url           = {https://proceedings.mlr.press/v162/zaffran22a.html},
+  eprint        = {2202.07282},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{bhatnagar2023saocp,
+  author    = {Bhatnagar, Aadyot and Wang, Huan and Xiong, Caiming and Bai, Yu},
+  title     = {Improved Online Conformal Prediction via Strongly Adaptive Online Learning},
+  booktitle = {Proceedings of the 40th International Conference on Machine Learning (ICML
+               2023)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {202},
+  year      = {2023},
+  eprint    = {2302.07869},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{angelopoulos2023pid,
+  author    = {Angelopoulos, Anastasios N. and Cand\`{e}s, Emmanuel J. and Tibshirani, Ryan J.},
+  title     = {Conformal {PID} control for time series prediction},
+  booktitle = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume    = {36},
+  pages     = {23047--23074},
+  year      = {2023},
+  doi       = {10.52202/075280-1000},
+  note      = {doi: \url{10.52202/075280-1000}}
+}
+
+@article{barber2023beyondexchangeability,
+  author  = {Barber, Rina Foygel and Cand\`{e}s, Emmanuel J. and Ramdas, Aaditya and Tibshirani, Ryan J.},
+  title   = {Conformal prediction beyond exchangeability},
+  journal = {Ann. Statist.},
+  volume  = {51},
+  number  = {2},
+  pages   = {816--845},
+  year    = {2023},
+  doi     = {10.1214/23-AOS2276},
+  note    = {doi: \url{10.1214/23-AOS2276}}
+}
+
+@inproceedings{nestor2019featurerobustness,
+  author        = {Nestor, Bret and McDermott, Matthew B. A. and Boag, Willie and Berner, Gabriela and Naumann, Tristan and Hughes, Michael C. and Goldenberg, Anna and Ghassemi, Marzyeh},
+  title         = {Feature robustness in non-stationary health records: Caveats to deployable model performance in common clinical machine learning tasks},
+  booktitle     = {Proc. 4th Mach. Learn. Healthc. Conf. (MLHC)},
+  series        = {PMLR},
+  volume        = {106},
+  pages         = {381--405},
+  year          = {2019},
+  url           = {https://proceedings.mlr.press/v106/nestor19a.html},
+  eprint        = {1908.00690},
+  archiveprefix = {arXiv}
+}
+
+@article{guo2022domaingeneralization,
+  author  = {Guo, Lin Lawrence and Pfohl, Stephen R. and Fries, Jason and Johnson, Alistair E. W. and Posada, Jose and Aftandilian, Catherine and Shah, Nigam and Sung, Lillian},
+  title   = {Evaluation of domain generalization and adaptation on improving model robustness to temporal dataset shift in clinical medicine},
+  journal = {Sci. Rep.},
+  volume  = {12},
+  pages   = {2726},
+  year    = {2022},
+  doi     = {10.1038/s41598-022-06484-1},
+  note    = {doi: \url{10.1038/s41598-022-06484-1}}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 4 -- Class-conditional / Mondrian conformal prediction for imbalanced outcomes
+% ---------------------------------------------------------------------------------------------
+
+@misc{vovk2003mondrian,
+  author       = {Vovk, Vladimir and Lindsay, David and Nouretdinov, Ilia and Gammerman, Alex},
+  title        = {Mondrian confidence machine},
+  howpublished = {On-line Compression Modelling Project, Working Paper 4, Royal Holloway, Univ. London},
+  year         = {2003},
+  url          = {http://www.alrw.net/old/04.pdf}
+}
+
+@inproceedings{vovk2012conditional,
+  author    = {Vovk, Vladimir},
+  title     = {Conditional validity of inductive conformal predictors},
+  booktitle = {Proceedings of the Asian Conference on Machine Learning (ACML 2012)},
+  series    = {Proceedings of Machine Learning Research},
+  volume    = {25},
+  pages     = {475--490},
+  year      = {2012}
+}
+
+@article{lofstrom2015bias,
+  author  = {L\"{o}fstr\"{o}m, Tuve and Bostr\"{o}m, Henrik and Linusson, Henrik and Johansson,
+             Ulf},
+  title   = {Bias reduction through conditional conformal prediction},
+  journal = {Intell. Data Anal.},
+  volume  = {19},
+  number  = {6},
+  pages   = {1355--1375},
+  year    = {2015},
+  doi     = {10.3233/IDA-150786},
+  note    = {doi: \url{10.3233/IDA-150786}}
+}
+
+@inproceedings{ding2023classconditional,
+  author        = {Ding, Tiffany and Angelopoulos, Anastasios N. and Bates, Stephen and Jordan, Michael I. and Tibshirani, Ryan J.},
+  title         = {Class-conditional conformal prediction with many classes},
+  booktitle     = {Adv. Neural Inf. Process. Syst. (NeurIPS)},
+  volume        = {36},
+  pages         = {64555--64576},
+  year          = {2023},
+  doi           = {10.52202/075280-2817},
+  note          = {doi: \url{10.52202/075280-2817}},
+  eprint        = {2306.09335},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{shi2024rc3p,
+  author    = {Shi, Yuanjie and Ghosh, Subhankar and Belkhouja, Taha and Doppa, Janardhan Rao
+               and Yan, Yan},
+  title     = {Conformal Prediction for Class-wise Coverage via Augmented Label Rank
+               Calibration},
+  booktitle = {Advances in Neural Information Processing Systems 37 (NeurIPS 2024)},
+  year      = {2024},
+  eprint    = {2406.06818},
+  archiveprefix = {arXiv}
+}
+
+@misc{bharti2026pogo,
+  author        = {Bharti, Beepul and Pal, Ambar and Teneggi, Jacopo and Sulam, Jeremias},
+  title         = {Parameter-Free and Group Conditional Online Conformal Prediction},
+  year          = {2026},
+  eprint        = {2606.00419},
+  archiveprefix = {arXiv}
+}
+
+@inproceedings{bastani2022mvp,
+  author    = {Bastani, Osbert and Gupta, Varun and Jung, Christopher and Noarov, Georgy and
+               Ramalingam, Ramya and Roth, Aaron},
+  title     = {Practical Adversarial Multivalid Conformal Prediction},
+  booktitle = {Advances in Neural Information Processing Systems 35 (NeurIPS 2022)},
+  year      = {2022},
+  eprint    = {2206.01067},
+  archiveprefix = {arXiv}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 5 -- NEWS2 and clinical early-warning-score validation
+% ---------------------------------------------------------------------------------------------
+
+@techreport{rcp2017news2,
+  author      = {{Royal College of Physicians}},
+  title       = {{National Early Warning Score} ({NEWS}) 2: Standardising the assessment of acute-illness severity in the {NHS}. {U}pdated report of a working party},
+  institution = {Royal College of Physicians},
+  address     = {London},
+  year        = {2017},
+  url         = {https://www.rcp.ac.uk/improving-care/resources/national-early-warning-score-news-2/}
+}
+
+@article{mhdyunin2025news2,
+  author  = {Mhd Yunin, Nor Safiahani and Tan, Toh Leong},
+  title   = {{National Early Warning Score} 2 ({NEWS2}) as a prognostic tool for adult patients in emergency department: A retrospective observational study},
+  journal = {PLoS ONE},
+  volume  = {20},
+  number  = {6},
+  pages   = {e0326058},
+  year    = {2025},
+  doi     = {10.1371/journal.pone.0326058},
+  note    = {doi: \url{10.1371/journal.pone.0326058}}
+}
+
+@article{gerry2020ews,
+  author  = {Gerry, Stephen and Bonnici, Timothy and Birks, Jacqueline and Kirtley, Shona and Virdee, Pradeep S. and Watkinson, Peter J. and Collins, Gary S.},
+  title   = {Early warning scores for detecting deterioration in adult hospital patients: systematic review and critical appraisal of methodology},
+  journal = {BMJ},
+  volume  = {369},
+  pages   = {m1501},
+  year    = {2020},
+  doi     = {10.1136/bmj.m1501},
+  note    = {doi: \url{10.1136/bmj.m1501}}
+}
+
+@article{guan2022ewsmeta,
+  author  = {Guan, Gigi and Lee, Crystal Man Ying and Begg, Stephen and Crombie, Angela and
+             Mnatzaganian, George},
+  title   = {The use of early warning system scores in prehospital and emergency department
+             settings to predict clinical deterioration: A systematic review and meta-analysis},
+  journal = {PLoS ONE},
+  volume  = {17},
+  number  = {3},
+  pages   = {e0265559},
+  year    = {2022},
+  doi     = {10.1371/journal.pone.0265559}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 6 -- MIMIC-IV-ED as a research resource, and the vendored benchmark baseline
+% --------------------------------------------------------------------------------------------,
+  note    = {doi: \url{10.1371/journal.pone.0265559}}
+}
+
+@article{johnson2023mimiciv,
+  author  = {Johnson, Alistair E. W. and Bulgarelli, Lucas and Shen, Lu and Gayles, Alvin and Shammout, Ayad and Horng, Steven and Pollard, Tom J. and Hao, Sicheng and Moody, Benjamin and Gow, Brian and Lehman, Li-wei H. and Celi, Leo A. and Mark, Roger G.},
+  title   = {{MIMIC-IV}, a freely accessible electronic health record dataset},
+  journal = {Sci. Data},
+  volume  = {10},
+  number  = {1},
+  pages   = {1},
+  year    = {2023},
+  doi     = {10.1038/s41597-022-01899-x},
+  note    = {doi: \url{10.1038/s41597-022-01899-x}}
+}
+
+@misc{johnson2023mimicived,
+  author       = {Johnson, Alistair and Bulgarelli, Lucas and Pollard, Tom and Celi, Leo Anthony and Mark, Roger and Horng, Steven},
+  title        = {{MIMIC-IV-ED}},
+  howpublished = {PhysioNet, version 2.2},
+  year         = {2023},
+  doi          = {10.13026/5ntk-km72},
+  note         = {doi: \url{10.13026/5ntk-km72}}
+}
+
+@article{quan2005coding,
+  author  = {Quan, Hude and Sundararajan, Vijaya and Halfon, Patricia and Fong, Andrew and Burnand, Bernard and Luthi, Jean-Christophe and Saunders, L. Duncan and Beck, Cynthia A. and Feasby, Thomas E. and Ghali, William A.},
+  title   = {Coding algorithms for defining comorbidities in {ICD-9-CM} and {ICD-10} administrative data},
+  journal = {Med. Care},
+  volume  = {43},
+  number  = {11},
+  pages   = {1130--1139},
+  month   = {nov},
+  year    = {2005},
+  doi     = {10.1097/01.mlr.0000182534.19832.83},
+  note    = {doi: \url{10.1097/01.mlr.0000182534.19832.83}}
+}
+
+@article{xie2022mimic4ed,
+  author  = {Xie, Feng and Zhou, Jun and Lee, Jin Wee and Tan, Mingrui and Li, Siqi and Rajnthern, Logasan S/O and Chee, Marcel Lucas and Chakraborty, Bibhas and Wong, An-Kwok Ian and Dagan, Alon and Ong, Marcus Eng Hock and Gao, Fei and Liu, Nan},
+  title   = {Benchmarking emergency department prediction models with machine learning and public electronic health records},
+  journal = {Sci. Data},
+  volume  = {9},
+  pages   = {658},
+  year    = {2022},
+  doi     = {10.1038/s41597-022-01782-9},
+  note    = {doi: \url{10.1038/s41597-022-01782-9}}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Section 7 -- Delayed-feedback conformal prediction, and clinical CP under temporal shift
+% (situates M2's delayed-feedback lag sweep in the literature)
+% --------------------------------------------------------------------------------------------,
+  note    = {doi: \url{10.1038/s41597-022-01782-9}}
+}
+
+@misc{elhalabi2026delayed,
+  author       = {El Halabi, Lama and Brandt, Adam},
+  title        = {Adaptive conformal inference under delayed feedback: Coverage guarantees and a delay-to-memory diagnostic},
+  howpublished = {arXiv:2609.07251},
+  year         = {2026},
+  doi          = {10.48550/arXiv.2609.07251},
+  note         = {doi: \url{10.48550/arXiv.2609.07251}}
+}
+
+@article{wang2025mirrorocp,
+  author  = {Wang, Bowen and Zecchin, Matteo and Simeone, Osvaldo},
+  title   = {Mirror online conformal prediction with intermittent feedback},
+  journal = {IEEE Signal Process. Lett.},
+  volume  = {32},
+  pages   = {2888--2892},
+  year    = {2025},
+  doi     = {10.1109/LSP.2025.3588085},
+  note    = {doi: \url{10.1109/LSP.2025.3588085}}
+}
+
+@misc{skalse2026ocpq,
+  author        = {Skalse, Joar and Pona, Edoardo and Simeone, Osvaldo and Paoletti, Nicola},
+  title         = {Online Conformal Prediction Beyond Feedback},
+  year          = {2026},
+  eprint        = {2608.07139},
+  archiveprefix = {arXiv}
+}
+
+@misc{gibbs2023onlineshift,
+  author        = {Gibbs, Isaac and Cand\`{e}s, Emmanuel J.},
+  title         = {Conformal Inference for Online Prediction with Arbitrary Distribution
+                   Shifts},
+  year          = {2023},
+  note          = {arXiv:2208.08401, submitted 2022, revised 2023},
+  eprint        = {2208.08401},
+  archiveprefix = {arXiv}
+}
+
+@article{kladny2025criticalperspective,
+  author  = {Kladny, Klaus-Rudolf and Sch\"{o}lkopf, Bernhard and Koch, Lisa and Baumgartner, Christian F. and Muehlebach, Michael},
+  title   = {A critical perspective on finite sample conformal prediction theory in medical applications},
+  journal = {Artif. Intell. Med.},
+  volume  = {180},
+  pages   = {103462},
+  year    = {2026},
+  doi     = {10.1016/j.artmed.2026.103462},
+  note    = {doi: \url{10.1016/j.artmed.2026.103462}}
+}
+
+@article{kim2025monitoring,
+  author  = {Kim, Grace Y. E. and Corbin, Conor K. and Grolleau, Fran\c{c}ois and Baiocchi, Michael and Chen, Jonathan H.},
+  title   = {Monitoring strategies for continuous evaluation of deployed clinical prediction models},
+  journal = {J. Biomed. Inform.},
+  volume  = {168},
+  pages   = {104854},
+  year    = {2025},
+  doi     = {10.1016/j.jbi.2025.104854},
+  note    = {doi: \url{10.1016/j.jbi.2025.104854}}
+}
+
+@article{kwon2026conformaltriage,
+  author  = {Kwon, Hyun and Kim, Dae-Jin},
+  title   = {Conformal selective prediction with cost aware deferral for safe clinical triage under distribution shift},
+  journal = {Sci. Rep.},
+  volume  = {16},
+  pages   = {10016},
+  year    = {2026},
+  doi     = {10.1038/s41598-026-40637-w},
+  note    = {doi: \url{10.1038/s41598-026-40637-w}}
+}
+
+% ---------------------------------------------------------------------------------------------
+% Vendored software baseline (CLAUDE.md Sec 2, M2 -- MAPIE is a mandatory vendored baseline
+% repository). Cited for what the library implements, per the same convention M1 used for its
+% Microsoft SEAL / sealcrypto entry.
+% --------------------------------------------------------------------------------------------,
+  note    = {doi: \url{10.1038/s41598-026-40637-w}}
+}
+
+@inproceedings{cordier2023mapie,
+  author    = {Cordier, Thibault and Blot, Vincent and Lacombe, Louis and Morzadec, Thomas and Capitaine, Arnaud and Brunel, Nicolas},
+  title     = {Flexible and systematic uncertainty estimation with conformal prediction via the {MAPIE} library},
+  booktitle = {Proc. 12th Symp. Conformal Probabilistic Prediction Appl. (COPA)},
+  series    = {PMLR},
+  volume    = {204},
+  pages     = {549--581},
+  year      = {2023},
+  url       = {https://proceedings.mlr.press/v204/cordier23a.html}
+}
+
+% XGBoost-Matched (Section: Predictive Models) is a mandatory Track A comparator; this entry is
+% carried through from module 1/paper/refs/m1.bib's own already-verified entry for the identical
+% paper (ACM DOI record), not independently re-fetched in this session -- added 2026-09-22 during
+% Methods drafting, after the bib-verification pass had already completed.
+@inproceedings{chen2016xgboost,
+  author    = {Chen, Tianqi and Guestrin, Carlos},
+  title     = {{XGBoost}: A scalable tree boosting system},
+  booktitle = {Proc. 22nd ACM SIGKDD Int. Conf. Knowl. Discov. Data Min.},
+  pages     = {785--794},
+  year      = {2016},
+  doi       = {10.1145/2939672.2939785},
+  note      = {doi: \url{10.1145/2939672.2939785}}
+}
+
+% ---- IEEE JBHI papers (venue corpus, 2026-09-28): metadata from Crossref by DOI ---,
+  note    = {doi: \url{10.1145/2939672.2939785}}
+}
+
+@article{shamout2020dews,
+  author  = {Shamout, Farah E. and Zhu, Tingting and Sharma, Pulkit and Watkinson, Peter J. and Clifton, David A.},
+  title   = {Deep interpretable early warning system for the detection of clinical deterioration},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {24},
+  number  = {2},
+  pages   = {437--446},
+  year    = {2020},
+  doi     = {10.1109/JBHI.2019.2937803},
+  note    = {doi: \url{10.1109/JBHI.2019.2937803}}
+}
+
+@article{colopy2019gpstepdown,
+  author  = {Colopy, Glen Wright and Roberts, Stephen J. and Clifton, David A.},
+  title   = {Gaussian Processes for Personalized Interpretable Volatility Metrics in the Step-Down Ward},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {23}, number = {3}, pages = {949--959}, year = {2019},
+  doi     = {10.1109/JBHI.2019.2890823},
+  note    = {doi: \url{10.1109/JBHI.2019.2890823}}
+}
+
+@article{ibrahim2022kdensemble,
+  author  = {Ibrahim, Zina M. and Bean, Daniel and Searle, Thomas and Qian, Linglong and Wu, Honghan and Shek, Anthony and Kraljevic, Zeljko and Galloway, James and Norton, Sam and Teo, James T. and Dobson, Richard J. B.},
+  title   = {A knowledge distillation ensemble framework for predicting short- and long-term hospitalization outcomes from electronic health records data},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {26},
+  number  = {1},
+  pages   = {423--435},
+  year    = {2022},
+  doi     = {10.1109/JBHI.2021.3089287},
+  note    = {doi: \url{10.1109/JBHI.2021.3089287}}
+}
+
+@article{ding2023crosshospitalsepsis,
+  author  = {Ding, Ruiqing and Zhou, Yu and Xu, Jie and Xie, Yan and Liang, Qiqiang and Ren, He and Wang, Yixuan and Chen, Yanlin and Wang, Leye and Huang, Man},
+  title   = {Cross-Hospital Sepsis Early Detection via Semi-Supervised Optimal Transport With Self-Paced Ensemble},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {27}, number = {6}, pages = {3049--3060}, year = {2023},
+  doi     = {10.1109/JBHI.2023.3253208},
+  note    = {doi: \url{10.1109/JBHI.2023.3253208}}
+}
+
+@article{wickstrom2021uncertaintyensembles,
+  author  = {Wickstr{\o}m, Kristoffer and Mikalsen, Karl {\O}yvind and Kampffmeyer, Michael and Revhaug, Arthur and Jenssen, Robert},
+  title   = {Uncertainty-Aware Deep Ensembles for Reliable and Explainable Predictions of Clinical Time Series},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {25}, number = {7}, pages = {2435--2444}, year = {2021},
+  doi     = {10.1109/JBHI.2020.3042637},
+  note    = {doi: \url{10.1109/JBHI.2020.3042637}}
+}
+
+@article{xia2024classbalancededl,
+  author  = {Xia, Tong and Dang, Ting and Han, Jing and Qendro, Lorena and Mascolo, Cecilia},
+  title   = {Uncertainty-Aware Health Diagnostics via Class-Balanced Evidential Deep Learning},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {28}, number = {11}, pages = {6417--6428}, year = {2024},
+  doi     = {10.1109/JBHI.2024.3360002},
+  note    = {doi: \url{10.1109/JBHI.2024.3360002}}
+}
+
+@article{zhan2022dilconformal,
+  author  = {Zhan, Xianghao and Wang, Fanjin and Gevaert, Olivier},
+  title   = {Reliably Filter Drug-Induced Liver Injury Literature With Natural Language Processing and Conformal Prediction},
+  journal = {IEEE J. Biomed. Health Inform.},
+  volume  = {26}, number = {10}, pages = {5033--5041}, year = {2022},
+  doi     = {10.1109/JBHI.2022.3193365},
+  note    = {doi: \url{10.1109/JBHI.2022.3193365}}
+}
+
+
+@article{kapoor2023leakage,
+  author  = {S. Kapoor and A. Narayanan},
+  title   = {Leakage and the reproducibility crisis in machine-learning-based science},
+  journal = {Patterns},
+  volume  = {4},
+  number  = {9},
+  pages   = {100804},
+  year    = {2023},
+  doi     = {10.1016/j.patter.2023.100804},
+  note    = {doi: \url{10.1016/j.patter.2023.100804}}
+}
+
+@article{geirhos2020shortcut,
+  author  = {R. Geirhos and J.-H. Jacobsen and C. Michaelis and R. Zemel and W. Brendel and M. Bethge and F. A. Wichmann},
+  title   = {Shortcut learning in deep neural networks},
+  journal = {Nat. Mach. Intell.},
+  volume  = {2},
+  number  = {11},
+  pages   = {665--673},
+  year    = {2020},
+  doi     = {10.1038/s42256-020-00257-z},
+  note    = {doi: \url{10.1038/s42256-020-00257-z}}
+}
+
+@article{vanhouwelingen2007landmarking,
+  author  = {H. C. van Houwelingen},
+  title   = {Dynamic prediction by landmarking in event history analysis},
+  journal = {Scand. J. Statist.},
+  volume  = {34},
+  number  = {1},
+  pages   = {70--85},
+  year    = {2007},
+  doi     = {10.1111/j.1467-9469.2006.00529.x},
+  note    = {doi: \url{10.1111/j.1467-9469.2006.00529.x}}
+}
+
+@inproceedings{solaiman2026earlydeterioration,
+  author    = {Solaiman, K. M. A. and Sebastian, Joshua and Tobden, Karma},
+  title     = {Benchmarking early deterioration prediction across hospital-rich and {MCI}-like emergency triage under constrained sensing},
+  booktitle = {Proc. IEEE 14th Int. Conf. Healthc. Inform. (ICHI)},
+  pages     = {1116--1125},
+  year      = {2026},
+  doi       = {10.1109/ICHI69079.2026.00137},
+  note      = {doi: \url{10.1109/ICHI69079.2026.00137}}
+}
+
+@article{raita2019triage,
+  author  = {Y. Raita and T. Goto and M. K. Faridi and D. F. M. Brown and C. A. Camargo and K. Hasegawa},
+  title   = {Emergency department triage prediction of clinical outcomes using machine learning models},
+  journal = {Crit. Care},
+  volume  = {23},
+  pages   = {64},
+  year    = {2019},
+  doi     = {10.1186/s13054-019-2351-7},
+  note    = {doi: \url{10.1186/s13054-019-2351-7}}
+}
+
+@article{hong2018admission,
+  author  = {W. S. Hong and A. D. Haimovich and R. A. Taylor},
+  title   = {Predicting hospital admission at emergency department triage using machine learning},
+  journal = {PLoS ONE},
+  volume  = {13},
+  number  = {7},
+  pages   = {e0201016},
+  year    = {2018},
+  doi     = {10.1371/journal.pone.0201016},
+  note    = {doi: \url{10.1371/journal.pone.0201016}}
+}
+
+
+% ---------------------------------------------------------------------------------------------
+% Added after the recorded literature search (metadata checked against Crossref records, 2026-10-07)
+% ---------------------------------------------------------------------------------------------
+@article{ramadan2025icdleakage,
+  author  = {Ramadan, Bashar and Liu, Ming-Chieh and Burkhart, Michael C. and Parker, William F. and Beaulieu-Jones, Brett K.},
+  title   = {Diagnostic codes in {AI} prediction models and label leakage of same-admission clinical outcomes},
+  journal = {JAMA Netw. Open},
+  volume  = {8},
+  number  = {12},
+  pages   = {e2550454},
+  year    = {2025},
+  doi     = {10.1001/jamanetworkopen.2025.50454},
+  note    = {doi: \url{10.1001/jamanetworkopen.2025.50454}}
+}
+
+@misc{millar2026classconditionalms,
+  author       = {Millar, Alexander S. and Rom{\'a}n, Cortnee and Gouripeddi, Ramkiran and Facelli, Julio C.},
+  title        = {Reliable uncertainty under class imbalance and distribution shift: Class-conditional conformal prediction of multiple sclerosis},
+  howpublished = {medRxiv preprint},
+  year         = {2026},
+  doi          = {10.64898/2026.05.12.26353057},
+  note         = {doi: \url{10.64898/2026.05.12.26353057}}
+}
+
+@article{wang2026conformalclinicalai,
+  author  = {Wang, Xiaofeng and Albahra, Samer and Liang, Faming and Duggal, Abhijit and Dweik, Raed A.},
+  title   = {Conformal prediction in clinical artificial intelligence},
+  journal = {Chest},
+  volume  = {169},
+  number  = {2},
+  pages   = {332--335},
+  year    = {2026},
+  doi     = {10.1016/j.chest.2025.07.4116},
+  note    = {doi: \url{10.1016/j.chest.2025.07.4116}}
+}
+
+@article{abdulai2025idontknow,
+  author  = {Abdulai, Abubakar Sadiq Bouda and Storm, Jean and Ehrlich, Michael},
+  title   = {{I} don't know: An uncertainty-aware machine learning model for predicting patient disposition at emergency department triage},
+  journal = {Int. J. Med. Inform.},
+  volume  = {201},
+  pages   = {105957},
+  year    = {2025},
+  doi     = {10.1016/j.ijmedinf.2025.105957},
+  note    = {doi: \url{10.1016/j.ijmedinf.2025.105957}}
+}
+
+@article{chalfin2007delayed,
+  author  = {Chalfin, Donald B. and Trzeciak, Stephen and Likourezos, Antonios and Baumann, Brigitte M. and Dellinger, R. Phillip},
+  title   = {Impact of delayed transfer of critically ill patients from the emergency department to the intensive care unit},
+  journal = {Crit. Care Med.},
+  volume  = {35},
+  number  = {6},
+  pages   = {1477--1483},
+  year    = {2007},
+  doi     = {10.1097/01.ccm.0000266585.74905.5a},
+  note    = {doi: \url{10.1097/01.ccm.0000266585.74905.5a}}
+}
+
+@article{alcaraz2025mdsed,
+  author  = {Lopez Alcaraz, Juan Miguel and Bouma, Hjalmar R. and Strodthoff, Nils},
+  title   = {Enhancing clinical decision support with physiological waveforms -- {A} multimodal benchmark in emergency care},
+  journal = {Comput. Biol. Med.},
+  volume  = {192},
+  pages   = {110196},
+  year    = {2025},
+  doi     = {10.1016/j.compbiomed.2025.110196},
+  note    = {doi: \url{10.1016/j.compbiomed.2025.110196}}
+}
+
+@misc{keoliya2025carebench,
+  author       = {Keoliya, Mayank and Choi, Seewon and Alur, Rajeev and Naik, Mayur and Wong, Eric},
+  title        = {Stable prediction of adverse events in medical time-series data},
+  howpublished = {arXiv:2510.14286},
+  year         = {2025},
+  doi          = {10.48550/arXiv.2510.14286},
+  note         = {doi: \url{10.48550/arXiv.2510.14286}. {CAREBench} code: \url{https://github.com/SeewonChoi/CAREBench}}
+}
+
+@article{collins2024tripodai,
+  author  = {Collins, Gary S. and Moons, Karel G. M. and Dhiman, Paula and Riley, Richard D. and Beam, Andrew L. and Van Calster, Ben and others},
+  title   = {{TRIPOD+AI} statement: Updated guidance for reporting clinical prediction models that use regression or machine learning methods},
+  journal = {BMJ},
+  volume  = {385},
+  pages   = {e078378},
+  year    = {2024},
+  doi     = {10.1136/bmj-2023-078378},
+  note    = {doi: \url{10.1136/bmj-2023-078378}}
+}
+
+@article{vickers2006decisioncurve,
+  author  = {Vickers, Andrew J. and Elkin, Elena B.},
+  title   = {Decision curve analysis: A novel method for evaluating prediction models},
+  journal = {Med. Decis. Making},
+  volume  = {26},
+  number  = {6},
+  pages   = {565--574},
+  year    = {2006},
+  doi     = {10.1177/0272989X06295361},
+  note    = {doi: \url{10.1177/0272989X06295361}}
+}
+
+@article{vancalster2019calibration,
+  author  = {Van Calster, Ben and McLernon, David J. and van Smeden, Maarten and Wynants, Laure and Steyerberg, Ewout W.},
+  title   = {Calibration: The {Achilles} heel of predictive analytics},
+  journal = {BMC Med.},
+  volume  = {17},
+  pages   = {230},
+  year    = {2019},
+  doi     = {10.1186/s12916-019-1466-7},
+  note    = {doi: \url{10.1186/s12916-019-1466-7}}
+}
+
+@article{austin2009balance,
+  author  = {Austin, Peter C.},
+  title   = {Balance diagnostics for comparing the distribution of baseline covariates between treatment groups in propensity-score matched samples},
+  journal = {Stat. Med.},
+  volume  = {28},
+  number  = {25},
+  pages   = {3083--3107},
+  year    = {2009},
+  doi     = {10.1002/sim.3697},
+  note    = {doi: \url{10.1002/sim.3697}}
+}
+
+@article{sisk2021informativepresence,
+  author  = {Sisk, Rose and Lin, Lijing and Sperrin, Matthew and Barrett, Jessica K. and Tom, Brian and Diaz-Ordaz, Karla and Peek, Niels and Martin, Glen P.},
+  title   = {Informative presence and observation in routine health data: {A} review of methodology for clinical risk prediction},
+  journal = {J. Am. Med. Inform. Assoc.},
+  volume  = {28},
+  number  = {1},
+  pages   = {155--166},
+  year    = {2021},
+  doi     = {10.1093/jamia/ocaa242}
+}
+
+@article{groenwold2020informativemissingness,
+  author  = {Groenwold, Rolf H. H.},
+  title   = {Informative missingness in electronic health record systems: {The} curse of knowing},
+  journal = {Diagn. Progn. Res.},
+  volume  = {4},
+  pages   = {8},
+  year    = {2020},
+  doi     = {10.1186/s41512-020-00077-0}
+}
+
+@article{davis2023labelleakage,
+  author  = {Davis, Sharon E. and Matheny, Michael E. and Balu, Suresh and Sendak, Mark P.},
+  title   = {A framework for understanding label leakage in machine learning for health care},
+  journal = {J. Am. Med. Inform. Assoc.},
+  volume  = {31},
+  number  = {1},
+  pages   = {274--280},
+  year    = {2023},
+  doi     = {10.1093/jamia/ocad178}
+}

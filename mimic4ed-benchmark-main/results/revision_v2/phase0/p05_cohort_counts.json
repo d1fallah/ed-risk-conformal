@@ -1,0 +1,120 @@
+{
+  "expected_by_plan": {
+    "after_filter_stays": 418025,
+    "train_stays": 288208,
+    "train_patients": 139371,
+    "test_stays": 84241,
+    "test_patients": 61843,
+    "excluded_stays": 45576,
+    "excluded_patients": 18968,
+    "dev_patients": {
+      "training": 108400,
+      "validation": 15486,
+      "calibration_selection": 7743,
+      "final_conformal_calibration": 7742
+    },
+    "master_stays_plan": 425088
+  },
+  "master_rows": 425087,
+  "master_patients": 205504,
+  "after_age_ge18_and_acuity_notnull_stays": 418025,
+  "after_filter_patients": 201214,
+  "train_period": {
+    "stays": 288208,
+    "patients": 139371,
+    "positives_outcome_critical": 15567,
+    "prevalence_outcome_critical": 0.054013073891078664,
+    "eligible_1h": 288166,
+    "positives_y_1h": 146,
+    "eligible_6h": 288166,
+    "positives_y_6h": 9232,
+    "eligible_12h": 288166,
+    "positives_y_12h": 13635
+  },
+  "test_period": {
+    "stays": 84241,
+    "patients": 61843,
+    "positives_outcome_critical": 6815,
+    "prevalence_outcome_critical": 0.08089884972875441,
+    "eligible_1h": 84229,
+    "positives_y_1h": 66,
+    "eligible_6h": 84229,
+    "positives_y_6h": 3841,
+    "eligible_12h": 84229,
+    "positives_y_12h": 5875
+  },
+  "excluded_returning_patient_stays": {
+    "stays": 45576,
+    "patients": 18968,
+    "positives_outcome_critical": 2500,
+    "prevalence_outcome_critical": 0.05485343163068281
+  },
+  "train_test_patient_overlap": 0,
+  "train_test_stay_overlap": 0,
+  "dev_subsets": {
+    "training": {
+      "patients_in_split_file": 108400,
+      "stays": 240353,
+      "patients": 108400,
+      "positives_outcome_critical": 12598,
+      "prevalence_outcome_critical": 0.05241457356471523,
+      "eligible_1h": 240319,
+      "positives_y_1h": 111,
+      "eligible_6h": 240319,
+      "positives_y_6h": 7565,
+      "eligible_12h": 240319,
+      "positives_y_12h": 11090,
+      "overlap_with_earlier_subsets": 0
+    },
+    "validation": {
+      "patients_in_split_file": 15486,
+      "stays": 24026,
+      "patients": 15486,
+      "positives_outcome_critical": 1438,
+      "prevalence_outcome_critical": 0.05985182718721385,
+      "eligible_1h": 24023,
+      "positives_y_1h": 14,
+      "eligible_6h": 24023,
+      "positives_y_6h": 838,
+      "eligible_12h": 24023,
+      "positives_y_12h": 1235,
+      "overlap_with_earlier_subsets": 0
+    },
+    "calibration_selection": {
+      "patients_in_split_file": 7743,
+      "stays": 12075,
+      "patients": 7743,
+      "positives_outcome_critical": 643,
+      "prevalence_outcome_critical": 0.053250517598343684,
+      "eligible_1h": 12072,
+      "positives_y_1h": 8,
+      "eligible_6h": 12072,
+      "positives_y_6h": 367,
+      "eligible_12h": 12072,
+      "positives_y_12h": 558,
+      "overlap_with_earlier_subsets": 0
+    },
+    "final_conformal_calibration": {
+      "patients_in_split_file": 7742,
+      "stays": 11754,
+      "patients": 7742,
+      "positives_outcome_critical": 888,
+      "prevalence_outcome_critical": 0.07554874936191934,
+      "eligible_1h": 11752,
+      "positives_y_1h": 13,
+      "eligible_6h": 11752,
+      "positives_y_6h": 462,
+      "eligible_12h": 11752,
+      "positives_y_12h": 752,
+      "overlap_with_earlier_subsets": 0
+    }
+  },
+  "dev_subsets_cover_train_patients": true,
+  "dev_subsets_stays_total": 288208,
+  "differences_from_plan_found_vs_expected": {
+    "master_rows": [
+      425087,
+      425088
+    ]
+  }
+}

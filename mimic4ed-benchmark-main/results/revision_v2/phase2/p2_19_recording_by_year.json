@@ -1,0 +1,601 @@
+{
+  "n_stays": 343153,
+  "by_year": {
+    "2008": {
+      "stays": 1,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 1.0,
+      "no_ed_vital_in_stay_share": 1.0,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rows_total_q": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "first_delay_h_q": null,
+      "first_delay_over_2h_share_of_stays_with_rows": NaN,
+      "rows_charted_before_arrival_share": 0.0,
+      "first_row_equals_triage_share_of_comparable": null,
+      "comparable_stays": 0,
+      "ed_los_h_q": [
+        8.466666666666667,
+        8.466666666666667,
+        8.466666666666667,
+        8.466666666666667,
+        8.466666666666667
+      ]
+    },
+    "2009": {
+      "stays": 1154,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.6447140381282496,
+      "no_ed_vital_in_stay_share": 0.17417677642980936,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        0.0,
+        1.0,
+        2.0,
+        3.0,
+        5.0
+      ],
+      "first_delay_h_q": [
+        0.43333333333333335,
+        0.9666666666666667,
+        2.35,
+        3.7,
+        5.073333333333337
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.5697796432318992,
+      "rows_charted_before_arrival_share": 0.006065857885615251,
+      "first_row_equals_triage_share_of_comparable": 0.02459893048128342,
+      "comparable_stays": 935,
+      "ed_los_h_q": [
+        2.7050000000000005,
+        3.55,
+        4.966666666666667,
+        7.0625,
+        10.940000000000001
+      ]
+    },
+    "2010": {
+      "stays": 5166,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.6202090592334495,
+      "no_ed_vital_in_stay_share": 0.09775454897406118,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        1.0,
+        2.0,
+        4.0,
+        6.0
+      ],
+      "first_delay_h_q": [
+        0.38333333333333336,
+        0.9833333333333333,
+        2.3833333333333333,
+        3.7333333333333334,
+        5.116666666666666
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.5790602874919545,
+      "rows_charted_before_arrival_share": 0.004258614014711576,
+      "first_row_equals_triage_share_of_comparable": 0.023342059336823734,
+      "comparable_stays": 4584,
+      "ed_los_h_q": [
+        2.6843055555555555,
+        3.566666666666667,
+        5.05,
+        7.266666666666667,
+        11.05875
+      ]
+    },
+    "2011": {
+      "stays": 56133,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.6196889530222863,
+      "no_ed_vital_in_stay_share": 0.07060018171129283,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        1.0,
+        2.0,
+        3.0,
+        6.0
+      ],
+      "first_delay_h_q": [
+        0.38333333333333336,
+        1.0166666666666666,
+        2.4,
+        3.65,
+        4.916666666666667
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.5907226375311482,
+      "rows_charted_before_arrival_share": 0.003652040689077726,
+      "first_row_equals_triage_share_of_comparable": 0.019688734211864074,
+      "comparable_stays": 51146,
+      "ed_los_h_q": [
+        2.6333333333333333,
+        3.4658333333333333,
+        4.866666666666666,
+        7.016666666666667,
+        10.366666666666667
+      ]
+    },
+    "2012": {
+      "stays": 28510,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.6116801122413188,
+      "no_ed_vital_in_stay_share": 0.04451069800070151,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        1.0,
+        2.0,
+        4.0,
+        6.0
+      ],
+      "first_delay_h_q": [
+        0.4,
+        1.0666666666666667,
+        2.45,
+        3.716666666666667,
+        4.983333333333333
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.5935171249219926,
+      "rows_charted_before_arrival_share": 0.003332164152928797,
+      "first_row_equals_triage_share_of_comparable": 0.017570693128404088,
+      "comparable_stays": 26806,
+      "ed_los_h_q": [
+        2.8,
+        3.75,
+        5.316666666666666,
+        7.616666666666666,
+        11.6
+      ]
+    },
+    "2013": {
+      "stays": 25732,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.5740323332815171,
+      "no_ed_vital_in_stay_share": 0.027941862272656614,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        0.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        1.0,
+        2.0,
+        4.0,
+        7.0
+      ],
+      "first_delay_h_q": [
+        0.06666666666666667,
+        0.7333333333333333,
+        2.316666666666667,
+        3.65,
+        4.933333333333334
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.5617079118858194,
+      "rows_charted_before_arrival_share": 0.003031245142235349,
+      "first_row_equals_triage_share_of_comparable": 0.103801585688148,
+      "comparable_stays": 24595,
+      "ed_los_h_q": [
+        2.8666666666666667,
+        3.8858333333333333,
+        5.598888888888888,
+        8.116666666666667,
+        12.465000000000025
+      ]
+    },
+    "2014": {
+      "stays": 87398,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.3679946909540264,
+      "no_ed_vital_in_stay_share": 0.018581660907572257,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        7.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.016666666666666666,
+        0.5,
+        2.816666666666667,
+        4.233333333333333
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.35594702357357705,
+      "rows_charted_before_arrival_share": 0.0019794503306711825,
+      "first_row_equals_triage_share_of_comparable": 0.4402063206546988,
+      "comparable_stays": 83947,
+      "ed_los_h_q": [
+        2.85,
+        3.8666666666666667,
+        5.583333333333333,
+        8.216666666666667,
+        12.883333333333333
+      ]
+    },
+    "2015": {
+      "stays": 33047,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.21048809271643418,
+      "no_ed_vital_in_stay_share": 0.010288377159802705,
+      "rows_by_L_q": [
+        0.0,
+        1.0,
+        1.0,
+        2.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        2.0,
+        3.0,
+        5.0,
+        8.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        1.0958333333333334,
+        3.5416666666666665
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.2022502828140765,
+      "rows_charted_before_arrival_share": 0.001845855902199897,
+      "first_row_equals_triage_share_of_comparable": 0.686661896020659,
+      "comparable_stays": 32141,
+      "ed_los_h_q": [
+        3.1333333333333333,
+        4.397777777777778,
+        6.4,
+        9.333333333333334,
+        15.012000000000011
+      ]
+    },
+    "2016": {
+      "stays": 27520,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.019622093023255814,
+      "no_ed_vital_in_stay_share": 0.0011264534883720931,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        2.0,
+        4.0,
+        6.0,
+        9.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.018516497508094146,
+      "rows_charted_before_arrival_share": 0.0016351744186046512,
+      "first_row_equals_triage_share_of_comparable": 0.9705031166518254,
+      "comparable_stays": 26952,
+      "ed_los_h_q": [
+        3.2,
+        4.533333333333333,
+        6.666666666666667,
+        9.9,
+        16.61833333333337
+      ]
+    },
+    "2017": {
+      "stays": 64243,
+      "period": [
+        "test"
+      ],
+      "zero_rows_by_L_share": 0.0009495197920395996,
+      "no_ed_vital_in_stay_share": 0.00015565898230157372,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        2.0,
+        3.0,
+        5.0,
+        9.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.0007628477573832765,
+      "rows_charted_before_arrival_share": 0.001556589823015737,
+      "first_row_equals_triage_share_of_comparable": 0.9961964772523221,
+      "comparable_stays": 61259,
+      "ed_los_h_q": [
+        2.95,
+        4.1,
+        6.083333333333333,
+        9.25,
+        16.283333333333335
+      ]
+    },
+    "2018": {
+      "stays": 9570,
+      "period": [
+        "test"
+      ],
+      "zero_rows_by_L_share": 0.00031347962382445143,
+      "no_ed_vital_in_stay_share": 0.0,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        3.0,
+        4.0,
+        6.0,
+        9.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.00031347962382445143,
+      "rows_charted_before_arrival_share": 0.0009404388714733542,
+      "first_row_equals_triage_share_of_comparable": 0.9956018021883716,
+      "comparable_stays": 9322,
+      "ed_los_h_q": [
+        3.25,
+        4.683333333333334,
+        6.9,
+        10.416666666666666,
+        18.41833333333334
+      ]
+    },
+    "2019": {
+      "stays": 3987,
+      "period": [
+        "test"
+      ],
+      "zero_rows_by_L_share": 0.00025081514923501377,
+      "no_ed_vital_in_stay_share": 0.0,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        3.0,
+        4.0,
+        6.0,
+        9.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.00025081514923501377,
+      "rows_charted_before_arrival_share": 0.001003260596940055,
+      "first_row_equals_triage_share_of_comparable": 0.9946043165467626,
+      "comparable_stays": 3892,
+      "ed_los_h_q": [
+        3.2333333333333334,
+        4.65,
+        6.966666666666667,
+        10.733333333333333,
+        19.44
+      ]
+    },
+    "2020": {
+      "stays": 692,
+      "period": [
+        "test"
+      ],
+      "zero_rows_by_L_share": 0.0,
+      "no_ed_vital_in_stay_share": 0.0,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        3.0,
+        4.0,
+        6.0,
+        10.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.0,
+      "rows_charted_before_arrival_share": 0.002890173410404624,
+      "first_row_equals_triage_share_of_comparable": 0.9910581222056631,
+      "comparable_stays": 671,
+      "ed_los_h_q": [
+        3.216666666666667,
+        4.5625,
+        7.191666666666666,
+        11.494583333333335,
+        19.459999999999997
+      ]
+    }
+  },
+  "by_period": {
+    "test": {
+      "stays": 78492,
+      "period": [
+        "test"
+      ],
+      "zero_rows_by_L_share": 0.0008281098710696632,
+      "no_ed_vital_in_stay_share": 0.00012740151862610202,
+      "rows_by_L_q": [
+        1.0,
+        1.0,
+        1.0,
+        2.0,
+        3.0
+      ],
+      "rows_total_q": [
+        2.0,
+        2.0,
+        3.0,
+        6.0,
+        9.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.0,
+        0.016666666666666666,
+        0.03333333333333333,
+        0.05
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.0006753140847582885,
+      "rows_charted_before_arrival_share": 0.0014651174642001732,
+      "first_row_equals_triage_share_of_comparable": 0.9959943575002661,
+      "comparable_stays": 75144,
+      "ed_los_h_q": [
+        3.0,
+        4.183333333333334,
+        6.233333333333333,
+        9.508541666666666,
+        16.783333333333335
+      ]
+    },
+    "train": {
+      "stays": 264661,
+      "period": [
+        "train"
+      ],
+      "zero_rows_by_L_share": 0.41790063515213804,
+      "no_ed_vital_in_stay_share": 0.03269465467144762,
+      "rows_by_L_q": [
+        0.0,
+        0.0,
+        1.0,
+        1.0,
+        2.0
+      ],
+      "rows_total_q": [
+        1.0,
+        2.0,
+        3.0,
+        4.0,
+        7.0
+      ],
+      "first_delay_h_q": [
+        0.0,
+        0.03333333333333333,
+        1.05,
+        3.033333333333333,
+        4.416666666666667
+      ],
+      "first_delay_over_2h_share_of_stays_with_rows": 0.39816333864566733,
+      "rows_charted_before_arrival_share": 0.0025919950427150205,
+      "first_row_equals_triage_share_of_comparable": 0.3557939674878338,
+      "comparable_stays": 251106,
+      "ed_los_h_q": [
+        2.8333333333333335,
+        3.85,
+        5.566666666666666,
+        8.183333333333334,
+        12.85
+      ]
+    }
+  }
+}

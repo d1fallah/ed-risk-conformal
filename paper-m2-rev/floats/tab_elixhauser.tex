@@ -1,0 +1,17 @@
+\begin{table}[t]
+\centering
+\caption{Effect of removing the comorbidity count on the end-of-stay task (test period). Rows 42 to 789: Hybrid GRU-D per seed with the frozen encoder of that seed; the last row is the tree ensemble. Interval: paired patient-cluster bootstrap, 1{,}000 resamples. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:elixhauser}
+\begin{tabular}{lcccc}
+\toprule
+Seed or model & AUROC with count & AUROC without & Difference & 95\% CI \\
+\midrule
+42 & 0.9375 & 0.9369 & \ensuremath{-}0.0007 & [\ensuremath{-}0.0010, \ensuremath{-}0.0003] \\
+123 & 0.9374 & 0.9364 & \ensuremath{-}0.0010 & [\ensuremath{-}0.0013, \ensuremath{-}0.0006] \\
+7 & 0.9361 & 0.9353 & \ensuremath{-}0.0008 & [\ensuremath{-}0.0011, \ensuremath{-}0.0004] \\
+456 & 0.9374 & 0.9365 & \ensuremath{-}0.0009 & [\ensuremath{-}0.0013, \ensuremath{-}0.0005] \\
+789 & 0.9375 & 0.9370 & \ensuremath{-}0.0005 & [\ensuremath{-}0.0009, \ensuremath{-}0.0002] \\
+Trees & 0.9271 & 0.9260 & \ensuremath{-}0.0011 & [\ensuremath{-}0.0017, \ensuremath{-}0.0006] \\
+\bottomrule
+\end{tabular}
+\end{table}

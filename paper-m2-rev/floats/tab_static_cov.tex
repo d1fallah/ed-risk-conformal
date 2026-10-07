@@ -1,0 +1,14 @@
+\begin{table}[t]
+\centering
+\caption{Sampling uncertainty of the coverage of the static conformal sets on the test period ($\alpha = 0.10$; seed-averaged coverage; 1,000 patient-cluster bootstrap resamples, 95\% percentile interval). Share: resamples whose marginal coverage reaches the validity threshold of 0.89. The bootstrap is valid for static methods, which apply a fixed threshold, and is not used for the online methods. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:static-cov}
+\begin{tabular}{lccccc}
+\toprule
+Model & Marginal coverage & 95\% CI & Share $\geq 0.89$ & Class-1 coverage, Mondrian & 95\% CI \\
+\midrule
+Hybrid GRU-D, end to end & 0.892 & [0.890, 0.894] & 95.3\% & 0.893 & [0.885, 0.901] \\
+Timing-aware trees & 0.888 & [0.885, 0.890] & 2.4\% & 0.904 & [0.896, 0.911] \\
+Logistic regression & 0.895 & [0.892, 0.897] & 100.0\% & 0.894 & [0.886, 0.903] \\
+\bottomrule
+\end{tabular}
+\end{table}

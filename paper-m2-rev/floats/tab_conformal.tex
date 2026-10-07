@@ -1,0 +1,16 @@
+\begin{table*}[t]
+\centering
+\caption{Conformal prediction sets for the primary model at $\alpha = 0.10$ (target coverage 0.90), test period, mean over five seeds ($\pm$ SD across seeds). $\{1\}$ denotes the singleton set containing the deterioration label; PPV and sensitivity refer to that set; false alarms are $\{1\}$ sets for stays without the outcome, per 100 patients; abstention is a set with both labels or none, among stays with the outcome. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:conformal}
+\begin{tabular}{lcccccccc}
+\toprule
+Method & Coverage & Class-1 coverage & Set size & $\{1\}$ rate & PPV & Sensitivity & False alarms / 100 & Abstention, class 1 \\
+\midrule
+Static LAC (marginal) & 0.892\,$\pm$\,0.002 & 0.065\,$\pm$\,0.017 & 0.93 & 0.6\% & 0.90 & 0.07 & 0.1 & 46.5\% \\
+ECI sets (marginal) & 0.901\,$\pm$\,0.001 & 0.098\,$\pm$\,0.018 & 0.94 & 0.9\% & 0.87 & 0.10 & 0.1 & 37.7\% \\
+Static Mondrian-LAC & 0.906\,$\pm$\,0.003 & 0.893\,$\pm$\,0.006 & 1.19 & 14.0\% & 0.39 & 0.69 & 8.6 & 19.9\% \\
+Mondrian-ECI & 0.900\,$\pm$\,0.001 & 0.899\,$\pm$\,0.001 & 1.28 & 14.7\% & 0.37 & 0.70 & 9.2 & 19.6\% \\
+Mondrian recalibration, $W = 10$k & 0.900\,$\pm$\,0.000 & 0.900\,$\pm$\,0.001 & 1.20 & 14.7\% & 0.37 & 0.71 & 9.2 & 19.2\% \\
+\bottomrule
+\end{tabular}
+\end{table*}

@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{Shortcut diagnostic within triage-acuity strata on the end-of-stay task (test period; AUROC with the patient-cluster bootstrap 95\% interval). Acuity 1 or 2: 35,531 stays, 6,209 events; acuity 3: 42,685 stays, 605 events. Acuity 4 or 5 (6,025 stays, 1 event) cannot be evaluated. Within a stratum, acuity alone is constant and cannot discriminate. The scores of Hybrid GRU-D are averaged over the five seeds before scoring, so its overall value can differ from the seed mean of the main table in the third decimal. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:acuity-shortcut}
+\begin{tabular}{lccc}
+\toprule
+Inputs & Overall & Acuity 1 or 2 & Acuity 3 \\
+\midrule
+Workflow quantities & 0.843 & 0.815 [0.808, 0.820] & 0.715 [0.687, 0.742] \\
+Triage acuity alone & 0.817 & 0.637 [0.630, 0.643] & 0.500 [0.500, 0.500] \\
+Workflow quantities and acuity & 0.897 & 0.834 [0.828, 0.839] & 0.684 [0.656, 0.711] \\
+Hybrid GRU-D (whole-stay vital signs) & 0.938 & 0.897 [0.892, 0.901] & 0.868 [0.850, 0.884] \\
+\bottomrule
+\end{tabular}
+\end{table}

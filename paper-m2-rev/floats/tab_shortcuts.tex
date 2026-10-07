@@ -1,0 +1,20 @@
+\begin{table}[t]
+\centering
+\caption{Shortcut diagnostic on the end-of-stay task of the original analysis (test period; outcome: death or ICU transfer within 12 h of ED departure). Upper block: logistic regression on quantities that describe how a stay was monitored (workflow quantities: ED duration, number of retained measurements, and per-vital measurement counts); interval: patient-cluster bootstrap 95\%. Lower block: models that read the last ten vital-sign rows of the whole stay; interval: standard deviation over five seeds. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:shortcuts}
+\begin{tabular}{lccc}
+\toprule
+Inputs & AUROC & Interval & AUPRC \\
+\midrule
+ED duration alone & 0.584 & [0.577, 0.591] & 0.097 \\
+Triage-time missingness & 0.684 & [0.677, 0.690] & 0.274 \\
+Workflow quantities & 0.843 & [0.837, 0.848] & 0.448 \\
+Workflow quantities and triage missingness & 0.868 & [0.863, 0.874] & 0.533 \\
+\midrule
+Static features, neural network & 0.856 & seed SD 0.001 & 0.360 \\
+Trees, whole stay & 0.927 & seed SD 0.000 & 0.634 \\
+GRU-D, whole stay & 0.921 & seed SD 0.002 & 0.664 \\
+Hybrid GRU-D, whole stay & 0.937 & seed SD 0.001 & 0.687 \\
+\bottomrule
+\end{tabular}
+\end{table}

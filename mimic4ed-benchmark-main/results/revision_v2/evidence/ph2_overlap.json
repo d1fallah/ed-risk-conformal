@@ -1,0 +1,11 @@
+{
+  "eligible": 343153,
+  "primary_positive": 19828,
+  "original_positive_among_eligible": 20544,
+  "primary_and_original": 19303,
+  "primary_only": 525,
+  "original_only": 1241,
+  "primary_only_icu_admission_in_window": 525,
+  "primary_only_death_in_window_without_icu": 0,
+  "primary_only_icu_later_than_12h_after_departure": 525
+}

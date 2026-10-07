@@ -1,0 +1,311 @@
+{
+  "budget": "TUNING_BUDGET.md",
+  "started": "2026-10-07 02:00:58",
+  "triage": {
+    "landmark": "triage",
+    "n": {
+      "fit": 240348,
+      "val": 24026,
+      "cs": 12074,
+      "fc": 11753,
+      "test": 84241
+    },
+    "positives": {
+      "fit": 12105,
+      "val": 1376,
+      "cs": 618,
+      "fc": 836,
+      "test": 6566
+    },
+    "n_features": 11,
+    "features": [
+      "triage_temperature",
+      "triage_heartrate",
+      "triage_resprate",
+      "triage_o2sat",
+      "triage_sbp",
+      "triage_dbp",
+      "triage_pain",
+      "age",
+      "sex",
+      "triage_acuity",
+      "comorbidity_elixhauser_count"
+    ],
+    "logreg": {
+      "tuning_trace": [
+        {
+          "C": 0.01,
+          "val_auroc": 0.8754668328712973
+        },
+        {
+          "C": 0.1,
+          "val_auroc": 0.8754881378664203
+        },
+        {
+          "C": 1.0,
+          "val_auroc": 0.8754913785358592
+        },
+        {
+          "C": 10.0,
+          "val_auroc": 0.8754911218491709
+        }
+      ],
+      "selected": {
+        "C": 1.0,
+        "val_auroc": 0.8754913785358592
+      },
+      "deterministic_single_fit": true
+    },
+    "xgboost": {
+      "tuning_trace": [
+        {
+          "max_depth": 4,
+          "learning_rate": 0.05,
+          "val_auroc_per_tune_seed": [
+            0.8876385466399713,
+            0.8875500218183685,
+            0.8873358809487141
+          ],
+          "val_auroc_mean": 0.8875081498023514
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.05,
+          "val_auroc_per_tune_seed": [
+            0.887365030930746,
+            0.887897864366754,
+            0.8869784126495199
+          ],
+          "val_auroc_mean": 0.8874137693156733
+        },
+        {
+          "max_depth": 4,
+          "learning_rate": 0.1,
+          "val_auroc_per_tune_seed": [
+            0.8879755120899431,
+            0.8869681291390729,
+            0.8869546530879409
+          ],
+          "val_auroc_mean": 0.8872994314389856
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.1,
+          "val_auroc_per_tune_seed": [
+            0.8880014534883721,
+            0.8876605575234869,
+            0.8873323354638328
+          ],
+          "val_auroc_mean": 0.887664782158564
+        }
+      ],
+      "selected": {
+        "max_depth": 6,
+        "learning_rate": 0.1
+      },
+      "finals": {
+        "42": {
+          "best_iteration": 137,
+          "val_auroc": 0.8880014534883721
+        },
+        "123": {
+          "best_iteration": 91,
+          "val_auroc": 0.8876605575234869
+        },
+        "7": {
+          "best_iteration": 120,
+          "val_auroc": 0.8873323354638328
+        },
+        "456": {
+          "best_iteration": 118,
+          "val_auroc": 0.8871399487910059
+        },
+        "789": {
+          "best_iteration": 114,
+          "val_auroc": 0.8878905648390575
+        }
+      }
+    }
+  },
+  "h2": {
+    "landmark": "h2",
+    "n": {
+      "fit": 220384,
+      "val": 22070,
+      "cs": 11108,
+      "fc": 11099,
+      "test": 78492
+    },
+    "positives": {
+      "fit": 11132,
+      "val": 1266,
+      "cs": 568,
+      "fc": 774,
+      "test": 6088
+    },
+    "n_features": 65,
+    "features": [
+      "temperature_mean",
+      "temperature_min",
+      "temperature_max",
+      "temperature_count",
+      "temperature_last",
+      "heartrate_mean",
+      "heartrate_min",
+      "heartrate_max",
+      "heartrate_count",
+      "heartrate_last",
+      "resprate_mean",
+      "resprate_min",
+      "resprate_max",
+      "resprate_count",
+      "resprate_last",
+      "o2sat_mean",
+      "o2sat_min",
+      "o2sat_max",
+      "o2sat_count",
+      "o2sat_last",
+      "sbp_mean",
+      "sbp_min",
+      "sbp_max",
+      "sbp_count",
+      "sbp_last",
+      "dbp_mean",
+      "dbp_min",
+      "dbp_max",
+      "dbp_count",
+      "dbp_last",
+      "pain_mean",
+      "pain_min",
+      "pain_max",
+      "pain_count",
+      "pain_last",
+      "n_ed_rows",
+      "first_ed_row_time",
+      "last_ed_row_time",
+      "time_span_ed_rows",
+      "gap_mean",
+      "gap_max",
+      "gap_min",
+      "gap_std",
+      "time_since_last_measurement",
+      "temperature_time_since_last",
+      "temperature_missing_ed_rows",
+      "heartrate_time_since_last",
+      "heartrate_missing_ed_rows",
+      "resprate_time_since_last",
+      "resprate_missing_ed_rows",
+      "o2sat_time_since_last",
+      "o2sat_missing_ed_rows",
+      "sbp_time_since_last",
+      "sbp_missing_ed_rows",
+      "dbp_time_since_last",
+      "dbp_missing_ed_rows",
+      "pain_time_since_last",
+      "pain_missing_ed_rows",
+      "missing_cells_ed",
+      "missing_fraction_ed",
+      "triage_missing_count",
+      "age",
+      "sex",
+      "triage_acuity",
+      "comorbidity_elixhauser_count"
+    ],
+    "logreg": {
+      "tuning_trace": [
+        {
+          "C": 0.01,
+          "val_auroc": 0.8938455297665748
+        },
+        {
+          "C": 0.1,
+          "val_auroc": 0.8938474281741298
+        },
+        {
+          "C": 1.0,
+          "val_auroc": 0.8939010012353318
+        },
+        {
+          "C": 10.0,
+          "val_auroc": 0.8939115943494886
+        }
+      ],
+      "selected": {
+        "C": 10.0,
+        "val_auroc": 0.8939115943494886
+      },
+      "deterministic_single_fit": true
+    },
+    "xgboost_timing": {
+      "tuning_trace": [
+        {
+          "max_depth": 4,
+          "learning_rate": 0.05,
+          "val_auroc_per_tune_seed": [
+            0.9032975301262093,
+            0.9028258897532465,
+            0.9031368489107545
+          ],
+          "val_auroc_mean": 0.9030867562634034
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.05,
+          "val_auroc_per_tune_seed": [
+            0.9036445780113376,
+            0.902752174587886,
+            0.9022532730824337
+          ],
+          "val_auroc_mean": 0.9028833418938857
+        },
+        {
+          "max_depth": 4,
+          "learning_rate": 0.1,
+          "val_auroc_per_tune_seed": [
+            0.9027353357128733,
+            0.9026510274333559,
+            0.9028959979442525
+          ],
+          "val_auroc_mean": 0.9027607870301605
+        },
+        {
+          "max_depth": 6,
+          "learning_rate": 0.1,
+          "val_auroc_per_tune_seed": [
+            0.9024485053153892,
+            0.9026501351818051,
+            0.902350699358156
+          ],
+          "val_auroc_mean": 0.9024831132851169
+        }
+      ],
+      "selected": {
+        "max_depth": 4,
+        "learning_rate": 0.05
+      },
+      "finals": {
+        "42": {
+          "best_iteration": 699,
+          "val_auroc": 0.9032975301262093
+        },
+        "123": {
+          "best_iteration": 600,
+          "val_auroc": 0.9028258897532465
+        },
+        "7": {
+          "best_iteration": 431,
+          "val_auroc": 0.9031368489107545
+        },
+        "456": {
+          "best_iteration": 429,
+          "val_auroc": 0.9033841924310947
+        },
+        "789": {
+          "best_iteration": 488,
+          "val_auroc": 0.9035420070511413
+        }
+      }
+    }
+  },
+  "finished": "2026-10-07 02:09:09"
+}

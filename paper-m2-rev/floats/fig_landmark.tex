@@ -1,0 +1,23 @@
+% Landmark design: what each model may see and what it must predict, on one emergency-department timeline.
+\begin{figure*}[t]
+\centering
+\resizebox{0.9\linewidth}{!}{%
+\begin{tikzpicture}[
+  ev/.style={font=\footnotesize, align=center},
+  box/.style={rectangle, rounded corners=2pt, draw=#1!70!black, fill=#1!14, thick, align=center, font=\footnotesize, inner sep=4pt},
+]
+\draw[-{Stealth[length=2.6mm]}, thick] (0,0) -- (16.4,0) node[right, font=\footnotesize] {time};
+\foreach \x/\l in {1/{arrival\\(triage anchor)}, 5.0/{2\,h\\landmark $L$}, 9.0/{$L+24$\,h}, 12.2/{ED departure\\(varies per stay)}}
+  \draw[thick] (\x,0.12) -- (\x,-0.12) node[below=2pt, ev] {\l};
+\node[box=teal, anchor=south west, text width=3.8cm] at (1.05,0.45) {inputs of the 2\,h models: triage values, ED vital signs charted by $L$, static profile};
+\node[box=orange, anchor=south west, text width=3.8cm] at (5.05,0.45) {primary outcome $Y_L$: ICU admission or in-hospital death in $(L, L+24\,\mathrm{h}]$};
+\node[box=gray, anchor=south west, text width=7.0cm] at (5.05,2.3) {not available at $L$: later vital signs, number of later measurements, ED length of stay, disposition, admission time};
+\draw[{Stealth}-{Stealth}, black!60] (1,-1.55) -- (12.2,-1.55);
+\node[font=\scriptsize\itshape, text=black!65, anchor=west] at (1,-1.95) {end-of-stay design of the original analysis: the last ten ED rows up to (and, for some stays, after) departure};
+\end{tikzpicture}}
+\caption{Landmark design. A prediction is made at the landmark $L$ using only what has been recorded by $L$, and is scored against
+an event in the following 24\,h. The triage landmark is anchored at ED arrival, because the triage table has no timestamp. The
+end-of-stay design of the original analysis used measurements up to ED departure, which are not available at an earlier prediction time.
+Data: MIMIC-IV-ED, a retrospective single-center proxy cohort.}
+\label{fig:landmark}
+\end{figure*}

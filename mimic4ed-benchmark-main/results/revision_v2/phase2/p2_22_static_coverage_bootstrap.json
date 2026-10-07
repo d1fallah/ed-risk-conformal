@@ -1,0 +1,92 @@
+{
+  "n_test": 78492,
+  "positives": 6088,
+  "alpha": 0.1,
+  "validity_threshold": 0.89,
+  "bootstrap_resamples": 1000,
+  "models": {
+    "hybrid_e2e": {
+      "seeds": 5,
+      "point": {
+        "marginal": 0.8921342302400244,
+        "class1_static_lac": 0.06537450722733246,
+        "class1_static_mondrian": 0.8931011826544022
+      },
+      "marginal_ci95": [
+        0.8895964616568541,
+        0.8942621047350836
+      ],
+      "marginal_share_resamples_at_or_above_threshold": 0.953,
+      "class1_static_lac_ci95": [
+        0.059812737947014506,
+        0.07113817094960105
+      ],
+      "class1_static_mondrian_ci95": [
+        0.8850031609574048,
+        0.9006727379731803
+      ],
+      "class1_static_mondrian_share_resamples_at_or_above_threshold": 0.78,
+      "per_seed_marginal": [
+        0.8928043622279977,
+        0.8944733221219997,
+        0.8903327727666513,
+        0.8903455129185139,
+        0.8927151811649595
+      ]
+    },
+    "xgboost_timing": {
+      "seeds": 5,
+      "point": {
+        "marginal": 0.8878076746674819,
+        "class1_static_lac": 0.08278580814717477,
+        "class1_static_mondrian": 0.9037450722733246
+      },
+      "marginal_ci95": [
+        0.8852890691379175,
+        0.8899493611389229
+      ],
+      "marginal_share_resamples_at_or_above_threshold": 0.024,
+      "class1_static_lac_ci95": [
+        0.07692544554598982,
+        0.08939788610017979
+      ],
+      "class1_static_mondrian_ci95": [
+        0.895683369390274,
+        0.9110082068639229
+      ],
+      "class1_static_mondrian_share_resamples_at_or_above_threshold": 1.0,
+      "per_seed_marginal": [
+        0.88642154614483,
+        0.8873770575345258,
+        0.889657544717933,
+        0.8881287264944198,
+        0.8874534984457014
+      ]
+    },
+    "logreg": {
+      "seeds": 1,
+      "point": {
+        "marginal": 0.8946134637924884,
+        "class1_static_lac": 0.05946123521681997,
+        "class1_static_mondrian": 0.8943823915900131
+      },
+      "marginal_ci95": [
+        0.8921549588819645,
+        0.8966441861489334
+      ],
+      "marginal_share_resamples_at_or_above_threshold": 1.0,
+      "class1_static_lac_ci95": [
+        0.0533823568323935,
+        0.06534193197407216
+      ],
+      "class1_static_mondrian_ci95": [
+        0.8857104485942187,
+        0.9026836028042444
+      ],
+      "class1_static_mondrian_share_resamples_at_or_above_threshold": 0.845,
+      "per_seed_marginal": [
+        0.8946134637924884
+      ]
+    }
+  }
+}

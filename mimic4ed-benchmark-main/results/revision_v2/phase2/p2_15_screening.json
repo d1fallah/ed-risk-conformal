@@ -1,0 +1,48 @@
+{
+ "date": "2026-10-07",
+ "source": "OpenAlex works search",
+ "queries": {
+  "Q1_workflow_shortcut_ed": {
+   "total_hits": 23,
+   "screened": 23,
+   "related": 4,
+   "meets": 0
+  },
+  "Q2_conformal_ed_or_deterioration": {
+   "total_hits": 45,
+   "screened": 45,
+   "related": 6,
+   "meets": 0
+  },
+  "Q3_conformal_class_conditional_clinical": {
+   "total_hits": 35,
+   "screened": 35,
+   "related": 6,
+   "meets": 0
+  },
+  "Q4_online_conformal_clinical": {
+   "total_hits": 25,
+   "screened": 25,
+   "related": 6,
+   "meets": 0
+  },
+  "Q6_monitoring_pattern_leakage_clinical_prediction": {
+   "total_hits": 313,
+   "screened": 60,
+   "related": 9,
+   "meets": 0
+  },
+  "Q7_ed_prediction_time_landmark": {
+   "total_hits": 33,
+   "screened": 33,
+   "related": 7,
+   "meets": 0
+  },
+  "Q5_conformal_delayed_feedback": {
+   "total_hits": 3,
+   "screened": 3,
+   "related": 0,
+   "meets": 0
+  }
+ }
+}

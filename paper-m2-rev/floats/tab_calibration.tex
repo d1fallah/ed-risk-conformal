@@ -1,0 +1,40 @@
+\begin{table}[t]
+\centering
+\caption{Probability calibration on the test period (primary outcome; mean over seeds). Observed event rate 7.8\%. Slope and intercept are from a logistic regression of the outcome on the logit of the score. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:calibration}
+\begin{tabular}{lccccc}
+\toprule
+Model & Brier & ECE & Slope & Intercept & Mean predicted risk \\
+\midrule
+Logistic regression & 0.0510 & 0.021 & 1.06 & 0.58 & 5.7\% \\
+Timing-aware trees & 0.0486 & 0.016 & 0.99 & 0.34 & 6.2\% \\
+Temporal-Only GRU-D & 0.0505 & 0.012 & 1.06 & 0.36 & 6.6\% \\
+Hybrid GRU-D, frozen encoder & 0.0490 & 0.015 & 1.01 & 0.36 & 6.2\% \\
+Hybrid GRU-D, end to end & 0.0494 & 0.015 & 1.04 & 0.42 & 6.2\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[t]
+\centering
+\caption{Discrimination by subgroup on the test period (AUROC, seed mean; 95\% patient-cluster bootstrap interval of the seed mean). Triage acuity 4 or 5 is omitted: 4,406 stays and 1 event. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:subgroups}
+\begin{tabular}{llrrcc}
+\toprule
+Subgroup & Model & Stays & Events & AUROC & 95\% CI \\
+\midrule
+Women & Hybrid GRU-D & 41,144 & 2,699 & 0.907 & [0.901, 0.913] \\
+Women & Timing-aware trees & 41,144 & 2,699 & 0.911 & [0.905, 0.916] \\
+Men & Hybrid GRU-D & 37,348 & 3,389 & 0.894 & [0.888, 0.899] \\
+Men & Timing-aware trees & 37,348 & 3,389 & 0.897 & [0.891, 0.902] \\
+Age below 65 years & Hybrid GRU-D & 55,093 & 2,852 & 0.909 & [0.903, 0.914] \\
+Age below 65 years & Timing-aware trees & 55,093 & 2,852 & 0.912 & [0.906, 0.917] \\
+Age 65 years or older & Hybrid GRU-D & 23,399 & 3,236 & 0.861 & [0.855, 0.868] \\
+Age 65 years or older & Timing-aware trees & 23,399 & 3,236 & 0.865 & [0.858, 0.872] \\
+Triage acuity 1 or 2 & Hybrid GRU-D & 34,016 & 5,541 & 0.841 & [0.836, 0.847] \\
+Triage acuity 1 or 2 & Timing-aware trees & 34,016 & 5,541 & 0.846 & [0.840, 0.852] \\
+Triage acuity 3 & Hybrid GRU-D & 40,070 & 546 & 0.773 & [0.752, 0.792] \\
+Triage acuity 3 & Timing-aware trees & 40,070 & 546 & 0.786 & [0.765, 0.806] \\
+\bottomrule
+\end{tabular}
+\end{table}

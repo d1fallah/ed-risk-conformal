@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Discrimination at each landmark on one fixed set of 41,173 test stays (those still in the ED and event-free at 6 hours, hence eligible at every earlier landmark); each landmark is scored on its own outcome window $(L, L + 24$\,h$]$ (AUROC with the patient-cluster bootstrap 95\% interval). The last column gives the trees on the full eligible cohort of the landmark, as in the main sweep. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:fixed-cohort}
+\begin{tabular}{lrrccc}
+\toprule
+Landmark (h) & Events & Rate & Logistic regression & Timing-aware trees & Trees, full cohort \\
+\midrule
+1 & 2,351 & 5.7\% & 0.808 [0.799, 0.817] & 0.821 [0.813, 0.830] & 0.903 \\
+2 & 2,366 & 5.7\% & 0.817 [0.808, 0.827] & 0.833 [0.824, 0.842] & 0.905 \\
+3 & 2,381 & 5.8\% & 0.825 [0.817, 0.835] & 0.842 [0.834, 0.850] & 0.898 \\
+4 & 2,393 & 5.8\% & 0.837 [0.829, 0.846] & 0.850 [0.842, 0.858] & 0.887 \\
+6 & 2,421 & 5.9\% & 0.846 [0.837, 0.855] & 0.860 [0.852, 0.868] & 0.860 \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,15 @@
+\begin{table}[t]
+\centering
+\caption{AUROC by approximate calendar-year block of the test period (primary outcome at the two-hour landmark; seed mean with the patient-cluster bootstrap 95\% interval). The blocks differ strongly in size, and the last holds few events. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:years}
+\begin{tabular}{lrrccc}
+\toprule
+Block & Stays & Events & Logistic regression & Timing-aware trees & Hybrid GRU-D \\
+\midrule
+2017 & 64,243 & 5,116 & 0.897 [0.893, 0.902] & 0.907 [0.903, 0.911] & 0.904 [0.899, 0.907] \\
+2018 & 9,570 & 681 & 0.889 [0.876, 0.902] & 0.894 [0.882, 0.906] & 0.893 [0.881, 0.905] \\
+2019 & 3,987 & 242 & 0.892 [0.867, 0.915] & 0.895 [0.871, 0.918] & 0.894 [0.870, 0.916] \\
+2020 & 692 & 49 & 0.889 [0.844, 0.931] & 0.898 [0.859, 0.935] & 0.897 [0.855, 0.935] \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,26 @@
+\begin{table}[t]
+\centering
+\caption{Characteristics of the stays eligible at the two-hour landmark, by period (MIMIC-IV-ED, retrospective single-center proxy). SMD: standardized difference of the test period relative to the training period. $^a$Acuity 1 or 2 against 3 to 5. $^b$Mean count. $^c$Description only; not an input of any landmark model.}
+\label{tab:characteristics}
+\begin{tabular}{lrrr}
+\toprule
+Characteristic & Training period & Test period & SMD \\
+\midrule
+Stays & 264,661 & 78,492 &  \\
+Patients & 129,661 & 57,920 &  \\
+Age, years, median (IQR) & 54 (36--69) & 52 (30--68) & \ensuremath{-}0.13 \\
+Female & 54.9\% & 52.4\% & \ensuremath{-}0.05 \\
+Triage acuity 1 & 6.1\% & 5.7\% &  \\
+Triage acuity 2 & 33.7\% & 37.7\% & +0.07$^a$ \\
+Triage acuity 3 & 55.0\% & 51.0\% &  \\
+Triage acuity 4 or 5 & 5.1\% & 5.6\% &  \\
+Comorbidity count $\geq 1$ & 47.4\% & 22.7\% & \ensuremath{-}0.49$^b$ \\
+All triage vital signs missing & 1.1\% & 3.4\% &  \\
+ED vital-sign rows by $L$, median (IQR) & 1 (0--1) & 1 (1--2) & +0.60 \\
+No ED vital sign by $L$ & 41.8\% & 0.1\% & \ensuremath{-}1.19 \\
+ED length of stay, h, median (IQR)$^c$ & 5.6 (3.9--8.2) & 6.2 (4.2--9.5) & +0.20 \\
+Primary outcome & 5.2\% & 7.8\% & +0.10 \\
+Secondary outcome & 5.4\% & 8.0\% &  \\
+\bottomrule
+\end{tabular}
+\end{table}

@@ -1,0 +1,16 @@
+\begin{table}[t]
+\centering
+\caption{Pre-specified AUROC contrasts on the test period. Difference: mean $\pm$ SD over five seeds (training variability); interval: patient-cluster bootstrap 95\% interval of the seed-averaged difference (sampling uncertainty). Holm correction over the five contrasts (the smallest attainable adjusted value with 10,000 resamples is 0.0005). A contrast is called significant only if it is Holm-significant and all five per-seed intervals exclude zero. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{tab:contrasts}
+\begin{tabular}{llcccc}
+\toprule
+ID & Contrast & Difference & 95\% CI & Holm $p$ & Significant \\
+\midrule
+C1 & Hybrid GRU-D minus timing-aware trees & \ensuremath{-}0.0033\,$\pm$\,0.0006 & [\ensuremath{-}0.0042, \ensuremath{-}0.0024] & 0.0005 & yes \\
+C2 & Hybrid GRU-D minus logistic regression & +0.0059\,$\pm$\,0.0005 & [+0.0045, +0.0073] & 0.0005 & yes \\
+C3 & Hybrid GRU-D minus Temporal-Only GRU-D & +0.0229\,$\pm$\,0.0008 & [+0.0204, +0.0255] & 0.0005 & yes \\
+C4 & Hybrid GRU-D minus frozen-encoder variant & \ensuremath{-}0.0010\,$\pm$\,0.0006 & [\ensuremath{-}0.0015, \ensuremath{-}0.0007] & 0.0005 & no \\
+C5 & Trees minus logistic regression (arrival landmark) & +0.0089\,$\pm$\,0.0003 & [+0.0073, +0.0106] & 0.0005 & yes \\
+\bottomrule
+\end{tabular}
+\end{table}
