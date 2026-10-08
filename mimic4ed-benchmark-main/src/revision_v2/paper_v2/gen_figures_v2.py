@@ -42,6 +42,32 @@ def fig_alpha():
     ev.write_provenance()
 
 
+def fig_alpha_col(panels=("class1", "fa"), name="fig_alpha_col", size=(3.45, 2.0)):
+    """One-column version of the coverage-level figure for the submitted (short) manuscript; same evidence as fig_alpha, panels chosen by `panels`."""
+    ev = PD.EV(name)
+    alphas = ["0.2", "0.1", "0.05", "0.01"]
+    cov = [1 - float(a) for a in alphas]
+    meths = [("static_lac", "Static LAC", BLACK, "o", "-"), ("static_mondrian_lac", "Static Mondrian-LAC", BLUE, "s", "--"), ("mondrian_eci", "Mondrian-ECI", VERM, "^", "-.")]
+    key = {"class1": ("coverage_class1", "metrics", "class-1 coverage"), "ppv": ("ppv_only1", "operating", "PPV of $\\{1\\}$"), "fa": ("false_alarms_per_100_patients", "operating", "false alarms per 100 patients")}
+    fig, ax = plt.subplots(1, len(panels), figsize=size)
+    ax = [ax] if len(panels) == 1 else list(ax)
+    for k, label, col, mk, ls in meths:
+        for a_, p in zip(ax, panels):
+            m, grp, _ = key[p]
+            y = [float(ev.reduce("mean", CF, f"/runs/*/sweep/{a}/{k}/{grp}/{m}")) for a in alphas]
+            a_.plot(cov, y, marker=mk, ms=3, lw=1.0, ls=ls, color=col, label=label if p == panels[0] else None)
+    for a_, p in zip(ax, panels):
+        a_.set_ylabel(key[p][2], fontsize=7.5); a_.set_xlabel("nominal coverage $1-\\alpha$", fontsize=7.5); a_.tick_params(labelsize=7)
+        if p == "class1":
+            a_.plot([0.78, 1], [0.78, 1], "k:", lw=0.8)
+    h, l = ax[0].get_legend_handles_labels()
+    fig.legend(h, l, frameon=False, loc="upper center", ncol=3, fontsize=6.3, handlelength=1.8, columnspacing=1.0, borderaxespad=0.1)
+    fig.tight_layout(pad=0.4, rect=[0, 0, 1, 0.9])
+    fig.savefig(os.path.join(OUT, name + ".pdf")); fig.savefig(os.path.join(OUT, name + ".png"), dpi=300)
+    plt.close(fig)
+    ev.write_provenance()
+
+
 def fig_discrimination():
     ev = PD.EV("fig_discrimination")
     names = [("logreg", "Logistic regression"), ("xgboost_timing", "Timing-aware trees"), ("temporal_grud", "Temporal-Only GRU-D"), ("hybrid_frozen", "Hybrid, frozen encoder"),
@@ -194,6 +220,7 @@ if __name__ == "__main__":
     fig_discrimination()
     fig_pr()
     fig_alpha()
+    fig_alpha_col(("class1", "fa"), "fig_alpha_col", (3.45, 2.0))
     fig_hist()
     fig_sweep()
     fig_forest()

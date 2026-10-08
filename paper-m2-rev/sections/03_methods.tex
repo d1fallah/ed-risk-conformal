@@ -6,31 +6,29 @@
 
 We used MIMIC-IV-ED~\cite{johnson2023mimicived}, the ED module of MIMIC-IV~\cite{johnson2023mimiciv},
 through the MIMIC-IV-ED benchmark pipeline~\cite{xie2022mimic4ed}. The data come from one US academic medical center and are used
-retrospectively as a research proxy; no result is a clinical validation. The source data were released under a waiver of informed
-consent~\cite{johnson2023mimiciv}, and we analyzed the de-identified records under the PhysioNet credentialed data use agreement. \datagap{MIMIC-IV hospital-module version, to be confirmed by the author}
+retrospectively as a research proxy; no result is a clinical validation. We analyzed the de-identified records under the PhysioNet credentialed data use agreement. \datagap{MIMIC-IV hospital-module version, to be confirmed by the author}
 
 Of \RVMasterStays{} ED stays, \RVEligibleStays{} met the inclusion criteria (age of at least 18 years and a recorded triage acuity).
-MIMIC-IV shifts each patient's dates by a random offset, so an approximate calendar year was recovered from the anchor-year group, with a
-resolution of about one year. Stays up to \RVCutYear{} form the training period (\RVTrainStays{} stays of \RVTrainPatients{} patients) and
+Calendar time is known only to about one year, from the anchor-year group of MIMIC-IV. Stays up to \RVCutYear{} form the training period (\RVTrainStays{} stays of \RVTrainPatients{} patients) and
 later stays the test period (\RVTestStays{} stays of \RVTestPatients{} patients). Patients with stays on both sides of the cut remain in the
 training period, and their \RVExcludedStays{} later stays (\RVExcludedPatients{} patients) were excluded from evaluation, so the test period has
 no patient in common with the training period. Within the training period, patients were ordered by the year of their first stay and
 divided into training, validation, calibration-selection, and final-calibration subsets of \RVDevTrainPatients{}, \RVDevValPatients{},
-\RVDevCsPatients{}, and \RVDevFcPatients{} patients, with the most recent patients in the two calibration subsets. The assignment is the same for every model and seed.
+\RVDevCsPatients{}, and \RVDevFcPatients{} patients, with the most recent patients in the two calibration subsets; the assignment is the same for every model and seed.
 
 \subsection{Prediction Task: Landmarks and Outcomes}
 \label{sec:methods-task}
 
-The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author. It predicts the critical outcome of the benchmark (in-hospital death, or ICU transfer within 12 hours of ED departure) from the static profile and the last ten ED vital-sign rows of the stay, so its prediction is made, in effect, at ED departure; the benchmark itself predicts this outcome at triage~\cite{xie2022mimic4ed}. The end-of-stay task enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
+The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author. It predicts the critical outcome of the benchmark (in-hospital death, or ICU transfer within 12 hours of ED departure) from the static profile and the last ten ED vital-sign rows of the stay, so its prediction is made, in effect, at ED departure. It enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
 
 A prediction is made at a landmark $L$ using only what has been recorded by $L$~\cite{vanhouwelingen2007landmarking}. The primary landmark is two
 hours after ED arrival; the secondary landmark is arrival itself. Because the triage table carries no timestamp, arrival
 (\texttt{edstays.intime}) is an operational anchor and not a recorded triage time. A stay is eligible at $L$ if the patient is still in the ED
 at $L$ and has had no ICU admission and no in-hospital death at or before $L$. The primary outcome is
 $Y_L = 1$ if an ICU admission or an in-hospital death occurs in $(L, L + 24\,\mathrm{h}]$; outcomes are observed in hospital
-only, so deaths after discharge are not captured. A secondary outcome keeps the episode endpoint of the benchmark, restricted to eligible stays whose event follows $L$. At the 2\,h landmark the
-cohort has \RVHtwoEligibleTotal{} eligible stays; \RVHtwoPrimaryPositivesTotal{} are primary-outcome positives and \RVHtwoSecondaryPositivesTotal{}
-secondary-outcome positives, so the primary outcome retains \RVRetainedPrimary{} and the secondary outcome \RVRetainedSecondary{} of the \RVOriginalPositivesTotal{} positives of the original endpoint (Table~\ref{tab:cohort}). The primary outcome also counts \RVOverlapPrimaryOnly{} events that the original endpoint excludes, all of them ICU admissions later than 12 hours after ED departure but within 24 hours of the landmark (Fig.~\ref{fig:landmark}).
+only. A secondary outcome keeps the episode endpoint of the benchmark, restricted to eligible stays whose event follows $L$. At the 2\,h landmark the
+cohort has \RVHtwoEligibleTotal{} eligible stays, with \RVHtwoPrimaryPositivesTotal{} primary-outcome and \RVHtwoSecondaryPositivesTotal{}
+secondary-outcome positives; the primary outcome retains \RVRetainedPrimary{} and the secondary outcome \RVRetainedSecondary{} of the \RVOriginalPositivesTotal{} positives of the original endpoint and also counts \RVOverlapPrimaryOnly{} ICU admissions later than 12 hours after ED departure but within 24 hours of the landmark (Table~\ref{tab:cohort}, Fig.~\ref{fig:landmark}).
 
 \input{fig_landmark}
 \input{tab_cohort_merged}
@@ -40,9 +38,8 @@ secondary-outcome positives, so the primary outcome retains \RVRetainedPrimary{}
 
 Each stay is described by a static profile (age, sex, triage acuity, and the Elixhauser comorbidity count~\cite{quan2005coding}) and a sequence of
 seven vital signs: the triage measurement, then every ED measurement charted between arrival and the landmark, truncated to the
-\RVTEdHtwo{} most recent, so that nearly every stay keeps all the rows charted by the landmark. The comorbidity count is built from the diagnoses of earlier admissions that ended before arrival, within a window of \RVElixWindowDays{} days (the window of the benchmark pipeline, about five years), so the codes of the index admission, which are finalized only after discharge~\cite{ramadan2025icdleakage}, are excluded. Implausible vital signs were set to missing, and each vital sign and static feature was standardized with the training-subset mean and standard deviation. We audited every input against its source table and
-timestamp (Table~\ref{tab:timing}). Stays whose own admission appeared as a prior admission because of an inconsistent discharge
-time (\RVOwnAdmissionStays{} stays) were corrected. At the 2\,h landmark \RVZeroRowsTrainPct{} of the
+\RVTEdHtwo{} most recent, The comorbidity count uses only the diagnoses of earlier admissions that ended before arrival, within \RVElixWindowDays{} days, so the codes of the index admission, which are finalized only after discharge~\cite{ramadan2025icdleakage}, are excluded. We audited every input against its source table and
+timestamp (Table~\ref{tab:timing}). At the 2\,h landmark \RVZeroRowsTrainPct{} of the
 eligible training-period stays have no ED vital sign after triage, against \RVZeroRowsTestPct{} in the test period, a difference in recording practice
 that we report and do not correct.
 
@@ -54,52 +51,39 @@ that we report and do not correct.
 At the 2\,h landmark we compared five models. Hybrid GRU-D trained end to end is the primary model. It fuses a GRU-D encoder~\cite{che2018grud}, which decays each variable toward its training mean at learned rates that depend on the time since it was last observed, with a
 static-feature branch, and trains both jointly. A frozen-encoder variant (an ablation) uses the encoder of a Temporal-Only GRU-D trained on
 the same inputs and fits only the static branch and the head; the Temporal-Only GRU-D uses the vital-sign sequence alone. A timing-aware gradient-boosted
-tree ensemble~\cite{chen2016xgboost} receives, for each vital sign, the mean, minimum, maximum, last value, and count, the four static features, and
-timing features (the number of ED rows, the time span and intervals between measurements, the time since the last measurement overall and per vital sign,
-and counts of missing values). Logistic regression receives the same features, with median imputation and missing-value indicators. At the arrival
+tree ensemble~\cite{chen2016xgboost} receives, for each vital sign, the mean, minimum, maximum, last value, and count, the static features, and
+timing features (the number of ED rows, the time span and intervals between measurements, and the time since the last measurement). Logistic regression receives the same features. At the arrival
 landmark we compared logistic regression with gradient-boosted trees on the triage vital signs and the static profile.
 
-Every tuned model received four configurations and the same three tuning seeds, selected by validation AUROC, with the search spaces written to file before any tuning run (Supplementary Table~\ref{S-tab:tuning}).
-The neural models minimized binary cross-entropy without class weighting (Adam, weight decay $10^{-4}$, batches of 128 stays, early stopping with patience 10 and at most 100 epochs) on one NVIDIA RTX 3050 GPU with PyTorch 2.13; the trees used XGBoost 3.4 (up to 1,000 trees, early stopping after 50 rounds) and logistic regression scikit-learn 1.9. Each selected configuration was refitted with five seeds $\{42, 123, 7, 456, 789\}$; logistic regression is deterministic. The test period was never used for tuning, selection, or thresholds.
+Every tuned model received four configurations and the same three tuning seeds, selected by validation AUROC, with the search spaces written to file before any tuning run (Supplementary Table~\ref{S-tab:tuning}; training details in the Supplementary Methods).
+Each selected configuration was refitted with five seeds $\{42, 123, 7, 456, 789\}$. The test period was never used for tuning, selection, or thresholds.
 
 \subsection{Conformal Calibration}
 \label{sec:methods-conformal}
 
 Conformal methods were applied to the primary model at miscoverage $\alpha = 0.10$, and at $\alpha \in \{0.20, 0.05, 0.01\}$ in a sweep. A method returns a
 \emph{prediction set} $\widehat{C}(x) \subseteq \{0,1\}$, which covers a stay when it contains the observed class; a set with both labels, or with none,
-is an abstention. The score of label $k$ is $1 - \hat{p}_k(x)$, which equals $|k - \hat{p}(x)|$ for a binary label. \emph{Static split-conformal} calibration uses
+is an abstention. \emph{Static split-conformal} calibration uses
 the least-ambiguous (LAC) score~\cite{sadinle2019lac}: the $(1-\alpha)$ quantile $\hat{q}$ of the scores of the true
-labels on the final-calibration subset, fixed for the whole test period. We computed it in closed form, which reproduced the coverage of MAPIE~\cite{cordier2023mapie} to within \RVStaticVsMapie{} on the end-of-stay task. \emph{Mondrian-LAC}~\cite{vovk2003mondrian} computes one quantile per observed class.
-ECI~\cite{wu2025eci} extends adaptive conformal inference~\cite{gibbs2021aci} with an
-error-quantification term. We used the implementation of its authors as the reference (one compatibility edit: \texttt{np.infty} replaced by
-\texttt{np.inf}) and an event-driven re-implementation of the same update for delayed labels and per-class streams, which agreed with the reference at zero delay. With score $s_t = |y_t - \hat{p}_t|$ and radius $q_t$, the radius is updated after each label:
-\begin{align}
-g_t &= \alpha\,\mathbf{1}\{q_t \ge s_t\} - (1-\alpha)\,\mathbf{1}\{q_t < s_t\}, \label{eq:eci}\\
-\tilde{q}_{t+1} &= \tilde{q}_t - \eta_t g_t, \quad q_{t+1} = \tilde{q}_{t+1} + \eta_t (s_t - q_t)\,\sigma'(s_t - q_t), \label{eq:eci-update}
-\end{align}
-where $\sigma'$ is the derivative of the logistic function (scale $c = 1$ in the code of the ECI authors) and $\eta_t$ is a base rate $\eta \in \{0.01, 0.05, 0.1\}$, chosen on the calibration-selection subset, times the range of the scores over the
-previous five steps. The burn-in window of five steps was fixed by our protocol; the
-reference experiments of the method use windows of \RVRefBurninLo{} to \RVRefBurninHi{} steps and base rates of \RVRefEtaLo{} to \RVRefEtaHi{}, so our settings differ from them. ECI runs as one stream over the
+labels ($1-\hat{p}_k(x)$ for label $k$) on the final-calibration subset, fixed for the whole test period; our closed form reproduced the coverage of MAPIE~\cite{cordier2023mapie} to within \RVStaticVsMapie{}. \emph{Mondrian-LAC}~\cite{vovk2003mondrian} computes one quantile per observed class.
+ECI~\cite{wu2025eci} extends adaptive conformal inference~\cite{gibbs2021aci} with an error-quantification term in the update of the radius after each label (equations and settings in the Supplementary Methods); we used the implementation of its authors and an event-driven re-implementation of the same update for delayed labels and per-class streams. The base rate was chosen on the calibration-selection subset, and the burn-in window and base rates differ from those of the reference experiments of the method. ECI runs as one stream over the
 final-calibration subset followed by the test period, and \emph{Mondrian-ECI} runs one
 stream per observed class. \emph{Periodic recalibration} recomputes the static quantile every $R = 2{,}000$ arrivals from the most recent $W = 10{,}000$ labeled arrivals.
 
-Labels were also delayed by $L_d \in \{60, 240, 1{,}000\}$ arrivals. Because the order of arrivals within a year is not recoverable, the test stream reproduces the shift between the periods but not the true order of arrivals; a controlled
-drift test therefore imposed a logit shift of $+0.5$ or $+1.0$, or a case-mix change, at the midpoint of the test stream. It is a stress test with synthetic drift and not a finding about the hospital.
+Labels were also delayed by $L_d \in \{60, 240, 1{,}000\}$ arrivals, and a controlled
+drift test imposed a logit shift of $+0.5$ or $+1.0$, or a case-mix change, at the midpoint of the test stream; it is a stress test with synthetic drift and not a finding about the hospital.
 For every set method we report the class-1 coverage and, from the cross-tabulation of set type against the true class, the positive predictive value (PPV) and sensitivity of the
-singleton set $\{1\}$, the number of false alarms per 100 patients, and the abstention rate.
-To relate the sets to the score, we verified that the singleton $\{1\}$ of a static set is issued exactly for the stays whose score exceeds one threshold and compared its PPV and sensitivity with those of a plain threshold on the precision--recall curve. As a competitor that does not use conformal prediction, the logit of the score was shifted by an intercept estimated on the most recent 10{,}000 labeled arrivals every 2{,}000 arrivals, and the conformal quantile was recomputed with the same shift applied to the final-calibration scores or on the recalibrated scores.
+singleton set $\{1\}$, the number of false alarms per 100 patients, and the abstention rate, and we compare them with a plain threshold on the precision--recall curve of the score. As a competitor that does not use conformal prediction, the intercept of the score was recalibrated on recent labeled arrivals, with the conformal quantile recomputed on shifted calibration scores (Supplementary Methods).
 
 \subsection{Comparators and Diagnostic Analyses}
 \label{sec:methods-diagnostics}
 
-We computed NEWS2~\cite{rcp2017news2} from five of its seven parameters (level of consciousness and supplemental oxygen are not in the
-extract), with a missing parameter contributing 0 points, using the last value of each parameter recorded by $L$.
-
-The shortcut diagnostic asks how much of the discrimination of the end-of-stay task needs no physiological value. On the inputs of that task we fitted logistic
+NEWS2~\cite{rcp2017news2} was computed from five of its seven parameters (level of consciousness and supplemental oxygen are not in the
+extract), with a missing parameter contributing 0 points. The shortcut diagnostic asks how much of the discrimination of the end-of-stay task needs no physiological value. We fitted logistic
 regression to quantities that describe how a stay was monitored and not how the patient was: ED duration, the number of
-retained ED rows, and the number of observed values of each vital sign among them (the workflow set), and also to ED duration alone. To separate what monitoring adds from what is known at arrival, the same logistic regression was fitted to arrival information (the triage vital signs and their missingness, age, sex, triage acuity, and the comorbidity count), to arrival information with the workflow quantities, and to arrival information with ED duration alone; differences of AUROC use paired bootstrap resamples. The end-of-stay models were also refitted without the comorbidity count (Supplementary Table~\ref{S-tab:elixhauser}).
+retained ED rows, and the number of observed values of each vital sign among them (the workflow set). To separate what monitoring adds from what is known at arrival, the same model was fitted to arrival information (the triage vital signs and their missingness, age, sex, triage acuity, and the comorbidity count), to arrival information with the workflow quantities, and to arrival information with ED duration alone; differences of AUROC use paired bootstrap resamples. The end-of-stay models were also refitted without the comorbidity count (Supplementary Table~\ref{S-tab:elixhauser}).
 
-We characterized the recording practice by the share of stays with no ED vital sign by $L$ and the share whose first ED vital-sign row repeats the triage measurement (at least three vital signs recorded in both, all equal), for each approximate calendar year. To test whether the copied row or the timing features drive the landmark results, logistic regression and the tree ensemble were refitted with the same stays, outcome, tuning budget, and seeds in three variants: with the copied first row removed and the later rows shifted up, without the timing features, and with the vital-sign values and static profile only. The stored recurrent models were not refitted; each seed was scored on the test stays with the copied row removed (the elapsed-time input rebuilt as in the data pipeline). Before the result was seen, we set the rule that the de-duplicated refit of Hybrid GRU-D would be run if the seed-mean AUROC changed by \RVGrudRule{} or more, about two thirds of the margin of the pre-specified contrast with the trees.
+We characterized the recording practice by the share of stays with no ED vital sign by $L$ and the share whose first ED vital-sign row repeats the triage measurement, for each approximate calendar year. To test whether the copied row or the timing features drive the landmark results, logistic regression and the tree ensemble were refitted with the same stays, outcome, tuning budget, and seeds in three variants: with the copied first row removed, without the timing features, and with the vital-sign values and static profile only. The stored recurrent models were not refitted; each seed was scored on the test stays with the copied row removed, under a rule for a refit of Hybrid GRU-D (a change of \RVGrudRule{} or more in the seed-mean AUROC) fixed before the result was seen (Supplementary Methods).
 Analyses by landmark time, subgroup, calendar year, triage acuity, and ED duration, calibration curves, and net benefit are described in the extended version.
 
 \subsection{Statistical Analysis}
@@ -108,18 +92,17 @@ Analyses by landmark time, subgroup, calendar year, triage acuity, and ED durati
 Discrimination is reported as mean $\pm$ standard deviation (SD) over the five seeds, which measures training variability. Sampling uncertainty is reported
 separately as a 95\% percentile interval from a patient-cluster bootstrap, in which patients are resampled with all their stays (\RVBootMain{} resamples for the
 primary outcome, 1,000 for secondary analyses). Five contrasts of AUROC were specified before the results: C1 to C4 at the 2\,h landmark (Hybrid GRU-D minus the timing-aware tree
-ensemble, minus logistic regression, minus Temporal-Only GRU-D, and minus the frozen-encoder variant) and C5 at the arrival landmark (trees minus logistic regression). For each contrast, the two-sided bootstrap value was computed from the distribution of the seed-averaged difference; the five values were adjusted with the Holm procedure, and a contrast is called significant only if its adjusted value is below 0.05 and all five per-seed 95\% intervals exclude zero. Calibration was summarized by the slope and intercept of a
+ensemble, minus logistic regression, minus Temporal-Only GRU-D, and minus the frozen-encoder variant) and C5 at the arrival landmark (trees minus logistic regression). The two-sided bootstrap values of the seed-averaged differences were adjusted with the Holm procedure, and a contrast is called significant only if its adjusted value is below 0.05 and all five per-seed 95\% intervals exclude zero. Calibration was summarized by the slope and intercept of a
 logistic regression of the outcome on the logit of the score~\cite{vancalster2019calibration}.
 Conformal coverage is judged against a validity threshold of 0.89, set before analysis slightly below the 0.90 target, and is summarized over seeds, because a
-patient-cluster bootstrap is not valid for online methods. For the static methods, which apply a fixed threshold to independent patients, we also report the bootstrap 95\% interval of the seed-averaged coverage and the share of resamples that reach the threshold.
+patient-cluster bootstrap is not valid for online methods; for the static methods, which apply a fixed threshold to independent patients, we also report the bootstrap 95\% interval of the seed-averaged coverage and the share of resamples that reach the threshold.
 
-An analysis plan written before any landmark model was trained fixed the cohort, outcomes, inputs, models, tuning budget, contrasts and significance rule,
-conformal methods, coverage levels, label delays, and drift test, together with the end-of-stay diagnostics. The other analyses were added after the first results and are marked as added where they are reported; the recording practice by year, the arrival information, the bootstrap intervals of the static coverage, the precision--recall comparison, and the intercept recalibration were added after an external review. No analysis selected a parameter on the test period.
+An analysis plan written before any landmark model was trained fixed the cohort, outcomes, inputs, models, tuning budget, contrasts, conformal methods, and the end-of-stay diagnostics. Other analyses were added after the first results, some after an external review, and are marked as added where they are reported (Supplementary Methods). No analysis selected a parameter on the test period.
 
 \subsection{Reporting and Reproducibility}
 \label{sec:methods-reporting}
 
-The study is reported following TRIPOD+AI~\cite{collins2024tripodai}; the checklist, with the location of each item, is given in Supplementary
-Table~\ref{S-tab:tripod}. The statements of Sections~\ref{sec:introduction} and~\ref{sec:related-work} about prior work rest on a recorded search of OpenAlex on
-\mbox{\RVLitDate{}}: seven queries over titles and abstracts, restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). Every reported value is read from a stored result file through an accessor that records its source, and a separate step re-derives each value and compares
+The study is reported following TRIPOD+AI~\cite{collins2024tripodai} (Supplementary
+Table~\ref{S-tab:tripod}). The statements of Sections~\ref{sec:introduction} and~\ref{sec:related-work} about prior work rest on a recorded search of OpenAlex on
+\mbox{\RVLitDate{}}: seven queries restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). Every reported value is read from a stored result file through an accessor that records its source, and a separate step re-derives each value and compares
 it with the manuscript assets. An extended version with all analyses is available \datagap{extended-version reference; depends on whether JBHI review is anonymous}.

@@ -40,14 +40,14 @@ same concern has been raised for inpatient models that use diagnostic codes fina
 monitoring record rather than from coding, but the remedy is the same: tie every input to the time at which it exists.
 ```
 
-**Proposed (239 words)**
+**Proposed (237 words)**
 
 ```latex
 A model that reads the last ten vital-sign rows of a stay is scoring the stay after most of it has happened. ED
 duration, the number of measurements, and the per-vital counts, none of which is a physiological value, reached an AUROC of \RVShortAAuroc{} against
 \RVEosHybridAuroc{} for the full model, but that figure is not the leaked share of the full model, because much of it restates what is known at arrival: arrival information alone reached \RVIncArr{}. The increment that monitoring adds is smaller, \RVIncWorkOverArr{} (\RVIncWorkOverArrLo{} to \RVIncWorkOverArrHi{}), of which ED duration alone contributes \RVIncDurOverArr{}. A plausible reading is that clinicians monitor sicker patients more often and keep admitted patients in the department for
 longer, so that monitoring intensity records the clinical judgment that the model is meant to anticipate; it is equally consistent with monitoring that becomes denser because the patient is deteriorating, and the design cannot separate the two. What the diagnostic does
-establish is that the end-of-stay AUROC combines arrival information, monitoring, and later physiology, and cannot be used to argue for early warning. The audited task comes from an earlier analysis by the author, so this is a demonstration of a design that the benchmark pipeline makes easy and not a correction of published studies. The same concern has been raised for inpatient models that use diagnostic codes finalized after discharge~\cite{ramadan2025icdleakage}; the remedy is to tie every input to the time at which it exists.
+establish is that the end-of-stay AUROC combines arrival information, monitoring, and later physiology, and cannot be used to argue for early warning. The audited task comes from an earlier analysis by the author, so this demonstrates a design that the benchmark pipeline makes easy and is not a correction of published studies. The same concern has been raised for inpatient models that use diagnostic codes finalized after discharge~\cite{ramadan2025icdleakage}; the remedy is to tie every input to the time at which it exists.
 ```
 
 ## Discrimination at the Landmark
@@ -79,17 +79,16 @@ another ED cohort~\cite{mhdyunin2025news2}. The difference is consistent with th
 parameter scores as normal, and the score was not designed for a 24-hour intensive-care or death outcome.
 ```
 
-**Proposed (390 words)**
+**Proposed (492 words)**
 
 ```latex
-Restricting the inputs to what had been recorded two hours after arrival lowered the AUROC of the best model from \RVEosHybridAuroc{} to about \RVAurocXgbT{}, which is
-the figure that bears on an early prediction. Among the landmark models the differences were small: timing-aware trees
+Restricting the inputs to what had been recorded two hours after arrival lowered the AUROC of the best model from \RVEosHybridAuroc{} to about \RVAurocXgbT{}. Among the landmark models the differences were small: timing-aware trees
 were better than the primary recurrent model by \RVTreesOverHybrid{} (95\% CI \RVTreesOverHybridLo{} to \RVTreesOverHybridHi{}), the recurrent model exceeded logistic regression (\RVCTwoDelta{}), and the largest single gain came from
 static features (\RVCThreeDelta{}). This agrees with reports that gradient-boosted trees remain strong on tabular data~\cite{grinsztajn2022treebased} and with the MIMIC-IV-ED benchmark, in which deep sequence models did not outperform simpler ones~\cite{xie2022mimic4ed}. On the same stays and the same outcome, the two-hour trees exceeded the arrival trees by \RVCommonTreesGain{} (\RVCommonTreesGainLo{} to \RVCommonTreesGainHi{}), so most of the discrimination is
 already available at arrival. These statements apply to
 this cohort, this outcome, and a tuning budget of four configurations per model, in which the selected recurrent configuration lay at a corner of the grid; a larger search could narrow or reverse the differences. The decline of the AUROC at landmarks later than two hours reflects a harder, shrinking population and not a loss of signal: on one fixed set of stays the AUROC of the trees rose from \RVFixTreesOne{} at one hour to \RVFixTreesSix{} at six hours (extended version).
 
-The timing features of the tree ensemble are legitimate inputs at $L$, but they describe monitoring practice, and their value may not transfer to a hospital that charts differently. The concern is concrete in these data: in the later years of the training period the first ED vital-sign row came to repeat the triage measurement (\RVRecEqTriC{} of stays in 2011, \RVRecEqTriTest{} in the test period). For logistic regression and the trees it did not materialize: refitting without the copied rows changed the AUROC by \RVDdTreesChange{} for the trees and \RVDdLrChange{} for logistic regression (Supplementary Table~\ref{S-tab:dedup}), and the advantage of the trees over logistic regression stayed near \RVOrigTreesOverLr{} in every variant, so the timing features do not explain it. The recurrent models were not refitted, but the stored Hybrid GRU-D models changed by \RVGrudHybridChange{} in AUROC when the copied rows were removed from the test stays, well below the \RVCOneDelta{} of the pre-specified contrast with the trees; scoring without a refit does not show what models trained without the copied rows would have learned.
+The timing features of the tree ensemble are legitimate inputs at $L$, but they describe monitoring practice, and their value may not transfer to a hospital that charts differently. The concern is concrete in these data: in the later years of the training period the first ED vital-sign row came to repeat the triage measurement (\RVRecEqTriC{} of stays in 2011, \RVRecEqTriTest{} in the test period). For logistic regression and the trees it did not materialize: refitting without the copied rows changed the AUROC by \RVDdTreesChange{} for the trees and \RVDdLrChange{} for logistic regression (Supplementary Table~\ref{S-tab:dedup}), and the advantage of the trees over logistic regression stayed near \RVOrigTreesOverLr{} in every variant, so the timing features do not explain it. The recurrent models were not refitted, but the stored Hybrid GRU-D models changed by \RVGrudHybridChange{} in AUROC when the copied rows were removed from the test stays, well below the \RVCOneDelta{} of the pre-specified contrast with the trees; scoring without a refit does not show what models trained without the copied rows would have learned. The finding bears on any landmark or chronologically split model built on MIMIC-IV-ED that uses the number, timing, or mask of ED vital-sign rows, because a measurement ``by $L$'' means something different before and after the change; such studies should report the share of copied rows by period and a sensitivity analysis without them, which here left the classical models unchanged but need not do so for other models or outcomes. NEWS2 performed well below every learned model (Table~\ref{tab:discrimination}), consistent with three handicaps of this implementation: five of its seven parameters were available, a missing parameter scores as normal, and the score was not designed for a 24-hour intensive-care or death outcome.
 ```
 
 ## Coverage Is Not Alarm Precision
@@ -108,7 +107,7 @@ such sets would be useful depends on what is done with a set that contains both 
 have.
 ```
 
-**Proposed (251 words)**
+**Proposed (245 words)**
 
 ```latex
 For a rare outcome, the marginal guarantee is met by
@@ -117,9 +116,8 @@ marginal threshold is set by the many non-events and the model rarely gives an e
 Calibrating within each class closes the gap, as the theory of class-conditional validity predicts~\cite{vovk2003mondrian,ding2023classconditional}, and has been applied to sepsis mortality~\cite{yang2024sepsisconformal}; a preprint on multiple sclerosis imaging
 reported the same under-coverage of the minority class~\cite{millar2026classconditionalms}. What a class-conditional set adds is a guarantee on class-1 coverage, not information about precision. At a nominal level of 0.90, the singleton
 set $\{1\}$ identified \RVSetSensMondEci{} of the patients with the outcome and had a PPV of \RVSetPpvMondEci{}, so about \RVSetFaMondEci{} in 100 patients received it
-without the outcome. The singleton of a static set is issued exactly for the stays whose score exceeds one threshold, so a plain threshold with the sensitivity of static Mondrian-LAC reached a PPV of \RVPrMondSame{} (the set: \RVPrMondPpv{}). The false-alarm burden is therefore the cost of that sensitivity with this model, which the coverage level selects and does not change; precision rose to \RVAFivePpvMondEci{} at a nominal level of 0.95 and \RVAOnePpvMondEci{} at 0.99 only as sets became larger (Fig.~\ref{fig:alpha}). Whether
-such sets would be useful depends on what is done with a set that contains both labels, a decision that needs clinician input and a cost model, neither of which we
-have.
+without the outcome. The singleton of a static set is issued exactly for the stays whose score exceeds one threshold, so a plain threshold with the sensitivity of static Mondrian-LAC reached a PPV of \RVPrMondSame{} (the set: \RVPrMondPpv{}). The false-alarm burden is therefore the cost of that sensitivity with this model, which the coverage level selects and does not change; precision rose to \RVAFivePpvMondEci{} at a nominal level of 0.95 and \RVAOnePpvMondEci{} at 0.99 only as sets became larger (Supplementary Table~\ref{S-tab:alpha}). Whether
+such sets would be useful depends on what is done with a set that contains both labels, which needs clinician input and a cost model.
 ```
 
 ## Static, Adaptive, and Periodic Calibration
@@ -133,12 +131,11 @@ recalibration did not. Since the drift is imposed on real predictions, it demons
 to 1{,}000 arrivals left both online methods valid; longer delays were not examined on the landmark task.
 ```
 
-**Proposed (192 words)**
+**Proposed (180 words)**
 
 ```latex
 The static quantile kept marginal coverage close to the target for the primary model (\RVIntCovStatic{}; bootstrap interval \RVStaticBootHybLo{} to \RVStaticBootHybHi{}, which includes the validity threshold of 0.89), but it did not meet the threshold for every model: coverage was \RVOtherXgbStaticCov{} for the trees (\RVStaticBootXgbLo{} to \RVStaticBootXgbHi{}), below the threshold, and \RVOtherLrStaticCov{} for logistic regression. The mean predicted risk was lower than
-the observed rate in the test period (\RVCalMeanPredEndToEnd{} against \RVCalObserved{}). Shifting the intercept of the score on recent labels restored calibration in the large but, with the same shift applied to the calibration scores, left the coverage of the static sets unchanged (\RVIrCovOne{} against \RVIrCovOrig{}). A quantile recomputed on the recalibrated scores gave \RVIrCovTwo{}, as ECI (\RVIntCovEci{}) and periodic recalibration (\RVIntCovRecalTen{}) did, at wider intervals; in these data the gain from updating the quantile is small, and its value shows mainly in the drift test, where ECI recovered coverage after the case-mix change and recalibration did not. Since the drift is imposed on real predictions, it demonstrates the behavior of the methods and not a property of the hospital. Label delays of up
-to 1{,}000 arrivals left both online methods valid.
+the observed rate in the test period (\RVCalMeanPredEndToEnd{} against \RVCalObserved{}). Shifting the intercept of the score on recent labels restored calibration in the large but, with the same shift applied to the calibration scores, left the coverage of the static sets unchanged (\RVIrCovOne{} against \RVIrCovOrig{}). A quantile recomputed on the recalibrated scores gave \RVIrCovTwo{}, as ECI (\RVIntCovEci{}) and periodic recalibration (\RVIntCovRecalTen{}) did, at wider intervals; in these data the gain from updating the quantile is small, and its value shows mainly in the drift test, where ECI recovered coverage after the case-mix change and recalibration did not. The drift is imposed on real predictions, so it shows the behavior of the methods and not a property of the hospital.
 ```
 
 ## Implications for Reporting and Practice
@@ -153,43 +150,14 @@ compared with periodic recalibration on a stream with a stated order and label d
 false alarms it accepts per patient correctly flagged, a choice that needs clinical input.
 ```
 
-**Proposed (98 words)**
+**Proposed (161 words)**
 
 ```latex
-A study of an ED deterioration model should state the prediction time, restrict both the inputs and the population at risk to it, report an end-of-stay AUROC only next to a workflow-only baseline, and report class-specific coverage with the PPV and sensitivity of the singleton set and the false alarms per 100 patients at more than one coverage level. Class-conditional sets offer a trade-off to be chosen, not an alarm to be trusted: a department would set the coverage level from the number of
-false alarms it accepts per patient correctly flagged, a choice that needs clinical input.
+Three reporting practices follow for studies of ED deterioration models. A study should state the prediction time and restrict both the inputs and the population at risk to it, reporting an end-of-stay AUROC, if at all, next to a workflow-only baseline that costs one logistic regression. A conformal analysis of a rare outcome should report class-specific coverage with the PPV and sensitivity of the singleton set and the false alarms per 100 patients, at more than one coverage level and against the precision--recall curve of the score, because the marginal guarantee constrains none of them; an online calibration method should be compared with periodic recalibration on a stream with a stated order and label delay, as both restored coverage in our data. For practice, class-conditional sets offer a trade-off to be chosen, not an alarm to be trusted: a department would set the coverage level from the false alarms it accepts per patient correctly flagged, a choice that needs clinical input.
 ```
 
 ## Limitations
 
 Unchanged (433 words).
 
-Totals without Limitations: current 2114 words, proposed 1314 words; with Limitations: current 2547, proposed 1747.
-
-## What the proposal removes from the submitted version (kept in the extended version)
-- The subsection-length detail on the benchmark comparison with a restricted-input benchmark (Solaiman et al.).
-- The fixed-set landmark paragraph (reduced to one sentence, so that the fall of the AUROC at later landmarks is not read as a loss of signal), the net-benefit and NEWS2 paragraph, and the sentence that training the encoder jointly did not help.
-- The within-year permutation sentence and the statement that longer label delays were not examined.
-- The three numbered reporting practices (reduced to two sentences).
-No claim of substance is changed, so there is nothing to sync; the extended Discussion stays as it is.
-
-## Page forecast (measured, not estimated, for the Discussion step)
-A throwaway build with the proposed Discussion (and the current Introduction, Conclusion, Methods and Results) gives **10.5 pages with references** (11 pages, the last one 55% full), against 12 pages now.
-The plan target of 8.5 pages is therefore **not reached by the Discussion cut alone**. Methods (2,389 words) and Results (1,532 words) are above the word targets of the plan (1,700 and 1,300), the floats take about 2.6 pages, and the 38 references about 1.3 pages.
-
-Further levers, each with its estimated saving (words of the section files over about 1,065 words per text page; floats and references from the build):
-| Lever | Saving (pages) | Running total |
-|---|---|---|
-| After the Discussion cut as proposed | | 10.5 |
-| Introduction and Conclusion trimmed as planned (800 and 200 words) | 0.25 | 10.2 |
-| Methods to 1,700 words (cut the equations' text, the NEWS2 paragraph, the reporting paragraph) | 0.65 | 9.6 |
-| Results to 1,300 words | 0.2 | 9.4 |
-| Table II (timing audit, full width) to the supplement, three sentences stay in Methods | 0.3 | 9.1 |
-| References cut to about 33 with the shorter text | 0.15 | 8.9 |
-| Discussion body (without Limitations) from 1,314 to about 900 words | 0.4 | 8.5 |
-| Fig. 6 (full width) to one column | 0.15 | 8.35 |
-A forecast is uncertain by about 0.3 page, so 8.5 needs the first seven levers and 9.0 needs roughly the first five. At 9.0 pages the cost is one charged page; at 10.5, two.
-
-## Decisions needed
-1. Approve the proposed Discussion text (or mark the paragraphs to change).
-2. Which of the further levers to use, and whether 9.0 pages is acceptable for now.
+Totals without Limitations: current 2114 words, proposed 1459 words; with Limitations: current 2547, proposed 1892.

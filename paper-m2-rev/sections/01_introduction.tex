@@ -2,17 +2,15 @@
 \label{sec:introduction}
 
 Delays in escalating the care of critically ill patients in the emergency department (ED) are harmful: in a multicenter database, ED patients who waited six hours or
-more for transfer to the intensive care unit (ICU) had a higher in-hospital mortality than those transferred sooner~\cite{chalfin2007delayed}. Timely escalation starts
-with recognizing which patients are deteriorating. EDs rank arriving
+more for transfer to the intensive care unit (ICU) had a higher in-hospital mortality than those transferred sooner~\cite{chalfin2007delayed}. EDs rank arriving
 patients by triage acuity, and early warning scores such as the National Early Warning Score 2 (NEWS2)~\cite{rcp2017news2} add a rule-based score computed from vital signs.
-Machine-learning models that use triage data have predicted critical care outcomes better than a model based on the triage acuity
-alone~\cite{raita2019triage}, and have predicted hospital admission at triage~\cite{hong2018admission}. The MIMIC-IV-ED benchmark~\cite{xie2022mimic4ed} made such
+Machine-learning models that use triage data have predicted critical care outcomes better than a model of the triage acuity
+alone~\cite{raita2019triage} and have predicted hospital admission at triage~\cite{hong2018admission}; the MIMIC-IV-ED benchmark~\cite{xie2022mimic4ed} made such
 comparisons reproducible on public data.
 
 Whether such a model would help depends on when its score is computed. The benchmark predicts its critical outcome at triage, but its pipeline also provides every vital sign charted during the stay, and a model that reads all of them scores the stay at ED departure. Part of that record is produced after the decision the score is meant to inform: how often a patient was measured and how long the patient
-stayed reflect the course of the stay, including the decisions taken during it. A model can therefore reach a high area under the receiver operating characteristic curve (AUROC) for a reason that is of
-no use at the bedside. Leakage of this kind is a recognized cause of optimistic results in machine-learning studies~\cite{kapoor2023leakage}, and shortcut learning
-describes models that succeed through features that do not transfer to the intended use~\cite{geirhos2020shortcut}. Landmarking restricts both the inputs and the
+stayed reflect the course of the stay. A model can therefore reach a high area under the receiver operating characteristic curve (AUROC) for a reason that is of
+no use at the bedside. Leakage of this kind is a recognized cause of optimistic results in machine-learning studies~\cite{kapoor2023leakage}. Landmarking restricts both the inputs and the
 population at risk to what holds at a chosen time~\cite{vanhouwelingen2007landmarking}, and so states the prediction time explicitly.
 
 A score that is acted on also needs a statement of how far it can be trusted. Conformal prediction attaches to each patient a set of labels that contains the true
@@ -27,7 +25,7 @@ MIMIC-IV-ED~\cite{solaiman2026earlydeterioration}. It found no study that measur
 
 The aim of this study is to determine how well an ED deterioration model discriminates when its inputs are restricted to a stated prediction time, and what its
 conformal sets guarantee for the patients who deteriorate. The use we evaluate is a score available to ED clinicians two hours after arrival, after triage and before
-disposition, when escalation can still change the course of the stay. Using MIMIC-IV-ED~\cite{johnson2023mimicived} with a chronological, patient-level split, we first
+disposition. Using MIMIC-IV-ED~\cite{johnson2023mimicived} with a chronological, patient-level split, we first
 audit the inputs of an end-of-stay model against their source timestamps. We then redefine the task at a landmark two hours after arrival, with a 24-hour outcome
 window, and compare a gated recurrent unit with decay (GRU-D)~\cite{che2018grud}, gradient-boosted trees~\cite{chen2016xgboost}, and logistic regression under an
 equal tuning budget. Finally, we calibrate the primary model with static, adaptive, class-conditional, and periodically recalibrated conformal methods.
@@ -41,11 +39,8 @@ physiological value) that add a measurable increment, and vital-sign values, so 
 finding that timing-aware trees discriminate slightly better than the recurrent model in this cohort and tuning budget, and that the gain of the recurrent model over a model of the vital-sign
 sequence alone comes from adding the static profile.
 \item An evaluation of conformal calibration for the patients who deteriorate. Sets with marginal coverage rarely contain the deterioration label, and
-class-conditional sets restore it; the positive predictive value and false alarms of the resulting sets lie on the precision-recall curve of the score. We report
-them across coverage levels, label delays, and a controlled drift, and compare online updating with periodic recalibration of the quantile and of the score.
+class-conditional sets restore it; the positive predictive value and false alarms of the resulting sets lie on the precision--recall curve of the score. We report
+them across coverage levels, label delays, and a controlled drift, and compare online updating with periodic recalibration.
 \end{itemize}
 We do not propose a new conformal method. The cohort is a retrospective single-center proxy, and the results concern prediction and calibration behavior, not clinical
 benefit.
-
-The remainder of this paper is organized as follows. Section~\ref{sec:related-work} reviews related work, Section~\ref{sec:methods} describes the data, task, models, and
-calibration methods, and Section~\ref{sec:results} reports the results. Section~\ref{sec:discussion} discusses them and their limits, and Section~\ref{sec:conclusion} concludes.
