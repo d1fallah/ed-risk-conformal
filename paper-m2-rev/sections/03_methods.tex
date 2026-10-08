@@ -14,12 +14,12 @@ later stays the test period (\RVTestStays{} stays of \RVTestPatients{} patients)
 training period, and their \RVExcludedStays{} later stays (\RVExcludedPatients{} patients) were excluded from evaluation, so the test period has
 no patient in common with the training period. Within the training period, patients were ordered by the year of their first stay and
 divided into training, validation, calibration-selection, and final-calibration subsets of \RVDevTrainPatients{}, \RVDevValPatients{},
-\RVDevCsPatients{}, and \RVDevFcPatients{} patients, with the most recent patients in the two calibration subsets; the assignment is the same for every model and seed.
+\RVDevCsPatients{}, and \RVDevFcPatients{} patients, the most recent patients in the two calibration subsets.
 
 \subsection{Prediction Task: Landmarks and Outcomes}
 \label{sec:methods-task}
 
-The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author. It predicts the critical outcome of the benchmark (in-hospital death, or ICU transfer within 12 hours of ED departure) from the static profile and the last ten ED vital-sign rows of the stay, so its prediction is made, in effect, at ED departure. It enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
+The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author: it predicts the critical outcome of the benchmark (in-hospital death, or ICU transfer within 12 hours of ED departure) from the static profile and the last ten ED vital-sign rows of the stay, so its prediction is made, in effect, at ED departure. It enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
 
 A prediction is made at a landmark $L$ using only what has been recorded by $L$~\cite{vanhouwelingen2007landmarking}. The primary landmark is two
 hours after ED arrival; the secondary landmark is arrival itself. Because the triage table carries no timestamp, arrival
@@ -61,7 +61,7 @@ Each selected configuration was refitted with five seeds $\{42, 123, 7, 456, 789
 \subsection{Conformal Calibration}
 \label{sec:methods-conformal}
 
-Conformal methods were applied to the primary model at miscoverage $\alpha = 0.10$, and at $\alpha \in \{0.20, 0.05, 0.01\}$ in a sweep. A method returns a
+Conformal methods were applied to the primary model at miscoverage $\alpha = 0.10$ and in a sweep over $\alpha \in \{0.20, 0.05, 0.01\}$. A method returns a
 \emph{prediction set} $\widehat{C}(x) \subseteq \{0,1\}$, which covers a stay when it contains the observed class; a set with both labels, or with none,
 is an abstention. \emph{Static split-conformal} calibration uses
 the least-ambiguous (LAC) score~\cite{sadinle2019lac}: the $(1-\alpha)$ quantile $\hat{q}$ of the scores of the true
@@ -81,10 +81,9 @@ singleton set $\{1\}$, the number of false alarms per 100 patients, and the abst
 NEWS2~\cite{rcp2017news2} was computed from five of its seven parameters (level of consciousness and supplemental oxygen are not in the
 extract), with a missing parameter contributing 0 points. The shortcut diagnostic asks how much of the discrimination of the end-of-stay task needs no physiological value. We fitted logistic
 regression to quantities that describe how a stay was monitored and not how the patient was: ED duration, the number of
-retained ED rows, and the number of observed values of each vital sign among them (the workflow set). To separate what monitoring adds from what is known at arrival, the same model was fitted to arrival information (the triage vital signs and their missingness, age, sex, triage acuity, and the comorbidity count), to arrival information with the workflow quantities, and to arrival information with ED duration alone; differences of AUROC use paired bootstrap resamples. The end-of-stay models were also refitted without the comorbidity count (Supplementary Table~\ref{S-tab:elixhauser}).
+retained ED rows, and the number of observed values of each vital sign among them (the workflow set). To separate what monitoring adds from what is known at arrival, the same model was fitted to arrival information (the triage vital signs and their missingness, age, sex, triage acuity, and the comorbidity count), to arrival information with the workflow quantities, and to arrival information with ED duration alone; differences of AUROC use paired bootstrap resamples.
 
-We characterized the recording practice by the share of stays with no ED vital sign by $L$ and the share whose first ED vital-sign row repeats the triage measurement, for each approximate calendar year. To test whether the copied row or the timing features drive the landmark results, logistic regression and the tree ensemble were refitted with the same stays, outcome, tuning budget, and seeds in three variants: with the copied first row removed, without the timing features, and with the vital-sign values and static profile only. The stored recurrent models were not refitted; each seed was scored on the test stays with the copied row removed, under a rule for a refit of Hybrid GRU-D (a change of \RVGrudRule{} or more in the seed-mean AUROC) fixed before the result was seen (Supplementary Methods).
-Analyses by landmark time, subgroup, calendar year, triage acuity, and ED duration, calibration curves, and net benefit are described in the extended version.
+We characterized the recording practice by calendar year (Supplementary Methods). To test whether the copied row or the timing features drive the landmark results, logistic regression and the tree ensemble were refitted with the same stays, outcome, tuning budget, and seeds in three variants: with the copied first row removed, without the timing features, and with the vital-sign values and static profile only. The stored recurrent models were not refitted; each seed was scored on the test stays with the copied row removed, under a rule for a refit of Hybrid GRU-D (a change of \RVGrudRule{} or more in the seed-mean AUROC) fixed before the result was seen (Supplementary Methods).
 
 \subsection{Statistical Analysis}
 \label{sec:methods-stats}
@@ -104,5 +103,4 @@ An analysis plan written before any landmark model was trained fixed the cohort,
 
 The study is reported following TRIPOD+AI~\cite{collins2024tripodai} (Supplementary
 Table~\ref{S-tab:tripod}). The statements of Sections~\ref{sec:introduction} and~\ref{sec:related-work} about prior work rest on a recorded search of OpenAlex on
-\mbox{\RVLitDate{}}: seven queries restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). Every reported value is read from a stored result file through an accessor that records its source, and a separate step re-derives each value and compares
-it with the manuscript assets. An extended version with all analyses is available \datagap{extended-version reference; depends on whether JBHI review is anonymous}.
+\mbox{\RVLitDate{}}: seven queries restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). Every reported value is read from a stored result file (Supplementary Methods). An extended version with all analyses (landmark time, subgroups, calendar year, acuity and duration strata, calibration curves, net benefit) is available \datagap{extended-version reference; depends on whether JBHI review is anonymous}.

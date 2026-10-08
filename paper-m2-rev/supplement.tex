@@ -13,6 +13,7 @@
 \renewenvironment{table}[1][]{\origtable[H]}{\endorigtable}
 \begin{document}
 \onecolumn
+\small
 \raggedbottom
 \renewcommand{\thetable}{S\arabic{table}}
 \renewcommand{\thefigure}{S\arabic{figure}}
@@ -30,57 +31,23 @@
 \section*{Tuning budget}
 \input{tab_tuning}
 
-\clearpage
-\clearpage
-\section*{Reporting checklist}
-\input{supp_tripod}
+\section*{Comorbidity count}
+\input{tab_elixhauser}
 
-\clearpage
-\section*{Recording of vital signs by year}
+\section*{Reporting checklist}
+\begingroup\footnotesize\setlength{\tabcolsep}{3pt}\input{supp_tripod}\endgroup
+
+\section*{Recording of vital signs and the copied triage row}
 \input{tab_recording}
 \input{tab_dedup}
 
-\section*{End-of-stay diagnostics}
-\input{tab_elixhauser}
-\input{tab_arrival}
-\input{tab_duration}
-\input{tab_acuity_shortcut}
-
 \section*{Pre-specified contrasts}
 \input{tab_contrasts}
-
-\section*{Discrimination by calendar year of the test period}
-\input{tab_years}
-
-\section*{Landmark time}
-\input{tab_sweep}
-\input{tab_fixed_cohort}
-
-\section*{Calibration and subgroups}
-\input{tab_calibration}
-
-\section*{Coverage of the static conformal sets}
-\input{tab_static_cov}
-
-\section*{Robustness of the conformal results}
-\input{tab_other_models}
-\input{tab_stream}
-
-\section*{Precision of the singleton set}
-\begin{figure}[H]
-\centering
-\includegraphics[width=0.5\linewidth]{fig_pr}
-\caption{Precision--recall curve of the primary model on the test period (seed 42) with the positive predictive value and sensitivity of the singleton set $\{1\}$ of the static and online class-conditional sets at $\alpha = 0.10$. The singleton of a static set is issued exactly for the stays whose score exceeds one threshold, so its operating point lies on the curve; the three Mondrian points nearly coincide. Dotted line: event rate. MIMIC-IV-ED, retrospective single-center proxy.}
-\label{fig:pr}
-\end{figure}
 
 \section*{Nominal coverage level}
 \input{tab_alpha}
 
 \section*{Label delay and imposed drift}
 \input{tab_lag_drift}
-
-\section*{Recalibration of the score}
-\input{tab_intercept}
 
 \end{document}

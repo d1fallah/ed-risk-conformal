@@ -96,3 +96,5 @@ Note on the bibliography: BibTeX prints only cited entries, so the submitted ver
 
 ## 10. Progress
 - Step 1 (extended copy): done. `extended/` builds to text identical to the current paper (16 pages) and supplement (11 pages); the verifier passes on both versions.
+
+- Steps 2 to 6 done (commits 56958f3 to the one holding this line). Result: main text 9.4 pages with references, supplement 5 pages with the checklist (about 3.8 without), total 14.4 with and 13.2 without the checklist. The author asked on 2026-10-08 for the 14-page limit above all and 8 main pages if possible; 8 is not reachable without removing Table II or another float.

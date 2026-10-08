@@ -15,14 +15,12 @@ Removing the copied row left the discrimination of the classical models unchange
 \label{sec:results-audit}
 
 The end-of-stay models read the last ten vital-sign rows of the stay, so the rows extend past any early prediction time: in the test period,
-\RVAfterTwoHTest{} of stays kept a row charted more than two hours after arrival, and \RVAfterDepRowsTest{} retained rows in \RVAfterDepStaysTest{} test stays were charted after ED departure (Table~\ref{tab:timing}). The comorbidity count passed the audit: its diagnoses come only
-from earlier admissions. Removing the count changed the AUROC of Hybrid GRU-D by \RVElixDeltaHybrid{} and of the tree ensemble by \RVElixDeltaXgb{}
+\RVAfterTwoHTest{} of stays kept a row charted more than two hours after arrival, and \RVAfterDepRowsTest{} retained rows in \RVAfterDepStaysTest{} test stays were charted after ED departure (Table~\ref{tab:timing}). The comorbidity count passed the audit; removing it changed the AUROC of Hybrid GRU-D by \RVElixDeltaHybrid{} and of the tree ensemble by \RVElixDeltaXgb{}
 (Supplementary Table~\ref{S-tab:elixhauser}).
 
 The workflow model, a logistic regression on ED duration, the number of measurements, and the per-vital measurement counts, reached an AUROC of \RVShortAAuroc{} (95\% CI
 \RVShortALo{}--\RVShortAHi{}) on the end-of-stay task, against
-\RVEosHybridAuroc{} for Hybrid GRU-D and \RVEosXgbAuroc{} for the tree ensemble on the whole-stay vital signs (Table~\ref{tab:shortcuts}). ED duration alone gave
-\RVShortDurAuroc{}. Arrival information alone, which is known before any monitoring, reached \RVIncArr{} (\RVIncArrLo{}--\RVIncArrHi{}) in an added analysis, and the workflow quantities added to it increased the AUROC to \RVIncArrWork{} (\RVIncArrWorkLo{}--\RVIncArrWorkHi{}), an increase of \RVIncWorkOverArr{} (\RVIncWorkOverArrLo{} to \RVIncWorkOverArrHi{}); ED duration added \RVIncDurOverArr{}.
+\RVEosHybridAuroc{} for Hybrid GRU-D and \RVEosXgbAuroc{} for the tree ensemble on the whole-stay vital signs (Table~\ref{tab:shortcuts}). Arrival information alone, which is known before any monitoring, reached \RVIncArr{} (\RVIncArrLo{}--\RVIncArrHi{}) in an added analysis, and the workflow quantities added to it increased the AUROC to \RVIncArrWork{} (\RVIncArrWorkLo{}--\RVIncArrWorkHi{}), an increase of \RVIncWorkOverArr{} (\RVIncWorkOverArrLo{} to \RVIncWorkOverArrHi{}); ED duration added \RVIncDurOverArr{}.
 
 \input{tab_shortcuts_arrival}
 
@@ -37,8 +35,7 @@ All models predicted a lower mean risk than the observed rate (\RVCalMeanPredEnd
 
 Among the pre-specified contrasts (adjusted values in Supplementary Table~\ref{S-tab:contrasts}), the primary model scored \RVCOneDelta{} (\RVCOneLo{} to \RVCOneHi{}) relative to
 the tree ensemble and \RVCTwoDelta{} (\RVCTwoLo{} to \RVCTwoHi{}) relative to logistic regression; both met the significance rule. The contrast with the Temporal-Only
-model, which lacks the static features, was \RVCThreeDelta{} (\RVCThreeLo{} to \RVCThreeHi{}), and that with the frozen-encoder variant was \RVCFourDelta{}
-(\RVCFourLo{} to \RVCFourHi{}), which did not meet the all-seeds rule. At the arrival landmark the tree ensemble exceeded logistic regression by \RVCFiveDelta{}
+model, which lacks the static features, was \RVCThreeDelta{}, and that with the frozen-encoder variant was \RVCFourDelta{}, which did not meet the all-seeds rule. At the arrival landmark the tree ensemble exceeded logistic regression by \RVCFiveDelta{}
 (\RVCFiveLo{} to \RVCFiveHi{}). By approximate calendar year of the test period, the tree ensemble was at or above the
 primary model in every year (extended version). The arrival-landmark models scored on the \RVCommonN{} test stays eligible at the two-hour landmark, against the two-hour outcome, reached \RVCommonArrTrees{} (trees) against \RVCommonTwoTrees{} for the two-hour trees, a gain of \RVCommonTreesGain{} (\RVCommonTreesGainLo{} to \RVCommonTreesGainHi{}); for logistic regression the gain was \RVCommonLrGain{}. AUROC was lower at 65 years or older (\RVSubAgeOverAuroc{}) and for triage acuity 3 (\RVSubAcuityMidAuroc{}) than below 65 years (\RVSubAgeUnderAuroc{}) and for acuity 1 or 2 (\RVSubAcuityHighAuroc{}) (extended version).
 
@@ -55,7 +52,7 @@ ECI covered \RVIntCovEci{} at a width of \RVIntWidEci{}, and recalibration with 
 \subsubsection{Coverage of the Patients Who Deteriorated}
 Marginal coverage did not extend to the patients who deteriorated (Table~\ref{tab:conformal}). Class-1 coverage was \RVSetCovOneStaticLac{} for static LAC sets and
 \RVSetCovOneEciSets{} for ECI sets. A stay enters the marginal set with label 1 only if its predicted risk is at least \RVScoreNeeded{}, whereas the
-median predicted risk among stays with the outcome was \RVScoreMedEvents{} (90th percentile \RVScoreQNinetyEvents{}) and among stays without it \RVScoreMedNon{}. The singleton $\{1\}$ of a static set is issued exactly for the stays whose score exceeds one threshold, so its PPV and sensitivity are a point on the precision--recall curve of the score.
+median predicted risk among stays with the outcome was \RVScoreMedEvents{}. The singleton $\{1\}$ of a static set is issued exactly for the stays whose score exceeds one threshold, so its PPV and sensitivity are a point on the precision--recall curve of the score.
 
 Mondrian calibration raised class-1 coverage to \RVSetCovOneStaticMond{} (static), \RVSetCovOneMondEci{} (Mondrian-ECI), and \RVSetCovOneMondRecal{} (recalibrated),
 at mean set sizes of \RVSetSizeStaticMond{}, \RVSetSizeMondEci{}, and \RVSetSizeMondRecal{}. In an added analysis, for static Mondrian-LAC the PPV was \RVPrMondPpv{} at a sensitivity of \RVPrMondSens{}, against \RVPrMondSame{} for a plain threshold at that sensitivity, and for Mondrian-ECI \RVPrEciPpv{} at \RVPrEciSens{}, against \RVPrEciSame{}.
@@ -66,7 +63,7 @@ at mean set sizes of \RVSetSizeStaticMond{}, \RVSetSizeMondEci{}, and \RVSetSize
 \label{sec:results-alpha}
 Across nominal coverage levels (Fig.~\ref{fig:alpha}, Supplementary Table~\ref{S-tab:alpha}), static LAC covered \RVATwentyCovOneStaticLac{} of the patients with the outcome at 0.80
 and \RVAOneCovOneStaticLac{} at 0.99. Mondrian-ECI covered \RVATwentyCovOneMondEci{} of them at 0.80, with a PPV of \RVATwentyPpvMondEci{} and \RVATwentyFaMondEci{}
-false alarms per 100 patients; at 0.95 its PPV was \RVAFivePpvMondEci{} with \RVAFiveFaMondEci{} false alarms and a mean set size of \RVAFiveSizeMondEci{}, and at 0.99
+false alarms per 100 patients; at 0.99
 its PPV was \RVAOnePpvMondEci{} with \RVAOneFaMondEci{} false alarm per 100 patients and a mean set size of \RVAOneSizeMondEci{}. The class-1 quantile was feasible at
 every level.
 
