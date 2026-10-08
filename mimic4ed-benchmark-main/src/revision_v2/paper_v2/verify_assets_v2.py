@@ -9,6 +9,8 @@ Independent re-verification of the revision manuscript assets.
    that table's .tex file (so no cell was typed or edited after generation).
 4. Every \\RV macro used in the manuscript sections is defined, and no digit string of four or more digits or decimal number appears in the prose
    outside macros, tables, citations, and a short allow-list (dates, years, the pre-specified constants).
+5. Every number in the Abstract, Discussion and Conclusion of the submitted paper is also used or shown in the submitted main text or supplement
+   (not only in the extended version), no sentence there rests on a pointer to the extended version, and every reference resolves.
 Exit status 1 on any failure.
 """
 import glob
@@ -36,6 +38,57 @@ def sha(p):
 def check(c, msg):
     if not c:
         fails.append(msg)
+
+
+def submitted_support_check():
+    """Abstract, Discussion and Conclusion of the SUBMITTED paper must be supported by the submitted main text or supplement.
+    Every macro they use must also be used in another submitted section, or its value must appear in a table of the submitted
+    build; no sentence may rest on a pointer to the extended version; every reference must resolve to a submitted label."""
+    skip = {"rv_numbers.tex", "preamble.tex", "numfmt.tex"}
+    targets = {"00_abstract.tex", "05_discussion.tex", "06_conclusion.tex"}
+
+    def resolve(name):
+        for base in (PAPER, os.path.join(PAPER, "floats"), os.path.join(PAPER, "sections")):
+            for cand in (os.path.join(base, name), os.path.join(base, name + ".tex")):
+                if os.path.isfile(cand) and cand.endswith(".tex"):
+                    return cand
+        return None
+
+    def strip(t):
+        return re.sub(r"(?m)^\s*%.*$", "", t)
+
+    reach, todo = {}, [os.path.join(PAPER, "main.tex"), os.path.join(PAPER, "supplement.tex")]
+    while todo:
+        q = todo.pop()
+        if q in reach or os.path.basename(q) in skip:
+            continue
+        reach[q] = strip(open(q, encoding="utf-8").read())
+        for nm in re.findall(r"\\input\{([^}]*)\}", reach[q]):
+            r = resolve(nm)
+            if r:
+                todo.append(r)
+    defs = dict(re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read()))
+    support = {q: t for q, t in reach.items() if os.path.basename(q) not in targets}
+    support_text = "\n".join(support.values())
+    float_text = "\n".join(t for q, t in support.items() if os.sep + "floats" + os.sep in q)
+    labels = set(re.findall(r"\\label\{([^}]*)\}", "\n".join(reach.values())))
+    n_macro = 0
+    for q, t in reach.items():
+        b = os.path.basename(q)
+        if b not in targets:
+            continue
+        for m in sorted(set(re.findall(r"\\(RV[A-Za-z]+)", t))):
+            n_macro += 1
+            v = defs.get(m)
+            used_elsewhere = re.search(r"\\" + m + r"(?![A-Za-z])", support_text) is not None
+            in_table = v is not None and re.search(r"(?<![\d.])" + re.escape(v) + r"(?![\d])", float_text) is not None
+            check(used_elsewhere or in_table, f"{b}: \\{m} ({v}) is supported only by the extended version (not used in another submitted section or shown in a submitted table)")
+        for i, line in enumerate(t.split("\n"), 1):
+            if re.search(r"extended\s+version", line):
+                check(False, f"{b}: a statement rests on a pointer to the extended version ({line.strip()[:90]}...)")
+        for lab in set(re.findall(r"\\(?:ref|eqref)\{([^}]*)\}", t)):
+            check(lab in labels or lab.split("-", 1)[-1] in labels, f"{b}: reference {lab} does not resolve to a label of the submitted build")
+    print(f"submitted-support check: {n_macro} macro uses in the Abstract, Discussion and Conclusion tested against the submitted main text and supplement")
 
 
 def main():
@@ -112,6 +165,7 @@ def main():
             for tok in re.findall(r"(?<![A-Za-z\\{])\d[\d,\.]*\d|\b\d\b", s):
                 if not allow.match(tok) and not re.match(r"^\d$", tok):
                     check(False, f"{os.path.basename(f)}:{i}: possible hand-typed number {tok!r}")
+    submitted_support_check()
     print(f"records replayed: {n_rec}; macros defined {len(defined)}, used {len(used)}; section files scanned {len(section_files)}")
     for m in fails[:80]:
         print("FAIL:", m)

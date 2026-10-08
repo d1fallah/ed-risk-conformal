@@ -19,17 +19,17 @@ divided into training, validation, calibration-selection, and final-calibration 
 \subsection{Prediction Task: Landmarks and Outcomes}
 \label{sec:methods-task}
 
-The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author: it predicts the critical outcome of the benchmark (in-hospital death, or ICU transfer within 12 hours of ED departure) from the static profile and the last ten ED vital-sign rows of the stay, so its prediction is made, in effect, at ED departure. It enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
+The audited task is the end-of-stay task of an earlier, unpublished analysis of this cohort by the author: it predicts in-hospital death or ICU transfer within 12 hours of ED departure from the static profile and the last ten ED vital-sign rows of the stay, so in effect at departure. It enters only the input audit, the shortcut diagnostic, and a check of the conformal implementation.
 
 A prediction is made at a landmark $L$ using only what has been recorded by $L$~\cite{vanhouwelingen2007landmarking}. The primary landmark is two
-hours after ED arrival; the secondary landmark is arrival itself. Because the triage table carries no timestamp, arrival
-(\texttt{edstays.intime}) is an operational anchor and not a recorded triage time. A stay is eligible at $L$ if the patient is still in the ED
+hours after ED arrival and the secondary landmark is arrival itself; because the triage table carries no timestamp, arrival is an operational anchor. A stay is eligible at $L$ if the patient is still in the ED
 at $L$ and has had no ICU admission and no in-hospital death at or before $L$. The primary outcome is
 $Y_L = 1$ if an ICU admission or an in-hospital death occurs in $(L, L + 24\,\mathrm{h}]$; outcomes are observed in hospital
 only. A secondary outcome keeps the episode endpoint of the benchmark, restricted to eligible stays whose event follows $L$. At the 2\,h landmark the
 cohort has \RVHtwoEligibleTotal{} eligible stays, with \RVHtwoPrimaryPositivesTotal{} primary-outcome and \RVHtwoSecondaryPositivesTotal{}
-secondary-outcome positives; the primary outcome retains \RVRetainedPrimary{} and the secondary outcome \RVRetainedSecondary{} of the \RVOriginalPositivesTotal{} positives of the original endpoint and also counts \RVOverlapPrimaryOnly{} ICU admissions later than 12 hours after ED departure but within 24 hours of the landmark (Table~\ref{tab:cohort}).
+secondary-outcome positives (Table~\ref{tab:cohort}, Fig.~\ref{fig:landmark}); their relation to the endpoint of the benchmark is in the Supplementary Methods.
 
+\input{fig_landmark_col}
 \input{tab_cohort_merged}
 
 \subsection{Inputs and Their Timing}
@@ -37,10 +37,8 @@ secondary-outcome positives; the primary outcome retains \RVRetainedPrimary{} an
 
 Each stay is described by a static profile (age, sex, triage acuity, and the Elixhauser comorbidity count~\cite{quan2005coding}) and a sequence of
 seven vital signs: the triage measurement, then every ED measurement charted between arrival and the landmark, truncated to the
-\RVTEdHtwo{} most recent, The comorbidity count uses only the diagnoses of earlier admissions that ended before arrival, within \RVElixWindowDays{} days, so the codes of the index admission, which are finalized only after discharge~\cite{ramadan2025icdleakage}, are excluded. We audited every input against its source table and
-timestamp (Table~\ref{tab:timing}). At the 2\,h landmark \RVZeroRowsTrainPct{} of the
-eligible training-period stays have no ED vital sign after triage, against \RVZeroRowsTestPct{} in the test period, a difference in recording practice
-that we report and do not correct.
+\RVTEdHtwo{} most recent. The comorbidity count uses only the diagnoses of earlier admissions that ended before arrival, within \RVElixWindowDays{} days, so the codes of the index admission, which are finalized only after discharge~\cite{ramadan2025icdleakage}, are excluded. We audited every input against its source table and
+timestamp (Table~\ref{tab:timing}). The recording practice differs between the periods (Table~\ref{tab:cohort}); we report this and do not correct it.
 
 \input{tab_timing_slim}
 
@@ -65,7 +63,7 @@ Conformal methods were applied to the primary model at miscoverage $\alpha = 0.1
 is an abstention. \emph{Static split-conformal} calibration uses
 the least-ambiguous (LAC) score~\cite{sadinle2019lac}: the $(1-\alpha)$ quantile $\hat{q}$ of the scores of the true
 labels ($1-\hat{p}_k(x)$ for label $k$) on the final-calibration subset, fixed for the whole test period; our closed form reproduced the coverage of MAPIE~\cite{cordier2023mapie} to within \RVStaticVsMapie{}. \emph{Mondrian-LAC}~\cite{vovk2003mondrian} computes one quantile per observed class.
-ECI~\cite{wu2025eci} extends adaptive conformal inference~\cite{gibbs2021aci} with an error-quantification term in the update of the radius after each label (equations and settings in the Supplementary Methods); we used the implementation of its authors and an event-driven re-implementation of the same update for delayed labels and per-class streams. The base rate was chosen on the calibration-selection subset, and the burn-in window and base rates differ from those of the reference experiments of the method. ECI runs as one stream over the
+ECI~\cite{wu2025eci} extends adaptive conformal inference~\cite{gibbs2021aci} with an error-quantification term in the update of the radius after each label (equations and settings in the Supplementary Methods); we used the implementation of its authors and an event-driven re-implementation of the same update for delayed labels and per-class streams. ECI runs as one stream over the
 final-calibration subset followed by the test period, and \emph{Mondrian-ECI} runs one
 stream per observed class. \emph{Periodic recalibration} recomputes the static quantile every $R = 2{,}000$ arrivals from the most recent $W = 10{,}000$ labeled arrivals.
 
@@ -90,8 +88,7 @@ We characterized the recording practice by calendar year (Supplementary Methods)
 Discrimination is reported as mean $\pm$ standard deviation (SD) over the five seeds, which measures training variability. Sampling uncertainty is reported
 separately as a 95\% percentile interval from a patient-cluster bootstrap, in which patients are resampled with all their stays (\RVBootMain{} resamples for the
 primary outcome, 1,000 for secondary analyses). Five contrasts of AUROC were specified before the results: C1 to C4 at the 2\,h landmark (Hybrid GRU-D minus the timing-aware tree
-ensemble, minus logistic regression, minus Temporal-Only GRU-D, and minus the frozen-encoder variant) and C5 at the arrival landmark (trees minus logistic regression). The two-sided bootstrap values of the seed-averaged differences were adjusted with the Holm procedure, and a contrast is called significant only if its adjusted value is below 0.05 and all five per-seed 95\% intervals exclude zero. Calibration was summarized by the slope and intercept of a
-logistic regression of the outcome on the logit of the score~\cite{vancalster2019calibration}.
+ensemble, minus logistic regression, minus Temporal-Only GRU-D, and minus the frozen-encoder variant) and C5 at the arrival landmark (trees minus logistic regression). The two-sided bootstrap values of the seed-averaged differences were adjusted with the Holm procedure, and a contrast is called significant only if its adjusted value is below 0.05 and all five per-seed 95\% intervals exclude zero. Calibration was summarized by the slope and intercept of a logistic regression of the outcome on the logit of the score~\cite{vancalster2019calibration}, and discrimination was also computed by sex and by age below and at or above 65 years.
 Conformal coverage is judged against a validity threshold of 0.89, set before analysis slightly below the 0.90 target, and is summarized over seeds, because a
 patient-cluster bootstrap is not valid for online methods; for the static methods, which apply a fixed threshold to independent patients, we also report the bootstrap 95\% interval of the seed-averaged coverage and the share of resamples that reach the threshold.
 
@@ -102,4 +99,4 @@ An analysis plan written before any landmark model was trained fixed the cohort,
 
 The study is reported following TRIPOD+AI~\cite{collins2024tripodai} (Supplementary
 Table~\ref{S-tab:tripod}). The statements of Sections~\ref{sec:introduction} and~\ref{sec:related-work} about prior work rest on a recorded search of OpenAlex on
-\mbox{\RVLitDate{}}: seven queries restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). Every reported value is read from a stored result file (Supplementary Methods). An extended version with all analyses (landmark time, subgroups, calendar year, acuity and duration strata, calibration curves, net benefit) is available \datagap{extended-version reference; depends on whether JBHI review is anonymous}.
+\mbox{\RVLitDate{}}: seven queries restricted to English records from 2015 onward and screened by one author (Supplementary Table~\ref{S-tab:search}). An extended version with all analyses (landmark time, subgroups, calendar year, acuity and duration strata, calibration curves, net benefit) is available \datagap{extended-version reference; depends on whether JBHI review is anonymous}.

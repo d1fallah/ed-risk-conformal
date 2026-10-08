@@ -5,9 +5,8 @@
 \label{sec:results-cohort}
 
 At the two-hour landmark, \RVHtwoTestEligible{} of the \RVHtwoTestStays{} test-period stays were eligible and \RVHtwoTestPositives{} had the primary outcome (Table~\ref{tab:cohort}).
-The primary-outcome rate rose from \RVCharTrainPrimary{} in the training period to \RVCharTestPrimary{} in the test period, and the share of stays with at least one comorbidity fell from \RVCharTrainElixPct{} to \RVCharTestElixPct{}.
 
-The recording of vital signs changed between the periods (Table~\ref{tab:cohort}). In an added analysis (Supplementary Table~\ref{S-tab:recording}), the change was a transition between 2013 and 2016 that ended before the test period. The share of eligible stays with no ED vital sign by two hours fell from \RVRecZeroC{} in 2011 to \RVRecZeroF{} in 2014 and \RVRecZeroH{} in 2016, and over the same years the share of stays whose first ED vital-sign row repeats the triage measurement rose from \RVRecEqTriC{} to \RVRecEqTriF{} and \RVRecEqTriH{}, and was \RVRecEqTriTest{} in the test period.
+The recording of vital signs changed between the periods (Table~\ref{tab:cohort}). In an added analysis (Supplementary Table~\ref{S-tab:recording}), the change was a transition between 2013 and 2016 that ended before the test period. The share of eligible stays with no ED vital sign by two hours fell from \RVRecZeroC{} in 2011 to \RVRecZeroH{} in 2016, and over the same years the share of stays whose first ED vital-sign row repeats the triage measurement rose from \RVRecEqTriC{} to \RVRecEqTriF{} and \RVRecEqTriH{}, and was \RVRecEqTriTest{} in the test period.
 
 Removing the copied row left the discrimination of the classical models unchanged (added analysis; Supplementary Table~\ref{S-tab:dedup}). It was removed for \RVDdFlaggedFit{} of the stays of the fitting subset and \RVDdFlaggedTest{} of the test period, and the AUROC of the trees and of logistic regression changed by \RVDdTreesChange{} (\RVDdTreesChangeLo{} to \RVDdTreesChangeHi{}) and \RVDdLrChange{} (\RVDdLrChangeLo{} to \RVDdLrChangeHi{}). Removing the timing features changed them by \RVNtTreesChange{} and \RVNtLrChange{}, and the advantage of the trees over logistic regression was \RVOrigTreesOverLr{} (\RVOrigTreesOverLrLo{} to \RVOrigTreesOverLrHi{}) in the primary analysis and between \RVNtTreesOverLr{} and \RVVoTreesOverLr{} in the three variants. Scoring the stored Hybrid GRU-D models on test stays without the copied row, with no refit, changed the seed-mean AUROC from \RVGrudHybridStored{} to \RVGrudHybridDd{} (\RVGrudHybridChange{}; \RVGrudHybridChangeLo{} to \RVGrudHybridChangeHi{}), below the threshold of \RVGrudRule{} set beforehand, so the refit was not run; the Temporal-Only models changed by \RVGrudTempChange{}.
 
@@ -18,7 +17,7 @@ The end-of-stay models read the last ten vital-sign rows of the stay, so the row
 \RVAfterTwoHTest{} of stays kept a row charted more than two hours after arrival, and \RVAfterDepRowsTest{} retained rows in \RVAfterDepStaysTest{} test stays were charted after ED departure (Table~\ref{tab:timing}). The comorbidity count passed the audit; removing it changed the AUROC of Hybrid GRU-D by \RVElixDeltaHybrid{} and of the tree ensemble by \RVElixDeltaXgb{}
 (Supplementary Table~\ref{S-tab:elixhauser}).
 
-The workflow model, a logistic regression on ED duration, the number of measurements, and the per-vital measurement counts, reached an AUROC of \RVShortAAuroc{} (95\% CI
+The workflow model reached an AUROC of \RVShortAAuroc{} (95\% CI
 \RVShortALo{}--\RVShortAHi{}) on the end-of-stay task, against
 \RVEosHybridAuroc{} for Hybrid GRU-D and \RVEosXgbAuroc{} for the tree ensemble on the whole-stay vital signs (Table~\ref{tab:shortcuts}). Arrival information alone, which is known before any monitoring, reached \RVIncArr{} (\RVIncArrLo{}--\RVIncArrHi{}) in an added analysis, and the workflow quantities added to it increased the AUROC to \RVIncArrWork{} (\RVIncArrWorkLo{}--\RVIncArrWorkHi{}), an increase of \RVIncWorkOverArr{} (\RVIncWorkOverArrLo{} to \RVIncWorkOverArrHi{}); ED duration added \RVIncDurOverArr{}.
 
@@ -36,8 +35,7 @@ All models predicted a lower mean risk than the observed rate (\RVCalMeanPredEnd
 Among the pre-specified contrasts (adjusted values in Supplementary Table~\ref{S-tab:contrasts}), the primary model scored \RVCOneDelta{} (\RVCOneLo{} to \RVCOneHi{}) relative to
 the tree ensemble and \RVCTwoDelta{} (\RVCTwoLo{} to \RVCTwoHi{}) relative to logistic regression; both met the significance rule. The contrast with the Temporal-Only
 model, which lacks the static features, was \RVCThreeDelta{}, and that with the frozen-encoder variant was \RVCFourDelta{}, which did not meet the all-seeds rule. At the arrival landmark the tree ensemble exceeded logistic regression by \RVCFiveDelta{}
-(\RVCFiveLo{} to \RVCFiveHi{}). By approximate calendar year of the test period, the tree ensemble was at or above the
-primary model in every year (extended version). The arrival-landmark models scored on the \RVCommonN{} test stays eligible at the two-hour landmark, against the two-hour outcome, reached \RVCommonArrTrees{} (trees) against \RVCommonTwoTrees{} for the two-hour trees, a gain of \RVCommonTreesGain{} (\RVCommonTreesGainLo{} to \RVCommonTreesGainHi{}); for logistic regression the gain was \RVCommonLrGain{}. AUROC was lower at 65 years or older (\RVSubAgeOverAuroc{}) and for triage acuity 3 (\RVSubAcuityMidAuroc{}) than below 65 years (\RVSubAgeUnderAuroc{}) and for acuity 1 or 2 (\RVSubAcuityHighAuroc{}) (extended version).
+(\RVCFiveLo{} to \RVCFiveHi{}). The arrival-landmark models scored on the \RVCommonN{} test stays eligible at the two-hour landmark, against the two-hour outcome, reached \RVCommonArrTrees{} (trees) against \RVCommonTwoTrees{} for the two-hour trees, a gain of \RVCommonTreesGain{} (\RVCommonTreesGainLo{} to \RVCommonTreesGainHi{}); for logistic regression the gain was \RVCommonLrGain{}. In an added analysis, the AUROC of the primary model was \RVSubFemaleAuroc{} (\RVSubFemaleLo{}--\RVSubFemaleHi{}) for women and \RVSubMaleAuroc{} (\RVSubMaleLo{}--\RVSubMaleHi{}) for men, and \RVSubAgeUnderAuroc{} (\RVSubAgeUnderLo{}--\RVSubAgeUnderHi{}) below 65 years against \RVSubAgeOverAuroc{} (\RVSubAgeOverLo{}--\RVSubAgeOverHi{}) at 65 years or older.
 
 \input{tab_discrimination_cal}
 
@@ -46,8 +44,8 @@ primary model in every year (extended version). The arrival-landmark models scor
 
 \subsubsection{Marginal Coverage}
 Static split-conformal score intervals, calibrated on \RVNFc{} final-calibration stays (\RVPosFc{} with the outcome), covered \RVIntCovStatic{} (SD \RVIntCovSdStatic{}
-over seeds) of the \RVNTest{} test stays at a target of 0.90, above the validity threshold of 0.89, with a mean width of \RVIntWidStatic{}.
-ECI covered \RVIntCovEci{} at a width of \RVIntWidEci{}, and recalibration with a 10{,}000-arrival window \RVIntCovRecalTen{} at \RVIntWidRecalTen{}. In an added analysis, the patient-cluster bootstrap 95\% interval of the static coverage of the primary model was \RVStaticBootHybLo{} to \RVStaticBootHybHi{}, which includes the threshold of 0.89 (\RVStaticBootHybShare{} of resamples reached it). With the tree ensemble static coverage was \RVOtherXgbStaticCov{} (\RVStaticBootXgbLo{} to \RVStaticBootXgbHi{}; \RVStaticBootXgbShare{} of resamples reached the threshold), which does not meet the validity threshold, and with logistic regression \RVOtherLrStaticCov{}; ECI coverage was \RVOtherXgbEciCov{} and \RVOtherLrEciCov{}.
+over seeds) of the \RVNTest{} test stays at a target of 0.90, above the validity threshold of 0.89.
+ECI covered \RVIntCovEci{}, and recalibration with a 10{,}000-arrival window \RVIntCovRecalTen{}. In an added analysis, the patient-cluster bootstrap 95\% interval of the static coverage of the primary model was \RVStaticBootHybLo{} to \RVStaticBootHybHi{}, which includes the threshold of 0.89 (\RVStaticBootHybShare{} of resamples reached it). With the tree ensemble static coverage was \RVOtherXgbStaticCov{} (\RVStaticBootXgbLo{} to \RVStaticBootXgbHi{}; \RVStaticBootXgbShare{} of resamples reached the threshold), which does not meet the validity threshold, and with logistic regression \RVOtherLrStaticCov{}; ECI coverage was \RVOtherXgbEciCov{} and \RVOtherLrEciCov{}.
 
 \subsubsection{Coverage of the Patients Who Deteriorated}
 Marginal coverage did not extend to the patients who deteriorated (Table~\ref{tab:conformal}). Class-1 coverage was \RVSetCovOneStaticLac{} for static LAC sets and
@@ -71,13 +69,12 @@ at mean set sizes of \RVSetSizeStaticMond{}, \RVSetSizeMondEci{}, and \RVSetSize
 Across nominal coverage levels (Fig.~\ref{fig:alpha}, Supplementary Table~\ref{S-tab:alpha}), static LAC covered \RVATwentyCovOneStaticLac{} of the patients with the outcome at 0.80
 and \RVAOneCovOneStaticLac{} at 0.99. Mondrian-ECI covered \RVATwentyCovOneMondEci{} of them at 0.80, with a PPV of \RVATwentyPpvMondEci{} and \RVATwentyFaMondEci{}
 false alarms per 100 patients; at 0.99
-its PPV was \RVAOnePpvMondEci{} with \RVAOneFaMondEci{} false alarm per 100 patients and a mean set size of \RVAOneSizeMondEci{}. The class-1 quantile was feasible at
-every level.
+its PPV was \RVAOnePpvMondEci{} with \RVAOneFaMondEci{} false alarm per 100 patients and a mean set size of \RVAOneSizeMondEci{}.
 
 \begin{figure}[t]
 \centering
 \includegraphics[width=\linewidth]{fig_alpha_col}
-\caption{Class-1 coverage and false alarms per 100 patients of the singleton set $\{1\}$ against the nominal coverage $1-\alpha$, for the primary model on the test period (mean over five seeds). Dotted line: class-1 coverage equal to the nominal level. MIMIC-IV-ED, retrospective single-center proxy.}
+\caption{Class-1 coverage and false alarms per 100 patients of the singleton set $\{1\}$ against the nominal coverage $1-\alpha$, for the primary model on the test period (mean over five seeds). Dotted line: class-1 coverage equal to the nominal level. The class-1 quantile was feasible at every level (\RVPosFc{} calibration positives). MIMIC-IV-ED, retrospective single-center proxy.}
 \label{fig:alpha}
 \end{figure}
 
