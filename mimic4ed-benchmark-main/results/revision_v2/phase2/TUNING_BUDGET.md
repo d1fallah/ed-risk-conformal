@@ -26,3 +26,5 @@ equal budget for all models of the landmark task.
 Sequence input length at the 2 h landmark: 7 ED slots + the triage slot (the smallest slot count covering 99.5% of eligible stays; 1,321 of
 343,153 eligible stays are truncated to their latest 7 rows). Vital-sign and static scalers are the existing ones fitted on the
 development `training` subjects (never refitted on validation or test).
+
+**Erratum (2026-10-08).** The line above that gives the writing time as 02:05 is inaccurate. The file system records this file as created at 01:59:24 on 2026-10-07 and not modified since; the first tuning logs were created at 02:00:56 (`p2_2_classical.log`) and 02:02:35 (`p2_3_e2e.log`). The budget therefore preceded every tuning run by about one and a half minutes. The text above is left unchanged.

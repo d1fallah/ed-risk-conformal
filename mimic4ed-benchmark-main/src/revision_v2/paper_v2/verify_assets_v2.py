@@ -160,8 +160,9 @@ def main():
     for m in sorted(used - defined):
         check(False, f"macro used but not defined: \\{m}")
     # hand-typed numbers in prose
+    # 2.2 = version of the MIMIC-IV-ED module (a data version, not a result)
     # 20 = minimum events per evaluated stratum (p2_16); 0.40 = upper end of the decision-curve grid (p2_13); both fixed in code before running.
-    allow = re.compile(r"^(0\.(05|10|20|01|89|90|40)|0\.9|0\.80|0\.95|0\.99|2[0-9]{3}|10|20|24|12|18|42|50|65|90|95|100|128|3050|2\.13|3\.4|1\.9|1\.5|60|240|1,?000|2,?000|10,?000|40,?000)$")
+    allow = re.compile(r"^(0\.(05|10|20|01|89|90|40)|0\.9|0\.80|0\.95|0\.99|2[0-9]{3}|10|20|24|12|18|42|50|65|90|95|100|128|3050|2\.13|2\.2|3\.4|1\.9|1\.5|60|240|1,?000|2,?000|10,?000|40,?000)$")
     for f in section_files:
         if os.path.basename(f) == "supp_tripod.tex":
             continue  # reporting checklist: its digits are TRIPOD+AI item numbers, and it holds no result
