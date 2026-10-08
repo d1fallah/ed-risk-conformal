@@ -70,6 +70,13 @@ def submitted_support_check():
     defs = dict(re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read()))
     support = {q: t for q, t in reach.items() if os.path.basename(q) not in targets}
     support_text = "\n".join(support.values())
+    # a macro is also supported when another macro used in the submitted main text or supplement was read from the same source value
+    # (for example an unsigned form of a signed difference); the macros and the provenance records of rv_numbers are written in the same order
+    order = re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read())
+    recs = json.load(open(os.path.join(PD.PROVENANCE_DIR, "rv_numbers.json")))["records"]
+    check(len(order) == len(recs), "rv_numbers macros and provenance records differ in number")
+    source = {nm: (r["artifact"], r["pointer"], r.get("reduce_how")) for (nm, val), r in zip(order, recs) if r["formatted"] == val and r.get("pointer")}
+    support_sources = {source[n] for n in set(re.findall(r"\\(RV[A-Za-z]+)", support_text)) if n in source}
     float_text = "\n".join(t for q, t in support.items() if os.sep + "floats" + os.sep in q)
     labels = set(re.findall(r"\\label\{([^}]*)\}", "\n".join(reach.values())))
     n_macro = 0
@@ -81,6 +88,7 @@ def submitted_support_check():
             n_macro += 1
             v = defs.get(m)
             used_elsewhere = re.search(r"\\" + m + r"(?![A-Za-z])", support_text) is not None
+            used_elsewhere = used_elsewhere or (m in source and source[m] in support_sources)
             in_table = v is not None and re.search(r"(?<![\d.])" + re.escape(v) + r"(?![\d])", float_text) is not None
             check(used_elsewhere or in_table, f"{b}: \\{m} ({v}) is supported only by the extended version (not used in another submitted section or shown in a submitted table)")
         for i, line in enumerate(t.split("\n"), 1):

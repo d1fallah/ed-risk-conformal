@@ -36,6 +36,9 @@ def macros_D():
     for k, nm in (("h2_trees minus arrival_trees", "TreesGain"), ("h2_logreg minus arrival_logreg", "LrGain")):
         b = f"/differences/{k}"
         L += [(f"Common{nm}", AH, b + "/delta", "+.3f"), (f"Common{nm}Lo", AH, b + "/ci95/0", "+.3f"), (f"Common{nm}Hi", AH, b + "/ci95/1", "+.3f")]
+    # unsigned form of the trees gain, for use inside a sentence ("a further 0.027") rather than as a signed difference
+    b = "/differences/h2_trees minus arrival_trees"
+    L += [("CommonTreesGainU", AH, b + "/delta", ".3f"), ("CommonTreesGainULo", AH, b + "/ci95/0", ".3f"), ("CommonTreesGainUHi", AH, b + "/ci95/1", ".3f")]
     L += [("CommonN", AH, "/n_common", ",d")]
     # bootstrap intervals of the static coverage
     for k, nm in (("hybrid_e2e", "Hyb"), ("xgboost_timing", "Xgb"), ("logreg", "Lr")):

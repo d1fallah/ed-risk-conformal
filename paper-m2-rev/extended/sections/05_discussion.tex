@@ -29,7 +29,7 @@ were better than the primary recurrent model by \RVTreesOverHybrid{} (95\% CI \R
 \RVHtwoTestEligible{} test stays and small in absolute terms, and the recurrent model exceeded logistic regression (difference \RVCTwoDelta{}). The largest single gain came from
 static features (\RVCThreeDelta{}). This agrees with reports that gradient-boosted trees remain strong on tabular data~\cite{grinsztajn2022treebased}, with the MIMIC-IV-ED benchmark, in which deep sequence models did not outperform simpler ones~\cite{xie2022mimic4ed}, and with the
 finding that models of triage data outperform a model of the triage acuity alone~\cite{raita2019triage}; most of the discrimination is
-already available at arrival. On the same stays and the same outcome, the two-hour trees exceeded the arrival trees by \RVCommonTreesGain{} (\RVCommonTreesGainLo{} to \RVCommonTreesGainHi{}), so the two hours add an amount that is detectable and small (Supplementary Table~\ref{S-tab:arrival}). Training the encoder jointly with the static branch did not help. These statements apply to
+already available at arrival. On the same stays and the same outcome, the arrival trees reached \RVCommonArrTrees{} and the two-hour trees \RVCommonTwoTrees{}, so the two hours add a further \RVCommonTreesGainU{} (\RVCommonTreesGainULo{} to \RVCommonTreesGainUHi{}), a gain whose interval excludes zero (Supplementary Table~\ref{S-tab:arrival}). Training the encoder jointly with the static branch did not help. These statements apply to
 this cohort, this outcome, and a tuning budget of four configurations per model, in which the selected recurrent configuration lay at a corner of the grid (the larger
 hidden size and the smaller step size); a larger search could narrow or reverse the differences.
 
