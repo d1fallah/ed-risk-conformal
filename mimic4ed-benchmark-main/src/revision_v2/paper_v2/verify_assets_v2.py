@@ -40,15 +40,18 @@ def check(c, msg):
         fails.append(msg)
 
 
-def submitted_support_check():
+def submitted_support_check(paper=None, prov_dir=None, report=None):
     """Abstract, Discussion and Conclusion of the SUBMITTED paper must be supported by the submitted main text or supplement.
     Every macro they use must also be used in another submitted section, or its value must appear in a table of the submitted
     build; no sentence may rest on a pointer to the extended version; every reference must resolve to a submitted label."""
+    paper = paper or PAPER
+    prov_dir = prov_dir or PD.PROVENANCE_DIR
+    report = report or check
     skip = {"rv_numbers.tex", "preamble.tex", "numfmt.tex"}
     targets = {"00_abstract.tex", "05_discussion.tex", "06_conclusion.tex"}
 
     def resolve(name):
-        for base in (PAPER, os.path.join(PAPER, "floats"), os.path.join(PAPER, "sections")):
+        for base in (paper, os.path.join(paper, "floats"), os.path.join(paper, "sections")):
             for cand in (os.path.join(base, name), os.path.join(base, name + ".tex")):
                 if os.path.isfile(cand) and cand.endswith(".tex"):
                     return cand
@@ -57,7 +60,7 @@ def submitted_support_check():
     def strip(t):
         return re.sub(r"(?m)^\s*%.*$", "", t)
 
-    reach, todo = {}, [os.path.join(PAPER, "main.tex"), os.path.join(PAPER, "supplement.tex")]
+    reach, todo = {}, [os.path.join(paper, "main.tex"), os.path.join(paper, "supplement.tex")]
     while todo:
         q = todo.pop()
         if q in reach or os.path.basename(q) in skip:
@@ -67,14 +70,14 @@ def submitted_support_check():
             r = resolve(nm)
             if r:
                 todo.append(r)
-    defs = dict(re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read()))
+    defs = dict(re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(paper, "rv_numbers.tex"), encoding="utf-8").read()))
     support = {q: t for q, t in reach.items() if os.path.basename(q) not in targets}
     support_text = "\n".join(support.values())
     # a macro is also supported when another macro used in the submitted main text or supplement was read from the same source value
     # (for example an unsigned form of a signed difference); the macros and the provenance records of rv_numbers are written in the same order
-    order = re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(PAPER, "rv_numbers.tex"), encoding="utf-8").read())
-    recs = json.load(open(os.path.join(PD.PROVENANCE_DIR, "rv_numbers.json")))["records"]
-    check(len(order) == len(recs), "rv_numbers macros and provenance records differ in number")
+    order = re.findall(r"\\newcommand\{\\(RV[A-Za-z]+)\}\{([^}]*)\}", open(os.path.join(paper, "rv_numbers.tex"), encoding="utf-8").read())
+    recs = json.load(open(os.path.join(prov_dir, "rv_numbers.json")))["records"]
+    report(len(order) == len(recs), "rv_numbers macros and provenance records differ in number")
     source = {nm: (r["artifact"], r["pointer"], r.get("reduce_how")) for (nm, val), r in zip(order, recs) if r["formatted"] == val and r.get("pointer")}
     support_sources = {source[n] for n in set(re.findall(r"\\(RV[A-Za-z]+)", support_text)) if n in source}
     float_text = "\n".join(t for q, t in support.items() if os.sep + "floats" + os.sep in q)
@@ -90,12 +93,12 @@ def submitted_support_check():
             used_elsewhere = re.search(r"\\" + m + r"(?![A-Za-z])", support_text) is not None
             used_elsewhere = used_elsewhere or (m in source and source[m] in support_sources)
             in_table = v is not None and re.search(r"(?<![\d.])" + re.escape(v) + r"(?![\d])", float_text) is not None
-            check(used_elsewhere or in_table, f"{b}: \\{m} ({v}) is supported only by the extended version (not used in another submitted section or shown in a submitted table)")
+            report(used_elsewhere or in_table, f"{b}: \\{m} ({v}) is supported only by the extended version (not used in another submitted section or shown in a submitted table)")
         for i, line in enumerate(t.split("\n"), 1):
             if re.search(r"extended\s+version", line):
-                check(False, f"{b}: a statement rests on a pointer to the extended version ({line.strip()[:90]}...)")
+                report(False, f"{b}: a statement rests on a pointer to the extended version ({line.strip()[:90]}...)")
         for lab in set(re.findall(r"\\(?:ref|eqref)\{([^}]*)\}", t)):
-            check(lab in labels or lab.split("-", 1)[-1] in labels, f"{b}: reference {lab} does not resolve to a label of the submitted build")
+            report(lab in labels or lab.split("-", 1)[-1] in labels, f"{b}: reference {lab} does not resolve to a label of the submitted build")
     print(f"submitted-support check: {n_macro} macro uses in the Abstract, Discussion and Conclusion tested against the submitted main text and supplement")
 
 
