@@ -1,0 +1,19 @@
+% Landmark design, one-column version for the submitted manuscript: what each model may see and what it must predict, on one emergency-department timeline.
+\begin{figure}[t]
+\centering
+\begin{tikzpicture}[
+  ev/.style={font=\scriptsize, align=center},
+  box/.style={rectangle, rounded corners=1.5pt, draw=#1!70!black, fill=#1!14, align=center, font=\scriptsize, inner sep=2.5pt},
+]
+\draw[-{Stealth[length=1.8mm]}, thick] (0,0) -- (8.3,0) node[above left, font=\scriptsize, inner sep=1pt] {time};
+\foreach \x/\l in {0.3/{arrival}, 3.0/{landmark\\$L = 2$\,h}, 6.0/{$L+24$\,h}, 7.7/{ED\\departure}}
+  \draw[thick] (\x,0.08) -- (\x,-0.08) node[below=1pt, ev] {\l};
+\node[box=teal, anchor=south west, text width=2.45cm] at (0.35,0.3) {inputs of the 2\,h models: triage, ED vital signs charted by $L$, static profile};
+\node[box=orange, anchor=south west, text width=2.75cm] at (3.05,0.3) {outcome $Y_L$: ICU admission or death in $(L, L+24\,\mathrm{h}]$};
+\node[box=gray, anchor=south west, text width=5.4cm] at (3.05,1.55) {not available at $L$: later vital signs, later measurement counts, ED length of stay, disposition};
+\draw[{Stealth}-{Stealth}, black!60] (0.3,-1.2) -- (7.7,-1.2);
+\node[font=\scriptsize\itshape, text=black!70, anchor=north west, text width=7.6cm] at (0.3,-1.25) {end-of-stay design of the original analysis: last ten ED rows up to departure};
+\end{tikzpicture}
+\caption{Landmark design. A prediction is made at the landmark $L$ using only what has been recorded by $L$ and is scored against an event in the next 24\,h. The triage table has no timestamp, so arrival is an operational anchor. The end-of-stay design of the original analysis used measurements up to ED departure. MIMIC-IV-ED, retrospective single-center proxy.}
+\label{fig:landmark}
+\end{figure}
