@@ -52,10 +52,17 @@ ECI covered \RVIntCovEci{} at a width of \RVIntWidEci{}, and recalibration with 
 \subsubsection{Coverage of the Patients Who Deteriorated}
 Marginal coverage did not extend to the patients who deteriorated (Table~\ref{tab:conformal}). Class-1 coverage was \RVSetCovOneStaticLac{} for static LAC sets and
 \RVSetCovOneEciSets{} for ECI sets. A stay enters the marginal set with label 1 only if its predicted risk is at least \RVScoreNeeded{}, whereas the
-median predicted risk among stays with the outcome was \RVScoreMedEvents{}. The singleton $\{1\}$ of a static set is issued exactly for the stays whose score exceeds one threshold, so its PPV and sensitivity are a point on the precision--recall curve of the score.
+median predicted risk among stays with the outcome was \RVScoreMedEvents{} (Fig.~\ref{fig:hist}). The singleton $\{1\}$ of a static set is issued exactly for the stays whose score exceeds one threshold, so its PPV and sensitivity are a point on the precision--recall curve of the score.
 
 Mondrian calibration raised class-1 coverage to \RVSetCovOneStaticMond{} (static), \RVSetCovOneMondEci{} (Mondrian-ECI), and \RVSetCovOneMondRecal{} (recalibrated),
 at mean set sizes of \RVSetSizeStaticMond{}, \RVSetSizeMondEci{}, and \RVSetSizeMondRecal{}. In an added analysis, for static Mondrian-LAC the PPV was \RVPrMondPpv{} at a sensitivity of \RVPrMondSens{}, against \RVPrMondSame{} for a plain threshold at that sensitivity, and for Mondrian-ECI \RVPrEciPpv{} at \RVPrEciSens{}, against \RVPrEciSame{}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\linewidth]{fig_hist}
+\caption{Predicted risk of the primary model on the test period (seed 42), for stays with and without the outcome. Dashed line: the risk a stay needs to include label 1 in a marginal LAC set; dotted lines: the thresholds of the class-conditional (Mondrian) sets for label 1 (lower) and label 0 (upper). MIMIC-IV-ED, retrospective single-center proxy.}
+\label{fig:hist}
+\end{figure}
 
 \input{tab_conformal}
 

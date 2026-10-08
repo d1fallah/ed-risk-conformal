@@ -4,7 +4,7 @@
 Delays in escalating the care of critically ill patients in the emergency department (ED) are harmful: ED patients who waited six hours or
 more for transfer to the intensive care unit (ICU) had a higher in-hospital mortality~\cite{chalfin2007delayed}. EDs rank arriving
 patients by triage acuity, and early warning scores such as the National Early Warning Score 2 (NEWS2)~\cite{rcp2017news2} add a rule-based score computed from vital signs.
-The MIMIC-IV-ED benchmark~\cite{xie2022mimic4ed} made machine-learning comparisons on triage data, which predict critical care outcomes better than the triage acuity alone~\cite{raita2019triage}, reproducible on public data.
+The MIMIC-IV-ED benchmark~\cite{xie2022mimic4ed} made machine-learning comparisons on triage data reproducible on public data.
 
 Whether such a model would help depends on when its score is computed. The benchmark predicts its critical outcome at triage, but its pipeline also provides every vital sign charted during the stay, and a model that reads all of them scores the stay at ED departure. Part of that record is produced after the decision the score is meant to inform: how often a patient was measured and how long the patient
 stayed reflect the course of the stay. A model can therefore reach a high area under the receiver operating characteristic curve (AUROC) for a reason that is of
